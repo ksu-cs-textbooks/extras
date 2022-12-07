@@ -3,4 +3,4 @@ archetype = "home"
 title = ""
 +++
 
-Lorem Ipsum.
+Lorem Ipsum. Test GitHub
