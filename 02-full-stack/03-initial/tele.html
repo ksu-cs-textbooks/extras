@@ -50,7 +50,7 @@
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="K-State CS Textbook Extras">
     <meta name="author" content="Russell Feldhausen">
-    <title>Introduction :: K-State CS Textbook Extras</title>
+    <title>Initialize :: K-State CS Textbook Extras</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1687300234" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1687300234" rel="stylesheet"></noscript>
     <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1687300234" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1687300234" rel="stylesheet"></noscript>
@@ -84,7 +84,7 @@
     <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/jquery.min.js?1687300234" defer></script>
 
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/03-initial/">
     
     <div id="tele" class="tele mirror">
     
@@ -92,15 +92,43 @@
       
       
       
-      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+      <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <div id="head-tags">
           </div>
-          <article class="chapter">
-<div class="article-subheading">Chapter 1</div>
-<h1>Introduction</h1>
+          <article class="default">
+<h1>Initialize</h1>
+<h2 id="create-repository">Create Repository</h2>
+<p>Start by creating a new GitHub repository. We&rsquo;ll let it initialize the repository using a <code>README</code> file, and also select the <code>.gitignore</code> file for a Node project.</p>
+<p><img src="../images/repo.png" alt="Create Repository"></p>
+<p>If you&rsquo;ve already created the repository, you can get the <code>.gitignore</code> file for Node projects from GitHub&rsquo;s 
 
-<p>Lorem Ipsum.</p>
+<a href="https://github.com/github/gitignore/blob/main/Node.gitignore" target="_blank" rel="noopener">gitignore repository</a></p>
+<h2 id="check-out-repository">Check out Repository</h2>
+<p>Next, check out the repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>git clone git@github.com:russfeld/fullstack.git
+</span></span><span style="display:flex;"><span>cd fullstack
+</span></span><span style="display:flex;"><span>code .
+</span></span></code></pre></div>
+  
+  
+<div class="box notices cstyle tip">
+    <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+    <div class="box-content">
+<p>Change the repository URL to match your repository!</p>
+    </div>
+</div>
+<p>This should open the repository in Visual Studio Code.</p>
+<h2 id="create-the-file-structure">Create the File Structure</h2>
+<p>Create the following folders within your project:</p>
+<ul>
+<li><code>client</code></li>
+<li><code>server</code></li>
+</ul>
+<p>These folders will store the frontend and backend applications, respectively.</p>
+<p>At this point, you should have the following structure:</p>
+<p><img src="../images/initial.png" alt="Initial Structure"></p>
 
             <footer class="footline">
             </footer>

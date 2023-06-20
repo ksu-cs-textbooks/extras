@@ -50,7 +50,7 @@
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="K-State CS Textbook Extras">
     <meta name="author" content="Russell Feldhausen">
-    <title>Introduction :: K-State CS Textbook Extras</title>
+    <title>Setup :: K-State CS Textbook Extras</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1687300234" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1687300234" rel="stylesheet"></noscript>
     <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1687300234" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1687300234" rel="stylesheet"></noscript>
@@ -84,23 +84,102 @@
     <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/jquery.min.js?1687300234" defer></script>
 
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/">
-    
-    <div id="tele" class="tele mirror">
-    
+  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/02-setup/embed.html">
     <div id="body" class="default-animation">
       
       
       
-      <main id="body-inner" class="highlightable chapter narrow" tabindex="-1">
+      <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <div id="head-tags">
           </div>
-          <article class="chapter">
-<div class="article-subheading">Chapter 1</div>
-<h1>Introduction</h1>
+          <article class="default">
+    
+    
+    
+<h2 id="prerequisites">Prerequisites</h2>
+<p>The basic environment required for this setup:</p>
+<ul>
+<li>A Linux/Unix system
+<ul>
+<li>Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work.</li>
+</ul>
+</li>
+<li>Docker Desktop</li>
+<li>Visual Studio Code</li>
+<li>Git and GitHub</li>
+</ul>
+<p>This guide will use the following environment:</p>
+<ul>
+<li>Windows 10 Host OS (should work on Windows 11 as well)</li>
+<li>
 
-<p>Lorem Ipsum.</p>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener">Windows Subsystem for Linux WSL 2</a></li>
+<li>
+
+<a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview" target="_blank" rel="noopener">Ubuntu LTS on WSL 2</a>
+<ul>
+<li>You do not need to install a GUI package as described in this guide</li>
+</ul>
+</li>
+<li>
+
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-22-04" target="_blank" rel="noopener">Git installed on Ubuntu in WSL 2</a>
+<ul>
+<li>You may also wish to either set up 
+
+<a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git" target="_blank" rel="noopener">Git Credential Manager</a> to share Git credentials with Windows or set up 
+
+<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh" target="_blank" rel="noopener">SSH Keys</a> to communicate with GitHub</li>
+</ul>
+</li>
+<li>
+
+<a href="https://docs.docker.com/desktop/windows/wsl/" target="_blank" rel="noopener">Docker Desktop with WSL 2 Backend</a></li>
+<li>
+
+<a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode" target="_blank" rel="noopener">Visual Studio Code and WSL Extension</a>
+<ul>
+<li>You may also wish to install the 
+
+<a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers" target="_blank" rel="noopener">Dev Containers</a> extension. This guide will not use it, but that is an alternative way to develop within a container.</li>
+</ul>
+</li>
+</ul>
+<h2 id="optional">Optional</h2>
+<p>To match the environment seen in the screenshots/videos, you can install these optional items:</p>
+<ul>
+<li>
+
+<a href="https://learn.microsoft.com/en-us/windows/terminal/install" target="_blank" rel="noopener">Windows Terminal</a></li>
+<li>
+
+<a href="https://github.com/tonsky/FiraCode" target="_blank" rel="noopener">FiraCode</a> font in VSCode</li>
+<li>Zsh terminal and 
+
+<a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener">Oh My Zsh</a> in Ubuntu</li>
+<li>
+
+<a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener">Powerlevel10k</a> Zsh theme
+<ul>
+<li>
+
+<a href="https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k" target="_blank" rel="noopener">Meslo Nerd Font</a> is recommended</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-systems">Other Systems</h2>
+<p>This guide should generally work for developing on both Ubuntu/Debian Linux systems as well as Mac OS X systems. Some modifications will need to be made, but in general you want to have Visual Studio Code, Docker Desktop, and Git installed.</p>
+<p>Likewise, deployment will mostly use GitHub actions but I will also include information for using GitLab runners.</p>
+<h2 id="helpful-resources">Helpful Resources</h2>
+<ul>
+<li>
+
+<a href="https://learn.microsoft.com/en-us/windows/wsl/setup/environment" target="_blank" rel="noopener">Set up a WSL development environment</a></li>
+<li>
+
+<a href="https://learn.microsoft.com/en-us/windows/wsl/filesystems" target="_blank" rel="noopener">WSL Filesystems</a></li>
+</ul>
 
             <footer class="footline">
             </footer>
@@ -109,9 +188,6 @@
       </main>
     </div>
     
-  </div>
-    
-    
     
     
     <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/clipboard.min.js?1687300234" defer></script>
@@ -119,7 +195,7 @@
     <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/featherlight.min.js?1687300234" defer></script>
     <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/theme.js?1687300234" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/tele-scroll.js?1687300234 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/embed-iframe.js?1687300234 defer"></script>
     
   </body>
 </html>
