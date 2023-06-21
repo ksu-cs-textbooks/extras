@@ -43,3 +43,9 @@ These folders will store the frontend and backend applications, respectively.
 At this point, you should have the following structure:
 
 ![Initial Structure](../images/initial.png)
+
+{{% notice note %}}
+
+If you aren't using GitHub, you can simply create the directory structure shown above manually or modify your existing project to match. 
+
+{{% /notice %}}

@@ -4,6 +4,12 @@ pre: "4. "
 weight: 40
 ---
 
+{{% notice note %}}
+
+If you have already created projects locally, skip down to the [Remove Node Modules]({{< relref "04-docker#01" >}}) section below. You can Dockerize existing projects as well! 
+
+{{% /notice %}}
+
 ## Get Effective IDs
 
 First, we need to make a note of our effective user ID and group ID in the terminal:
@@ -42,9 +48,10 @@ In this command:
 * `--rm` will remove the container when it is finished
 * `-it` will provide an interactive terminal
 * ``-v `pwd`/:/app</code>`` will create a volume mount between the current directory and the `/app` directory in the container.
-  * Backticks around a command in the terminal will use the result of that command in the outer command. See [Docker Volumes](https://docs.docker.com/storage/volumes/).
+  * Backticks around a command in the terminal will use the result of that command in the outer command. You could instead enter the full path to the current directory as part of the command, as in `-v /home/user/projects/fullstack:/app/code`.
+  * See [Docker Volumes](https://docs.docker.com/storage/volumes/) for more details.
 * `node:18` is the name of the Docker image to run.
-  * Refer to [Node](https://hub.docker.com/_/node/) on DockerHub for other image versions.
+  * Refer to [Node](https://hub.docker.com/_/node/) on DockerHub for other image versions. At the time of writing, Node 18 is the current LTS version.
 * `bash` will load the Bash terminal inside of the container
 
 Refer to the [Docker run](https://docs.docker.com/engine/reference/commandline/run/) documentation for more details.
@@ -70,7 +77,13 @@ chown -R 1000:1000 /app/*
 
 {{% notice tip %}}
 
-Modify the command above to match your IDs found earlier. The first one is the user Id and the second is the group ID.
+Modify the command above to match your IDs found earlier. The first one is the user Id and the second is the group ID. 
+
+{{% /notice %}}
+
+{{% notice warning %}}
+
+Hopefully this highlights one of the major security concerns from using Docker volume mounts. The files are originally owned by the `root` user, but since Docker runs as `root` by default, we can use commands within a container to change file permissions that we may not be able to change outside of the container. In an enterprise setting, this means that anyone who can start Docker containers can in theory change these permissions.
 
 {{% /notice %}}
 
@@ -83,7 +96,7 @@ exit
 
 This will stop the container and remove it.
 
-## Remove Node Modules
+## Remove Node Modules {#01}
 
 Finally, we want to remove the `node_modules` folders from both the `client` and `server` folders. These are created when the project is first initialized, but we don't want them outside of our actual containers. So, **DELETE** both `node_modules` folders!
 
@@ -131,6 +144,7 @@ services:
       - /app/client/node_modules
 
 networks:
+  # internal Docker network for project
   project-network:
     name: project-network
     internal: true
