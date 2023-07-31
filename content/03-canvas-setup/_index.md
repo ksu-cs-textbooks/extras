@@ -12,7 +12,7 @@ Setting up a Canvas course to connect with a Codio Course.
 2. Connect the Canvas course to the Codio course
 3. Connect a Canvas assignment to a Codio assignment
 
-If you 
+Please note that this video assumes that you have already set-up a Codio course and have the LTI settings configured. 
 
 Here is a video you can follow along with or you can follow through this Chapters pages.
 
