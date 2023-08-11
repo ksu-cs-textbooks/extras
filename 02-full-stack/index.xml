@@ -74,9 +74,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Full Stack Web Application on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/</link>
+    <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html</link>
     <description>Recent content in Full Stack Web Application on K-State CS Textbook Extras</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html</guid>
+      <description>This is a brief guide to building a framework for a full-stack web application from scratch.
+Features Express.js Backend React Frontend Full Docker Setup for Development You don&amp;rsquo;t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.</description>
+    </item>
+    <item>
+      <title>Setup</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html</guid>
+      <description>Prerequisites The basic environment required for this setup:
+A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:
+Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.</description>
+    </item>
+    <item>
+      <title>Initialize</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html</guid>
+      <description>Create Repository Start by creating a new GitHub repository. We&amp;rsquo;ll let it initialize the repository using a README file, and also select the .gitignore file for a Node project.
+If you&amp;rsquo;ve already created the repository, you can get the .gitignore file for Node projects from GitHub&amp;rsquo;s gitignore repository Check out Repository Next, check out the repository:
+# Terminal git clone git@github.com:russfeld/fullstack.git cd fullstack code . Tip Change the repository URL to match your repository!</description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html</guid>
+      <description>Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!
+Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:
+# Terminal idYou should get output that begins with something similar to this:
+uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!
+Create Projects To create the projects themselves, we&amp;rsquo;re going to use a one-off Docker command to run a container.</description>
+    </item>
+    <item>
+      <title>Working with Docker</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html</guid>
+      <description>Now that the project is running in Docker, let&amp;rsquo;s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &amp;#34;docker-entrypoint.s…&amp;#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &amp;#34;docker-entrypoint.s…&amp;#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:</description>
+    </item>
   </channel>
 </rss>

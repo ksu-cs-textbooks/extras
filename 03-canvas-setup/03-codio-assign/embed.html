@@ -71,58 +71,57 @@
 		
 		
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0">
-    <meta name="generator" content="Relearn 5.2.0+tip">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="K-State CS Textbook Extras">
     <meta name="author" content="Russell Feldhausen">
     <title>Canvas to Codio Assignment :: K-State CS Textbook Extras</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/perfect-scrollbar.min.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/nucleus.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme-light-theme.css?1690823121" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/ie.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/variant.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/print.css?1690823121" rel="stylesheet" media="print">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/variant.js?1690823121"></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1691786945" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1691786945" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1691786945" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1691786945"></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1691786945"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      var index_url="https://ksu-cs-textbooks.github.io/hugo-starter/index.json";
-      var root_url="https://ksu-cs-textbooks.github.io/hugo-starter/";
+      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
+      var root_url="https://ksu-cs-textbooks.github.io/extras/";
       var baseUri=root_url.replace(/\/$/, '');
       // translations
       window.T_Copy_to_clipboard = 'Copy to clipboard';
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/hugo-starter/';
-      window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
+      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/custom.css?1690823121" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/jquery.min.js?1690823121" defer></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1691786945" rel="stylesheet">
 
   </head>
-  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/03-codio-assign/embed.html">
-    <div id="body" class="default-animation" data-iframe-height="yes">
+  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/embed.html">
+    <div id="body" class="default-animation">
       
       
       
-      <main id="body-inner" class="highlightable default" tabindex="-1" data-iframe-height="yes" style="padding-bottom: 0px">
-        <div class="flex-block-wrapper" data-iframe-height="yes">
-          <div id="head-tags">
-          </div>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
           <article class="default">
     
     
@@ -133,13 +132,32 @@
 <p>In this part, we will be adding assignments to the Canvas course.</p>
 <p>The key parts of this step are to have the submission type be an &ldquo;External Tool&rdquo; and &ldquo;Load in a New Tab&rdquo;.</p>
 <p>You will need to get the assignment URL from Codio.</p>
-<p><img src="../images/codio-assn-lti.png" alt="Canvas"></p>
+<p>
+<a href="#image-3a4aea0f3f71e65bcb4b02a5022bca0a" class="lightbox-link">
+<img src="../images/codio-assn-lti.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-3a4aea0f3f71e65bcb4b02a5022bca0a">
+<img src="../images/codio-assn-lti.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a></p>
 <h3 id="accessing-all-ltilms-urls">Accessing All LTI/LMS URLs</h3>
 <p>When first setting up a course, it is helpful to export the Assignment URLs.</p>
-<p><img src="../images/codio-course-lti.png" alt="Canvas">
-<img src="../images/codio-all-assns-lti.png" alt="Canvas"></p>
+<p>
+<a href="#image-19c75d28e982ded1504ae7d867b733cd" class="lightbox-link">
+<img src="../images/codio-course-lti.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-19c75d28e982ded1504ae7d867b733cd">
+<img src="../images/codio-course-lti.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a>
+
+<a href="#image-124ad8be4a355379177e09423f93c9ef" class="lightbox-link">
+<img src="../images/codio-all-assns-lti.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-124ad8be4a355379177e09423f93c9ef">
+<img src="../images/codio-all-assns-lti.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a></p>
 
             <footer class="footline">
+
             </footer>
           </article>
         </div>
@@ -148,13 +166,8 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/clipboard.min.js?1690823121" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/featherlight.min.js?1690823121" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/theme.js?1690823121" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/embed-iframe.js?1690823121 defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.2/js/iframeResizer.contentWindow.min.js"></script>
-    
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1691786945" defer></script>
   </body>
 </html>

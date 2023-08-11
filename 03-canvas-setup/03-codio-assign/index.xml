@@ -74,9 +74,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Canvas to Codio Assignment on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/03-codio-assign/</link>
+    <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html</link>
     <description>Recent content in Canvas to Codio Assignment on K-State CS Textbook Extras</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/03-codio-assign/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

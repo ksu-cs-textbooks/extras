@@ -74,9 +74,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/hugo-starter/</link>
+    <link>https://ksu-cs-textbooks.github.io/extras/index.html</link>
     <description>Recent content on K-State CS Textbook Extras</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-starter/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/01-introduction/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/01-introduction/index.html</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>Full Stack Web Application</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html</guid>
+      <description>A full stack web application from scratch!</description>
+    </item>
+    <item>
+      <title>Setting Up a Canvas Course</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html</guid>
+      <description>Setting up a Canvas course to connect with a Codio Course.
+Connect the Canvas course to the Codio organization Connect the Canvas course to the Codio course Connect a Canvas assignment to a Codio assignment Please note that this video assumes that you have already set-up a Codio course and have the LTI settings configured.
+Here is a video you can follow along with or you can follow through this Chapters pages.</description>
+    </item>
   </channel>
 </rss>

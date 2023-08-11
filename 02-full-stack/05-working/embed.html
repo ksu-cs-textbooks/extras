@@ -71,58 +71,57 @@
 		
 		
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0">
-    <meta name="generator" content="Relearn 5.2.0+tip">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="K-State CS Textbook Extras">
     <meta name="author" content="Russell Feldhausen">
     <title>Working with Docker :: K-State CS Textbook Extras</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/perfect-scrollbar.min.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/nucleus.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme-light-theme.css?1690823121" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/ie.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/variant.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/print.css?1690823121" rel="stylesheet" media="print">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/variant.js?1690823121"></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1691786945" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1691786945" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1691786945" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1691786945"></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1691786945"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      var index_url="https://ksu-cs-textbooks.github.io/hugo-starter/index.json";
-      var root_url="https://ksu-cs-textbooks.github.io/hugo-starter/";
+      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
+      var root_url="https://ksu-cs-textbooks.github.io/extras/";
       var baseUri=root_url.replace(/\/$/, '');
       // translations
       window.T_Copy_to_clipboard = 'Copy to clipboard';
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/hugo-starter/';
-      window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
+      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/custom.css?1690823121" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/jquery.min.js?1690823121" defer></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1691786945" rel="stylesheet">
 
   </head>
-  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/05-working/embed.html">
-    <div id="body" class="default-animation" data-iframe-height="yes">
+  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/embed.html">
+    <div id="body" class="default-animation">
       
       
       
-      <main id="body-inner" class="highlightable default" tabindex="-1" data-iframe-height="yes" style="padding-bottom: 0px">
-        <div class="flex-block-wrapper" data-iframe-height="yes">
-          <div id="head-tags">
-          </div>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
           <article class="default">
     
     
@@ -130,43 +129,36 @@
 <p>Now that the project is running in Docker, let&rsquo;s review some helpful commands we can use to interact with the Docker containers.</p>
 <h2 id="docker-status">Docker Status</h2>
 <p>Query running container status</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker ps
-</span></span></code></pre></div><p>Sample output:</p>
-<pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker ps</span></span></code></pre></div><p>Sample output:</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
 119d2cc1ae20   fullstack-project-client   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes   3000/tcp   project-client
-b5c0853fa8b2   fullstack-project-server   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes              project-server
-</code></pre><h2 id="software-output">Software Output</h2>
+b5c0853fa8b2   fullstack-project-server   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes              project-server</code></pre></div><h2 id="software-output">Software Output</h2>
 <p>You can view the output of programs running in a container using this command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs project-client
-</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker logs project-client</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
 <p>If you want to monitor the logs for new output, add the <code>-f</code> flag:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs -f project-client
-</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker logs -f project-client</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
 <h2 id="terminal">Terminal</h2>
 <p>To get an interactive terminal inside of the container, use this command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-client bash
-</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker exec -it project-client bash</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
 <p>The command <code>bash</code> will get you an interactive terminal running Bash. You can replace <code>bash</code> with another command to run that command inside of the container itself. This allows you to run comands inside of the contaniner while it is running. However, your app will also be running, so you will be limited in what you can do.</p>
 <h2 id="run-commands">Run Commands</h2>
 <p>Alternatively, you can run some commands inside of a container using Docker compose:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose run --rm project-client npm run test
-</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Terminal</span>
+</span></span><span style="display:flex;"><span>docker compose run --rm project-client npm run test</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
 <h2 id="cleanup">Cleanup</h2>
 <p>Finally, Docker provides a handy command to cleanup any unused Docker resources on your system to conserve space:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker system prune
-</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker system prune</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
 <h2 id="reference">Reference</h2>
-<p>
-
-<a href="https://docs.docker.com/engine/reference/commandline/cli/" target="_blank" rel="noopener">Docker Command Line Reference</a></p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/cli/" target="_blank">Docker Command Line Reference</a>
+</p>
 
             <footer class="footline">
+
             </footer>
           </article>
         </div>
@@ -175,13 +167,8 @@ b5c0853fa8b2   fullstack-project-server   &#34;docker-entrypoint.s…&#34;   2 m
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/clipboard.min.js?1690823121" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/featherlight.min.js?1690823121" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/theme.js?1690823121" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/embed-iframe.js?1690823121 defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.2/js/iframeResizer.contentWindow.min.js"></script>
-    
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1691786945" defer></script>
   </body>
 </html>

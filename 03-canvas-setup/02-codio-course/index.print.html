@@ -71,153 +71,134 @@
 		
 		
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0">
-    <meta name="generator" content="Relearn 5.2.0+tip">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="K-State CS Textbook Extras">
     <meta name="author" content="Russell Feldhausen">
     <title>Canvas to Codio Course :: K-State CS Textbook Extras</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fontawesome-all.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/featherlight.min.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/auto-complete.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/perfect-scrollbar.min.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/nucleus.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/fonts.css?1690823121" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/theme-light-theme.css?1690823121" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/ie.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/variant.css?1690823121" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/print.css?1690823121" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/format-print.css?1690823121" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/variant.js?1690823121"></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1691786945" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1691786945" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1691786945" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/format-print.css?1691786945" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1691786945" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1691786945"></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1691786945"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      var index_url="https://ksu-cs-textbooks.github.io/hugo-starter/index.json";
-      var root_url="https://ksu-cs-textbooks.github.io/hugo-starter/";
+      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
+      var root_url="https://ksu-cs-textbooks.github.io/extras/";
       var baseUri=root_url.replace(/\/$/, '');
       // translations
       window.T_Copy_to_clipboard = 'Copy to clipboard';
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/hugo-starter/';
-      window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
+      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/hugo-starter/css/custom.css?1690823121" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/jquery.min.js?1690823121" defer></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1691786945" rel="stylesheet">
 
   </head>
-  <body class="mobile-support print disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/">
+  <body class="mobile-support print disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
-          <div class="navigation">
-             <a class="nav nav-next" href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/03-codio-assign/" title="Canvas to Codio Assignment (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
-          </div>
-          <div class="navigation">
-             <a class="nav nav-prev" href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/01-codio-org/" title="Canvas to Codio Org (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
-          </div>
-          <div id="top-print-link">
-            <a class="print-link" title='Print whole chapter (CTRL+ALT+p)' href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/index.print.html">
-              <i class="fas fa-print fa-fw"></i>
-            </a>
-          </div>
           <div id="top-tele-link">
-            <a class="print-link" title='Teleprompter View' href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/tele.html">
+            <a class="print-link" title='Teleprompter View' href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/tele.html">
               <i class="fas fa-tv fa-fw"></i>
             </a>
           </div>
           <div id="top-embed-link">
-            <a class="print-link" title='Embeddable Version' href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/embed.html">
+            <a class="print-link" title='Embeddable Version' href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/embed.html">
               <i class="fas fa-expand-arrows-alt fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-github-link">
-            <a class="github-link" title='Edit (CTRL+ALT+e)' href="https://gitlab.cs.ksu.edu/-/ide/project/cs-textbooks/extras/edit/master/-/content/03-canvas-setup/02-codio-course.md" target="blank">
-              <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
-              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+m)'><i class="fas fa-bars fa-fw"></i></a>
+              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <meta itemprop="itemListOrder" content="Descending" />
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://ksu-cs-textbooks.github.io/hugo-starter/"><span itemprop="name">K-State CS Textbook Extras</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/"><span itemprop="name">Setting Up a Canvas Course</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/" aria-disabled="true"><span itemprop="name">Canvas to Codio Course</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html"><span itemprop="name">Setting Up a Canvas Course</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Canvas to Codio Course</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
         </div>
       </nav>
       <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
-          <div id="head-tags">
-          </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
           <article class="default">
-<h1>Canvas to Codio Course</h1>
+            <header class="headline">
+            </header>
+<h1 id="canvas-to-codio-course">Canvas to Codio Course</h1>
+
 <p><a href="https://www.youtube.com/watch?v=wzzIYT5iyvE%3fstart%3d191">YouTube Video</a></p>
 <p>Once you have the Canvas course connected to the Codio Organization, you can connect the Canvas course to the Codio Course.</p>
 <p>As with the connection to the Codio organization, you will edit the Codio app configurations in Canvas.</p>
-<p><img src="../images/canvas-codio-edit.png" alt="Canvas"></p>
+<p>
+<a href="#image-91c7f968595afd24471aebeb33848752" class="lightbox-link">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/canvas-codio-edit.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-91c7f968595afd24471aebeb33848752">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/canvas-codio-edit.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a></p>
 <p>This step only requires that you update the &ldquo;Custom Fields&rdquo;</p>
-<p><img src="../images/canvas-fields.png" alt="Canvas"></p>
+<p>
+<a href="#image-ab8272af68636e8d5c520dde8930b000" class="lightbox-link">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/canvas-fields.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-ab8272af68636e8d5c520dde8930b000">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/canvas-fields.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a></p>
 <p>The particular field gets two values from Codio: &ldquo;codio_course_target_id&rdquo; and &ldquo;codio_parent_course_id&rdquo;. To get these, open the Codio course and select &ldquo;LTI/LMS&rdquo;. Copy these two fields and paste them into the Canvas &ldquo;Custom Fields&rdquo;, one per line.</p>
-<p><img src="../images/codio-parent-target.png" alt="Canvas"></p>
+<p>
+<a href="#image-e172b1abd96a3e08f52ee182590a4ca4" class="lightbox-link">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/codio-parent-target.png" alt="Canvas" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-e172b1abd96a3e08f52ee182590a4ca4">
+<img src="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/../images/codio-parent-target.png" alt="Canvas" class="lightbox-image" loading="lazy">
+</a></p>
 
   
   
 <div class="box notices cstyle tip">
-    <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
-    <div class="box-content">
+  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+  <div class="box-content">
+
 <p>When we clone the course, we will refer to these values again.</p>
-    </div>
+</div>
 </div>
 
             <footer class="footline">
+
             </footer>
           </article>
 
-    
-    
-    
-    
+
         </div>
       </main>
     
 <div class="git-footer">
+<p class="theme-version-footer">5.18.0</p>
 <p>Last modified by: 
             <i class='fas fa-user'></i> Emily Alfs-Votipka
             <i class='fas fa-calendar'></i> <a href="https://gitlab.cs.ksu.edu/cs-textbooks/extras/-/commit/574174e1e1eed0b8ac3d07d97bea9f979e219af7">Jul 10, 2023</a>
@@ -226,100 +207,8 @@
 
     
     </div>
-    <aside id="sidebar" class="default-animation">
-      <div id="header-wrapper" class="default-animation">
-        <div id="header" class="default-animation">
-
-<a id="logo" href="https://ksu-cs-textbooks.github.io/hugo-starter/">
-  K-State CS Textbook Extras
-</a>
-        </div>
-        <div class="searchbox default-animation">
-          <label for="search-by"><i class="fas fa-search"></i></label>
-          <input data-search-input id="search-by" type="search" placeholder="Search...">
-          <span data-search-clear=""><i class="fas fa-times"></i></span>
-        </div>
-        <script>
-          var contentLangs=['en'];
-        </script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/auto-complete.js?1690823121" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/lunr.min.js?1690823121" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/lunr.stemmer.support.min.js?1690823121" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/lunr.multi.min.js?1690823121" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/lunr.en.min.js?1690823121" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/search.js?1690823121" defer></script>
-      </div>
-      <div id="content-wrapper" class="highlightable">
-        <ul class="topics collapsible-menu">
-          <li data-nav-id="/01-introduction/" title="Introduction" class="dd-item"><input type="checkbox" id="section-8eafca96a477d19968a76a0ac8bd2d47" class="toggle"/><label for="section-8eafca96a477d19968a76a0ac8bd2d47" ></label><a href="https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/"><b>1. </b>Introduction</a><ul>
-          <li data-nav-id="/01-introduction/01-welcome/" title="Welcome" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/01-welcome/">1. Welcome</a></li></ul></li>
-          <li data-nav-id="/02-full-stack/" title="Full Stack Web Application" class="dd-item"><input type="checkbox" id="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6" class="toggle"/><label for="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6" ></label><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/"><b>2. </b>Full Stack Web Application</a><ul>
-          <li data-nav-id="/02-full-stack/01-intro/" title="Introduction" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/01-intro/">1. Introduction</a></li>
-          <li data-nav-id="/02-full-stack/02-setup/" title="Setup" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/02-setup/">2. Setup</a></li>
-          <li data-nav-id="/02-full-stack/03-initial/" title="Initialize" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/03-initial/">3. Initialize</a></li>
-          <li data-nav-id="/02-full-stack/04-docker/" title="Docker" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/04-docker/">4. Docker</a></li>
-          <li data-nav-id="/02-full-stack/05-working/" title="Working with Docker" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/02-full-stack/05-working/">5. Working with Docker</a></li></ul></li>
-          <li data-nav-id="/03-canvas-setup/" title="Setting Up a Canvas Course" class="dd-item parent"><input type="checkbox" id="section-d32fb3f4fb9e82785cdf48fa94602da9" class="toggle" checked/><label for="section-d32fb3f4fb9e82785cdf48fa94602da9" ></label><a href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/"><b>3. </b>Setting Up a Canvas Course</a><ul>
-          <li data-nav-id="/03-canvas-setup/01-codio-org/" title="Canvas to Codio Org" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/01-codio-org/">1. Canvas to Codio Org</a></li>
-          <li data-nav-id="/03-canvas-setup/02-codio-course/" title="Canvas to Codio Course" class="dd-item active"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/02-codio-course/">2. Canvas to Codio Course</a></li>
-          <li data-nav-id="/03-canvas-setup/03-codio-assign/" title="Canvas to Codio Assignment" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/03-codio-assign/">3. Canvas to Codio Assignment</a></li>
-          <li data-nav-id="/03-canvas-setup/04-canvas-clone/" title="Cloning a Canvas Course" class="dd-item"><a href="https://ksu-cs-textbooks.github.io/hugo-starter/03-canvas-setup/04-canvas-clone/">4. Cloning a Canvas Course</a></li></ul></li>
-        </ul>
-        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
-        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"/>
-        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
-          <ul>
-            <li id="select-language-container" class="footerLangSwitch">
-              <a class="padding select-container">
-                <i class="fas fa-language fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="select-style">
-                  <select id="select-language" onchange="location = baseUri + this.value;">
-                  </select>
-                </div>
-                <div class="select-clear"></div>
-              </a>
-            </li>
-            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
-              <a class="padding select-container">
-                <i class="fas fa-paint-brush fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="select-style">
-                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                    <option id="light-theme" value="light-theme" selected>Light Theme</option>
-                    <option id="dark-theme" value="dark-theme">Dark Theme</option>
-                  </select>
-                </div>
-                <div class="select-clear"></div>
-              </a>
-              <script>window.variants && variants.markSelectedVariant();</script>
-            </li>
-            <li class="footerVisitedLinks"><a class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</a></li>
-          </ul>
-        </div>
-        <div id="footer" class="footerFooter showFooter"><style>
-#footer {
-	font-size: 13px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 2rem 1rem;
-	min-width: 230px;
-	max-width: 300px;
-}
-#footer p {
-	margin: 0;
-}
-</style>
-
-<p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p>
-
-        </div>
-      </div>
-    </aside>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/clipboard.min.js?1690823121" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/perfect-scrollbar.min.js?1690823121" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/featherlight.min.js?1690823121" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/hugo-starter/js/theme.js?1690823121" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1691786945" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1691786945" defer></script>
   </body>
 </html>

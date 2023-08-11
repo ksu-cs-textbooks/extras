@@ -73,9 +73,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/hugo-starter/categories/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/extras/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/hugo-starter/tags/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/extras/tags/index.html</loc>
   </url>
 </urlset>

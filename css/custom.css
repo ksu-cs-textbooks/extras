@@ -131,7 +131,7 @@ body {
 
 /* Sidebar Arrows */
 #sidebar ul.topics > li {
-    margin-left: 0;
+    margin-left: 1rem; 
 }
 
 /* Keyboard */
@@ -204,4 +204,16 @@ kbd {
       box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
       top: 1px;
     }
-  }
+}
+
+/* Sidebar Titles */
+#sidebar ul.topics > li > a b {
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+/* Theme Version Footer */
+.theme-version-footer {
+    float: right;
+    opacity: 0.25;
+}
