@@ -1,6 +1,6 @@
 +++
 archetype = "chapter"
-chapter = true
+ordinal = "3"
 title = "Setting Up a Canvas Course"
 pre = "<b>3. </b>"
 weight = 3
