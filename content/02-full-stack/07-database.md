@@ -103,7 +103,7 @@ POSTGRES_HOST="project-db"
 POSTGRES_PORT="5432"
 POSTGRES_USER="projectuser"
 POSTGRES_PASSWORD="projectpass"
-POSTGRES_DATABASE="projectdb"
+POSTGRES_DB="projectdb"
 ```
 
 {{% notice tip %}}
