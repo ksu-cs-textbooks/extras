@@ -10,6 +10,9 @@ This is a brief guide to building a framework for a full-stack web application f
 
 * Express.js Backend
 * React Frontend
+  * Can easily substitute Vue or other frontends
+* Postgres Database
+  * Can easily substitue MySQL or other databases
 * Full Docker Setup for Development
   * You don't have to install Node or a database locally - it all runs in Docker!
 * Docker Deployment

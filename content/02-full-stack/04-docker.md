@@ -33,12 +33,12 @@ To create the projects themselves, we're going to use a one-off Docker command t
 
 ```bash
 # Terminal
-docker run --rm -it -v `pwd`/:/app node:18 bash
+docker run --rm -it --user=1000:1000 -v `pwd`/:/app node:18 bash
 ```
 
 {{% notice tip %}}
 
-Make sure you run this command in the root directory of your project!
+Modify the command above to match your IDs found earlier. See below for details. Make sure you run this command in the root directory of your project!
 
 {{% /notice %}}
 
@@ -47,6 +47,7 @@ In this command:
 * `docker run` will start a container to run a command. The container is removed when the command is finished.
 * `--rm` will remove the container when it is finished
 * `-it` will provide an interactive terminal
+* `--user=1000:1000` will set the user and group IDs to 1000, respectively - match these to the output you received above.
 * ``-v `pwd`/:/app</code>`` will create a volume mount between the current directory and the `/app` directory in the container.
   * Backticks around a command in the terminal will use the result of that command in the outer command. You could instead enter the full path to the current directory as part of the command, as in `-v /home/user/projects/fullstack:/app/code`.
   * See [Docker Volumes](https://docs.docker.com/storage/volumes/) for more details.
@@ -68,22 +69,9 @@ npx express-generator -v ejs /app/server
 npx create-react-app /app/client
 ```
 
-Next, we are going to set the owner and gorup of these files to match the effective user and group IDs of the host system outside of Docker. This allows us to maintain and modify the files in Visual Studio Code.
+{{% notice note %}}
 
-```bash
-# Docker Container Terminal
-chown -R 1000:1000 /app/*
-```
-
-{{% notice tip %}}
-
-Modify the command above to match your IDs found earlier. The first one is the user Id and the second is the group ID. 
-
-{{% /notice %}}
-
-{{% notice warning %}}
-
-Hopefully this highlights one of the major security concerns from using Docker volume mounts. The files are originally owned by the `root` user, but since Docker runs as `root` by default, we can use commands within a container to change file permissions that we may not be able to change outside of the container. In an enterprise setting, this means that anyone who can start Docker containers can in theory change these permissions.
+This guide uses React, but you could easily use Vue or another frontend framework here. Just make sure it is placed in the `/app/client` directory inside of the container.
 
 {{% /notice %}}
 
@@ -116,8 +104,12 @@ services:
       # location of Dockerfile
       context: ./server
     container_name: project-server
+    # set the user ID to match our user
+    user: "1000"
     networks:
       - project-network
+      # allow external connections (remove this in production)
+      - default
     volumes:
       # mount code into container
       - ./server:/app/server
@@ -130,6 +122,8 @@ services:
       # location of Dockerfile
       context: ./client
     container_name: project-client
+    # set the user ID to match our user
+    user: "1000"
     depends_on:
       # requires server to start
       - project-server
@@ -152,14 +146,21 @@ networks:
 
 Refer to [Docker Compose File Reference](https://docs.docker.com/compose/compose-file/compose-file-v3/) for what this does.
 
+{{% notice tip %}}
+
+Update `user: "1000"` in each of these files to match the user ID found earlier.
+
+{{% /notice %}}
+
 We'll also need to add a Dockerfile to each project:
 
 ```dockerfile
 # client/Dockerfile
 # For running in development mode only
 FROM node:18
+USER 1000
 WORKDIR /app/client
-COPY package*.json ./
+COPY --chown=1000:1000 package*.json ./
 RUN npm install
 EXPOSE 3000
 CMD ["npm", "start"]
@@ -169,14 +170,21 @@ CMD ["npm", "start"]
 # server/Dockerfile
 # For running in development mode only
 FROM node:18
+USER 1000
 WORKDIR /app/server
-COPY package*.json ./
+COPY --chown=1000:1000 package*.json ./
 RUN npm install
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
 ```
 
 Refer to [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for the structure of these files.
+
+{{% notice tip %}}
+
+Update `user: "1000"` and `--chown=1000:1000` in each of these files to match the user ID and group ID found earlier.
+
+{{% /notice %}}
 
 Finally, we can start and run the Docker containers using Docker Compose:
 
