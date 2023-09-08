@@ -45,7 +45,7 @@ In the documentation for Knex it will reference these commands as just `knex`. H
 
 {{% /notice %}}
 
-This should create a file `server/knexfile.js.`.
+This should create a file `server/knexfile.js`.
 
 Once that is done, we can close the terminal connected to the container using the `exit` command.
 
@@ -274,3 +274,9 @@ npm run reset
 ```
 
 This will undo all database migrations, redo them, and seed the database with your initial seed data.
+
+{{% notice note %}}
+
+You may also wish to look into [Objection.js](https://vincit.github.io/objection.js/), which is a great ORM that works well with Knex. 
+
+{{% /notice %}}
