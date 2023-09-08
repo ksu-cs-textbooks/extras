@@ -98,7 +98,8 @@
       <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/01-codio-org/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/01-codio-org/index.html</guid>
-      <description>The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
+      <description>YouTube Video
+The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
 Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app. Once you install it, you will be prompted to enter the &amp;lsquo;Consumer Key&amp;rsquo; and &amp;lsquo;Secret Key&amp;rsquo;
 Tip Canvas&amp;rsquo;s &amp;ldquo;Add App&amp;rdquo; is requesting Codio&amp;rsquo;s &amp;ldquo;Organization&amp;rdquo; information.</description>
     </item>
@@ -107,17 +108,19 @@ Tip Canvas&amp;rsquo;s &amp;ldquo;Add App&amp;rdquo; is requesting Codio&amp;rsq
       <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html</guid>
-      <description>Once you have the Canvas course connected to the Codio Organization, you can connect the Canvas course to the Codio Course.
+      <description>YouTube Video
+Once you have the Canvas course connected to the Codio Organization, you can connect the Canvas course to the Codio Course.
 As with the connection to the Codio organization, you will edit the Codio app configurations in Canvas.
 This step only requires that you update the &amp;ldquo;Custom Fields&amp;rdquo;
-The particular field gets two values from Codio: &amp;ldquo;codio_course_target_id&amp;rdquo; and &amp;ldquo;codio_parent_course_id&amp;rdquo;. To get these, open the Codio course and select &amp;ldquo;LTI/LMS&amp;rdquo;. Copy these two fields and paste them into the Canvas &amp;ldquo;Custom Fields&amp;rdquo;, one per line.</description>
+The particular field gets two values from Codio: &amp;ldquo;codio_course_target_id&amp;rdquo; and &amp;ldquo;codio_parent_course_id&amp;rdquo;. To get these, open the Codio course and select &amp;ldquo;LTI/LMS&amp;rdquo;.</description>
     </item>
     <item>
       <title>Canvas to Codio Assignment</title>
       <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html</guid>
-      <description>In this part, we will be adding assignments to the Canvas course.
+      <description>YouTube Video
+In this part, we will be adding assignments to the Canvas course.
 The key parts of this step are to have the submission type be an &amp;ldquo;External Tool&amp;rdquo; and &amp;ldquo;Load in a New Tab&amp;rdquo;.
 You will need to get the assignment URL from Codio.
 Accessing All LTI/LMS URLs When first setting up a course, it is helpful to export the Assignment URLs.</description>
