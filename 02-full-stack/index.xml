@@ -45,6 +45,21 @@
 	
 		
 		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
 		
 
 	
@@ -84,7 +99,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html</guid>
       <description>This is a brief guide to building a framework for a full-stack web application from scratch.
-Features Express.js Backend React Frontend Full Docker Setup for Development You don&amp;rsquo;t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.</description>
+Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don&amp;rsquo;t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials.</description>
     </item>
     <item>
       <title>Setup</title>
@@ -124,6 +139,34 @@ Create Projects To create the projects themselves, we&amp;rsquo;re going to use 
 Docker Status Query running container status
 # Terminal docker psSample output:
 CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &amp;#34;docker-entrypoint.s…&amp;#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &amp;#34;docker-entrypoint.s…&amp;#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:</description>
+    </item>
+    <item>
+      <title>Nodemon</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html</guid>
+      <description>At this point we probably want to install the Nodemon tool in our backend.
+Install Nodemon First, we&amp;rsquo;ll get a terminal inside of the container
+# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:
+# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.</description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html</guid>
+      <description>Now let&amp;rsquo;s add a database to our project.
+Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:
+# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .</description>
+    </item>
+    <item>
+      <title>Knex</title>
+      <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html</guid>
+      <description>We&amp;rsquo;re going to use the Knex library to connect to our database from the server. We&amp;rsquo;ll also use it to handle database migrations and seeding.
+Install Knex We can install Knex using npm inside the server container:
+# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,448 @@
+
+
+
+
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="author" content="Russell Feldhausen">
+    <title>Database :: K-State CS Textbook Extras</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211203" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211203" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211203" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211203" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211203" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211203" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211203" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211203" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211203" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211203" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211203"></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211203"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
+      var root_url="https://ksu-cs-textbooks.github.io/extras/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+    </script>
+    
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211203" rel="stylesheet">
+
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html" title="Knex (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html" title="Nodemon (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.print.html">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-tele-link">
+            <a class="print-link" title='Teleprompter View' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/tele.html">
+              <i class="fas fa-tv fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-embed-link">
+            <a class="print-link" title='Embeddable Version' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/embed.html">
+              <i class="fas fa-expand-arrows-alt fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://gitlab.cs.ksu.edu/-/ide/project/cs-textbooks/extras/edit/master/-/content/02-full-stack/07-database.md" target="_blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Database</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#postgres-container">Postgres Container</a></li>
+    <li><a href="#environment-file">Environment File</a></li>
+    <li><a href="#start-container">Start Container</a></li>
+    <li><a href="#commit">Commit</a></li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="database">Database</h1>
+
+<p>Now let&rsquo;s add a database to our project.</p>
+<h2 id="postgres-container">Postgres Container</h2>
+<p>First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#75715e"># database</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#f92672">project-db</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#75715e"># Use an existing image from DockerHub</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:15</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-db</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#75715e"># Automatically restart the container as needed</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># Persist database data in a Docker volume</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project_db_data:/var/lib/postgresql/data:rw</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># Configure environment using .env file</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_USER</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_PASSWORD</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_DB</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># check if database is running and healthy</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">test</span>: [<span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">30s</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">start_period</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># server</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-server</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># requires database to start</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project-db</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections (remove this in production)</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./server:/app/server</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/server/node_modules</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># client</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-client</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># requires server to start</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./client:/app/client</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/client/node_modules</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#f92672">project_db_data</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># internal Docker network for project</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Refer to the <a href="https://hub.docker.com/_/postgres" target="_blank">Postgres Docker Image</a>
+ documentation for more details.</p>
+<h2 id="environment-file">Environment File</h2>
+<p>For this project, we are going to use a single global environment file that is shared across all containers. For this, create a file named <code>.env</code> in the root of the project and add the following contents:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># .env</span>
+</span></span><span style="display:flex;"><span>POSTGRES_HOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;project-db&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_PORT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5432&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_USER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectuser&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_PASSWORD<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectpass&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_DATABASE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectdb&#34;</span></span></span></code></pre></div>
+  
+  
+<div class="box notices cstyle tip">
+  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+  <div class="box-content">
+
+<p>Customize the user, password, and database variables as desired. The host should match the name of the database container, and the port should be the default port for the chosen database engine.</p>
+</div>
+</div>
+<p>You should also create a file named <code>.env.example</code> that has the same contents.</p>
+
+  
+  
+<div class="box notices cstyle warning">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Warning</div>
+  <div class="box-content">
+
+<p>You should never commit the <code>.env</code> file to GitHub, since it contains all of the secret information for your project. Instead, it is recommended to create a sample file such as <code>.env.example</code> that contains the same variables but with default values, and also some explanation of what each variable does.</p>
+</div>
+</div>
+<p>In the Docker Compose file above, we defined several variables in the <code>project-db</code> service that match variables in the <code>.env</code> file:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Configure environment using .env file</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">POSTGRES_USER</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">POSTGRES_PASSWORD</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">POSTGRES_DB:</span></span></span></code></pre></div><p>By including blank variables here, the values from the <code>.env</code> file for those variables will be shared with the container. Other variables will not be shared.</p>
+<h2 id="start-container">Start Container</h2>
+<p>Once we are ready, we can use Docker Compose to update our running containers and start the database container:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker compose up -d</span></span></code></pre></div><p>You can confirm that the database is up and running using <code>docker ps</code> or checking the logs using <code>docker logs project-db</code>.</p>
+<h2 id="commit">Commit</h2>
+<p>This is a great place to stop and commit your work to GitHub.</p>
+
+            <footer class="footline">
+
+            </footer>
+          </article>
+        </div>
+      </main>
+    
+<div class="git-footer">
+<p class="theme-version-footer">5.18.0</p>
+<p>Last modified by: 
+            <i class='fas fa-user'></i> Russell Feldhausen
+            <i class='fas fa-calendar'></i> <a href="https://gitlab.cs.ksu.edu/cs-textbooks/extras/-/commit/c46d0e427f69bcb4b56f9f3a7addd0e6b86326c3">Sep 8, 2023</a>
+</p>
+</div>
+
+    
+    </div>
+    <aside id="sidebar" class="default-animation">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+
+<a id="logo" href="https://ksu-cs-textbooks.github.io/extras/">
+  K-State CS Textbook Extras
+</a>
+
+        </div>
+        <form action="https://ksu-cs-textbooks.github.io/extras/search.html" method="get"><div class="searchbox default-animation">
+          <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+        </div></form>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/auto-complete.js?1694211204" defer></script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.min.js?1694211204" defer></script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.stemmer.support.min.js?1694211204" defer></script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.multi.min.js?1694211204" defer></script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.en.min.js?1694211204" defer></script>
+        <script src="https://ksu-cs-textbooks.github.io/extras/js/search.js?1694211204" defer></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics enlarge morespace collapsible-menu">
+          <li data-nav-id="/01-introduction/index.html" class=""><input type="checkbox" id="section-8eafca96a477d19968a76a0ac8bd2d47" aria-controls="subsections-8eafca96a477d19968a76a0ac8bd2d47"><label for="section-8eafca96a477d19968a76a0ac8bd2d47"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="subsections-8eafca96a477d19968a76a0ac8bd2d47" class="morespace collapsible-menu">
+          <li data-nav-id="/01-introduction/01-welcome/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
+          <li data-nav-id="/02-full-stack/index.html" class="parent "><input type="checkbox" id="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6" aria-controls="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" checked><label for="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" class="morespace collapsible-menu">
+          <li data-nav-id="/02-full-stack/01-intro/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
+          <li data-nav-id="/02-full-stack/02-setup/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
+          <li data-nav-id="/02-full-stack/03-initial/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
+          <li data-nav-id="/02-full-stack/04-docker/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
+          <li data-nav-id="/02-full-stack/05-working/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
+          <li data-nav-id="/02-full-stack/06-nodemon/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
+          <li data-nav-id="/02-full-stack/07-database/index.html" class="active"><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html">7. Database</a></li>
+          <li data-nav-id="/02-full-stack/08-knex/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
+          <li data-nav-id="/03-canvas-setup/index.html" class=""><input type="checkbox" id="section-d32fb3f4fb9e82785cdf48fa94602da9" aria-controls="subsections-d32fb3f4fb9e82785cdf48fa94602da9"><label for="section-d32fb3f4fb9e82785cdf48fa94602da9"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="subsections-d32fb3f4fb9e82785cdf48fa94602da9" class="morespace collapsible-menu">
+          <li data-nav-id="/03-canvas-setup/01-codio-org/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
+          <li data-nav-id="/03-canvas-setup/02-codio-course/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
+          <li data-nav-id="/03-canvas-setup/03-codio-assign/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
+          <li data-nav-id="/03-canvas-setup/04-canvas-clone/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
+        </ul>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding menu-control">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <div class="padding menu-control">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="auto" value="auto" selected>Auto</option>
+                    <option id="light-theme" value="light-theme">Light Theme</option>
+                    <option id="dark-theme" value="dark-theme">Dark Theme</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks">
+              <div class="padding menu-control">
+                <i class="fas fa-history fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <button onclick="clearHistory();">Clear History</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+#footer {
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem 1rem;
+	min-width: 230px;
+	max-width: 300px;
+}
+#footer p {
+	margin: 0;
+}
+</style>
+
+<p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p>
+
+        </div>
+      </div>
+    </aside>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211204" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211204" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211204" defer></script>
+  </body>
+</html>
