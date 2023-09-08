@@ -98,20 +98,20 @@
     <title>Knex :: K-State CS Textbook Extras</title>
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211349" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211349" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211349" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211349" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211349" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211349" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211349" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211349" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211349" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-light-theme.css?1694211349" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211349" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211349" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211349" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211349"></script>
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-light-theme.css?1694211878" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
     
     
     
@@ -133,7 +133,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211349" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
 
     
   </head>
@@ -181,7 +181,7 @@
 </p>
 </div>
 </div>
-<p>This should create a file <code>server/knexfile.js.</code>.</p>
+<p>This should create a file <code>server/knexfile.js</code>.</p>
 <p>Once that is done, we can close the terminal connected to the container using the <code>exit</code> command.</p>
 <p>We&rsquo;ll replace the default contents of the <code>server/knexfile.js</code> with the following:</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// server/knexfile.js
@@ -341,6 +341,17 @@
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
 </span></span><span style="display:flex;"><span>npm run reset</span></span></code></pre></div><p>This will undo all database migrations, redo them, and seed the database with your initial seed data.</p>
 
+  
+  
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>You may also wish to look into <a href="https://vincit.github.io/objection.js/" target="_blank">Objection.js</a>
+, which is a great ORM that works well with Knex.</p>
+</div>
+</div>
+
             <footer class="footline">
 
             </footer>
@@ -351,10 +362,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211349" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211349" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211349" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/embed-iframe.js?1694211349 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/extras/js/embed-iframe.js?1694211878 defer"></script>
   </body>
 </html>
