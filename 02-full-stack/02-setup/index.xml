@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Setup on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html</link>
-    <description>Recent content in Setup on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.xml" rel="self" type="application/rss+xml" />
+    <title>Setup :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/</link>
+    <description>Prerequisites The basic environment required for this setup:&#xA;A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:&#xA;Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

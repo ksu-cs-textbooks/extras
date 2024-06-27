@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nodemon on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html</link>
-    <description>Recent content in Nodemon on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.xml" rel="self" type="application/rss+xml" />
+    <title>Nodemon :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/</link>
+    <description>At this point we probably want to install the Nodemon tool in our backend.&#xA;Install Nodemon First, we’ll get a terminal inside of the container&#xA;# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:&#xA;# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

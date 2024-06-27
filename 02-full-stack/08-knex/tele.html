@@ -3,254 +3,274 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.117.0">
-    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="generator" content="Hugo 0.128.0">
+    <meta name="generator" content="Relearn 6.0.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="description" content="We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.
+Install Knex We can install Knex using npm inside the server container:
+# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:">
     <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Knex :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.
+Install Knex We can install Knex using npm inside the server container:
+# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Knex :: K-State CS Textbook Extras">
+    <meta property="og:description" content="We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.
+Install Knex We can install Knex using npm inside the server container:
+# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Full Stack Web Application">
+    <meta property="article:modified_time" content="2023-09-08T17:24:16-05:00">
+    <meta itemprop="name" content="Knex :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.
+Install Knex We can install Knex using npm inside the server container:
+# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:">
+    <meta itemprop="dateModified" content="2023-09-08T17:24:16-05:00">
+    <meta itemprop="wordCount" content="1029">
     <title>Knex :: K-State CS Textbook Extras</title>
-    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211878" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211878"></script>
+    <link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/nucleus.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar.min.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/fonts.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/theme.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/theme-auto.css?1719524535" rel="stylesheet" id="R-variant-style">
+    <link href="/extras/css/chroma-auto.css?1719524535" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/extras/css/variant.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/print.css?1719524535" rel="stylesheet" media="print">
+    <script src="/extras/js/variant.js?1719524535"></script>
     <script>
-      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
-      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
-      var root_url="https://ksu-cs-textbooks.github.io/extras/";
-      var baseUri=root_url.replace(/\/$/, '');
-      // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.index_js_url="/extras/index.search.js";
+      // variant stuff
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
-
+    <link href="/extras/css/custom.css?1719524535" rel="stylesheet">
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="/extras/02-full-stack/08-knex/">
     
     <div id="tele" class="tele mirror">
     
-    <div id="body" class="default-animation">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
       
       
       
-      <main id="body-inner" class="highlightable default" tabindex="-1">
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <article class="default">
             <header class="headline">
             </header>
+
 <h1 id="knex">Knex</h1>
 
-<p>We&rsquo;re going to use the <a href="https://knexjs.org/" target="_blank">Knex</a>
- library to connect to our database from the server. We&rsquo;ll also use it to handle database migrations and seeding.</p>
+<p>We&rsquo;re going to use the <a href="https://knexjs.org/" rel="external" target="_blank">Knex</a> library to connect to our database from the server. We&rsquo;ll also use it to handle database migrations and seeding.</p>
 <h2 id="install-knex">Install Knex</h2>
 <p>We can install Knex using <code>npm</code> inside the server container:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-server bash</span></span></code></pre></div><p>Then we can use <code>npm</code> to install the <code>knex</code> library, along with the <code>pg</code> library for connecting to Postgres databases. This should be done in the <code>/app/server</code> directory inside the container:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npm install knex pg</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it project-server bash</span></span></code></pre></div><p>Then we can use <code>npm</code> to install the <code>knex</code> library, along with the <code>pg</code> library for connecting to Postgres databases. This should be done in the <code>/app/server</code> directory inside the container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npm install knex pg</span></span></code></pre></div>
   
   
 <div class="box notices cstyle tip">
   <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
   <div class="box-content">
 
-<p>You can replace <code>pg</code> with the database engine of your choice. Modifications must be made below to match that engine; refer to the <a href="https://knexjs.org/guide/" target="_blank">Knex</a>
- documentation.</p>
+<p>You can replace <code>pg</code> with the database engine of your choice. Modifications must be made below to match that engine; refer to the <a href="https://knexjs.org/guide/" rel="external" target="_blank">Knex</a> documentation.</p>
 </div>
 </div>
 <p>Once Knex is installed, we&rsquo;ll run a few additional commands inside of the container to configure it.</p>
 <h2 id="create-knexfile">Create Knexfile</h2>
 <p>The Knex library uses a special file called a <code>knexfile</code> to store some configuration information. We can create it using this command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npx knex init</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npx knex init</span></span></code></pre></div>
   
   
 <div class="box notices cstyle tip">
   <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
   <div class="box-content">
 
-<p>In the documentation for Knex it will reference these commands as just <code>knex</code>. However, since they are installed by an <code>npm</code> package, they are not directly accessible in the system path inside the container. So, to get around that, we can prefix the command with <code>npx</code> to run commands from within an <code>npm</code> package. <a href="https://docs.npmjs.com/cli/v8/commands/npx" target="_blank">npx documentation</a>
-</p>
+<p>In the documentation for Knex it will reference these commands as just <code>knex</code>. However, since they are installed by an <code>npm</code> package, they are not directly accessible in the system path inside the container. So, to get around that, we can prefix the command with <code>npx</code> to run commands from within an <code>npm</code> package. <a href="https://docs.npmjs.com/cli/v8/commands/npx" rel="external" target="_blank">npx documentation</a></p>
 </div>
 </div>
 <p>This should create a file <code>server/knexfile.js</code>.</p>
 <p>Once that is done, we can close the terminal connected to the container using the <code>exit</code> command.</p>
 <p>We&rsquo;ll replace the default contents of the <code>server/knexfile.js</code> with the following:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// server/knexfile.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @type { Object.&lt;string, import(&#34;knex&#34;).Knex.Config&gt; }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">development</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pg&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_HOST</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_PORT</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_USER</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_PASSWORD</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_DB</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">migrations</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tableName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;migrations&#39;</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>  },
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">production</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pg&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_HOST</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_PORT</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_USER</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_PASSWORD</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">POSTGRES_DB</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">migrations</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tableName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;migrations&#39;</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>  },
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>This will use environment variables to configure the database in both development and production modes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// server/knexfile.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @type { Object.&lt;string, import(&#34;knex&#34;).Knex.Config&gt; }
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">development</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">client</span><span class="o">:</span> <span class="s1">&#39;pg&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">connection</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">host</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_HOST</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_PORT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">user</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_USER</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_PASSWORD</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">database</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_DB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">migrations</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tableName</span><span class="o">:</span> <span class="s1">&#39;migrations&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">production</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">client</span><span class="o">:</span> <span class="s1">&#39;pg&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">connection</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">host</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_HOST</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_PORT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">user</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_USER</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_PASSWORD</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">database</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">POSTGRES_DB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">migrations</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tableName</span><span class="o">:</span> <span class="s1">&#39;migrations&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>This will use environment variables to configure the database in both development and production modes.</p>
 <h2 id="pass-environment-to-containers">Pass Environment to Containers</h2>
 <p>Next we&rsquo;ll need to reconfigure our containers to pass the environment from the <code>.env</code> file. To do this, we&rsquo;ll edit the server service in the Docker Compose file:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#75715e"># server</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-server</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./server</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-server</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># requires database to start</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-db</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections (remove this in production)</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./server:/app/server</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/server/node_modules</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">env_file</span>:
-</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># load environment file into container environment</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">.env</span></span></span></code></pre></div><p>This will load the entire contents of the <code>.env</code> file into the container&rsquo;s environment. This is a bit different than how we handled the database container, since we only passed it a few variables. Refer to <a href="https://docs.docker.com/compose/environment-variables/set-environment-variables/" target="_blank">Docker Compose Environment Documentation</a>
- for details.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="c"># server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># location of Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># set the user ID to match our user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># requires database to start</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># allow external connections (remove this in production)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># mount code into container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./server:/app/server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># maintain existing node_modules in container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/app/server/node_modules</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="c"># load environment file into container environment</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span>- <span class="l">.env</span></span></span></code></pre></div><p>This will load the entire contents of the <code>.env</code> file into the container&rsquo;s environment. This is a bit different than how we handled the database container, since we only passed it a few variables. Refer to <a href="https://docs.docker.com/compose/environment-variables/set-environment-variables/" rel="external" target="_blank">Docker Compose Environment Documentation</a> for details.</p>
 <h2 id="recreate-container">Recreate Container</h2>
 <p>Once we&rsquo;ve made that change, we need to recreate our container with the new environment.</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose up -d</span></span></code></pre></div><p>This will give us access to the information needed to connect to the database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div><p>This will give us access to the information needed to connect to the database.</p>
 <h2 id="create-migration">Create Migration</h2>
 <p>We can use Knex to create a migration for our database. First, we must connect to it:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-server bash</span></span></code></pre></div><p>Then we can create a migration:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npx knex migrate:make users</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it project-server bash</span></span></code></pre></div><p>Then we can create a migration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npx knex migrate:make users</span></span></code></pre></div>
   
   
 <div class="box notices cstyle tip">
@@ -263,80 +283,79 @@
 <p>This will create a file in the <code>migrations</code> directory that includes a timestamp and the name of the migration. The timestamp is included to ensure the migrations are applied in the correct order.</p>
 <h2 id="add-users-table">Add Users Table</h2>
 <p>Now, open the file created in the <code>migrations</code> directory and add the following content:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param { import(&#34;knex&#34;).Knex } knex
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @returns { Promise&lt;void&gt; }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">up</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">knex</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">knex</span>.<span style="color:#a6e22e">schema</span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">createTable</span>(<span style="color:#e6db74">&#39;users&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">table</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">increments</span>(<span style="color:#e6db74">&#39;id&#39;</span>)
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">string</span>(<span style="color:#e6db74">&#39;username&#39;</span>, <span style="color:#ae81ff">20</span>).<span style="color:#a6e22e">unique</span>().<span style="color:#a6e22e">notNullable</span>()
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">string</span>(<span style="color:#e6db74">&#39;passhash&#39;</span>, <span style="color:#ae81ff">60</span>).<span style="color:#a6e22e">notNullable</span>()
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">string</span>(<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">255</span>).<span style="color:#a6e22e">notNullable</span>()
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">string</span>(<span style="color:#e6db74">&#39;email&#39;</span>, <span style="color:#ae81ff">255</span>).<span style="color:#a6e22e">notNullable</span>()
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">timestamps</span>()
-</span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param { import(&#34;knex&#34;).Knex } knex
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @returns { Promise&lt;void&gt; }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">down</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">knex</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">knex</span>.<span style="color:#a6e22e">schema</span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">dropTable</span>(<span style="color:#e6db74">&#39;users&#39;</span>)
-</span></span><span style="display:flex;"><span>};</span></span></code></pre></div><p>This will create a <code>users</code> table with a few columns. You can find more information about creating migrations with Knex in the <a href="https://knexjs.org/guide/schema-builder.html" target="_blank">Schema Builder Documentation</a>
-.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param { import(&#34;knex&#34;).Knex } knex
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns { Promise&lt;void&gt; }
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">up</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">createTable</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">table</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">increments</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">).</span><span class="nx">unique</span><span class="p">().</span><span class="nx">notNullable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;passhash&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">).</span><span class="nx">notNullable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="mi">255</span><span class="p">).</span><span class="nx">notNullable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="mi">255</span><span class="p">).</span><span class="nx">notNullable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">table</span><span class="p">.</span><span class="nx">timestamps</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param { import(&#34;knex&#34;).Knex } knex
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns { Promise&lt;void&gt; }
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">down</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">knex</span><span class="p">.</span><span class="nx">schema</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">dropTable</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div><p>This will create a <code>users</code> table with a few columns. You can find more information about creating migrations with Knex in the <a href="https://knexjs.org/guide/schema-builder.html" rel="external" target="_blank">Schema Builder Documentation</a>.</p>
 <p>Once we&rsquo;ve created that file, we can apply the migration using the <code>knex</code> command line tool:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npx knex migrate:up</span></span></code></pre></div><p>If everything works correctly, you&rsquo;ll get a success message. You can check that the table exists in the database using various tools to query a Postgres database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npx knex migrate:up</span></span></code></pre></div><p>If everything works correctly, you&rsquo;ll get a success message. You can check that the table exists in the database using various tools to query a Postgres database.</p>
 <h2 id="create-seed">Create Seed</h2>
 <p>You can also use Knex to seed some initial data into the database. First, create a seed file from inside the project-server Docker container:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npx knex seed:make users_seed</span></span></code></pre></div><p>This will create a file <code>users_seed.js</code> in the <code>seeds</code> directory. Add the following content to that file:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param { import(&#34;knex&#34;).Knex } knex
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @returns { Promise&lt;void&gt; } 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">seed</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">knex</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Get current date
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">19</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;T&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Deletes ALL existing entries
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">knex</span>(<span style="color:#e6db74">&#39;users&#39;</span>).<span style="color:#a6e22e">del</span>()
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">knex</span>(<span style="color:#e6db74">&#39;users&#39;</span>).<span style="color:#a6e22e">insert</span>([
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;admin&#39;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">passhash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$2y$10$41NXCocgYzuOGgOB4aL1M.wg7mZT.P6NY9D9EbfdKu8xbHU8x0b3O&#39;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Administrator&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;admin@local.local&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">created_at</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">now</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">updated_at</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">now</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;user&#39;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">passhash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$2y$10$41NXCocgYzuOGgOB4aL1M.wg7mZT.P6NY9D9EbfdKu8xbHU8x0b3O&#39;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;User&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;user@local.local&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">created_at</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">now</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">updated_at</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">now</span>,
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]);
-</span></span><span style="display:flex;"><span>};</span></span></code></pre></div><p>We can now apply that seed file using the <code>knex</code> command line tool:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npx knex seed:run</span></span></code></pre></div><p>You should now be able to see a couple of entries in the <code>users</code> table of the database. You can check that these exist in the database using various tools to query a Postgres database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npx knex seed:make users_seed</span></span></code></pre></div><p>This will create a file <code>users_seed.js</code> in the <code>seeds</code> directory. Add the following content to that file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param { import(&#34;knex&#34;).Knex } knex
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns { Promise&lt;void&gt; } 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="kr">async</span> <span class="kd">function</span><span class="p">(</span><span class="nx">knex</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Get current date
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">19</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Deletes ALL existing entries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">await</span> <span class="nx">knex</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">).</span><span class="nx">del</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">knex</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">).</span><span class="nx">insert</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">username</span><span class="o">:</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">passhash</span><span class="o">:</span> <span class="s1">&#39;$2y$10$41NXCocgYzuOGgOB4aL1M.wg7mZT.P6NY9D9EbfdKu8xbHU8x0b3O&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Administrator&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;admin@local.local&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">created_at</span><span class="o">:</span> <span class="nx">now</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">updated_at</span><span class="o">:</span> <span class="nx">now</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">username</span><span class="o">:</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">passhash</span><span class="o">:</span> <span class="s1">&#39;$2y$10$41NXCocgYzuOGgOB4aL1M.wg7mZT.P6NY9D9EbfdKu8xbHU8x0b3O&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;User&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;user@local.local&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">created_at</span><span class="o">:</span> <span class="nx">now</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">updated_at</span><span class="o">:</span> <span class="nx">now</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div><p>We can now apply that seed file using the <code>knex</code> command line tool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npx knex seed:run</span></span></code></pre></div><p>You should now be able to see a couple of entries in the <code>users</code> table of the database. You can check that these exist in the database using various tools to query a Postgres database.</p>
 <h2 id="helpful-scripts">Helpful Scripts</h2>
 <p>It is very helpful to have a script that will allow you to reset your database while working on it. I recommend adding the following <code>reset</code> to your <code>package.json</code> file for the server:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;nodemon ./bin/www&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;NODE_ENV=production node ./bin/www&#34;</span>,
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">&#34;reset&#34;</span>: <span style="color:#e6db74">&#34;knex migrate:rollback --all &amp;&amp; knex migrate:latest &amp;&amp; knex seed:run&#34;</span>
-</span></span><span style="display:flex;"><span>  }</span></span></code></pre></div><p>With that script in the <code>package.json</code> file, you can use the following command to fully reset the database back to the default state:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npm run reset</span></span></code></pre></div><p>This will undo all database migrations, redo them, and seed the database with your initial seed data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;nodemon ./bin/www&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;NODE_ENV=production node ./bin/www&#34;</span><span class="p">,</span>
+</span></span><span class="line hl"><span class="cl">    <span class="nt">&#34;reset&#34;</span><span class="p">:</span> <span class="s2">&#34;knex migrate:rollback --all &amp;&amp; knex migrate:latest &amp;&amp; knex seed:run&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div><p>With that script in the <code>package.json</code> file, you can use the following command to fully reset the database back to the default state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npm run reset</span></span></code></pre></div><p>This will undo all database migrations, redo them, and seed the database with your initial seed data.</p>
 
   
   
@@ -344,29 +363,31 @@
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
   <div class="box-content">
 
-<p>You may also wish to look into <a href="https://vincit.github.io/objection.js/" target="_blank">Objection.js</a>
-, which is a great ORM that works well with Knex.</p>
+<p>You may also wish to look into <a href="https://vincit.github.io/objection.js/" rel="external" target="_blank">Objection.js</a>, which is a great ORM that works well with Knex.</p>
 </div>
 </div>
 
             <footer class="footline">
-
+              
+              
+              
+              
             </footer>
           </article>
-        </div>
-      </main>
-    </div>
-    
-    </div>
-    
-    
-    
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/tele-scroll.js?1694211878 defer"></script>
-    
-  </body>
+</div>
+</main>
+</div>
+
+</div>
+
+
+
+
+<script src="/extras/js/clipboard.min.js?1719524535" defer></script>
+<script src="/extras/js/perfect-scrollbar.min.js?1719524535" defer></script>
+<script src="/extras/js/theme.js?1719524535" defer></script>
+
+<script src="/extras/js/tele-scroll.js?1719524535" defer></script>
+
+</body>
 </html>

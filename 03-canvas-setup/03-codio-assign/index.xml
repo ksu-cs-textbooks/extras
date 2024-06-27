@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Canvas to Codio Assignment on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html</link>
-    <description>Recent content in Canvas to Codio Assignment on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.xml" rel="self" type="application/rss+xml" />
+    <title>Canvas to Codio Assignment :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/03-codio-assign/</link>
+    <description>YouTube Video&#xA;In this part, we will be adding assignments to the Canvas course.&#xA;The key parts of this step are to have the submission type be an “External Tool” and “Load in a New Tab”.&#xA;You will need to get the assignment URL from Codio.&#xA;Accessing All LTI/LMS URLs When first setting up a course, it is helpful to export the Assignment URLs.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/03-canvas-setup/03-codio-assign/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

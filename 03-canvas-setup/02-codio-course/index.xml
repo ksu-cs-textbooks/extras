@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Canvas to Codio Course on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html</link>
-    <description>Recent content in Canvas to Codio Course on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.xml" rel="self" type="application/rss+xml" />
+    <title>Canvas to Codio Course :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/02-codio-course/</link>
+    <description>YouTube Video&#xA;Once you have the Canvas course connected to the Codio Organization, you can connect the Canvas course to the Codio Course.&#xA;As with the connection to the Codio organization, you will edit the Codio app configurations in Canvas.&#xA;This step only requires that you update the “Custom Fields”&#xA;The particular field gets two values from Codio: “codio_course_target_id” and “codio_parent_course_id”. To get these, open the Codio course and select “LTI/LMS”.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/03-canvas-setup/02-codio-course/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

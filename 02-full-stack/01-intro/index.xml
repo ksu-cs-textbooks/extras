@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html</link>
-    <description>Recent content in Introduction on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.xml" rel="self" type="application/rss+xml" />
+    <title>Introduction :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/</link>
+    <description>This is a brief guide to building a framework for a full-stack web application from scratch.&#xA;Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

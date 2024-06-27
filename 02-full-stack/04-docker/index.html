@@ -3,178 +3,174 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.117.0">
-    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="generator" content="Hugo 0.128.0">
+    <meta name="generator" content="Relearn 6.0.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="description" content="Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!
+Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:
+# Terminal idYou should get output that begins with something similar to this:
+uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!
+Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.">
     <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Docker :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!
+Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:
+# Terminal idYou should get output that begins with something similar to this:
+uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!
+Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Docker :: K-State CS Textbook Extras">
+    <meta property="og:description" content="Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!
+Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:
+# Terminal idYou should get output that begins with something similar to this:
+uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!
+Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Full Stack Web Application">
+    <meta property="article:modified_time" content="2024-06-27T16:41:43-05:00">
+    <meta itemprop="name" content="Docker :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!
+Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:
+# Terminal idYou should get output that begins with something similar to this:
+uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!
+Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.">
+    <meta itemprop="dateModified" content="2024-06-27T16:41:43-05:00">
+    <meta itemprop="wordCount" content="812">
     <title>Docker :: K-State CS Textbook Extras</title>
-    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211878" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211878"></script>
+    <link href="/extras/css/fontawesome-all.min.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/nucleus.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/auto-complete.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar.min.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/fonts.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/theme.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/theme-auto.css?1719524534" rel="stylesheet" id="R-variant-style">
+    <link href="/extras/css/chroma-auto.css?1719524534" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/extras/css/variant.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/print.css?1719524534" rel="stylesheet" media="print">
+    <script src="/extras/js/variant.js?1719524534"></script>
     <script>
-      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
-      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
-      var root_url="https://ksu-cs-textbooks.github.io/extras/";
-      var baseUri=root_url.replace(/\/$/, '');
-      // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.index_js_url="/extras/index.search.js";
+      // variant stuff
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
-
+    <link href="/extras/css/custom.css?1719524534" rel="stylesheet">
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html">
-    <div id="body" class="default-animation">
-      <div id="sidebar-overlay"></div>
-      <div id="toc-overlay"></div>
-      <nav id="topbar" class="highlightable">
-        <div>
-          <div class="navigation">
-            <a class="nav nav-next topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html" title="Working with Docker (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
-          </div>
-          <div class="navigation">
-            <a class="nav nav-prev topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html" title="Initialize (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
-          </div>
-          <div id="top-print-link">
-            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.print.html">
-              <i class="fas fa-print fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-tele-link">
-            <a class="print-link" title='Teleprompter View' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/tele.html">
-              <i class="fas fa-tv fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-embed-link">
-            <a class="print-link" title='Embeddable Version' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/embed.html">
-              <i class="fas fa-expand-arrows-alt fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-github-link">
-            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://gitlab.cs.ksu.edu/-/ide/project/cs-textbooks/extras/edit/master/-/content/02-full-stack/04-docker.md" target="_blank">
-              <i class="fas fa-pen fa-fw"></i>
-            </a>
-          </div>
-          <div id="breadcrumbs">
-            <span id="sidebar-toggle-span">
-              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
-            </span>
-            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
-            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="2"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Docker</span><meta itemprop="position" content="3"></li>
-            </ol>
-          </div>
-          <div class="default-animation progress">
-            <div class="toc-wrapper"><nav id="TableOfContents">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/extras/02-full-stack/04-docker/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
     <li><a href="#get-effective-ids">Get Effective IDs</a></li>
     <li><a href="#create-projects">Create Projects</a></li>
@@ -183,15 +179,45 @@
     <li><a href="#commit">Commit</a></li>
   </ul>
 </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/extras/02-full-stack/"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Docker</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/main/content/02-full-stack/04-docker.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/04-docker/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/03-initial/" title="Initialize (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/05-working/" title="Working with Docker (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="area-more" data-width-l="area-more"><a class="topbar-control" href="/extras/02-full-stack/04-docker/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="area-more" data-width-l="area-more"><a class="topbar-control" href="/extras/02-full-stack/04-docker/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-      <main id="body-inner" class="highlightable default" tabindex="-1">
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <article class="default">
             <header class="headline">
             </header>
+
 <h1 id="docker">Docker</h1>
 
 
@@ -201,19 +227,18 @@
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
   <div class="box-content">
 
-<p>If you have already created projects locally, skip down to the <a href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/#01">Remove Node Modules</a>
- section below. You can Dockerize existing projects as well!</p>
+<p>If you have already created projects locally, skip down to the <a href="/extras/02-full-stack/04-docker/#01">Remove Node Modules</a> section below. You can Dockerize existing projects as well!</p>
 </div>
 </div>
 <h2 id="get-effective-ids">Get Effective IDs</h2>
 <p>First, we need to make a note of our effective user ID and group ID in the terminal:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>id</span></span></code></pre></div><p>You should get output that begins with something similar to this:</p>
-<div class="wrap-code highlight"><pre tabindex="0"><code>uid=1000(youboon2) gid=1000(youboon2)</code></pre></div><p>Remember those two numbers for later!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">id</span></span></code></pre></div><p>You should get output that begins with something similar to this:</p>
+<div class="highlight"><pre tabindex="0"><code>uid=1000(youboon2) gid=1000(youboon2)</code></pre></div><p>Remember those two numbers for later!</p>
 <h2 id="create-projects">Create Projects</h2>
 <p>To create the projects themselves, we&rsquo;re going to use a one-off Docker command to run a container.</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker run --rm -it --user<span style="color:#f92672">=</span>1000:1000 -v <span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span>/:/app node:18 bash</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker run --rm -it --user<span class="o">=</span>1000:1000 -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/:/app node:18 bash</span></span></code></pre></div>
   
   
 <div class="box notices cstyle tip">
@@ -232,34 +257,24 @@
 <li><code>-v `pwd`/:/app&lt;/code&gt;</code> will create a volume mount between the current directory and the <code>/app</code> directory in the container.
 <ul>
 <li>Backticks around a command in the terminal will use the result of that command in the outer command. You could instead enter the full path to the current directory as part of the command, as in <code>-v /home/user/projects/fullstack:/app/code</code>.</li>
-<li>See <a href="https://docs.docker.com/storage/volumes/" target="_blank">Docker Volumes</a>
- for more details.</li>
+<li>See <a href="https://docs.docker.com/storage/volumes/" rel="external" target="_blank">Docker Volumes</a> for more details.</li>
 </ul>
 </li>
 <li><code>node:18</code> is the name of the Docker image to run.
 <ul>
-<li>Refer to <a href="https://hub.docker.com/_/node/" target="_blank">Node</a>
- on DockerHub for other image versions. At the time of writing, Node 18 is the current LTS version.</li>
+<li>Refer to <a href="https://hub.docker.com/_/node/" rel="external" target="_blank">Node</a> on DockerHub for other image versions. At the time of writing, Node 18 is the current LTS version.</li>
 </ul>
 </li>
 <li><code>bash</code> will load the Bash terminal inside of the container</li>
 </ul>
-<p>Refer to the <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank">Docker run</a>
- documentation for more details.</p>
+<p>Refer to the <a href="https://docs.docker.com/engine/reference/commandline/run/" rel="external" target="_blank">Docker run</a> documentation for more details.</p>
 <p>Once we have run that command, we should get a terminal inside of the container:</p>
-<p>
-<a href="#image-60c6867026cf9559374f63b48e2762a3" class="lightbox-link">
-<img src="../images/terminal.png" alt="Docker Terminal" style="height: auto; width: auto;" loading="lazy">
-</a>
-<a href="javascript:history.back();" class="lightbox" id="image-60c6867026cf9559374f63b48e2762a3">
-<img src="../images/terminal.png" alt="Docker Terminal" class="lightbox-image" loading="lazy">
-</a></p>
-<p>To create the projects, we are going to use <a href="https://expressjs.com/en/starter/generator.html" target="_blank">Express Application Generator</a>
- and <a href="https://create-react-app.dev/" target="_blank">Create React App</a>
-. You can refer to those pages for additional options that you can use when creating these projects.</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker Container Terminal</span>
-</span></span><span style="display:flex;"><span>npx express-generator -v ejs /app/server
-</span></span><span style="display:flex;"><span>npx create-react-app /app/client</span></span></code></pre></div>
+<p><a href="#R-image-7025d659dc8f5005d02ecf12413b6526" class="lightbox-link"><img alt="Docker Terminal" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/terminal.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7025d659dc8f5005d02ecf12413b6526"><img alt="Docker Terminal" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/terminal.png"></a></p>
+<p>To create the projects, we are going to use <a href="https://expressjs.com/en/starter/generator.html" rel="external" target="_blank">Express Application Generator</a> and <a href="https://create-react-app.dev/" rel="external" target="_blank">Create React App</a>. You can refer to those pages for additional options that you can use when creating these projects.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker Container Terminal</span>
+</span></span><span class="line"><span class="cl">npx express-generator -v ejs /app/server
+</span></span><span class="line"><span class="cl">npx create-react-app /app/client</span></span></code></pre></div>
   
   
 <div class="box notices cstyle note">
@@ -270,61 +285,60 @@
 </div>
 </div>
 <p>Once we are done, we can exit the container:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker Container Terminal</span>
-</span></span><span style="display:flex;"><span>exit</span></span></code></pre></div><p>This will stop the container and remove it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker Container Terminal</span>
+</span></span><span class="line"><span class="cl">exit</span></span></code></pre></div><p>This will stop the container and remove it.</p>
 <h2 id="01">Remove Node Modules</h2>
 <p>Finally, we want to remove the <code>node_modules</code> folders from both the <code>client</code> and <code>server</code> folders. These are created when the project is first initialized, but we don&rsquo;t want them outside of our actual containers. So, <strong>DELETE</strong> both <code>node_modules</code> folders!</p>
 <h2 id="configure-docker">Configure Docker</h2>
 <p>Now let&rsquo;s configure Docker to allow us to load both projects in separate Docker containers.</p>
 <p>Create a <code>docker-compose.yml</code> file in the root directory of the project with the following content:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose.yml</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># server</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-server</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./server</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-server</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections (remove this in production)</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./server:/app/server</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/server/node_modules</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># client</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-client</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./client</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-client</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># requires server to start</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-server</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./client:/app/client</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/client/node_modules</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># internal Docker network for project</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-network</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">project-network</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Refer to <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/" target="_blank">Docker Compose File Reference</a>
- for what this does.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="c"># docker-compose.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># location of Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># set the user ID to match our user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># allow external connections (remove this in production)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># mount code into container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./server:/app/server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># maintain existing node_modules in container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/app/server/node_modules</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># client</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-client</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># location of Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./client</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-client</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># set the user ID to match our user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># requires server to start</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># allow external connections</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">default</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># mount code into container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./client:/app/client</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># maintain existing node_modules in container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/app/client/node_modules</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># internal Docker network for project</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">project-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div><p>Refer to <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/" rel="external" target="_blank">Docker Compose File Reference</a> for what this does.</p>
 
   
   
@@ -336,24 +350,23 @@
 </div>
 </div>
 <p>We&rsquo;ll also need to add a Dockerfile to each project:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># client/Dockerfile</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># For running in development mode only</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:18</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> 1000</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app/client</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>1000:1000 package*.json ./<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm install<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 3000</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;npm&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span>]</span></span></code></pre></div><div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># server/Dockerfile</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># For running in development mode only</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:18</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> 1000</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app/server</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>1000:1000 package*.json ./<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm install<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 3000</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;npm&#34;</span>, <span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;dev&#34;</span>]</span></span></code></pre></div><p>Refer to <a href="https://docs.docker.com/engine/reference/builder/" target="_blank">Dockerfile Reference</a>
- for the structure of these files.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># client/Dockerfile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># For running in development mode only</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:18</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">USER</span><span class="s"> 1000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app/client</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --chown<span class="o">=</span>1000:1000 package*.json ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;start&#34;</span><span class="p">]</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># server/Dockerfile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># For running in development mode only</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:18</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">USER</span><span class="s"> 1000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app/server</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --chown<span class="o">=</span>1000:1000 package*.json ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;run&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">]</span></span></span></code></pre></div><p>Refer to <a href="https://docs.docker.com/engine/reference/builder/" rel="external" target="_blank">Dockerfile Reference</a> for the structure of these files.</p>
 
   
   
@@ -365,149 +378,142 @@
 </div>
 </div>
 <p>Finally, we can start and run the Docker containers using Docker Compose:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose up -d</span></span></code></pre></div><p>Refer to the <a href="https://docs.docker.com/compose/reference/" target="_blank">Docker Compose CLI Reference</a>
- for how to use Docker Compose commands.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div><p>Refer to the <a href="https://docs.docker.com/compose/reference/" rel="external" target="_blank">Docker Compose CLI Reference</a> for how to use Docker Compose commands.</p>
 <p>It will take a bit to build and configure both containers, but eventually the command should finish. This will be faster in the future. You can confirm they are running using the <code>docker ps</code> command.</p>
-<p>
-<a href="#image-fccb081950005845f5b17b2580514cb4" class="lightbox-link">
-<img src="../images/docker_ps.png" alt="Docker PS" style="height: auto; width: auto;" loading="lazy">
-</a>
-<a href="javascript:history.back();" class="lightbox" id="image-fccb081950005845f5b17b2580514cb4">
-<img src="../images/docker_ps.png" alt="Docker PS" class="lightbox-image" loading="lazy">
-</a></p>
+<p><a href="#R-image-7e96b43e0860e7bee4e760baefca43d8" class="lightbox-link"><img alt="Docker PS" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/docker_ps.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e96b43e0860e7bee4e760baefca43d8"><img alt="Docker PS" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/docker_ps.png"></a></p>
 <p>To stop the containers when you are done, use</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose down</span></span></code></pre></div><h2 id="commit">Commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose down</span></span></code></pre></div><h2 id="commit">Commit</h2>
 <p>This is a great place to stop and commit your work to GitHub.</p>
 
             <footer class="footline">
-
+              
+              
+              
+              
             </footer>
           </article>
         </div>
       </main>
     
 <div class="git-footer">
-<p class="theme-version-footer">5.18.0</p>
-<p>Last modified by: 
-            <i class='fas fa-user'></i> Russell Feldhausen
-            <i class='fas fa-calendar'></i> <a href="https://gitlab.cs.ksu.edu/cs-textbooks/extras/-/commit/c46d0e427f69bcb4b56f9f3a7addd0e6b86326c3">Sep 8, 2023</a>
-</p>
-</div>
-
+  <p class="theme-version-footer">6.0.0</p>
+  <p>Last modified by: 
+              <i class='fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/519faedbbc5229d2776b846866cac0205bd0a73b">Jun 27, 2024</a>
+  </p>
+  </div>
+  
     
     </div>
-    <aside id="sidebar" class="default-animation">
-      <div id="header-wrapper" class="default-animation">
-        <div id="header" class="default-animation">
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
 
-<a id="logo" href="https://ksu-cs-textbooks.github.io/extras/">
+<a id="logo" href="/extras/">
   K-State CS Textbook Extras
 </a>
-
         </div>
-        <form action="https://ksu-cs-textbooks.github.io/extras/search.html" method="get"><div class="searchbox default-animation">
-          <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-          <label class="a11y-only" for="search-by">Search</label>
-          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-          <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-        </div></form>
+
+        <search><form action="/extras/search.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/auto-complete.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.stemmer.support.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.multi.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.en.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/search.js?1694211878" defer></script>
+        <script src="/extras/js/auto-complete.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.multi.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.en.min.js?1719524534" defer></script>
+        <script src="/extras/js/search.js?1719524534" defer></script>
       </div>
-      <div id="content-wrapper" class="highlightable">
-        <ul class="topics enlarge morespace collapsible-menu">
-          <li data-nav-id="/01-introduction/index.html" class=""><input type="checkbox" id="section-8eafca96a477d19968a76a0ac8bd2d47" aria-controls="subsections-8eafca96a477d19968a76a0ac8bd2d47"><label for="section-8eafca96a477d19968a76a0ac8bd2d47"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="subsections-8eafca96a477d19968a76a0ac8bd2d47" class="morespace collapsible-menu">
-          <li data-nav-id="/01-introduction/01-welcome/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
-          <li data-nav-id="/02-full-stack/index.html" class="parent "><input type="checkbox" id="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6" aria-controls="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" checked><label for="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" class="morespace collapsible-menu">
-          <li data-nav-id="/02-full-stack/01-intro/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
-          <li data-nav-id="/02-full-stack/02-setup/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
-          <li data-nav-id="/02-full-stack/03-initial/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
-          <li data-nav-id="/02-full-stack/04-docker/index.html" class="active"><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
-          <li data-nav-id="/02-full-stack/05-working/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
-          <li data-nav-id="/02-full-stack/06-nodemon/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
-          <li data-nav-id="/02-full-stack/07-database/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html">7. Database</a></li>
-          <li data-nav-id="/02-full-stack/08-knex/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
-          <li data-nav-id="/03-canvas-setup/index.html" class=""><input type="checkbox" id="section-d32fb3f4fb9e82785cdf48fa94602da9" aria-controls="subsections-d32fb3f4fb9e82785cdf48fa94602da9"><label for="section-d32fb3f4fb9e82785cdf48fa94602da9"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="subsections-d32fb3f4fb9e82785cdf48fa94602da9" class="morespace collapsible-menu">
-          <li data-nav-id="/03-canvas-setup/01-codio-org/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
-          <li data-nav-id="/03-canvas-setup/02-codio-course/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
-          <li data-nav-id="/03-canvas-setup/03-codio-assign/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
-          <li data-nav-id="/03-canvas-setup/04-canvas-clone/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
-        </ul>
-        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
-        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
-        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
-          <ul>
-            <li id="select-language-container" class="footerLangSwitch">
-              <div class="padding menu-control">
-                <i class="fas fa-language fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="select-language">Language</label>
-                  <select id="select-language" onchange="location = baseUri + this.value;">
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-            </li>
-            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
-              <div class="padding menu-control">
-                <i class="fas fa-paint-brush fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="select-variant">Theme</label>
-                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                    <option id="auto" value="auto" selected>Auto</option>
-                    <option id="light-theme" value="light-theme">Light Theme</option>
-                    <option id="dark-theme" value="dark-theme">Dark Theme</option>
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-              <script>window.variants && variants.markSelectedVariant();</script>
-            </li>
-            <li class="footerVisitedLinks">
-              <div class="padding menu-control">
-                <i class="fas fa-history fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <button onclick="clearHistory();">Clear History</button>
-                </div>
-                <div class="clear"></div>
-              </div>
-            </li>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/extras/01-introduction/" class=""><input type="checkbox" id="R-section-97af81d8468c589e658b8950871073d8" aria-controls="R-subsections-97af81d8468c589e658b8950871073d8"><label for="R-section-97af81d8468c589e658b8950871073d8"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/"><b>1. </b>Introduction</a><ul id="R-subsections-97af81d8468c589e658b8950871073d8" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/01-introduction/01-welcome/" class=""><a class="padding" href="/extras/01-introduction/01-welcome/">1. Welcome</a></li></ul></li>
+          <li data-nav-id="/extras/02-full-stack/" class="parent "><input type="checkbox" id="R-section-59eefba781298dd6f28a82d901efcf2c" aria-controls="R-subsections-59eefba781298dd6f28a82d901efcf2c" checked><label for="R-section-59eefba781298dd6f28a82d901efcf2c"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-59eefba781298dd6f28a82d901efcf2c" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/02-full-stack/01-intro/" class=""><a class="padding" href="/extras/02-full-stack/01-intro/">1. Introduction</a></li>
+          <li data-nav-id="/extras/02-full-stack/02-setup/" class=""><a class="padding" href="/extras/02-full-stack/02-setup/">2. Setup</a></li>
+          <li data-nav-id="/extras/02-full-stack/03-initial/" class=""><a class="padding" href="/extras/02-full-stack/03-initial/">3. Initialize</a></li>
+          <li data-nav-id="/extras/02-full-stack/04-docker/" class="active"><a class="padding" href="/extras/02-full-stack/04-docker/">4. Docker</a></li>
+          <li data-nav-id="/extras/02-full-stack/05-working/" class=""><a class="padding" href="/extras/02-full-stack/05-working/">5. Working with Docker</a></li>
+          <li data-nav-id="/extras/02-full-stack/06-nodemon/" class=""><a class="padding" href="/extras/02-full-stack/06-nodemon/">6. Nodemon</a></li>
+          <li data-nav-id="/extras/02-full-stack/07-database/" class=""><a class="padding" href="/extras/02-full-stack/07-database/">7. Database</a></li>
+          <li data-nav-id="/extras/02-full-stack/08-knex/" class=""><a class="padding" href="/extras/02-full-stack/08-knex/">8. Knex</a></li></ul></li>
+          <li data-nav-id="/extras/03-canvas-setup/" class=""><input type="checkbox" id="R-section-9a4ea4d6c93f5dddc42c0ec108481e6f" aria-controls="R-subsections-9a4ea4d6c93f5dddc42c0ec108481e6f"><label for="R-section-9a4ea4d6c93f5dddc42c0ec108481e6f"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="/extras/03-canvas-setup/"><b>3. </b>Setting Up a Canvas Course</a><ul id="R-subsections-9a4ea4d6c93f5dddc42c0ec108481e6f" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/03-canvas-setup/01-codio-org/" class=""><a class="padding" href="/extras/03-canvas-setup/01-codio-org/">1. Canvas to Codio Org</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/02-codio-course/" class=""><a class="padding" href="/extras/03-canvas-setup/02-codio-course/">2. Canvas to Codio Course</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/03-codio-assign/" class=""><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/">3. Canvas to Codio Assignment</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/04-canvas-clone/" class=""><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/">4. Cloning a Canvas Course</a></li></ul></li>
           </ul>
         </div>
-        <div id="footer" class="footerFooter showFooter"><style>
-#footer {
-	font-size: 13px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 2rem 1rem;
-	min-width: 230px;
-	max-width: 300px;
-}
-#footer p {
-	margin: 0;
-}
-</style>
-
-<p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/extras/02-full-stack/04-docker/" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>KSU Auto</option>
+                      <option id="R-select-variant-light-theme" value="light-theme">KSU Light</option>
+                      <option id="R-select-variant-dark-theme" value="dark-theme">KSU Dark</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter"><p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p>
-
+          </div>
         </div>
       </div>
     </aside>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
+    <script src="/extras/js/clipboard.min.js?1719524534" defer></script>
+    <script src="/extras/js/perfect-scrollbar.min.js?1719524534" defer></script>
+    <script src="/extras/js/theme.js?1719524534" defer></script>
   </body>
 </html>

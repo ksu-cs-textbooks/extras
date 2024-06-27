@@ -3,156 +3,183 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.117.0">
-    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="generator" content="Hugo 0.128.0">
+    <meta name="generator" content="Relearn 6.0.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="description" content="At this point we probably want to install the Nodemon tool in our backend.
+Install Nodemon First, we’ll get a terminal inside of the container
+# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:
+# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.">
     <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nodemon :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="At this point we probably want to install the Nodemon tool in our backend.
+Install Nodemon First, we’ll get a terminal inside of the container
+# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:
+# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Nodemon :: K-State CS Textbook Extras">
+    <meta property="og:description" content="At this point we probably want to install the Nodemon tool in our backend.
+Install Nodemon First, we’ll get a terminal inside of the container
+# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:
+# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Full Stack Web Application">
+    <meta property="article:modified_time" content="2023-09-08T17:12:58-05:00">
+    <meta itemprop="name" content="Nodemon :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="At this point we probably want to install the Nodemon tool in our backend.
+Install Nodemon First, we’ll get a terminal inside of the container
+# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:
+# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.">
+    <meta itemprop="dateModified" content="2023-09-08T17:12:58-05:00">
+    <meta itemprop="wordCount" content="234">
     <title>Nodemon :: K-State CS Textbook Extras</title>
-    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211878" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211878"></script>
+    <link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/nucleus.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar.min.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/fonts.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/theme.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/theme-auto.css?1719524535" rel="stylesheet" id="R-variant-style">
+    <link href="/extras/css/chroma-auto.css?1719524535" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/extras/css/variant.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/print.css?1719524535" rel="stylesheet" media="print">
+    <script src="/extras/js/variant.js?1719524535"></script>
     <script>
-      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
-      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
-      var root_url="https://ksu-cs-textbooks.github.io/extras/";
-      var baseUri=root_url.replace(/\/$/, '');
-      // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.index_js_url="/extras/index.search.js";
+      // variant stuff
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
-
+    <link href="/extras/css/custom.css?1719524535" rel="stylesheet">
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="/extras/02-full-stack/06-nodemon/">
     
     <div id="tele" class="tele mirror">
     
-    <div id="body" class="default-animation">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
       
       
       
-      <main id="body-inner" class="highlightable default" tabindex="-1">
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <article class="default">
             <header class="headline">
             </header>
+
 <h1 id="nodemon">Nodemon</h1>
 
-<p>At this point we probably want to install the <a href="https://www.npmjs.com/package/nodemon" target="_blank">Nodemon</a>
- tool in our backend.</p>
+<p>At this point we probably want to install the <a href="https://www.npmjs.com/package/nodemon" rel="external" target="_blank">Nodemon</a> tool in our backend.</p>
 <h2 id="install-nodemon">Install Nodemon</h2>
 <p>First, we&rsquo;ll get a terminal inside of the container</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-server bash</span></span></code></pre></div><p>Then we can use the usual process to install Nodemon using <code>npm</code>. Make sure this is done inside of the <code>/app/server</code> directory:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Docker project-server Terminal</span>
-</span></span><span style="display:flex;"><span>npm install nodemon</span></span></code></pre></div><p>Once Nodemon is installed, we can close the terminal connected to the container using the <code>exit</code> command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it project-server bash</span></span></code></pre></div><p>Then we can use the usual process to install Nodemon using <code>npm</code>. Make sure this is done inside of the <code>/app/server</code> directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker project-server Terminal</span>
+</span></span><span class="line"><span class="cl">npm install nodemon</span></span></code></pre></div><p>Once Nodemon is installed, we can close the terminal connected to the container using the <code>exit</code> command.</p>
 
   
   
@@ -165,30 +192,48 @@
 </div>
 <h2 id="update-dockerfile">Update Dockerfile</h2>
 <p>To use Nodemon inside of our container, we need to update the <code>scripts</code> section of the <code>package.json</code> file for the server:</p>
-<p>This adds a new <code>dev</code> command that uses Nodemon to run the server in development mode, and also changes the <code>start</code> command to run the server in production mode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">/*</span> <span class="err">server/package.json</span> <span class="err">*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">/*</span> <span class="err">other</span> <span class="err">contents</span> <span class="err">*/</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line hl"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;nodemon ./bin/www&#34;</span><span class="p">,</span>
+</span></span><span class="line hl"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;NODE_ENV=production node ./bin/www&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="err">/*</span> <span class="err">other</span> <span class="err">contents</span> <span class="err">*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>This adds a new <code>dev</code> command that uses Nodemon to run the server in development mode, and also changes the <code>start</code> command to run the server in production mode.</p>
 <p>We also need to update the <code>CMD</code> entry in the server&rsquo;s Dockerfile to use the new <code>dev</code> command:</p>
-<p>With those changes, we need to rebuild and restart our containers:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose up -d --build</span></span></code></pre></div><p>The <code>--build</code> will build any changed containers.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># server/Dockerfile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># For running in development mode only</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:18</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app/server</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package*.json ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
+</span></span></span><span class="line hl"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;run&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">]</span></span></span></code></pre></div><p>With those changes, we need to rebuild and restart our containers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose up -d --build</span></span></code></pre></div><p>The <code>--build</code> will build any changed containers.</p>
 
             <footer class="footline">
-
+              
+              
+              
+              
             </footer>
           </article>
-        </div>
-      </main>
-    </div>
-    
-    </div>
-    
-    
-    
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/tele-scroll.js?1694211878 defer"></script>
-    
-  </body>
+</div>
+</main>
+</div>
+
+</div>
+
+
+
+
+<script src="/extras/js/clipboard.min.js?1719524535" defer></script>
+<script src="/extras/js/perfect-scrollbar.min.js?1719524535" defer></script>
+<script src="/extras/js/theme.js?1719524535" defer></script>
+
+<script src="/extras/js/tele-scroll.js?1719524535" defer></script>
+
+</body>
 </html>

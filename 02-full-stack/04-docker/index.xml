@@ -3,95 +3,96 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on K-State CS Textbook Extras</title>
-    <link>https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html</link>
-    <description>Recent content in Docker on K-State CS Textbook Extras</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.xml" rel="self" type="application/rss+xml" />
+    <title>Docker :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/</link>
+    <description>Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!&#xA;Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:&#xA;# Terminal idYou should get output that begins with something similar to this:&#xA;uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!&#xA;Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -3,178 +3,170 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.117.0">
-    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="generator" content="Hugo 0.128.0">
+    <meta name="generator" content="Relearn 6.0.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
     <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta property="og:description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Full Stack Web Application">
+    <meta property="article:modified_time" content="2023-06-21T12:48:32-05:00">
+    <meta itemprop="name" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta itemprop="dateModified" content="2023-06-21T12:48:32-05:00">
+    <meta itemprop="wordCount" content="315">
     <title>Working with Docker :: K-State CS Textbook Extras</title>
-    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211878" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211878"></script>
+    <link href="/extras/css/fontawesome-all.min.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/nucleus.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/auto-complete.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar.min.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/fonts.css?1719524534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1719524534" rel="stylesheet"></noscript>
+    <link href="/extras/css/theme.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/theme-auto.css?1719524534" rel="stylesheet" id="R-variant-style">
+    <link href="/extras/css/chroma-auto.css?1719524534" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/extras/css/variant.css?1719524534" rel="stylesheet">
+    <link href="/extras/css/print.css?1719524534" rel="stylesheet" media="print">
+    <script src="/extras/js/variant.js?1719524534"></script>
     <script>
-      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
-      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
-      var root_url="https://ksu-cs-textbooks.github.io/extras/";
-      var baseUri=root_url.replace(/\/$/, '');
-      // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.index_js_url="/extras/index.search.js";
+      // variant stuff
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
-
+    <link href="/extras/css/custom.css?1719524534" rel="stylesheet">
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html">
-    <div id="body" class="default-animation">
-      <div id="sidebar-overlay"></div>
-      <div id="toc-overlay"></div>
-      <nav id="topbar" class="highlightable">
-        <div>
-          <div class="navigation">
-            <a class="nav nav-next topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html" title="Nodemon (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
-          </div>
-          <div class="navigation">
-            <a class="nav nav-prev topbar-link" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html" title="Docker (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
-          </div>
-          <div id="top-print-link">
-            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.print.html">
-              <i class="fas fa-print fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-tele-link">
-            <a class="print-link" title='Teleprompter View' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/tele.html">
-              <i class="fas fa-tv fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-embed-link">
-            <a class="print-link" title='Embeddable Version' href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/embed.html">
-              <i class="fas fa-expand-arrows-alt fa-fw"></i>
-            </a>
-          </div>
-          <div id="top-github-link">
-            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://gitlab.cs.ksu.edu/-/ide/project/cs-textbooks/extras/edit/master/-/content/02-full-stack/05-working.md" target="_blank">
-              <i class="fas fa-pen fa-fw"></i>
-            </a>
-          </div>
-          <div id="breadcrumbs">
-            <span id="sidebar-toggle-span">
-              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
-            </span>
-            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
-            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="2"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Working with Docker</span><meta itemprop="position" content="3"></li>
-            </ol>
-          </div>
-          <div class="default-animation progress">
-            <div class="toc-wrapper"><nav id="TableOfContents">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/extras/02-full-stack/05-working/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
     <li><a href="#docker-status">Docker Status</a></li>
     <li><a href="#software-output">Software Output</a></li>
@@ -184,175 +176,203 @@
     <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/extras/02-full-stack/"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Working with Docker</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/main/content/02-full-stack/05-working.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/05-working/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/04-docker/" title="Docker (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/06-nodemon/" title="Nodemon (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="area-more" data-width-l="area-more"><a class="topbar-control" href="/extras/02-full-stack/05-working/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="area-more" data-width-l="area-more"><a class="topbar-control" href="/extras/02-full-stack/05-working/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-      <main id="body-inner" class="highlightable default" tabindex="-1">
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <article class="default">
             <header class="headline">
             </header>
+
 <h1 id="working-with-docker">Working with Docker</h1>
 
 <p>Now that the project is running in Docker, let&rsquo;s review some helpful commands we can use to interact with the Docker containers.</p>
 <h2 id="docker-status">Docker Status</h2>
 <p>Query running container status</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker ps</span></span></code></pre></div><p>Sample output:</p>
-<div class="wrap-code highlight"><pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker ps</span></span></code></pre></div><p>Sample output:</p>
+<div class="highlight"><pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
 119d2cc1ae20   fullstack-project-client   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes   3000/tcp   project-client
 b5c0853fa8b2   fullstack-project-server   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes              project-server</code></pre></div><h2 id="software-output">Software Output</h2>
 <p>You can view the output of programs running in a container using this command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs project-client</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker logs project-client</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
 <p>If you want to monitor the logs for new output, add the <code>-f</code> flag:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs -f project-client</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker logs -f project-client</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
 <h2 id="terminal">Terminal</h2>
 <p>To get an interactive terminal inside of the container, use this command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-client bash</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it project-client bash</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
 <p>The command <code>bash</code> will get you an interactive terminal running Bash. You can replace <code>bash</code> with another command to run that command inside of the container itself. This allows you to run comands inside of the contaniner while it is running. However, your app will also be running, so you will be limited in what you can do.</p>
 <h2 id="run-commands">Run Commands</h2>
 <p>Alternatively, you can run some commands inside of a container using Docker compose:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose run --rm project-client npm run test</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose run --rm project-client npm run test</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
 <h2 id="cleanup">Cleanup</h2>
 <p>Finally, Docker provides a handy command to cleanup any unused Docker resources on your system to conserve space:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker system prune</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker system prune</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
 <h2 id="reference">Reference</h2>
-<p><a href="https://docs.docker.com/engine/reference/commandline/cli/" target="_blank">Docker Command Line Reference</a>
-</p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/cli/" rel="external" target="_blank">Docker Command Line Reference</a></p>
 
             <footer class="footline">
-
+              
+              
+              
+              
             </footer>
           </article>
         </div>
       </main>
     
 <div class="git-footer">
-<p class="theme-version-footer">5.18.0</p>
-<p>Last modified by: 
-            <i class='fas fa-user'></i> Russell Feldhausen
-            <i class='fas fa-calendar'></i> <a href="https://gitlab.cs.ksu.edu/cs-textbooks/extras/-/commit/ba23467e41b72ca732d6db5e16363426988e1633">Jun 21, 2023</a>
-</p>
-</div>
-
+  <p class="theme-version-footer">6.0.0</p>
+  <p>Last modified by: 
+              <i class='fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/ba23467e41b72ca732d6db5e16363426988e1633">Jun 21, 2023</a>
+  </p>
+  </div>
+  
     
     </div>
-    <aside id="sidebar" class="default-animation">
-      <div id="header-wrapper" class="default-animation">
-        <div id="header" class="default-animation">
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
 
-<a id="logo" href="https://ksu-cs-textbooks.github.io/extras/">
+<a id="logo" href="/extras/">
   K-State CS Textbook Extras
 </a>
-
         </div>
-        <form action="https://ksu-cs-textbooks.github.io/extras/search.html" method="get"><div class="searchbox default-animation">
-          <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-          <label class="a11y-only" for="search-by">Search</label>
-          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-          <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-        </div></form>
+
+        <search><form action="/extras/search.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/auto-complete.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.stemmer.support.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.multi.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/lunr/lunr.en.min.js?1694211878" defer></script>
-        <script src="https://ksu-cs-textbooks.github.io/extras/js/search.js?1694211878" defer></script>
+        <script src="/extras/js/auto-complete.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.multi.min.js?1719524534" defer></script>
+        <script src="/extras/js/lunr/lunr.en.min.js?1719524534" defer></script>
+        <script src="/extras/js/search.js?1719524534" defer></script>
       </div>
-      <div id="content-wrapper" class="highlightable">
-        <ul class="topics enlarge morespace collapsible-menu">
-          <li data-nav-id="/01-introduction/index.html" class=""><input type="checkbox" id="section-8eafca96a477d19968a76a0ac8bd2d47" aria-controls="subsections-8eafca96a477d19968a76a0ac8bd2d47"><label for="section-8eafca96a477d19968a76a0ac8bd2d47"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="subsections-8eafca96a477d19968a76a0ac8bd2d47" class="morespace collapsible-menu">
-          <li data-nav-id="/01-introduction/01-welcome/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
-          <li data-nav-id="/02-full-stack/index.html" class="parent "><input type="checkbox" id="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6" aria-controls="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" checked><label for="section-3e7d5e9cdecc4eda70a9f42a08e0b3e6"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="subsections-3e7d5e9cdecc4eda70a9f42a08e0b3e6" class="morespace collapsible-menu">
-          <li data-nav-id="/02-full-stack/01-intro/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
-          <li data-nav-id="/02-full-stack/02-setup/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
-          <li data-nav-id="/02-full-stack/03-initial/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
-          <li data-nav-id="/02-full-stack/04-docker/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
-          <li data-nav-id="/02-full-stack/05-working/index.html" class="active"><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
-          <li data-nav-id="/02-full-stack/06-nodemon/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
-          <li data-nav-id="/02-full-stack/07-database/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/07-database/index.html">7. Database</a></li>
-          <li data-nav-id="/02-full-stack/08-knex/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
-          <li data-nav-id="/03-canvas-setup/index.html" class=""><input type="checkbox" id="section-d32fb3f4fb9e82785cdf48fa94602da9" aria-controls="subsections-d32fb3f4fb9e82785cdf48fa94602da9"><label for="section-d32fb3f4fb9e82785cdf48fa94602da9"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="subsections-d32fb3f4fb9e82785cdf48fa94602da9" class="morespace collapsible-menu">
-          <li data-nav-id="/03-canvas-setup/01-codio-org/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
-          <li data-nav-id="/03-canvas-setup/02-codio-course/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
-          <li data-nav-id="/03-canvas-setup/03-codio-assign/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
-          <li data-nav-id="/03-canvas-setup/04-canvas-clone/index.html" class=""><a class="padding" href="https://ksu-cs-textbooks.github.io/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
-        </ul>
-        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
-        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
-        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
-          <ul>
-            <li id="select-language-container" class="footerLangSwitch">
-              <div class="padding menu-control">
-                <i class="fas fa-language fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="select-language">Language</label>
-                  <select id="select-language" onchange="location = baseUri + this.value;">
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-            </li>
-            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
-              <div class="padding menu-control">
-                <i class="fas fa-paint-brush fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="select-variant">Theme</label>
-                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                    <option id="auto" value="auto" selected>Auto</option>
-                    <option id="light-theme" value="light-theme">Light Theme</option>
-                    <option id="dark-theme" value="dark-theme">Dark Theme</option>
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-              <script>window.variants && variants.markSelectedVariant();</script>
-            </li>
-            <li class="footerVisitedLinks">
-              <div class="padding menu-control">
-                <i class="fas fa-history fa-fw"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <button onclick="clearHistory();">Clear History</button>
-                </div>
-                <div class="clear"></div>
-              </div>
-            </li>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/extras/01-introduction/" class=""><input type="checkbox" id="R-section-97af81d8468c589e658b8950871073d8" aria-controls="R-subsections-97af81d8468c589e658b8950871073d8"><label for="R-section-97af81d8468c589e658b8950871073d8"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/"><b>1. </b>Introduction</a><ul id="R-subsections-97af81d8468c589e658b8950871073d8" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/01-introduction/01-welcome/" class=""><a class="padding" href="/extras/01-introduction/01-welcome/">1. Welcome</a></li></ul></li>
+          <li data-nav-id="/extras/02-full-stack/" class="parent "><input type="checkbox" id="R-section-59eefba781298dd6f28a82d901efcf2c" aria-controls="R-subsections-59eefba781298dd6f28a82d901efcf2c" checked><label for="R-section-59eefba781298dd6f28a82d901efcf2c"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-59eefba781298dd6f28a82d901efcf2c" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/02-full-stack/01-intro/" class=""><a class="padding" href="/extras/02-full-stack/01-intro/">1. Introduction</a></li>
+          <li data-nav-id="/extras/02-full-stack/02-setup/" class=""><a class="padding" href="/extras/02-full-stack/02-setup/">2. Setup</a></li>
+          <li data-nav-id="/extras/02-full-stack/03-initial/" class=""><a class="padding" href="/extras/02-full-stack/03-initial/">3. Initialize</a></li>
+          <li data-nav-id="/extras/02-full-stack/04-docker/" class=""><a class="padding" href="/extras/02-full-stack/04-docker/">4. Docker</a></li>
+          <li data-nav-id="/extras/02-full-stack/05-working/" class="active"><a class="padding" href="/extras/02-full-stack/05-working/">5. Working with Docker</a></li>
+          <li data-nav-id="/extras/02-full-stack/06-nodemon/" class=""><a class="padding" href="/extras/02-full-stack/06-nodemon/">6. Nodemon</a></li>
+          <li data-nav-id="/extras/02-full-stack/07-database/" class=""><a class="padding" href="/extras/02-full-stack/07-database/">7. Database</a></li>
+          <li data-nav-id="/extras/02-full-stack/08-knex/" class=""><a class="padding" href="/extras/02-full-stack/08-knex/">8. Knex</a></li></ul></li>
+          <li data-nav-id="/extras/03-canvas-setup/" class=""><input type="checkbox" id="R-section-9a4ea4d6c93f5dddc42c0ec108481e6f" aria-controls="R-subsections-9a4ea4d6c93f5dddc42c0ec108481e6f"><label for="R-section-9a4ea4d6c93f5dddc42c0ec108481e6f"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="/extras/03-canvas-setup/"><b>3. </b>Setting Up a Canvas Course</a><ul id="R-subsections-9a4ea4d6c93f5dddc42c0ec108481e6f" class="morespace collapsible-menu">
+          <li data-nav-id="/extras/03-canvas-setup/01-codio-org/" class=""><a class="padding" href="/extras/03-canvas-setup/01-codio-org/">1. Canvas to Codio Org</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/02-codio-course/" class=""><a class="padding" href="/extras/03-canvas-setup/02-codio-course/">2. Canvas to Codio Course</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/03-codio-assign/" class=""><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/">3. Canvas to Codio Assignment</a></li>
+          <li data-nav-id="/extras/03-canvas-setup/04-canvas-clone/" class=""><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/">4. Cloning a Canvas Course</a></li></ul></li>
           </ul>
         </div>
-        <div id="footer" class="footerFooter showFooter"><style>
-#footer {
-	font-size: 13px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 2rem 1rem;
-	min-width: 230px;
-	max-width: 300px;
-}
-#footer p {
-	margin: 0;
-}
-</style>
-
-<p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/extras/02-full-stack/05-working/" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>KSU Auto</option>
+                      <option id="R-select-variant-light-theme" value="light-theme">KSU Light</option>
+                      <option id="R-select-variant-dark-theme" value="dark-theme">KSU Dark</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter"><p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p>
-
+          </div>
         </div>
       </div>
     </aside>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
+    <script src="/extras/js/clipboard.min.js?1719524534" defer></script>
+    <script src="/extras/js/perfect-scrollbar.min.js?1719524534" defer></script>
+    <script src="/extras/js/theme.js?1719524534" defer></script>
   </body>
 </html>

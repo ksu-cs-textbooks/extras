@@ -3,197 +3,227 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.117.0">
-    <meta name="generator" content="Relearn 5.18.0">
+    <meta name="generator" content="Hugo 0.128.0">
+    <meta name="generator" content="Relearn 6.0.0">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="K-State CS Textbook Extras">
+    <meta name="description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
     <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta property="og:description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Full Stack Web Application">
+    <meta property="article:modified_time" content="2023-06-21T12:48:32-05:00">
+    <meta itemprop="name" content="Working with Docker :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.
+Docker Status Query running container status
+# Terminal docker psSample output:
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:">
+    <meta itemprop="dateModified" content="2023-06-21T12:48:32-05:00">
+    <meta itemprop="wordCount" content="315">
     <title>Working with Docker :: K-State CS Textbook Extras</title>
-    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fontawesome-all.min.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/nucleus.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/auto-complete.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/perfect-scrollbar.min.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/extras/css/fonts.css?1694211878" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/theme-auto.css?1694211878" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/variant.css?1694211878" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/print.css?1694211878" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/ie.css?1694211878" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/url.js?1694211878"></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/variant.js?1694211878"></script>
+    <link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/nucleus.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar.min.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/fonts.css?1719524535" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1719524535" rel="stylesheet"></noscript>
+    <link href="/extras/css/theme.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/theme-auto.css?1719524535" rel="stylesheet" id="R-variant-style">
+    <link href="/extras/css/chroma-auto.css?1719524535" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/extras/css/variant.css?1719524535" rel="stylesheet">
+    <link href="/extras/css/print.css?1719524535" rel="stylesheet" media="print">
+    <script src="/extras/js/variant.js?1719524535"></script>
     <script>
-      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
-      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      window.index_js_url="https://ksu-cs-textbooks.github.io/extras/index.search.js";
-      var root_url="https://ksu-cs-textbooks.github.io/extras/";
-      var baseUri=root_url.replace(/\/$/, '');
-      // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/extras/';
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.index_js_url="/extras/index.search.js";
+      // variant stuff
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/extras/css/custom.css?1694211878" rel="stylesheet">
-
+    <link href="/extras/css/custom.css?1719524535" rel="stylesheet">
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/extras/02-full-stack/05-working/index.html">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="/extras/02-full-stack/05-working/">
     
     <div id="tele" class="tele mirror">
     
-    <div id="body" class="default-animation">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
       
       
       
-      <main id="body-inner" class="highlightable default" tabindex="-1">
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
           <article class="default">
             <header class="headline">
             </header>
+
 <h1 id="working-with-docker">Working with Docker</h1>
 
 <p>Now that the project is running in Docker, let&rsquo;s review some helpful commands we can use to interact with the Docker containers.</p>
 <h2 id="docker-status">Docker Status</h2>
 <p>Query running container status</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker ps</span></span></code></pre></div><p>Sample output:</p>
-<div class="wrap-code highlight"><pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker ps</span></span></code></pre></div><p>Sample output:</p>
+<div class="highlight"><pre tabindex="0"><code>CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS      NAMES
 119d2cc1ae20   fullstack-project-client   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes   3000/tcp   project-client
 b5c0853fa8b2   fullstack-project-server   &#34;docker-entrypoint.s…&#34;   2 minutes ago   Up 2 minutes              project-server</code></pre></div><h2 id="software-output">Software Output</h2>
 <p>You can view the output of programs running in a container using this command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs project-client</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker logs project-client</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to query.</p>
 <p>If you want to monitor the logs for new output, add the <code>-f</code> flag:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker logs -f project-client</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker logs -f project-client</span></span></code></pre></div><p>When following the logs, use <kbd>CTRL</kbd> + <kbd>C</kbd> to exit.</p>
 <h2 id="terminal">Terminal</h2>
 <p>To get an interactive terminal inside of the container, use this command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker exec -it project-client bash</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it project-client bash</span></span></code></pre></div><p>Replace <code>project-client</code> with the name of the container to run the command in.</p>
 <p>The command <code>bash</code> will get you an interactive terminal running Bash. You can replace <code>bash</code> with another command to run that command inside of the container itself. This allows you to run comands inside of the contaniner while it is running. However, your app will also be running, so you will be limited in what you can do.</p>
 <h2 id="run-commands">Run Commands</h2>
 <p>Alternatively, you can run some commands inside of a container using Docker compose:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Terminal</span>
-</span></span><span style="display:flex;"><span>docker compose run --rm project-client npm run test</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Terminal</span>
+</span></span><span class="line"><span class="cl">docker compose run --rm project-client npm run test</span></span></code></pre></div><p>This will create a new temporary container to run the command, so be aware that there may be some side effects of doing so.</p>
 <h2 id="cleanup">Cleanup</h2>
 <p>Finally, Docker provides a handy command to cleanup any unused Docker resources on your system to conserve space:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
-</span></span><span style="display:flex;"><span>docker system prune</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
+</span></span><span class="line"><span class="cl">docker system prune</span></span></code></pre></div><p>This removes all unused containers, images, networks, and more. However, it will not remove any data volumes by default, but you can add the <code>--volumes</code> option to do just that.</p>
 <h2 id="reference">Reference</h2>
-<p><a href="https://docs.docker.com/engine/reference/commandline/cli/" target="_blank">Docker Command Line Reference</a>
-</p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/cli/" rel="external" target="_blank">Docker Command Line Reference</a></p>
 
             <footer class="footline">
-
+              
+              
+              
+              
             </footer>
           </article>
-        </div>
-      </main>
-    </div>
-    
-    </div>
-    
-    
-    
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/clipboard.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/perfect-scrollbar.min.js?1694211878" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/theme.js?1694211878" defer></script>
-    
-    <script src="https://ksu-cs-textbooks.github.io/extras/js/tele-scroll.js?1694211878 defer"></script>
-    
-  </body>
+</div>
+</main>
+</div>
+
+</div>
+
+
+
+
+<script src="/extras/js/clipboard.min.js?1719524535" defer></script>
+<script src="/extras/js/perfect-scrollbar.min.js?1719524535" defer></script>
+<script src="/extras/js/theme.js?1719524535" defer></script>
+
+<script src="/extras/js/tele-scroll.js?1719524535" defer></script>
+
+</body>
 </html>

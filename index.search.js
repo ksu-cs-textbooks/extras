@@ -3,101 +3,103 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
+  
 	
-	
 		
 		
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
-		
+	  
 
-	
+  
 	
 		
 		
 var relearn_search_index = [
   {
+    "breadcrumb": "",
     "content": "",
     "description": "",
-    "tags": null,
+    "tags": [],
     "title": "Categories",
-    "uri": "/categories/index.html"
+    "uri": "/extras/categories/"
   },
   {
+    "breadcrumb": "",
     "content": "",
     "description": "",
-    "tags": null,
+    "tags": [],
     "title": "Tags",
-    "uri": "/tags/index.html"
+    "uri": "/extras/tags/"
   }
 ]
