@@ -12,11 +12,11 @@ The key parts of this step are to have the submission type be an "External Tool"
 
 You will need to get the assignment URL from Codio.
 
-![Canvas](../images/codio-assn-lti.png)
+![Canvas](images/codio-assn-lti.png)
 
 ### Accessing All LTI/LMS URLs
 
 When first setting up a course, it is helpful to export the Assignment URLs.
 
-![Canvas](../images/codio-course-lti.png)
-![Canvas](../images/codio-all-assns-lti.png)
+![Canvas](images/codio-course-lti.png)
+![Canvas](images/codio-all-assns-lti.png)

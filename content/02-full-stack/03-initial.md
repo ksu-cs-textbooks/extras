@@ -8,7 +8,7 @@ weight: 30
 
 Start by creating a new GitHub repository. We'll let it initialize the repository using a `README` file, and also select the `.gitignore` file for a Node project.
 
-![Create Repository](../images/repo.png)
+![Create Repository](images/repo.png)
 
 If you've already created the repository, you can get the `.gitignore` file for Node projects from GitHub's [gitignore repository](https://github.com/github/gitignore/blob/main/Node.gitignore)
 
@@ -42,7 +42,7 @@ These folders will store the frontend and backend applications, respectively.
 
 At this point, you should have the following structure:
 
-![Initial Structure](../images/initial.png)
+![Initial Structure](images/initial.png)
 
 {{% notice note %}}
 

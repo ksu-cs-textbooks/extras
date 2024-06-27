@@ -59,7 +59,7 @@ Refer to the [Docker run](https://docs.docker.com/engine/reference/commandline/r
 
 Once we have run that command, we should get a terminal inside of the container:
 
-![Docker Terminal](../images/terminal.png)
+![Docker Terminal](images/terminal.png)
 
 To create the projects, we are going to use [Express Application Generator](https://expressjs.com/en/starter/generator.html) and [Create React App](https://create-react-app.dev/). You can refer to those pages for additional options that you can use when creating these projects.
 
@@ -198,7 +198,7 @@ Refer to the [Docker Compose CLI Reference](https://docs.docker.com/compose/refe
 
 It will take a bit to build and configure both containers, but eventually the command should finish. This will be faster in the future. You can confirm they are running using the `docker ps` command.
 
-![Docker PS](../images/docker_ps.png)
+![Docker PS](images/docker_ps.png)
 
 To stop the containers when you are done, use
 
