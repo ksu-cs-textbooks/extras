@@ -1,154 +1,67 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Full Stack Web Application :: K-State CS Textbook Extras</title>
-    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/</link>
+    <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/index.html</link>
     <description>A full stack web application from scratch!</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/</guid>
-      <description>This is a brief guide to building a framework for a full-stack web application from scratch.&#xA;Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials.</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/index.html</guid>
+      <description>This is a brief guide to building a framework for a full-stack web application from scratch.&#xA;Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.</description>
     </item>
     <item>
       <title>Setup</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/</guid>
-      <description>Prerequisites The basic environment required for this setup:&#xA;A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:&#xA;Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.html</guid>
+      <description>Prerequisites The basic environment required for this setup:&#xA;A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:&#xA;Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:</description>
     </item>
     <item>
       <title>Initialize</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/</guid>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/index.html</guid>
       <description>Create Repository Start by creating a new GitHub repository. We’ll let it initialize the repository using a README file, and also select the .gitignore file for a Node project.&#xA;If you’ve already created the repository, you can get the .gitignore file for Node projects from GitHub’s gitignore repository&#xA;Check out Repository Next, check out the repository:&#xA;# Terminal git clone git@github.com:russfeld/fullstack.git cd fullstack code . Tip Change the repository URL to match your repository!</description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/</guid>
-      <description>Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!&#xA;Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:&#xA;# Terminal idYou should get output that begins with something similar to this:&#xA;uid=1000(youboon2) gid=1000(youboon2)Remember those two numbers for later!&#xA;Create Projects To create the projects themselves, we’re going to use a one-off Docker command to run a container.</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/index.html</guid>
+      <description>Note If you have already created projects locally, skip down to the Remove Node Modules section below. You can Dockerize existing projects as well!&#xA;Get Effective IDs First, we need to make a note of our effective user ID and group ID in the terminal:&#xA;# Terminal id You should get output that begins with something similar to this:&#xA;uid=1000(youboon2) gid=1000(youboon2) Remember those two numbers for later!</description>
     </item>
     <item>
       <title>Working with Docker</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/</guid>
-      <description>Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.&#xA;Docker Status Query running container status&#xA;# Terminal docker psSample output:&#xA;CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-serverSoftware Output You can view the output of programs running in a container using this command:</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/index.html</guid>
+      <description>Now that the project is running in Docker, let’s review some helpful commands we can use to interact with the Docker containers.&#xA;Docker Status Query running container status&#xA;# Terminal docker ps Sample output:&#xA;CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 119d2cc1ae20 fullstack-project-client &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes 3000/tcp project-client b5c0853fa8b2 fullstack-project-server &#34;docker-entrypoint.s…&#34; 2 minutes ago Up 2 minutes project-server Software Output You can view the output of programs running in a container using this command:</description>
     </item>
     <item>
       <title>Nodemon</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/</guid>
-      <description>At this point we probably want to install the Nodemon tool in our backend.&#xA;Install Nodemon First, we’ll get a terminal inside of the container&#xA;# Terminal docker exec -it project-server bashThen we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:&#xA;# Docker project-server Terminal npm install nodemonOnce Nodemon is installed, we can close the terminal connected to the container using the exit command.</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/index.html</guid>
+      <description>At this point we probably want to install the Nodemon tool in our backend.&#xA;Install Nodemon First, we’ll get a terminal inside of the container&#xA;# Terminal docker exec -it project-server bash Then we can use the usual process to install Nodemon using npm. Make sure this is done inside of the /app/server directory:&#xA;# Docker project-server Terminal npm install nodemon Once Nodemon is installed, we can close the terminal connected to the container using the exit command.</description>
     </item>
     <item>
       <title>Database</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/</guid>
-      <description>Now let’s add a database to our project.&#xA;Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:&#xA;# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/index.html</guid>
+      <description>Now let’s add a database to our project.&#xA;Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:&#xA;# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .env file POSTGRES_USER: POSTGRES_PASSWORD: POSTGRES_DB: healthcheck: # check if database is running and healthy test: [&#34;CMD-SHELL&#34;, &#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;] interval: 30s timeout: 5s retries: 5 start_period: 10s # server project-server: build: # location of Dockerfile context: ./server container_name: project-server # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires database to start - project-db networks: - project-network # allow external connections (remove this in production) - default volumes: # mount code into container - ./server:/app/server # maintain existing node_modules in container - /app/server/node_modules # client project-client: build: # location of Dockerfile context: ./client container_name: project-client # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires server to start - project-server networks: - project-network # allow external connections - default volumes: # mount code into container - ./client:/app/client # maintain existing node_modules in container - /app/client/node_modules volumes: project_db_data: networks: # internal Docker network for project project-network: name: project-network internal: true Refer to the Postgres Docker Image documentation for more details.</description>
     </item>
     <item>
       <title>Knex</title>
-      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/</link>
+      <link>https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/</guid>
-      <description>We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.&#xA;Install Knex We can install Knex using npm inside the server container:&#xA;# Terminal docker exec -it project-server bashThen we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:</description>
+      <guid>https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/index.html</guid>
+      <description>We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.&#xA;Install Knex We can install Knex using npm inside the server container:&#xA;# Terminal docker exec -it project-server bash Then we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:</description>
     </item>
   </channel>
 </rss>

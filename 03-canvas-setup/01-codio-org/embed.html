@@ -1,176 +1,134 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.128.0">
-    <meta name="generator" content="Relearn 6.0.0">
-    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
     <meta name="description" content="The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
-Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app. Once you install it, you will be prompted to enter the ‘Consumer Key’ and ‘Secret Key’
-Tip Canvas’s “Add App” is requesting Codio’s “Organization” information.">
+Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app.">
     <meta name="author" content="Russell Feldhausen">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta name="twitter:title" content="Canvas to Codio Org :: K-State CS Textbook Extras">
     <meta name="twitter:description" content="The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
-Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app. Once you install it, you will be prompted to enter the ‘Consumer Key’ and ‘Secret Key’
-Tip Canvas’s “Add App” is requesting Codio’s “Organization” information.">
-    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/03-canvas-setup/01-codio-org/embed.html">
+Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/03-canvas-setup/01-codio-org/index.html">
     <meta property="og:site_name" content="K-State CS Textbook Extras">
     <meta property="og:title" content="Canvas to Codio Org :: K-State CS Textbook Extras">
     <meta property="og:description" content="The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
-Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app. Once you install it, you will be prompted to enter the ‘Consumer Key’ and ‘Secret Key’
-Tip Canvas’s “Add App” is requesting Codio’s “Organization” information.">
-    <meta property="og:locale" content="en-us">
+Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app.">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Setting Up a Canvas Course">
     <meta property="article:modified_time" content="2024-06-27T16:41:43-05:00">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta itemprop="name" content="Canvas to Codio Org :: K-State CS Textbook Extras">
     <meta itemprop="description" content="The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.
-Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app. Once you install it, you will be prompted to enter the ‘Consumer Key’ and ‘Secret Key’
-Tip Canvas’s “Add App” is requesting Codio’s “Organization” information.">
+Install Codio By default, Codio is not an installed app on Canvas. You will need to install the app.">
     <meta itemprop="dateModified" content="2024-06-27T16:41:43-05:00">
     <meta itemprop="wordCount" content="208">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Canvas to Codio Org :: K-State CS Textbook Extras</title>
-    
-  <link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet"></noscript>
-  <link href="/extras/css/nucleus.css?1755561266" rel="stylesheet">
-  <link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet"></noscript>
-  <link href="/extras/css/perfect-scrollbar.min.css?1755561266" rel="stylesheet">
-  <link href="/extras/css/fonts.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1755561266" rel="stylesheet"></noscript>
-  <link href="/extras/css/theme.css?1755561266" rel="stylesheet">
-  
-  
-  
-  <link href="/extras/css/theme-light-theme.css?1755561266" rel="stylesheet" id="R-variant-style">
-  <link href="/extras/css/chroma-relearn-light.css?1755561266" rel="stylesheet" id="R-variant-chroma-style">
-  <link href="/extras/css/variant.css?1755561266" rel="stylesheet">
-  <link href="/extras/css/print.css?1755561266" rel="stylesheet" media="print">
-  
-  
-  
-  <script>
-    window.relearn = window.relearn || {};
-    window.relearn.relBasePath='..\/..';
-    window.relearn.relBaseUri='..\/..\/..';
-    window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
-    window.index_js_url="/extras/index.search.js";
-    // variant stuff
-    window.variants && variants.init( [ 'light-theme' ] );
-    // translations
-    window.T_Copy_to_clipboard = `Copy to clipboard`;
-    window.T_Copied_to_clipboard = `Copied to clipboard!`;
-    window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
-    window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
-    window.T_Reset_view = `Reset view`;
-    window.T_View_reset = `View reset!`;
-    window.T_No_results_found = `No results found for "{0}"`;
-    window.T_N_results_found = `{1} results found for "{0}"`;
-  </script>
-  
-  <link href="/extras/css/custom.css?1755561266" rel="stylesheet">
-    
+    <link href="https://textbooks.cs.ksu.edu/extras/03-canvas-setup/01-codio-org/index.html" rel="canonical" type="text/html" title="Canvas to Codio Org :: K-State CS Textbook Extras">
+    <link href="/extras/03-canvas-setup/01-codio-org/index.xml" rel="alternate" type="application/rss+xml" title="Canvas to Codio Org :: K-State CS Textbook Extras">
+    <link href="/extras/03-canvas-setup/01-codio-org/index.print.html" rel="alternate" type="text/html" title="Canvas to Codio Org :: K-State CS Textbook Extras">
+    <link href="/extras/03-canvas-setup/01-codio-org/tele.html" rel="alternate" type="text/html" title="Canvas to Codio Org :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1757103378" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1757103378" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/search.min.js?1757103378" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1757103378";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1757103378" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1757103378" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/03-canvas-setup\/01-codio-org\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'light-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=false;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1757103378" rel="stylesheet">
   </head>
-  <body class="mobile-support embed disableInlineCopyToClipboard" data-url="/extras/03-canvas-setup/01-codio-org/embed.html">
+  <body class="mobile-support embed html" data-url="/extras/03-canvas-setup/01-codio-org/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       
       
       
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable 03-canvas-setup" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-    
-    
-    
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="canvas-to-codio-org">Canvas to Codio Org</h1>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/wzzIYT5iyvE?start=102" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -178,83 +136,78 @@ Tip Canvas’s “Add App” is requesting Codio’s “Organization” informat
 <p>The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.</p>
 <h1 id="install-codio">Install Codio</h1>
 <p>By default, Codio is not an installed app on Canvas. You will need to install the app.
-<a href="#R-image-46c69b20bc3f988549648adc0e0cb737" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/settings-apps.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-46c69b20bc3f988549648adc0e0cb737"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/settings-apps.png"></a></p>
-<p><a href="#R-image-c5b68245add394dd770335afdcb4f724" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/install-codio.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c5b68245add394dd770335afdcb4f724"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/install-codio.png"></a></p>
+<a href="#R-image-d6c150ad652d8278021f35ffb28f10af" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/settings-apps.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d6c150ad652d8278021f35ffb28f10af"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/settings-apps.png"></a></p>
+<p><a href="#R-image-2ba144dc09c2e3345e583c7b9ebee3bb" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/install-codio.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2ba144dc09c2e3345e583c7b9ebee3bb"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/install-codio.png"></a></p>
 <p>Once you install it, you will be prompted to enter the &lsquo;Consumer Key&rsquo; and &lsquo;Secret Key&rsquo;</p>
-<p><a href="#R-image-cee05119a38b7795ef13f0286d220ea8" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/canvas-keys.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cee05119a38b7795ef13f0286d220ea8"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/canvas-keys.png"></a></p>
+<p><a href="#R-image-b73486446ad398d8112f0c4198ecd916" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/canvas-keys.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b73486446ad398d8112f0c4198ecd916"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/canvas-keys.png"></a></p>
 
-  
-  
-<div class="box notices cstyle tip">
-  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Tip
+  </summary>
   <div class="box-content">
-
 <p>Canvas&rsquo;s &ldquo;Add App&rdquo; is requesting Codio&rsquo;s &ldquo;Organization&rdquo; information.</p>
-</div>
-</div>
+  </div>
+</details>
 <p>To get these requested keys, you will need to do the following</p>
 <h1 id="get-codio-lti-keys">Get Codio LTI Keys</h1>
 <p>Open up the organization by selecting the button that looks like a power button. Then select &ldquo;Organizations&rdquo;
-<a href="#R-image-3a44bedab73e07190af1cc356e4c0406" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/codio-orgs.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a44bedab73e07190af1cc356e4c0406"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/codio-orgs.png"></a></p>
+<a href="#R-image-ac10233ac284ad1e76959220d815a590" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/codio-orgs.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac10233ac284ad1e76959220d815a590"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/codio-orgs.png"></a></p>
 
-  
-  
-<div class="box notices cstyle tip">
-  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Tip
+  </summary>
   <div class="box-content">
-
 <p>You might have just one organization and that is fine!</p>
-</div>
-</div>
+  </div>
+</details>
 <p>If you have more than one organization, select the organization where the course was created. Once you select the organization, you will select &ldquo;LTI Integrations&rdquo;.</p>
 <h1 id="copy-the-keys">Copy the Keys</h1>
 <p>You will copy Codio&rsquo;s &ldquo;LTI Consumer&rdquo; into Canvas&rsquo;s &ldquo;Consumer Key&rdquo; and Codio&rsquo;s &ldquo;LTI Secret&rdquo; into Canvas&rsquo;s &ldquo;Shared Secret&rdquo;.</p>
-<p><a href="#R-image-44b2412ea7c7509abcac36ce5ead07ad" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/codio-keys.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-44b2412ea7c7509abcac36ce5ead07ad"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/codio-keys.png"></a></p>
-<p><a href="#R-image-d0614555be66d4581be04d925a9ed7e1" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/canvas-keys.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0614555be66d4581be04d925a9ed7e1"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/canvas-keys.png"></a></p>
+<p><a href="#R-image-30c4146183d7909cc9defd339182b1b9" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/codio-keys.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-30c4146183d7909cc9defd339182b1b9"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/codio-keys.png"></a></p>
+<p><a href="#R-image-26ab2e98c4dc68cc3fe39e97cf0db628" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/canvas-keys.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-26ab2e98c4dc68cc3fe39e97cf0db628"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/canvas-keys.png"></a></p>
 <h1 id="launch-url">Launch URL</h1>
 <p>The last step is to set up the launch url in Canvas. To access this, you will need to open the Codio app in Canvas</p>
-<p><a href="#R-image-8e9bdf58e3ba8ec7c9b7a6cdca7d4c8f" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/canvas-config-codio.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8e9bdf58e3ba8ec7c9b7a6cdca7d4c8f"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/canvas-config-codio.png"></a></p>
-<p><a href="#R-image-c64a20be160efbd80f122670f117da0a" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/canvas-codio-edit.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c64a20be160efbd80f122670f117da0a"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/canvas-codio-edit.png"></a></p>
-<p><a href="#R-image-42db5e9538a0f82100cd418b213f525b" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/canvas-launch-url.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-42db5e9538a0f82100cd418b213f525b"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/canvas-launch-url.png"></a></p>
-<p><a href="#R-image-33e913d0859ffe12c8a05f69b066b34c" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox noshadow figure-image" loading="lazy" src="/extras/images/codio-launch-url.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-33e913d0859ffe12c8a05f69b066b34c"><img alt="Canvas" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="/extras/images/codio-launch-url.png"></a></p>
+<p><a href="#R-image-a61ca1eaa58f8c871b9bb1d5802f2d5b" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/canvas-config-codio.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a61ca1eaa58f8c871b9bb1d5802f2d5b"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/canvas-config-codio.png"></a></p>
+<p><a href="#R-image-68dcdd939b2942f7801f14a054bbc1fc" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/canvas-codio-edit.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68dcdd939b2942f7801f14a054bbc1fc"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/canvas-codio-edit.png"></a></p>
+<p><a href="#R-image-04ad04bcf562937b0f1b5887f3ccdbfb" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/canvas-launch-url.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-04ad04bcf562937b0f1b5887f3ccdbfb"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/canvas-launch-url.png"></a></p>
+<p><a href="#R-image-acf5f71de9e2968c78a431068cbe6ebe" class="lightbox-link"><img alt="Canvas" class="border lazy lightbox figure-image" loading="lazy" src="/extras/images/codio-launch-url.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-acf5f71de9e2968c78a431068cbe6ebe"><img alt="Canvas" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/images/codio-launch-url.png"></a></p>
 
-  
-  
-<div class="box notices cstyle tip">
-  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Tip
+  </summary>
   <div class="box-content">
-
 <p>Unless the &ldquo;Secret Key&rdquo; in Codio gets changed, we won&rsquo;t have to worry about these values in the future.</p>
-</div>
-</div>
+  </div>
+</details>
 
-            <footer class="footline">
-              
-              
-              
-              
-            </footer>
-          </article>
-</div>
-</main>
-</div>
-
-
-
-<script src="/extras/js/clipboard.min.js?1755561266" defer></script>
-<script src="/extras/js/perfect-scrollbar.min.js?1755561266" defer></script>
-<script src="/extras/js/theme.js?1755561266" defer></script>
-
-<script src="/extras/js/embed-iframe.js?1755561266" defer></script>
-</body>
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+      
+      
+      
+    </div>
+    <script src="/extras/js/clipboard/clipboard.min.js?1757103378" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1757103378" defer></script>
+    <script src="/extras/js/theme.min.js?1757103378" defer></script>
+  <script src="/extras/js/embed-iframe.min.js?1757103378" defer></script>
+  </body>
 </html>

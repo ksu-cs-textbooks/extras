@@ -1,96 +1,73 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://textbooks.cs.ksu.edu/extras/categories/</loc>
+    <loc>https://textbooks.cs.ksu.edu/extras/01-introduction/index.html</loc>
+    <lastmod>2023-08-11T15:55:35-05:00</lastmod>
   </url>
   <url>
-    <loc>https://textbooks.cs.ksu.edu/extras/tags/</loc>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/index.html</loc>
+    <lastmod>2023-08-11T15:48:35-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/index.html</loc>
+    <lastmod>2023-08-11T15:48:35-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/01-codio-org/index.html</loc>
+    <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/index.html</loc>
+    <lastmod>2023-09-08T17:12:58-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/01-introduction/01-welcome/index.html</loc>
+    <lastmod>2022-08-04T09:40:32-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/02-codio-course/index.html</loc>
+    <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.html</loc>
+    <lastmod>2023-06-20T17:30:07-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/03-codio-assign/index.html</loc>
+    <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/index.html</loc>
+    <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/04-canvas-clone/index.html</loc>
+    <lastmod>2023-07-31T12:03:34-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/04-docker/index.html</loc>
+    <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/05-working/index.html</loc>
+    <lastmod>2023-06-21T12:48:32-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/06-nodemon/index.html</loc>
+    <lastmod>2023-09-08T17:12:58-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/index.html</loc>
+    <lastmod>2023-09-08T17:15:14-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/08-knex/index.html</loc>
+    <lastmod>2023-09-08T17:24:16-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/tags/index.html</loc>
   </url>
 </urlset>

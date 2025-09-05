@@ -1,144 +1,80 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.128.0">
-    <meta name="generator" content="Relearn 6.0.0">
-    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
     <meta name="description" content="Now let’s add a database to our project.
 Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:
-# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .">
+# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .env file POSTGRES_USER: POSTGRES_PASSWORD: POSTGRES_DB: healthcheck: # check if database is running and healthy test: [&#34;CMD-SHELL&#34;, &#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;] interval: 30s timeout: 5s retries: 5 start_period: 10s # server project-server: build: # location of Dockerfile context: ./server container_name: project-server # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires database to start - project-db networks: - project-network # allow external connections (remove this in production) - default volumes: # mount code into container - ./server:/app/server # maintain existing node_modules in container - /app/server/node_modules # client project-client: build: # location of Dockerfile context: ./client container_name: project-client # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires server to start - project-server networks: - project-network # allow external connections - default volumes: # mount code into container - ./client:/app/client # maintain existing node_modules in container - /app/client/node_modules volumes: project_db_data: networks: # internal Docker network for project project-network: name: project-network internal: true Refer to the Postgres Docker Image documentation for more details.">
     <meta name="author" content="Russell Feldhausen">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta name="twitter:title" content="Database :: K-State CS Textbook Extras">
     <meta name="twitter:description" content="Now let’s add a database to our project.
 Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:
-# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .">
-    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/">
+# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .env file POSTGRES_USER: POSTGRES_PASSWORD: POSTGRES_DB: healthcheck: # check if database is running and healthy test: [&#34;CMD-SHELL&#34;, &#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;] interval: 30s timeout: 5s retries: 5 start_period: 10s # server project-server: build: # location of Dockerfile context: ./server container_name: project-server # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires database to start - project-db networks: - project-network # allow external connections (remove this in production) - default volumes: # mount code into container - ./server:/app/server # maintain existing node_modules in container - /app/server/node_modules # client project-client: build: # location of Dockerfile context: ./client container_name: project-client # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires server to start - project-server networks: - project-network # allow external connections - default volumes: # mount code into container - ./client:/app/client # maintain existing node_modules in container - /app/client/node_modules volumes: project_db_data: networks: # internal Docker network for project project-network: name: project-network internal: true Refer to the Postgres Docker Image documentation for more details.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/index.html">
     <meta property="og:site_name" content="K-State CS Textbook Extras">
     <meta property="og:title" content="Database :: K-State CS Textbook Extras">
     <meta property="og:description" content="Now let’s add a database to our project.
 Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:
-# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .">
-    <meta property="og:locale" content="en-us">
+# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .env file POSTGRES_USER: POSTGRES_PASSWORD: POSTGRES_DB: healthcheck: # check if database is running and healthy test: [&#34;CMD-SHELL&#34;, &#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;] interval: 30s timeout: 5s retries: 5 start_period: 10s # server project-server: build: # location of Dockerfile context: ./server container_name: project-server # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires database to start - project-db networks: - project-network # allow external connections (remove this in production) - default volumes: # mount code into container - ./server:/app/server # maintain existing node_modules in container - /app/server/node_modules # client project-client: build: # location of Dockerfile context: ./client container_name: project-client # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires server to start - project-server networks: - project-network # allow external connections - default volumes: # mount code into container - ./client:/app/client # maintain existing node_modules in container - /app/client/node_modules volumes: project_db_data: networks: # internal Docker network for project project-network: name: project-network internal: true Refer to the Postgres Docker Image documentation for more details.">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Full Stack Web Application">
     <meta property="article:modified_time" content="2023-09-08T17:15:14-05:00">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta itemprop="name" content="Database :: K-State CS Textbook Extras">
     <meta itemprop="description" content="Now let’s add a database to our project.
 Postgres Container First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:
-# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .">
+# docker-compose.yml services: # database project-db: # Use an existing image from DockerHub image: postgres:15 container_name: project-db # Automatically restart the container as needed restart: unless-stopped networks: - project-network volumes: # Persist database data in a Docker volume - project_db_data:/var/lib/postgresql/data:rw environment: # Configure environment using .env file POSTGRES_USER: POSTGRES_PASSWORD: POSTGRES_DB: healthcheck: # check if database is running and healthy test: [&#34;CMD-SHELL&#34;, &#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;] interval: 30s timeout: 5s retries: 5 start_period: 10s # server project-server: build: # location of Dockerfile context: ./server container_name: project-server # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires database to start - project-db networks: - project-network # allow external connections (remove this in production) - default volumes: # mount code into container - ./server:/app/server # maintain existing node_modules in container - /app/server/node_modules # client project-client: build: # location of Dockerfile context: ./client container_name: project-client # set the user ID to match our user user: &#34;1000&#34; depends_on: # requires server to start - project-server networks: - project-network # allow external connections - default volumes: # mount code into container - ./client:/app/client # maintain existing node_modules in container - /app/client/node_modules volumes: project_db_data: networks: # internal Docker network for project project-network: name: project-network internal: true Refer to the Postgres Docker Image documentation for more details.">
     <meta itemprop="dateModified" content="2023-09-08T17:15:14-05:00">
-    <meta itemprop="wordCount" content="510">
+    <meta itemprop="wordCount" content="513">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Database :: K-State CS Textbook Extras</title>
-    <link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/nucleus.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar.min.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/fonts.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/theme.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/theme-auto.css?1755561266" rel="stylesheet" id="R-variant-style">
-    <link href="/extras/css/chroma-auto.css?1755561266" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/extras/css/variant.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/print.css?1755561266" rel="stylesheet" media="print">
-    <link href="/extras/css/format-print.css?1755561266" rel="stylesheet">
-    <script src="/extras/js/variant.js?1755561266"></script>
+    <link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/07-database/index.html" rel="canonical" type="text/html" title="Database :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/07-database/index.xml" rel="alternate" type="application/rss+xml" title="Database :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/07-database/tele.html" rel="alternate" type="text/html" title="Database :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/07-database/embed.html" rel="alternate" type="text/html" title="Database :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1757103378" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1757103378" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/search.min.js?1757103378" defer></script>
     <script>
       window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1757103378";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1757103378" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1757103378" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/02-full-stack\/07-database\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
-      window.index_js_url="/extras/index.search.js";
-      // variant stuff
-      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -148,186 +84,194 @@ Postgres Container First, we can add an entry to our Docker Compose file to crea
       window.T_View_reset = `View reset!`;
       window.T_No_results_found = `No results found for "{0}"`;
       window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'light-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=false;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
     </script>
-    
-    <link href="/extras/css/custom.css?1755561266" rel="stylesheet">
+    <link href="/extras/css/custom.css?1757103378" rel="stylesheet">
   </head>
-  <body class="mobile-support print disableInlineCopyToClipboard" data-url="/extras/02-full-stack/07-database/">
+  <body class="mobile-support embed print" data-url="/extras/02-full-stack/07-database/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
-          <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
-            </div>
-          </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/extras/02-full-stack/"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Database</span><meta itemprop="position" content="2"></li>
-          </ol>
-          <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/06-nodemon/" title="Nodemon (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/08-knex/" title="Knex (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
+      
+      
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable 02-full-stack" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-            <header class="headline">
-            </header>
+<article class="default">
+  <header class="headline">
+  </header>
 
 <h1 id="database">Database</h1>
 
 <p>Now let&rsquo;s add a database to our project.</p>
 <h2 id="postgres-container">Postgres Container</h2>
 <p>First, we can add an entry to our Docker Compose file to create a Postgres database, and also an entry for the volume to store the data:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="c"># docker-compose.yml</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="c"># database</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nt">project-db</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="c"># Use an existing image from DockerHub</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:15</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-db</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="c"># Automatically restart the container as needed</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="c"># Persist database data in a Docker volume</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span>- <span class="l">project_db_data:/var/lib/postgresql/data:rw</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="c"># Configure environment using .env file</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="c"># check if database is running and healthy</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;CMD-SHELL&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l">30s</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l">5s</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l">10s</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># server</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-server</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># location of Dockerfile</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./server</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-server</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># set the user ID to match our user</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1000&#34;</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span><span class="c"># requires database to start</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">      </span>- <span class="l">project-db</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># allow external connections (remove this in production)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">default</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># mount code into container</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./server:/app/server</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># maintain existing node_modules in container</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/app/server/node_modules</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># client</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-client</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># location of Dockerfile</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./client</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">project-client</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># set the user ID to match our user</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1000&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># requires server to start</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-server</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">project-network</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># allow external connections</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">default</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># mount code into container</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./client:/app/client</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># maintain existing node_modules in container</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/app/client/node_modules</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nt">project_db_data</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># internal Docker network for project</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">project-network</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">project-network</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div><p>Refer to the <a href="https://hub.docker.com/_/postgres" rel="external" target="_blank">Postgres Docker Image</a> documentation for more details.</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#75715e"># database</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#f92672">project-db</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#75715e"># Use an existing image from DockerHub</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:15</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-db</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#75715e"># Automatically restart the container as needed</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># Persist database data in a Docker volume</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project_db_data:/var/lib/postgresql/data:rw</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># Configure environment using .env file</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_USER</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_PASSWORD</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">POSTGRES_DB</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># check if database is running and healthy</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">test</span>: [<span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">30s</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#f92672">start_period</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># server</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-server</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      <span style="color:#75715e"># requires database to start</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>      - <span style="color:#ae81ff">project-db</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections (remove this in production)</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./server:/app/server</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/server/node_modules</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># client</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-client</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># location of Dockerfile</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">project-client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the user ID to match our user</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;1000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># requires server to start</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># allow external connections</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># mount code into container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./client:/app/client</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># maintain existing node_modules in container</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/app/client/node_modules</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#f92672">project_db_data</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># internal Docker network for project</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project-network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">project-network</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div>
+<p>Refer to the <a href="https://hub.docker.com/_/postgres" rel="external" target="_blank">Postgres Docker Image</a> documentation for more details.</p>
 <h2 id="environment-file">Environment File</h2>
 <p>For this project, we are going to use a single global environment file that is shared across all containers. For this, create a file named <code>.env</code> in the root of the project and add the following contents:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># .env</span>
-</span></span><span class="line"><span class="cl"><span class="nv">POSTGRES_HOST</span><span class="o">=</span><span class="s2">&#34;project-db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">POSTGRES_PORT</span><span class="o">=</span><span class="s2">&#34;5432&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">POSTGRES_USER</span><span class="o">=</span><span class="s2">&#34;projectuser&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="s2">&#34;projectpass&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">POSTGRES_DB</span><span class="o">=</span><span class="s2">&#34;projectdb&#34;</span></span></span></code></pre></div>
-  
-  
-<div class="box notices cstyle tip">
-  <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
-  <div class="box-content">
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># .env</span>
+</span></span><span style="display:flex;"><span>POSTGRES_HOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;project-db&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_PORT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5432&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_USER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectuser&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_PASSWORD<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectpass&#34;</span>
+</span></span><span style="display:flex;"><span>POSTGRES_DB<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;projectdb&#34;</span></span></span></code></pre></div>
 
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Tip
+  </summary>
+  <div class="box-content">
 <p>Customize the user, password, and database variables as desired. The host should match the name of the database container, and the port should be the default port for the chosen database engine.</p>
-</div>
-</div>
+  </div>
+</details>
 <p>You should also create a file named <code>.env.example</code> that has the same contents.</p>
 
-  
-  
-<div class="box notices cstyle warning">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Warning</div>
+<details open class=" box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Warning
+  </summary>
   <div class="box-content">
-
 <p>You should never commit the <code>.env</code> file to GitHub, since it contains all of the secret information for your project. Instead, it is recommended to create a sample file such as <code>.env.example</code> that contains the same variables but with default values, and also some explanation of what each variable does.</p>
-</div>
-</div>
+  </div>
+</details>
 <p>In the Docker Compose file above, we defined several variables in the <code>project-db</code> service that match variables in the <code>.env</code> file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Configure environment using .env file</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="l">POSTGRES_DB:</span></span></span></code></pre></div><p>By including blank variables here, the values from the <code>.env</code> file for those variables will be shared with the container. Other variables will not be shared.</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Configure environment using .env file</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">POSTGRES_USER</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">POSTGRES_PASSWORD</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">POSTGRES_DB:</span></span></span></code></pre></div>
+<p>By including blank variables here, the values from the <code>.env</code> file for those variables will be shared with the container. Other variables will not be shared.</p>
 <h2 id="start-container">Start Container</h2>
 <p>Once we are ready, we can use Docker Compose to update our running containers and start the database container:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Terminal</span>
-</span></span><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div><p>You can confirm that the database is up and running using <code>docker ps</code> or checking the logs using <code>docker logs project-db</code>.</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Terminal</span>
+</span></span><span style="display:flex;"><span>docker compose up -d</span></span></code></pre></div>
+<p>You can confirm that the database is up and running using <code>docker ps</code> or checking the logs using <code>docker logs project-db</code>.</p>
 <h2 id="commit">Commit</h2>
 <p>This is a great place to stop and commit your work to GitHub.</p>
 
-            <footer class="footline">
-              
-              
-              
-              
-            </footer>
-          </article>
-
+  <footer class="footline">
+  </footer>
+</article>
         </div>
       </main>
-    
-<div class="git-footer">
-  <p class="theme-version-footer">6.0.0</p>
-  <p>Last modified by: 
-              <i class='fas fa-user'></i> Russell Feldhausen
-              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/ca949e3f7f7c17b8e57f2a1e34945a89dc309653">Sep 8, 2023</a>
-  </p>
-  </div>
-  
-    
+      
+      
+      
     </div>
-    <script src="/extras/js/clipboard.min.js?1755561266" defer></script>
-    <script src="/extras/js/perfect-scrollbar.min.js?1755561266" defer></script>
-    <script src="/extras/js/theme.js?1755561266" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1757103378" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1757103378" defer></script>
+    <script src="/extras/js/theme.min.js?1757103378" defer></script>
+  <script src="/extras/js/embed-iframe.min.js?1757103378" defer></script>
   </body>
 </html>

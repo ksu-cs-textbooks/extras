@@ -1,143 +1,80 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
-	  
-
-  
-	
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-	  
-
-  
-	
-		
-		
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.128.0">
-    <meta name="generator" content="Relearn 6.0.0">
-    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
     <meta name="description" content="Prerequisites The basic environment required for this setup:
 A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:
-Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.">
+Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:">
     <meta name="author" content="Russell Feldhausen">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta name="twitter:title" content="Setup :: K-State CS Textbook Extras">
     <meta name="twitter:description" content="Prerequisites The basic environment required for this setup:
 A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:
-Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.">
-    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/">
+Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.html">
     <meta property="og:site_name" content="K-State CS Textbook Extras">
     <meta property="og:title" content="Setup :: K-State CS Textbook Extras">
     <meta property="og:description" content="Prerequisites The basic environment required for this setup:
 A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:
-Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.">
-    <meta property="og:locale" content="en-us">
+Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Full Stack Web Application">
     <meta property="article:modified_time" content="2023-06-20T17:30:07-05:00">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta itemprop="name" content="Setup :: K-State CS Textbook Extras">
     <meta itemprop="description" content="Prerequisites The basic environment required for this setup:
 A Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:
-Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension.">
+Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:">
     <meta itemprop="dateModified" content="2023-06-20T17:30:07-05:00">
     <meta itemprop="wordCount" content="251">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Setup :: K-State CS Textbook Extras</title>
-    <link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fontawesome-all.min.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/nucleus.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/auto-complete.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar.min.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/fonts.css?1755561266" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/css/fonts.css?1755561266" rel="stylesheet"></noscript>
-    <link href="/extras/css/theme.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/theme-auto.css?1755561266" rel="stylesheet" id="R-variant-style">
-    <link href="/extras/css/chroma-auto.css?1755561266" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/extras/css/variant.css?1755561266" rel="stylesheet">
-    <link href="/extras/css/print.css?1755561266" rel="stylesheet" media="print">
-    <script src="/extras/js/variant.js?1755561266"></script>
+    <link href="https://textbooks.cs.ksu.edu/extras/02-full-stack/02-setup/index.html" rel="canonical" type="text/html" title="Setup :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/02-setup/index.xml" rel="alternate" type="application/rss+xml" title="Setup :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/02-setup/index.print.html" rel="alternate" type="text/html" title="Setup :: K-State CS Textbook Extras">
+    <link href="/extras/02-full-stack/02-setup/embed.html" rel="alternate" type="text/html" title="Setup :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1757103378" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1757103378" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/search.min.js?1757103378" defer></script>
     <script>
       window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1757103378";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1757103378" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1757103378" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1757103378" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1757103378" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1757103378" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/02-full-stack\/02-setup\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
-      window.index_js_url="/extras/index.search.js";
-      // variant stuff
-      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -147,11 +84,42 @@ Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Lin
       window.T_View_reset = `View reset!`;
       window.T_No_results_found = `No results found for "{0}"`;
       window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'light-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=false;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
     </script>
-    
-    <link href="/extras/css/custom.css?1755561267" rel="stylesheet">
+    <link href="/extras/css/custom.css?1757103378" rel="stylesheet">
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="/extras/02-full-stack/02-setup/">
+  <body class="mobile-support html" data-url="/extras/02-full-stack/02-setup/index.html">
     
     <div id="tele" class="tele mirror">
     
@@ -161,11 +129,11 @@ Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Lin
       
       
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable 02-full-stack" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-            <header class="headline">
-            </header>
+<article class="default">
+  <header class="headline">
+  </header>
 
 <h1 id="setup">Setup</h1>
 
@@ -223,27 +191,22 @@ Windows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Lin
 <li><a href="https://learn.microsoft.com/en-us/windows/wsl/filesystems" rel="external" target="_blank">WSL Filesystems</a></li>
 </ul>
 
-            <footer class="footline">
-              
-              
-              
-              
-            </footer>
-          </article>
-</div>
-</main>
-</div>
-
-</div>
-
-
-
-
-<script src="/extras/js/clipboard.min.js?1755561267" defer></script>
-<script src="/extras/js/perfect-scrollbar.min.js?1755561267" defer></script>
-<script src="/extras/js/theme.js?1755561267" defer></script>
-
-<script src="/extras/js/tele-scroll.js?1755561267" defer></script>
-
-</body>
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+      
+      
+      
+    </div>
+    <script src="/extras/js/clipboard/clipboard.min.js?1757103378" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1757103378" defer></script>
+    <script src="/extras/js/theme.min.js?1757103378" defer></script>
+      
+      
+      
+    </div> 
+  <script src="/extras/js/tele-scroll.min.js?1757103378" defer></script>
+  </body>
 </html>
