@@ -24,12 +24,28 @@ var relearn_lti_index = [
     "uri": "/extras/03-canvas-setup/index.html"
   },
   {
+    "breadcrumb": "",
+    "description": "A deployable web application example.",
+    "modified": "2025-09-10T20:57:13-05:00",
+    "tags": [],
+    "title": "Deployment Example",
+    "uri": "/extras/04-deploy-example/index.html"
+  },
+  {
     "breadcrumb": "Setting Up a Canvas Course",
     "description": "The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.\nInstall Codio By default, Codio is not an installed app on Canvas. You will need to install the app.",
     "modified": "2024-06-27T16:41:43-05:00",
     "tags": [],
     "title": "Canvas to Codio Org",
     "uri": "/extras/03-canvas-setup/01-codio-org/index.html"
+  },
+  {
+    "breadcrumb": "Deployment Example",
+    "description": "Setup Dev Container Follow the steps on this page to create a new devcontainer and GitHub Codespace: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/01-codespace/index.html.\nChoose the Node.js \u0026 PostgreSQL container type with Node version 22-bookworm.\nSetup Server Follow the steps on this page to create a new Express server: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/02-express-starter/index.html\nUse the npm-check-updates comamnd to update all installed packages.\nEnvironment Install dotenvx as shown on this page: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/07-environment/index.html\nAdd to top of app.js\nrequire('@dotenvx/dotenvx').config() Create .env file with these contents:",
+    "modified": "2025-09-10T20:57:13-05:00",
+    "tags": [],
+    "title": "Instructions",
+    "uri": "/extras/04-deploy-example/01-instructions/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",

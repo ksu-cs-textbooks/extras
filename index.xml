@@ -28,5 +28,12 @@
       <guid>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/index.html</guid>
       <description>Setting up a Canvas course to connect with a Codio Course.&#xA;Connect the Canvas course to the Codio organization Connect the Canvas course to the Codio course Connect a Canvas assignment to a Codio assignment Please note that this video assumes that you have already set-up a Codio course and have the LTI settings configured.&#xA;Here is a video you can follow along with or you can follow through this Chapters pages.</description>
     </item>
+    <item>
+      <title>Deployment Example</title>
+      <link>https://textbooks.cs.ksu.edu/extras/04-deploy-example/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/04-deploy-example/index.html</guid>
+      <description>A deployable web application example.</description>
+    </item>
   </channel>
 </rss>

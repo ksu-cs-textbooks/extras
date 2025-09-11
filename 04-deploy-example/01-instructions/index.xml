@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instructions :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/04-deploy-example/01-instructions/index.html</link>
+    <description>Setup Dev Container Follow the steps on this page to create a new devcontainer and GitHub Codespace: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/01-codespace/index.html.&#xA;Choose the Node.js &amp; PostgreSQL container type with Node version 22-bookworm.&#xA;Setup Server Follow the steps on this page to create a new Express server: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/02-express-starter/index.html&#xA;Use the npm-check-updates comamnd to update all installed packages.&#xA;Environment Install dotenvx as shown on this page: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/07-environment/index.html&#xA;Add to top of app.js&#xA;require(&#39;@dotenvx/dotenvx&#39;).config() Create .env file with these contents:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/04-deploy-example/01-instructions/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

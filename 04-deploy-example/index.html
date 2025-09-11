@@ -5,35 +5,29 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.148.1">
     <meta name="generator" content="Relearn 8.0.0">
-    <meta name="description" content="This is a brief guide to building a framework for a full-stack web application from scratch.
-Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.">
+    <meta name="description" content="A deployable web application example.">
     <meta name="author" content="Russell Feldhausen">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
-    <meta name="twitter:title" content="Introduction :: K-State CS Textbook Extras">
-    <meta name="twitter:description" content="This is a brief guide to building a framework for a full-stack web application from scratch.
-Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.">
-    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/02-full-stack/01-intro/index.html">
+    <meta name="twitter:title" content="Deployment Example :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="A deployable web application example.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/04-deploy-example/index.html">
     <meta property="og:site_name" content="K-State CS Textbook Extras">
-    <meta property="og:title" content="Introduction :: K-State CS Textbook Extras">
-    <meta property="og:description" content="This is a brief guide to building a framework for a full-stack web application from scratch.
-Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.">
+    <meta property="og:title" content="Deployment Example :: K-State CS Textbook Extras">
+    <meta property="og:description" content="A deployable web application example.">
     <meta property="og:locale" content="en_us">
-    <meta property="og:type" content="article">
-    <meta property="article:section" content="Full Stack Web Application">
-    <meta property="article:modified_time" content="2023-09-08T17:12:58-05:00">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
-    <meta itemprop="name" content="Introduction :: K-State CS Textbook Extras">
-    <meta itemprop="description" content="This is a brief guide to building a framework for a full-stack web application from scratch.
-Features Express.js Backend React Frontend Can easily substitute Vue or other frontends Postgres Database Can easily substitue MySQL or other databases Full Docker Setup for Development You don’t have to install Node or a database locally - it all runs in Docker! Docker Deployment GitHub Actions What this is: this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you what to do.">
-    <meta itemprop="dateModified" content="2023-09-08T17:12:58-05:00">
-    <meta itemprop="wordCount" content="256">
+    <meta itemprop="name" content="Deployment Example :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="A deployable web application example.">
+    <meta itemprop="dateModified" content="2025-09-10T20:57:13-05:00">
+    <meta itemprop="wordCount" content="5">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
-    <title>Introduction :: K-State CS Textbook Extras</title>
-    <link href="/extras/02-full-stack/01-intro/index.xml" rel="alternate" type="application/rss+xml" title="Introduction :: K-State CS Textbook Extras">
-    <link href="/extras/02-full-stack/01-intro/index.print.html" rel="alternate" type="text/html" title="Introduction :: K-State CS Textbook Extras">
-    <link href="/extras/02-full-stack/01-intro/tele.html" rel="alternate" type="text/html" title="Introduction :: K-State CS Textbook Extras">
-    <link href="/extras/02-full-stack/01-intro/embed.html" rel="alternate" type="text/html" title="Introduction :: K-State CS Textbook Extras">
+    <title>Deployment Example :: K-State CS Textbook Extras</title>
+    <link href="/extras/04-deploy-example/index.xml" rel="alternate" type="application/rss+xml" title="Deployment Example :: K-State CS Textbook Extras">
+    <link href="/extras/04-deploy-example/index.print.html" rel="alternate" type="text/html" title="Deployment Example :: K-State CS Textbook Extras">
+    <link href="/extras/04-deploy-example/tele.html" rel="alternate" type="text/html" title="Deployment Example :: K-State CS Textbook Extras">
+    <link href="/extras/04-deploy-example/embed.html" rel="alternate" type="text/html" title="Deployment Example :: K-State CS Textbook Extras">
     <link href="/extras/css/auto-complete/auto-complete.min.css?1757555851" rel="stylesheet">
     <script src="/extras/js/auto-complete/auto-complete.min.js?1757555851" defer></script>
     <script src="/extras/js/search-lunr.min.js?1757555851" defer></script>
@@ -58,9 +52,9 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = `.min`;
-      window.relearn.path='\/02-full-stack\/01-intro\/index.html';
-      window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.path='\/04-deploy-example\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
@@ -114,7 +108,7 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
     </script>
     <link href="/extras/css/custom.css?1757555851" rel="stylesheet">
   </head>
-  <body class="mobile-support html" data-url="/extras/02-full-stack/01-intro/index.html">
+  <body class="mobile-support html" data-url="/extras/04-deploy-example/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -125,36 +119,29 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-<nav class="TableOfContents">
-  <ul>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#conventions">Conventions</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-</nav>
+                <div class="topbar-content-wrapper"> 
                 </div>
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/02-full-stack/index.html"><span itemprop="name">Full Stack Web Application</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Introduction</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Deployment Example</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/02-full-stack/01-intro.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/04-deploy-example/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
             </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/01-intro/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/04-deploy-example/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/index.html" title="Full Stack Web Application (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/03-canvas-setup/04-canvas-clone/index.html" title="Cloning a Canvas Course (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/02-setup/index.html" title="Setup (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/04-deploy-example/01-instructions/index.html" title="Instructions (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
                   <div class="topbar-area topbar-area-more" data-area="more">
-            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/01-intro/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/04-deploy-example/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
             </div>
-            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/02-full-stack/01-intro/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/04-deploy-example/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
             </div>
                   </div>
                 </div>
@@ -164,48 +151,15 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable 02-full-stack" tabindex="-1">
+      <main id="R-body-inner" class="highlightable 04-deploy-example" tabindex="-1">
         <div class="flex-block-wrapper">
 <article class="default">
   <header class="headline">
   </header>
 
-<h1 id="introduction">Introduction</h1>
+<h1 id="deployment-example">Deployment Example</h1>
 
-<p>This is a brief guide to building a framework for a full-stack web application from scratch.</p>
-<h2 id="features">Features</h2>
-<ul>
-<li>Express.js Backend</li>
-<li>React Frontend
-<ul>
-<li>Can easily substitute Vue or other frontends</li>
-</ul>
-</li>
-<li>Postgres Database
-<ul>
-<li>Can easily substitue MySQL or other databases</li>
-</ul>
-</li>
-<li>Full Docker Setup for Development
-<ul>
-<li>You don&rsquo;t have to install Node or a database locally - it all runs in Docker!</li>
-</ul>
-</li>
-<li>Docker Deployment</li>
-<li>GitHub Actions</li>
-</ul>
-<p><strong>What this is:</strong> this guide will give you the steps to build the framework, including links to associated resources and tutorials. Basically, it will show you <em>what</em> to do.</p>
-<p><strong>What this is not:</strong> this guide is not an exhaustive explanation of <em>why</em> or <em>how</em> to do these steps. It also doesn&rsquo;t cover how to build a web application once you have this framework set up. So, you may have to do some extra reading to really understand what is going on and match this framework to your needs.</p>
-<h2 id="conventions">Conventions</h2>
-<p>Some brief conventions in this guide:</p>
-<ul>
-<li>Code blocks will include a comment at the top giving the filename where the code is placed or the terminal where the commands should be executed.</li>
-<li>Be careful copy/pasting code - you may have to modify code or commands to match your environment!</li>
-</ul>
-<h2 id="faq">FAQ</h2>
-<ul>
-<li><strong>Can I download this framework somewhere?</strong> Yes, it is on <a href="https://github.com/russfeld/fullstack" rel="external" target="_blank">GitHub</a>. However, the value in this framework is really going through the work of building it yourself so you understand what it contains and how it works. Then, once you&rsquo;ve built it yourself once, you can reuse your own version and tweak it as needed.</li>
-</ul>
+<p>A deployable web application example.</p>
 
   <footer class="footline">
   </footer>
@@ -216,7 +170,7 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
   <p class="theme-version-footer">8.0.0</p>
 <p>Last modified by:
               <i class='fa-fw fas fa-user'></i> Russell Feldhausen
-              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/c46d0e427f69bcb4b56f9f3a7addd0e6b86326c3">Sep 8, 2023</a>
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/b21bc1f72808b678a26880869fd80a8b751e56ec">Sep 10, 2025</a>
 </p>
 
 </div>
@@ -263,8 +217,8 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
           <ul class="enlarge morespace collapsible-menu">
             <li class="" data-nav-id="/extras/01-introduction/index.html"><input type="checkbox" id="R-section-8ac037dd365a7ab70041d22087358e55" aria-controls="R-subsections-8ac037dd365a7ab70041d22087358e55"><label for="R-section-8ac037dd365a7ab70041d22087358e55"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="R-subsections-8ac037dd365a7ab70041d22087358e55" class="collapsible-menu">
             <li class="" data-nav-id="/extras/01-introduction/01-welcome/index.html"><a class="padding" href="/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
-            <li class="parent " data-nav-id="/extras/02-full-stack/index.html"><input type="checkbox" id="R-section-833bd75f80125bdb3a3b58824278b2dc" aria-controls="R-subsections-833bd75f80125bdb3a3b58824278b2dc" checked><label for="R-section-833bd75f80125bdb3a3b58824278b2dc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-833bd75f80125bdb3a3b58824278b2dc" class="collapsible-menu">
-            <li class="active " data-nav-id="/extras/02-full-stack/01-intro/index.html"><a class="padding" href="/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/index.html"><input type="checkbox" id="R-section-833bd75f80125bdb3a3b58824278b2dc" aria-controls="R-subsections-833bd75f80125bdb3a3b58824278b2dc"><label for="R-section-833bd75f80125bdb3a3b58824278b2dc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-833bd75f80125bdb3a3b58824278b2dc" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/02-full-stack/01-intro/index.html"><a class="padding" href="/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
             <li class="" data-nav-id="/extras/02-full-stack/02-setup/index.html"><a class="padding" href="/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
             <li class="" data-nav-id="/extras/02-full-stack/03-initial/index.html"><a class="padding" href="/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
             <li class="" data-nav-id="/extras/02-full-stack/04-docker/index.html"><a class="padding" href="/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
@@ -277,7 +231,7 @@ Features Express.js Backend React Frontend Can easily substitute Vue or other fr
             <li class="" data-nav-id="/extras/03-canvas-setup/02-codio-course/index.html"><a class="padding" href="/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
             <li class="" data-nav-id="/extras/03-canvas-setup/03-codio-assign/index.html"><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
             <li class="" data-nav-id="/extras/03-canvas-setup/04-canvas-clone/index.html"><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
-            <li class="" data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e"><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
+            <li class="active parent " data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e" checked><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
             <li class="" data-nav-id="/extras/04-deploy-example/01-instructions/index.html"><a class="padding" href="/extras/04-deploy-example/01-instructions/index.html">1. Instructions</a></li></ul></li>
           </ul>
         </div>
