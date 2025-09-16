@@ -10,13 +10,21 @@ Follow the steps on this page to create a new devcontainer and GitHub Codespace:
 
 Choose the **Node.js & PostgreSQL** container type with Node version **22-bookworm**. 
 
+Also consider adding the `docker-outside-of-docker` feature by selecting it from the list or adding it directly to your `devcontainer.json` file. This allows you to see and control the PosgreSQL container. See [this link] for details.
+
 ## Setup Server
+
+{{% notice warning %}}
+
+All commands and files in this section should be performed in the `server` directory that is created as part of the first step. 
+
+{{% /notice %}}
 
 Follow the steps on this page to create a new Express server: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/02-express-starter/index.html
 
 Use the `npm-check-updates` comamnd to update all installed packages. 
 
-## Environment
+### Environment
 
 Install dotenvx as shown on this page: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/07-environment/index.html
 
@@ -32,7 +40,7 @@ Create `.env` file with these contents:
 port=3000
 ```
 
-## Database
+### Database
 
 Install libraries:
 
@@ -69,7 +77,7 @@ DATABASE_PASSWORD=postgres
 DATABASE_NAME=postgres
 ```
 
-## Database Migrations
+### Database Migrations
 
 Create migration configuration `config/migrations.js`
 
@@ -139,7 +147,7 @@ Run migration
 node migrate up
 ```
 
-## Seeds
+### Seeds
 
 Create seed configration `config/seeds.js`
 
@@ -216,7 +224,7 @@ async function down({context: queryInterface}) {
 module.exports = {up, down}
 ```
 
-## Automation
+### Automation
 
 Update `bin/www` file to automate migration and seeding:
 
@@ -300,7 +308,7 @@ SEED_DATA=true
 ```
 
 
-## Database Models
+### Database Models
 
 Create model `models/models.js`
 
@@ -343,7 +351,7 @@ const User = database.define(
 module.exports = { User }
 ```
 
-## Create API Endpoint
+### Create API Endpoint
 
 Edit `routes/users.js`
 
@@ -371,7 +379,13 @@ Should see API output. Great - server is working!
 
 To prepare for Vue, update `app.js` to remove the `index` router. 
 
-## Vue 
+## Vue
+
+{{% notice warning %}}
+
+All commands and files in this section should be performed in the `client` directory that is created as part of the first step.
+
+{{% /notice %}}
 
 Create a Vue starter project as described here: https://textbooks.cs.ksu.edu/cis526/x-examples/05-vue-starter/01-vue-starter/index.html
 
@@ -379,7 +393,7 @@ Can omit Pinia and Vitest features. Choose to skip all example code and start wi
 
 Npm install and check for updates
 
-## Proxy
+### Proxy
 
 Update `vite.config.js` to add proxy:
 
@@ -407,7 +421,7 @@ export default defineConfig({
 })
 ```
 
-## API Call
+### API Call
 
 Update `src/App.vue` to call API
 
@@ -447,7 +461,15 @@ $ cd client
 $ npm run dev
 ```
 
-## Ready for Deployment
+## Prepare Deployment
+
+{{% notice warning %}}
+
+All commands and files in this section should be performed in the base directory for the project (outside of `client` and `server`).
+
+{{% /notice %}}
+
+### Dockerfile
 
 Create `Dockerfile`
 
@@ -536,7 +558,7 @@ HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:3000/users
 CMD npm run start
 ```
 
-## GitHub Action Workflow
+### GitHub Action Workflow
 
 Create `.github/workflows/build_docker.yml`
 
@@ -592,7 +614,7 @@ jobs:
           generate_release_notes: true
 ```
 
-## Create Compose File
+### Create Compose File
 
 Create `compose.yml`
 
@@ -607,6 +629,7 @@ services:
   example-deploy:
     
     # Docker Image
+    # !!TODO - Update this to match your repository !!
     image: ghcr.io/cis526-codio/ex-deploy:latest
 
     # Container Name
