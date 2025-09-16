@@ -41,8 +41,8 @@ var relearn_lti_index = [
   },
   {
     "breadcrumb": "Deployment Example",
-    "description": "Setup Dev Container Follow the steps on this page to create a new devcontainer and GitHub Codespace: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/01-codespace/index.html.\nChoose the Node.js \u0026 PostgreSQL container type with Node version 22-bookworm.\nSetup Server Follow the steps on this page to create a new Express server: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/02-express-starter/index.html\nUse the npm-check-updates comamnd to update all installed packages.\nEnvironment Install dotenvx as shown on this page: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/07-environment/index.html\nAdd to top of app.js\nrequire('@dotenvx/dotenvx').config() Create .env file with these contents:",
-    "modified": "2025-09-10T20:57:13-05:00",
+    "description": "Setup Dev Container Follow the steps on this page to create a new devcontainer and GitHub Codespace: https://textbooks.cs.ksu.edu/cis526/x-examples/01-express-starter/01-codespace/index.html.\nChoose the Node.js \u0026 PostgreSQL container type with Node version 22-bookworm.\nAlso consider adding the docker-outside-of-docker feature by selecting it from the list or adding it directly to your devcontainer.json file. This allows you to see and control the PosgreSQL container. See [this link] for details.\nSetup Server Warning All commands and files in this section should be performed in the server directory that is created as part of the first step.",
+    "modified": "2025-09-16T13:31:27-05:00",
     "tags": [],
     "title": "Instructions",
     "uri": "/extras/04-deploy-example/01-instructions/index.html"
