@@ -32,6 +32,22 @@ var relearn_lti_index = [
     "uri": "/extras/04-deploy-example/index.html"
   },
   {
+    "breadcrumb": "",
+    "description": "An example mobile application built with Flutter Flow",
+    "modified": "2026-02-09T15:10:48-06:00",
+    "tags": [],
+    "title": "Flutter Flow Example",
+    "uri": "/extras/05-flutter-flow/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "description": "Tip To get access to any of the MS Teams, YouTube channels, or online tools that are needed for this project, contact Russ Feldhausen or another faculty.\nStep 0 - Acquire New Intros The new intros are currently in the Computational Core Faculty MS Team Folder under Documents \u003e Video Editing \u003e CS Zero \u003e New AI Intros:",
+    "modified": "2026-02-09T15:10:48-06:00",
+    "tags": [],
+    "title": "Video Intros",
+    "uri": "/extras/06-video-intros/index.html"
+  },
+  {
     "breadcrumb": "Setting Up a Canvas Course",
     "description": "The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.\nInstall Codio By default, Codio is not an installed app on Canvas. You will need to install the app.",
     "modified": "2024-06-27T16:41:43-05:00",

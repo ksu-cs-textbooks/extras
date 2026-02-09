@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Video Intros :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/06-video-intros/index.html</link>
+    <description>Tip To get access to any of the MS Teams, YouTube channels, or online tools that are needed for this project, contact Russ Feldhausen or another faculty.&#xA;Step 0 - Acquire New Intros The new intros are currently in the Computational Core Faculty MS Team Folder under Documents &gt; Video Editing &gt; CS Zero &gt; New AI Intros:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/06-video-intros/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
