@@ -7,5 +7,19 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starter Project</title>
+      <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/01-starter/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/01-starter/index.html</guid>
+      <description>In this project, we’ll use the FlutterFlow tool to build a basic mobile application that could be deployed on Android and iOS devices as well as the web, all in one.&#xA;Under the Hood Behind the scenes, this tool develops an application using the Flutter mobile application framework, which is built on top of the Dart programming language. We’ll examine some of the code written by this tool as we go.</description>
+    </item>
+    <item>
+      <title>First Page</title>
+      <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/02-first-page/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/02-first-page/index.html</guid>
+      <description>Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.&#xA;The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:</description>
+    </item>
   </channel>
 </rss>

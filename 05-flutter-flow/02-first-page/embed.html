@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.
+The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:">
+    <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta name="twitter:title" content="First Page :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.
+The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/02-first-page/index.html">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="First Page :: K-State CS Textbook Extras">
+    <meta property="og:description" content="Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.
+The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta itemprop="name" content="First Page :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.
+The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:">
+    <meta itemprop="dateModified" content="2026-03-04T15:09:34-06:00">
+    <meta itemprop="wordCount" content="465">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <title>First Page :: K-State CS Textbook Extras</title>
+    <link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/02-first-page/index.html" rel="canonical" type="text/html" title="First Page :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/02-first-page/index.xml" rel="alternate" type="application/rss+xml" title="First Page :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/02-first-page/index.print.html" rel="alternate" type="text/html" title="First Page :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/02-first-page/tele.html" rel="alternate" type="text/html" title="First Page :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1772658609" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1772658609" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1772658609" defer></script>
+    <script src="/extras/js/search.min.js?1772658609" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1772658609";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1772658609" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1772658609" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1772658609" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1772658609" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1772658609" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1772658609" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1772658609" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1772658609" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1772658609" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/05-flutter-flow\/02-first-page\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'light-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=false;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1772658609" rel="stylesheet">
+  </head>
+  <body class="mobile-support embed html" data-url="/extras/05-flutter-flow/02-first-page/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      
+      
+      
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="first-page">First Page</h1>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/asdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Now that we&rsquo;ve created a new project in FlutterFlow, let&rsquo;s explore the process of creating our first page by adding some widgets and data.</p>
+<h2 id="the-concept---to-do-application">The Concept - &ldquo;To Do&rdquo; Application</h2>
+<p>For this tutorial, we&rsquo;re going to build a simple &ldquo;To Do&rdquo; application to help us keep track of our tasks. Our application should have the following features:</p>
+<ul>
+<li><input disabled="" type="checkbox"> To Do tasks should include a short title and longer description.</li>
+<li><input disabled="" type="checkbox"> To Do tasks should track the date it was created, the date it is due, and whether it has been completed or not.</li>
+<li><input disabled="" type="checkbox"> Tasks may optionally have an address associated with the task, and the application should allow the user to request directions to that address.</li>
+<li><input disabled="" type="checkbox"> When a task is completed, it should track when (and optionally where) it was completed.</li>
+<li><input disabled="" type="checkbox"> To Do tasks should be assigned to different priorities (Low, Medium, High) and sorted according to completion, due date, and priority.</li>
+<li><input disabled="" type="checkbox"> Our application should track the percentage of tasks completed on-time (before the due date).</li>
+<li><input disabled="" type="checkbox"> Our application should include user accounts so that multiple users can use the app.</li>
+<li><input disabled="" type="checkbox"> User accounts should use an email address and password to log in.</li>
+<li><input disabled="" type="checkbox"> Each user&rsquo;s data should be stored securely and not accessible by other users.</li>
+<li><input disabled="" type="checkbox"> Users should be able to configure their display name and update their password.</li>
+<li><input disabled="" type="checkbox"> Users should be able to delete their account and all associated data.</li>
+<li><input disabled="" type="checkbox"> User profile pictures should be visible from <a href="https://gravatar.com/" rel="external" target="_blank">Gravatar</a></li>
+<li><input disabled="" type="checkbox"> The app should display a global leaderboard showing the users with the highest on-time completion percentage.</li>
+<li><input disabled="" type="checkbox"> The app should have a page to display the current weather.</li>
+</ul>
+<p>That looks like a long list of features, but we&rsquo;ll slowly work through this list over several steps to build the desired functionality for our application. Our hope is that this list of features will give you enough building blocks to start building your own applications using these features and more!</p>
+<h2 id="data">Data</h2>
+<p>Now that we have a basic concept for our application in mind, a great place to start is by thinking about the data our application will need to store. For this initial page we are developing, we&rsquo;ll start with our To Do tasks. For many web and mobile applications, data is often stored and communicated in the <a href="https://www.json.org/json-en.html" rel="external" target="_blank">JavaScript Object Notation (JSON)</a> format. Thankfully, we don&rsquo;t need to understand all of the details of JSON to use it in our application, and it is fairly easy to read and understand with a bit of programming background.</p>
+<p>So, let&rsquo;s start by creating a basic structure for a single to do task in a JSON format:</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;This is a title&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;This is a longer description for the task&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dateCreated&#34;</span>: <span style="color:#e6db74">&#34;2026-01-01 00:00:00.000 GMT&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dateDue&#34;</span>: <span style="color:#e6db74">&#34;2026-02-01 00:00:00.000 GMT&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;address&#34;</span>: <span style="color:#e6db74">&#34;1701D Platt St., Manhattan KS 66506&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;isCompleted&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dateCompleted&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;priority&#34;</span>: <span style="color:#e6db74">&#34;Low&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+      
+      
+      
+    </div>
+    <script src="/extras/js/clipboard/clipboard.min.js?1772658609" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1772658609" defer></script>
+    <script src="/extras/js/theme.min.js?1772658609" defer></script>
+  <script src="/extras/js/embed-iframe.min.js?1772658609" defer></script>
+  </body>
+</html>

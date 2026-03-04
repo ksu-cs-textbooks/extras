@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/notes/index.html</link>
+    <description>Connect to Firebase (settings -&gt; Firebase)&#xA;Security concern! Remove access afterwards https://console.firebase.google.com/ takes a while generate config files package name “edu.ksu.mc565.russfeld.todoapp” or similar Deploy settings (Connect -&gt; Firestore -&gt; Settings) Auth&#xA;Once Firebase is connected, enable auth Get started - choose providers Selected Email/Password, no email link Storage - not available for free&#xA;Data&#xA;Priority Enum Collections&#xA;Create a users collection - needs uid Create a a todo collection - needs uid Create Pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/notes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

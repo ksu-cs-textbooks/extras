@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Starter Project :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/01-starter/index.html</link>
+    <description>In this project, we’ll use the FlutterFlow tool to build a basic mobile application that could be deployed on Android and iOS devices as well as the web, all in one.&#xA;Under the Hood Behind the scenes, this tool develops an application using the Flutter mobile application framework, which is built on top of the Dart programming language. We’ll examine some of the code written by this tool as we go.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/01-starter/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
