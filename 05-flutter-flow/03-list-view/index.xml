@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>List View :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/03-list-view/index.html</link>
+    <description>Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.&#xA;Component Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/03-list-view/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

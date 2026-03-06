@@ -97,11 +97,19 @@ var relearn_lti_index = [
   },
   {
     "breadcrumb": "Flutter Flow Example",
-    "description": "Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first page by adding some widgets and data.\nThe Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:",
-    "modified": "2026-03-04T15:09:34-06:00",
+    "description": "Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first component by adding some widgets and data.\nThe Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:",
+    "modified": "2026-03-06T13:33:36-06:00",
     "tags": [],
-    "title": "First Page",
+    "title": "First Component",
     "uri": "/extras/05-flutter-flow/02-first-page/index.html"
+  },
+  {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.\nComponent Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:",
+    "modified": "2026-03-06T13:33:36-06:00",
+    "tags": [],
+    "title": "List View",
+    "uri": "/extras/05-flutter-flow/03-list-view/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",
