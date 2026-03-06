@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.
+Completing Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.">
+    <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta name="twitter:title" content="Interaction :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.
+Completing Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/04-interaction/index.html">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Interaction :: K-State CS Textbook Extras">
+    <meta property="og:description" content="We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.
+Completing Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta itemprop="name" content="Interaction :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.
+Completing Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.">
+    <meta itemprop="dateModified" content="2026-03-06T16:57:34-06:00">
+    <meta itemprop="wordCount" content="1558">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <title>Interaction :: K-State CS Textbook Extras</title>
+    <link href="/extras/05-flutter-flow/04-interaction/index.xml" rel="alternate" type="application/rss+xml" title="Interaction :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/04-interaction/index.print.html" rel="alternate" type="text/html" title="Interaction :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/04-interaction/tele.html" rel="alternate" type="text/html" title="Interaction :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/04-interaction/embed.html" rel="alternate" type="text/html" title="Interaction :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1772837875" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1772837875" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1772837875" defer></script>
+    <script src="/extras/js/search.min.js?1772837875" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1772837875";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1772837875" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1772837875" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1772837875" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1772837875" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1772837875" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1772837875" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1772837875" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1772837875" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1772837875" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/05-flutter-flow\/04-interaction\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'light-theme', 'dark-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=true;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1772837875" rel="stylesheet">
+  </head>
+  <body class="mobile-support html" data-url="/extras/05-flutter-flow/04-interaction/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#completing-tasks">Completing Tasks</a></li>
+    <li><a href="#setting-completion-date">Setting Completion Date</a></li>
+    <li><a href="#editing-tasks">Editing Tasks</a>
+      <ul>
+        <li><a href="#component-widgets">Component Widgets</a></li>
+        <li><a href="#component-parameters">Component Parameters</a></li>
+        <li><a href="#widget-values">Widget Values</a></li>
+        <li><a href="#widget-buttons">Widget Buttons</a></li>
+      </ul>
+    </li>
+    <li><a href="#dynamically-loading-a-component">Dynamically Loading a Component</a></li>
+    <li><a href="#editing-dates">Editing Dates</a></li>
+    <li><a href="#saving-data">Saving Data</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">Flutter Flow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Interaction</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/04-interaction/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/03-list-view/index.html" title="List View (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/06-video-intros/index.html" title="Video Intros (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="interaction">Interaction</h1>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/asdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>We now have a basic mobile app that displays some data from the app&rsquo;s internal state, but we have no way to modify that data. So, let&rsquo;s explore the basics of making our application interactive by allowing us to edit and create data.</p>
+<h2 id="completing-tasks">Completing Tasks</h2>
+<p>Let&rsquo;s start with the simplest case - marking a task completed. We already have a <strong>Switch</strong> widget in our <code>ToDoItemComponent</code> to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.</p>
+<p>First, let&rsquo;s go back to our <code>ToDoItemComponent</code> and add a new <strong>Component Parameter</strong> called <code>index</code> that should contain an integer. We&rsquo;ll use that to keep track of the index of the current to do task in our overall list so we can refer back to it.</p>
+<p><a href="#R-image-2e6bb364bd3c361ca105c59a60a27d42" class="lightbox-link"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e6bb364bd3c361ca105c59a60a27d42"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png"></a></p>
+<p>Next, we&rsquo;ll head back to our <code>HomePage</code> and configure a couple of options for the <code>ToDoItemComponent</code> that is placed inside of our <strong>ListView</strong> widget. Here, we want to set the <strong>Unique Key</strong> to the <code>toDoItemList Item</code> option, and then select the <strong>Index in List</strong> option from the available options.</p>
+<p><a href="#R-image-67cbaedc7d5111ddbd14bd9f04e297c2" class="lightbox-link"><img alt="FlutterFlow Index in List" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-67cbaedc7d5111ddbd14bd9f04e297c2"><img alt="FlutterFlow Index in List" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png"></a></p>
+<p>We also want to configure the new <code>index</code> parameter to the same value:</p>
+<p><a href="#R-image-1085dde2014e1f304ef303d4c88ee43a" class="lightbox-link"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1085dde2014e1f304ef303d4c88ee43a"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png"></a></p>
+<p>This allows us to access the index of the item in the list from within our <code>ToDoItemComponent</code> custom component. We&rsquo;ll need that value to know which task we need to update.</p>
+<p>To configure the switch interaction, we first need to find that widget in our <strong>Widget Tree</strong> and then look at the <strong>Properties Panel</strong> to the right. There, we should see a button to configure the actions for this widget.</p>
+<p><a href="#R-image-e043f0e9d3a16e34ee9a1bfd8ebe7021" class="lightbox-link"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e043f0e9d3a16e34ee9a1bfd8ebe7021"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png"></a></p>
+<p>Once on that page, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><span class="title">Open</span></a></span> button to open the <strong>Action Flow Editor</strong>, which is one of the easiest ways to configure these actions.</p>
+<p>In the window that appears, there are two action triggers to choose from. Let&rsquo;s start with the <strong>On Toggled On</strong> trigger. This trigger will fire when the switch is moved from the <strong>Off</strong> state to the <strong>On</strong> state. So, in our data model, we want to mark the underlying task as completed. To do this, we&rsquo;ll click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Action</span></a></span> button, then look for the <strong>State Management</strong> actions and choose <strong>Update App State</strong>.</p>
+<p>We&rsquo;ll then be able to click an <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Field</span></a></span> button to indicate which field in our app state we want to update. We&rsquo;ll choose our <code>toDoTasks</code> app state variable as our field to update, then we&rsquo;ll set the <strong>Update Type</strong> to <strong>Update Item at Index</strong>. The <strong>Item Index</strong> can be set to the <code>index</code> component parameter, and then the <strong>Update Type</strong> under that should be <strong>Update Field(s)</strong>. Finally, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Field</span></a></span> button in the popup window and select the <code>isCompleted</code> field, and set the value to the <code>True</code> value found under the <strong>Constants</strong> list. The full process is shown in the animation below or the video at the top of this page.</p>
+<p><a href="#R-image-09e727d75d4cecbd61b5f33caeeab173" class="lightbox-link"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-09e727d75d4cecbd61b5f33caeeab173"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif"></a></p>
+<p>Next, we&rsquo;ll need to do the same process for the <strong>On Toggled Off</strong> trigger, but this time we&rsquo;ll set the value for the <code>isCompleted</code> field to <code>False</code> instead. The rest of the process is the same.</p>
+<p>Once that is done, we can launch our app in test mode to see if our action is working properly. In the <strong>Debug Panel</strong> on the left, scroll down to find the <strong>App State</strong> section, and watch the data shown there change as you toggle the switches.</p>
+<p><a href="#R-image-b9f585bde2838af7db1eda95ea2d2349" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9f585bde2838af7db1eda95ea2d2349"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif"></a></p>
+<p>If everything is working correctly, you should see the app state update to match what is shown in the interface!</p>
+<h2 id="setting-completion-date">Setting Completion Date</h2>
+<p>We also want our application to keep track of the completion date, so let&rsquo;s go back to those actions we just configured in the <code>ToDoItemComponent</code> on the <strong>Switch</strong> widget and add an additional option to update the <code>dateCompleted</code> field. When we toggle the switch on, we should set the value to the <strong>Current Time</strong> option found under <strong>Global Properties</strong>, and when we toggle the switch off, we should set that value to the <strong>Empty String</strong> option found under <strong>Constants</strong> instead. The animation below shows that process.</p>
+<p><a href="#R-image-346909189cdcfb72d31dbed2b7c07f3c" class="lightbox-link"><img alt="FlutterFlow Update Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-346909189cdcfb72d31dbed2b7c07f3c"><img alt="FlutterFlow Update Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif"></a></p>
+<p>We can now test our application again by clicking the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: teal;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-rotate-right"></i> <span class="title">Instant Reload</span></a></span> button if it is still running in the Test Mode tab, and see if our date is now also updating.</p>
+<p><a href="#R-image-b41a0484a1e813583fb484894d166e02" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b41a0484a1e813583fb484894d166e02"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif"></a></p>
+<p>There we go! We can now mark our tasks as done, and when we do, it will even update the <code>dateCompleted</code> value along with it. This is really the core concept behind building interactivity in our application.</p>
+<h2 id="editing-tasks">Editing Tasks</h2>
+<p>We can currently mark our tasks as completed, but what if we want to edit a task? That&rsquo;s another big part of this project, so let&rsquo;s create another custom component to edit our tasks. We&rsquo;ll start on the <strong>Page Selector</strong> tab and press the <span class="btn interactive  cstyle transparent" style="--VARIABLE-BOX-color: green;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button to create a new blank component. Let&rsquo;s name this one <code>EditToDoItemComponent</code>.</p>
+<h3 id="component-widgets">Component Widgets</h3>
+<p>In this component, we&rsquo;ll start with a <strong>Column</strong> widget layout, and then place a few widgets in the <strong>Widget Tree</strong> following the diagram below:</p>
+
+<div class="list-tree"><ul>
+<li>EditToDoItemComponent
+<ul>
+<li>Column
+<ul>
+<li>TextField <code>TitleField</code></li>
+<li>TextField <code>DescriptionField</code></li>
+<li>Row
+<ul>
+<li>Text <code>DueDateText</code></li>
+<li>Spacer</li>
+<li>IconButton <code>DueDateButton</code></li>
+</ul>
+</li>
+<li>DropDown <code>PriorityDropDown</code></li>
+<li>TextField <code>AddressField</code></li>
+<li>Row
+<ul>
+<li>Button <code>Cancel Button</code></li>
+</ul>
+</li>
+<li>Row
+<ul>
+<li>Button <code>Save Button</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>When fully set up, your component should have this layout:</p>
+<p><a href="#R-image-1cd53304d71c33e1ad880ee37f6e654f" class="lightbox-link"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cd53304d71c33e1ad880ee37f6e654f"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png"></a></p>
+
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Design Time!
+  </summary>
+  <div class="box-content">
+<p>Before moving on, feel free to take a minute to adjust the design of this component by adding spacing between each item, setting or removing item widths, and having items expand to fill the space or use the minimal amount of space required. The examples shown here already have some design changes applied to them, but at this point you should be able to click around and adjust the design as desired!</p>
+  </div>
+</details>
+<h3 id="component-parameters">Component Parameters</h3>
+<p>This component will also need to have a couple of parameters. In fact, they will be the exact same parameters we used for the <code>ToDoItemComponent</code> earlier, which are <code>toDoItemParam</code> using the <code>ToDoItemType</code> and an <code>index</code> parameter representing the index of the item in the list:</p>
+<p><a href="#R-image-7c7b6db4b0d394f73e7b46ec398aad52" class="lightbox-link"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c7b6db4b0d394f73e7b46ec398aad52"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png"></a></p>
+<h3 id="widget-values">Widget Values</h3>
+<p>Now we can connect each widget&rsquo;s display values to the <code>toDoItemParam</code> parameter just like we did previously. For <strong>TextField</strong> widgets, we can also set a <strong>Label</strong> value and <strong>Hint</strong> value as well. Below is an example of setting up the <code>TitleField</code> <strong>TextField</strong> widget:</p>
+<p><a href="#R-image-0c8704ed0641d937122281f35aa888fa" class="lightbox-link"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c8704ed0641d937122281f35aa888fa"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif"></a></p>
+<p>Go ahead and do the same process for the text field widgets displaying the <code>description</code> and <code>address</code> fields.</p>
+<p>For the <code>DueDateText</code> <strong>Text</strong> widget, we&rsquo;ll connect it directly to the <code>dateDue</code> field so we can see the complete due date.</p>
+<p>Finally, for the <code>PriorityDropDown</code>, we&rsquo;ll set the <strong>Initial Option Value</strong> to be the <code>priority</code> field from our <code>toDoItemParam</code> parameter, and we can also configure the drop-down to have both <code>Low</code> and <code>High</code> as options.</p>
+<p><a href="#R-image-9d10a7224e03bc47f60838aa67fd02b3" class="lightbox-link"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d10a7224e03bc47f60838aa67fd02b3"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png"></a></p>
+<h3 id="widget-buttons">Widget Buttons</h3>
+<p>To test out our widget, let&rsquo;s configure both the <code>CancelButton</code> and <code>SaveButton</code> actions to do the same thing. When creating an action, we&rsquo;ll choose the <strong>On Tap</strong> action, and then look for the <strong>Widget/UI Interactions</strong> section in the list of actions, and choose <strong>Bottom Sheet</strong> and then <strong>Dismiss</strong>. See the animation below for an example of configuring the <code>CancelButton</code> with this action.</p>
+<p><a href="#R-image-a6ee3cd97c855b72763b43491016cd0f" class="lightbox-link"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6ee3cd97c855b72763b43491016cd0f"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif"></a></p>
+<p>Make sure you configure the <code>SaveButton</code> to perform the same action for now. We&rsquo;ll come back and update it later with additional functionality to actually save our changes.</p>
+<p>That&rsquo;s a basic component to edit tasks!</p>
+<h2 id="dynamically-loading-a-component">Dynamically Loading a Component</h2>
+<p>Now that we have a component available to edit our tasks, let&rsquo;s add some functionality to our interface that allows us to actually edit our tasks. For this, let&rsquo;s add an <strong>IconButton</strong> to our <code>ToDoItemComponent</code> at the end of the top row. We&rsquo;ll call this an <code>EditButton</code> and configure the design a bit:</p>
+<p><a href="#R-image-b025d11e138f739426cc1ee99227d5ec" class="lightbox-link"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b025d11e138f739426cc1ee99227d5ec"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png"></a></p>
+<p>For this button, we&rsquo;ll configure the <strong>On Tap</strong> action to open a <strong>Bottom Sheet</strong> and place our <code>EditToDoItemComponent</code> in that area. We&rsquo;ll also link the <code>toDoItemParam</code> and <code>index</code> parameters to this sheet, and enable the <strong>Safe Area</strong> option just to make sure our interface does not interfere with anything else on the screen. The animation below shows the full process.</p>
+<p><a href="#R-image-e124563ef2619443777e60e5dec05ca4" class="lightbox-link"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e124563ef2619443777e60e5dec05ca4"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif"></a></p>
+<p>Once we have configured that button, we should be able to launch our application in <strong>Test Mode</strong> and test it out!</p>
+<p><a href="#R-image-6059dfb091ab1b113cf144cbfe7552e1" class="lightbox-link"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6059dfb091ab1b113cf144cbfe7552e1"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif"></a></p>
+<p>If everything is working correctly, we can click on the Edit button in each of our to do tasks, and we&rsquo;ll see a little pop up on the bottom of the screen showing the settings for that task!</p>
+<p>We can place any component in that <strong>Bottom Sheet</strong> area by configuring an action to launch it.</p>
+<h2 id="editing-dates">Editing Dates</h2>
+<p>Let&rsquo;s go back to our <code>EditToDoItemComponent</code> and configure the <code>DueDateButton</code> widget&rsquo;s <strong>On Tap</strong> action to open a <strong>Date/Time Picker</strong> under the <strong>Widget/UI Interactions</strong> section so we can choose a due date. We&rsquo;ll set it to the <strong>Date+Time</strong> type and allow the user to select any valid date and time in the future.</p>
+<p>Once the user has selected a value, we can find that value in the <strong>Widget State</strong> under the <strong>Date Picked</strong> value. So, let&rsquo;s configure the <code>DueDateText</code> to use that value if available using a <strong>Conditional Value</strong> configuration to check if a date has been selected. The process is shown in the animation below.</p>
+<p><a href="#R-image-0fc1144a8f3f0d95d768aa9ac83f6634" class="lightbox-link"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0fc1144a8f3f0d95d768aa9ac83f6634"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif"></a></p>
+<p>Let&rsquo;s reload our <strong>Test Mode</strong> and make sure that this is working before continuing.</p>
+<p><a href="#R-image-11d92671dfa032538efb9b9febe54aad" class="lightbox-link"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-11d92671dfa032538efb9b9febe54aad"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif"></a></p>
+<h2 id="saving-data">Saving Data</h2>
+<p>Finally, let&rsquo;s update our <code>SaveButton</code> action to actually save the data. This is very similar to what we did when we configured the <strong>Switch</strong> widget to mark a task as completed.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+<p>Last modified by:
+              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/84b619ee832e92574bd8155936c9571069df2250">Mar 6, 2026</a>
+</p>
+
+</div>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          
+          <a id="R-logo" href="/extras/index.html">
+            <div class="logo-title">K-State CS Hugo Framework</div>
+          </a>
+        </div>
+        <search><form action="/extras/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/index.html"><input type="checkbox" id="R-section-8ac037dd365a7ab70041d22087358e55" aria-controls="R-subsections-8ac037dd365a7ab70041d22087358e55"><label for="R-section-8ac037dd365a7ab70041d22087358e55"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="R-subsections-8ac037dd365a7ab70041d22087358e55" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/01-welcome/index.html"><a class="padding" href="/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
+            <li class="" data-nav-id="/extras/02-full-stack/index.html"><input type="checkbox" id="R-section-833bd75f80125bdb3a3b58824278b2dc" aria-controls="R-subsections-833bd75f80125bdb3a3b58824278b2dc"><label for="R-section-833bd75f80125bdb3a3b58824278b2dc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-833bd75f80125bdb3a3b58824278b2dc" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/02-full-stack/01-intro/index.html"><a class="padding" href="/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/02-setup/index.html"><a class="padding" href="/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/03-initial/index.html"><a class="padding" href="/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/04-docker/index.html"><a class="padding" href="/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/05-working/index.html"><a class="padding" href="/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/06-nodemon/index.html"><a class="padding" href="/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/07-database/index.html"><a class="padding" href="/extras/02-full-stack/07-database/index.html">7. Database</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/08-knex/index.html"><a class="padding" href="/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/index.html"><input type="checkbox" id="R-section-34a809bea981e201e90739794ef2ad65" aria-controls="R-subsections-34a809bea981e201e90739794ef2ad65"><label for="R-section-34a809bea981e201e90739794ef2ad65"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="R-subsections-34a809bea981e201e90739794ef2ad65" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/03-canvas-setup/01-codio-org/index.html"><a class="padding" href="/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/02-codio-course/index.html"><a class="padding" href="/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/03-codio-assign/index.html"><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/04-canvas-clone/index.html"><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
+            <li class="" data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e"><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/04-deploy-example/01-instructions/index.html"><a class="padding" href="/extras/04-deploy-example/01-instructions/index.html">1. Instructions</a></li></ul></li>
+            <li class="parent " data-nav-id="/extras/05-flutter-flow/index.html"><input type="checkbox" id="R-section-642d241f864349d539b611bd36b843c7" aria-controls="R-subsections-642d241f864349d539b611bd36b843c7" checked><label for="R-section-642d241f864349d539b611bd36b843c7"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Flutter Flow Example</span></label><a class="padding" href="/extras/05-flutter-flow/index.html"><b>5. </b>Flutter Flow Example</a><ul id="R-subsections-642d241f864349d539b611bd36b843c7" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/05-flutter-flow/01-starter/index.html"><a class="padding" href="/extras/05-flutter-flow/01-starter/index.html">1. Starter Project</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/02-first-page/index.html"><a class="padding" href="/extras/05-flutter-flow/02-first-page/index.html">2. First Component</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/03-list-view/index.html"><a class="padding" href="/extras/05-flutter-flow/03-list-view/index.html">3. List View</a></li>
+            <li class="active " data-nav-id="/extras/05-flutter-flow/04-interaction/index.html"><a class="padding" href="/extras/05-flutter-flow/04-interaction/index.html">4. Interaction</a></li></ul></li>
+            <li class="" data-nav-id="/extras/06-video-intros/index.html"><a class="padding" href="/extras/06-video-intros/index.html"><b>6. </b>Video Intros</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-auto" value="auto" selected>KSU Auto</option>
+                    <option id="R-select-variant-light-theme" value="light-theme">KSU Light</option>
+                    <option id="R-select-variant-dark-theme" value="dark-theme">KSU Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p></div>
+      </div>
+    </aside>
+    <script src="/extras/js/clipboard/clipboard.min.js?1772837875" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1772837875" defer></script>
+    <script src="/extras/js/theme.min.js?1772837875" defer></script>
+  </body>
+</html>

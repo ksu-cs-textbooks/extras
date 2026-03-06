@@ -104,14 +104,6 @@ var relearn_lti_index = [
     "uri": "/extras/05-flutter-flow/02-first-page/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
-    "description": "Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.\nComponent Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:",
-    "modified": "2026-03-06T13:33:36-06:00",
-    "tags": [],
-    "title": "List View",
-    "uri": "/extras/05-flutter-flow/03-list-view/index.html"
-  },
-  {
     "breadcrumb": "Full Stack Web Application",
     "description": "Prerequisites The basic environment required for this setup:\nA Linux/Unix system Ubuntu/Debian is preferred. Mac OS X (Darwin) should also work. Docker Desktop Visual Studio Code Git and GitHub This guide will use the following environment:\nWindows 10 Host OS (should work on Windows 11 as well) Windows Subsystem for Linux WSL 2 Ubuntu LTS on WSL 2 You do not need to install a GUI package as described in this guide Git installed on Ubuntu in WSL 2 You may also wish to either set up Git Credential Manager to share Git credentials with Windows or set up SSH Keys to communicate with GitHub Docker Desktop with WSL 2 Backend Visual Studio Code and WSL Extension You may also wish to install the Dev Containers extension. This guide will not use it, but that is an alternative way to develop within a container. Optional To match the environment seen in the screenshots/videos, you can install these optional items:",
     "modified": "2023-06-20T17:30:07-05:00",
@@ -136,6 +128,14 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/03-initial/index.html"
   },
   {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.\nComponent Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:",
+    "modified": "2026-03-06T16:57:34-06:00",
+    "tags": [],
+    "title": "List View",
+    "uri": "/extras/05-flutter-flow/03-list-view/index.html"
+  },
+  {
     "breadcrumb": "Setting Up a Canvas Course",
     "description": "Video to come!",
     "modified": "2023-07-31T12:03:34-05:00",
@@ -150,6 +150,14 @@ var relearn_lti_index = [
     "tags": [],
     "title": "Docker",
     "uri": "/extras/02-full-stack/04-docker/index.html"
+  },
+  {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.\nCompleting Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.",
+    "modified": "2026-03-06T16:57:34-06:00",
+    "tags": [],
+    "title": "Interaction",
+    "uri": "/extras/05-flutter-flow/04-interaction/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",
