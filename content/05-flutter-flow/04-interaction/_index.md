@@ -155,8 +155,87 @@ Let's reload our **Test Mode** and make sure that this is working before continu
 
 ## Saving Data
 
-Finally, let's update our `SaveButton` action to actually save the data. This is very similar to what we did when we configured the **Switch** widget to mark a task as completed.
+Finally, let's update our `SaveButton` action to actually save the data. This is very similar to what we did when we configured the **Switch** widget to mark a task as completed. We'll start by going back to our `EditToDoItemComponent` and then clicking the `SaveButton` and editing the Actions applied to it. In the **Action Flow Editor**, we need to add a second action that will save the data before dismissing the bottom sheet. So, we can click the **Plus** button at the bottom of that action and create a new action. In that action, we'll look for the **State Management** option and find **Update App State**, then click the {{% button href="#" icon="plus" color="blue"%}}Add Field{{% /button %}} button to choose our `toDoTasks` **App State** field. Then, just like before, we'll select the **Update Item at Index** option and set the **Item Index** to our `index` variable, then we can set the individual fields by matching them to either the text fields and drop down fields on our component or the **Date Picked** state from our **Widget State** for the due date if it has been selected, using a **Conditional Value** similar to what we did before. The full process is shown in the animation below or the video above.
 
+![FlutterFlow Update Save Action](images/updatesave.gif)
 
+Once that is done, we can reload our app in **Test Mode** and make sure that the edits we make are properly saved in the app state that is shown in the **Debug Panel** on the left side.
 
+![FlutterFlow Update Save Action Test](images/updatesave2.gif)
 
+There we go! We can now update our state easily!
+
+## Creating Data
+
+The process to create a component for creating a new to do task is very similar. Let's look at that process and see how it differs.
+
+First, let's create a duplicate of our `EditToDoItemComponent` - we'll call it `CreateToDoItemComponent` to follow our existing naming scheme. You can duplicate a component by right-clicking it in the **Page Selector** and selecting **Duplicate Component**. Once it is created, we can rename it to the appropriate name.
+
+Next, we can remove the two component parameters from this component since they aren't needed at all. So, choose the component in the **Page Selector** and find the **Component Parameters** section of the **Properties Panel** and remove the `toDoItemParam` and `index` parameters from that list.
+
+![FlutterFlow Remove Parameters](images/removeparams.gif)
+
+We'll also need to update the **Initial Value** settings for each of our fields since they are no longer relevant. They can just be completely removed for now. Remember to update the three **Text Field** widgets as well as the **Drop Down** widget for priority and the else case in the **Text** widget for the due date (it can be set to the **Empty String** constant).
+
+Finally, we need to modify the `SaveButton` action to **Add to List** instead of **Update Item at Index**. The process of matching up the fields is the same as before, but with a few important changes:
+1. Since we are creating a new entry, all fields should be specified and set to default values
+2. The `dateCreated` can be set to the **Current Time** option found under **Global State**
+3. The `dateDue` can be directly set to the **Date Picked** option under **Widget State**
+4. All other fields should have values set by the widgets or reasonable defaults
+
+The full process for editing that action is shown below.
+
+![FlutterFlow Create Action](images/createaction.gif)
+
+Finally, let's quickly add a **Button** widget to the bottom of our `HomePage` to allow us to create a new task. The **On Tap** action for that button will be to open the `CreateToDoItemComponent` as a bottom sheet. For the example, we chose to add that at the bottom of the **Column** widget in a new **Row** widget so it could expand to fill the whole width, and we added a **Spacer** widget as well.
+
+![FlutterFlow Create Button](images/createbutton.png)
+
+Once again, at this point we can open our app in **Test Mode** to confirm that we can actually add new items to our **App State**. 
+
+![FlutterFlow Create Button Test](images/createbuttontest.gif)
+
+Awesome! It looks like it is working!
+
+{{% notice note "What about Validation?" %}}
+
+One of the major topics we aren't covering in this tutorial is **Form Validation**. For example, what if the user doesn't enter a title? Or what if the user forgets to select a due date? Our current application will allow this (the widget will still work and just show default values), but in practice we may not want to. FlutterFlow includes a **Form** widget that we can use to add validation logic to our form fields. More information can be found in the [FlutterFlow - Form Validation](https://docs.flutterflow.io/resources/forms/form-validation/) documentation.
+
+{{% /notice %}}
+
+## Deleting Data
+
+Finally, let's add another button that allows users to delete data. This is actually quite simple - we just add a new button to our `ToDoItemComponent` and set the action to **Update App State** then choose the **Remove From List at Index** option and select the `index` parameter. However, this time we also want to set the **Update Type** at the bottom to **Rebuild Containing Page** since we are updating the app state beyond this component. By setting this option, it will refresh the entire list and remove this component once the underlying **App State** is updated.
+
+![FlutterFlow Delete Action](images/deleteaction.png)
+
+With that in place, we should also be able to delete items from our application.
+
+![FlutterFlow Delete Button Test](images/deleteactiontest.gif)
+
+## Summary
+
+Let's take a minute to go back to that initial list of features and check off the ones we have already implemented:
+
+- [X] To Do tasks should include a short title and longer description.
+- [X] To Do tasks should track the date it was created and the date it is due.
+- [X] To Do tasks should track whether it has been completed or not.
+- [X] Tasks may optionally have an address associated with the task.
+- [X] To Do tasks should be assigned to different priorities (Low, High).
+- [X] When a task is completed, it should track the date and time when it was completed.
+- [X] Users should be able to create, edit, and delete tasks.
+- [ ] Tasks should be sorted according to completion, due date, and priority.
+- [ ] Our application should include user accounts so that multiple users can use the app.
+- [ ] User accounts should use an email address and password to log in.
+- [ ] User data should be stored in the cloud so they can use the app across devices.
+- [ ] Each user's data should be stored securely and not accessible by other users.
+- [ ] If a task has an address, the application should allow the user to request directions to that address.
+- [ ] If the user gives permission, it should also track the location where a task was completed.
+- [ ] Our application should track the percentage of tasks completed on-time (before the due date).
+- [ ] Users should be able to configure their display name and update their password.
+- [ ] Users should be able to delete their account and all associated data.
+- [ ] User profile pictures should be visible from [Gravatar](https://gravatar.com/)
+- [ ] The app should display a global leaderboard showing the users with the highest on-time completion percentage.
+- [ ] The app should have a page to display the current weather.
+
+We are already nearly one third of the way through the list! At this point we have an app that has quite a few interesting features. Next, we'll work on connecting this app to the cloud and adding user accounts.
