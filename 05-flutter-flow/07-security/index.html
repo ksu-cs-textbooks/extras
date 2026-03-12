@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.">
+    <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta name="twitter:title" content="Security :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/07-security/index.html">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Security :: K-State CS Textbook Extras">
+    <meta property="og:description" content="Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta itemprop="name" content="Security :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.">
+    <meta itemprop="dateModified" content="2026-03-12T16:43:33-05:00">
+    <meta itemprop="wordCount" content="2217">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <title>Security :: K-State CS Textbook Extras</title>
+    <link href="/extras/05-flutter-flow/07-security/index.xml" rel="alternate" type="application/rss+xml" title="Security :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/07-security/index.print.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/07-security/tele.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/07-security/embed.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773351840" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773351840" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773351840" defer></script>
+    <script src="/extras/js/search.min.js?1773351840" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773351840";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1773351840" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773351840" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773351840" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773351840" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773351840" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773351840" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773351840" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773351840" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1773351840" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/05-flutter-flow\/07-security\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'light-theme', 'dark-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=true;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1773351840" rel="stylesheet">
+  </head>
+  <body class="mobile-support html" data-url="/extras/05-flutter-flow/07-security/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#firebase-configuration">Firebase Configuration</a></li>
+    <li><a href="#using-firebase-in-code">Using Firebase in Code</a></li>
+    <li><a href="#firestore-rules">Firestore Rules</a></li>
+    <li><a href="#secure-access-in-flutterflow">Secure Access in FlutterFlow</a></li>
+    <li><a href="#adding-a-uid-to-a-task">Adding a UID to a Task</a></li>
+    <li><a href="#updating-firestore-rules">Updating Firestore Rules</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">Flutter Flow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Security</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/07-security/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/07-security/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/06-authentication/index.html" title="Authentication (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/06-video-intros/index.html" title="Video Intros (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/07-security/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/07-security/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="security">Security</h1>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/asdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Our application is currently storing both our user&rsquo;s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let&rsquo;s take a minute to explore the flaw and truly understand why it is so important to fix correctly.</p>
+<h2 id="firebase-configuration">Firebase Configuration</h2>
+<p>One of the key security concepts to keep in mind when developing applications (both mobile applications as well as web applications) is that we can never trust <em>anything</em> that is in control of the user. This includes their device, their web browser, or any other tool that they use to interface with our application. A user could modify the contents of their device, inspect its memory, change settings, send back malicious data, and generally do anything they want. So, we have to take that into account when developing the security settings in our applications. In short, we must enforce security in a location that is not accessible to the user.</p>
+<p>As we&rsquo;ve seen, Google Firebase is a cloud database that can be accessed directly without going through any other service. This means that <em>everything</em> needed to access data in Google Firebase has to be stored directly in our application, which would eventually be installed on user&rsquo;s phones. This means that any relatively skilled user could open up the memory in our application and find all of that information. In fact, it is stored directly in a <code>firebase_config.dart</code> file inside of the code for our FlutterFlow application, the code of which is shown below</p>
+<div class="tab-panel" data-tab-group="1f997c9bfab6d7e28d575eb2ceccaaa7">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="libbackendfirebasefirebase_configdart"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('1f997c9bfab6d7e28d575eb2ceccaaa7','libbackendfirebasefirebase_configdart')"
+    >
+      <span class="tab-nav-text">lib/backend/firebase/firebase_config.dart</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="libbackendfirebasefirebase_configdart"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:firebase_core/firebase_core.dart&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/foundation.dart&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Future initFirebase() <span style="color:#66d9ef">async</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (kIsWeb) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> Firebase.initializeApp(
+</span></span><span style="display:flex;"><span>        options: FirebaseOptions(
+</span></span><span style="display:flex;"><span>            apiKey: <span style="color:#e6db74">&#34;AIzaSyDR7S&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            authDomain: <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;.firebaseapp.com&#34;</span>,
+</span></span><span style="display:flex;"><span>            projectId: <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            storageBucket: <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;.firebasestorage.app&#34;</span>,
+</span></span><span style="display:flex;"><span>            messagingSenderId: <span style="color:#e6db74">&#34;1086985&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            appId: <span style="color:#e6db74">&#34;1:1086985&lt;redacted&gt;:web:640e1e74f5a&lt;redacted&gt;&#34;</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> Firebase.initializeApp();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Redacted Data
+  </summary>
+  <div class="box-content">
+<p>Of course, some items have been <code>&lt;redacted&gt;</code> because they would compromise the security of the actual demo application being built for this tutorial!</p>
+  </div>
+</details>
+<p>So, if a user can export those settings, what can they do with it? Let&rsquo;s find out!</p>
+<h2 id="using-firebase-in-code">Using Firebase in Code</h2>
+<p>For this demo, we used Google Copilot to quickly create a demo application in JavaScript that uses the standard client libraries to access Google Firebase. This is the <em>exact same process</em> a web application written in a JavaScript framework, such as React or Vue, would use.</p>
+<p>In just a few seconds, we are given this piece of code:</p>
+<div class="tab-panel" data-tab-group="fc81a46a67d87fb072575a460e9e0f8d">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="indexjs"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('fc81a46a67d87fb072575a460e9e0f8d','indexjs')"
+    >
+      <span class="tab-nav-text">index.js</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="indexjs"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">initializeApp</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;firebase/app&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">getFirestore</span>, <span style="color:#a6e22e">collection</span>, <span style="color:#a6e22e">getDocs</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;firebase/firestore&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Initialize Firebase
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firebaseConfig</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">apiKey</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AIzaSyDR7S&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">authDomain</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;.firebaseapp.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">storageBucket</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;flutter-flow-demo-&lt;redacted&gt;.firebasestorage.app&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">messagingSenderId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1086985&lt;redacted&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">appId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1:1086985&lt;redacted&gt;:web:640e1e74f5a&lt;redacted&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">initializeApp</span>(<span style="color:#a6e22e">firebaseConfig</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getFirestore</span>(<span style="color:#a6e22e">app</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Fetch and print to_do_tasks collection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getTasks</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Fetching to_do_tasks collection from Firebase...&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">querySnapshot</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getDocs</span>(<span style="color:#a6e22e">collection</span>(<span style="color:#a6e22e">db</span>, <span style="color:#e6db74">&#39;to_do_tasks&#39;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">querySnapshot</span>.<span style="color:#a6e22e">empty</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;No tasks found in the collection.&#39;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasks</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">querySnapshot</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">doc</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">push</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>        ...<span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">data</span>(),
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;\n=== TO-DO TASKS ===&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">tasks</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Error fetching tasks:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Run the function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">getTasks</span>();</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div><p>As you can see, it includes the exact same configuration that was found in our FlutterFlow application. When we run this code, we see the following output:</p>
+<p><a href="#R-image-39dbe9f09dd594728e959ebb915a3e9b" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-39dbe9f09dd594728e959ebb915a3e9b"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
+<p>Yikes! As we can see here, we were able to access the entire contents of the <code>to_do_tasks</code> collection from Firestore with just that configuration. We didn&rsquo;t have to log in, we didn&rsquo;t have to create a user account, <em>we didn&rsquo;t even have to do anything except borrow a few settings from our app</em>!</p>
+<p>What if we try to do the same to the <code>users</code> collection? Let&rsquo;s try that:</p>
+<p><a href="#R-image-40f869350d9e04aa8068baf6869a328e" class="lightbox-link"><img alt="Firebase Users Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-40f869350d9e04aa8068baf6869a328e"><img alt="Firebase Users Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png"></a></p>
+<p>Super yikes! We can even get a list of all of the users in our application! <strong>This is a major security flaw!</strong> Effectively, this means that anyone who downloads our application can see all of this data, and they can start trying to guess individual user&rsquo;s passwords or worse.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Case Studies
+  </summary>
+  <div class="box-content">
+<p>A quick search for &ldquo;firebase data breach&rdquo; will turn up a number of case studies and news articles referencing this issue:</p>
+<ul>
+<li><a href="https://www.scworld.com/brief/nearly-300m-chat-ask-ai-user-messages-spilled-by-firebase-misconfiguration" rel="external" target="_blank">Nearly 300M Chat &amp; Ask AI user messages spilled by Firebase misconfiguration</a></li>
+<li><a href="https://cybersecuritynews.com/numerous-applications-using-googles-firebase-platform/" rel="external" target="_blank">Numerous Applications Using Google’s Firebase Platform Leaking Highly Sensitive Data</a></li>
+<li><a href="https://www.bleepingcomputer.com/news/security/misconfigured-firebase-instances-leaked-19-million-plaintext-passwords/" rel="external" target="_blank">Misconfigured Firebase instances leaked 19 million plaintext passwords</a></li>
+<li><a href="https://www.bleepingcomputer.com/news/security/tea-app-leak-worsens-with-second-database-exposing-user-chats/" rel="external" target="_blank">Tea app leak worsens with second database exposing user chats</a></li>
+</ul>
+<p>Sadly, Firebase security misconfigurations are shockingly common errors, often made by inexperienced application developers who don&rsquo;t understand the security aspects of storing data in the cloud. Before releasing an app publicly, it is important to do a full security review and ensure data is properly protected.</p>
+  </div>
+</details>
+<h2 id="firestore-rules">Firestore Rules</h2>
+<p>Thankfully, Firebase has a solution available in the form of it&rsquo;s <strong>Firestore Rules</strong>, which allow us to define the requirements users must meet in order to access data in our database. Let&rsquo;s look at our current rules, which can be found in the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a>:</p>
+<p><a href="#R-image-54550547ae6122c628235fd555f875d7" class="lightbox-link"><img alt="Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-54550547ae6122c628235fd555f875d7"><img alt="Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png"></a></p>
+<p>Here are the current rules that are defined for our demo application:</p>
+<div class="highlight" dir="auto"><pre tabindex="0"><code class="language-cloud-firestore-security-rules" data-lang="cloud-firestore-security-rules">rules_version = &#39;2&#39;;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == document;
+      allow delete: if request.auth.uid == document;
+    }
+
+    match /to_do_tasks/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if request.auth.token.email.matches(&#34;firebase@flutterflow.io&#34;);
+    }
+
+    match /{document=**} {
+      // This rule allows anyone with your database reference to view, edit,
+      // and delete all data in your database. It is useful for getting
+      // started, but it is configured to expire after 30 days because it
+      // leaves your app open to attackers. At that time, all client
+      // requests to your database will be denied.
+      //
+      // Make sure to write security rules for your app before that time, or
+      // else all client requests to your database will be denied until you
+      // update your rules.
+      allow read, write: if request.time &lt; timestamp.date(2026, 4, 6);
+    }
+  }
+}</code></pre></div>
+<p>While we won&rsquo;t go too deeply into all of the details in this setup, we should hopefully see a couple of things jump out automatically:</p>
+<ul>
+<li>The bottom rule includes a large comment describing it, but basically it allows <strong>ALL</strong> requests to our database during the first 30 days for testing. So, we don&rsquo;t even <em>have</em> any active security rules in effect right now.</li>
+<li>The rule above that allows any actions made by FlutterFlow through their <code>firebase@flutterflow.io</code> account</li>
+</ul>
+<p>So, before we do anything else, let&rsquo;s remove both of those rules so that it looks like this:</p>
+<div class="highlight" dir="auto"><pre tabindex="0"><code class="language-cloud-firestore-security-rules" data-lang="cloud-firestore-security-rules">rules_version = &#39;2&#39;;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == document;
+      allow delete: if request.auth.uid == document;
+    }
+
+    match /to_do_tasks/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+  }
+}</code></pre></div>
+<p>Once we are satisfied, we can click <strong>Publish</strong> to save our changes:</p>
+<p><a href="#R-image-357d8f20f940a442effba920e45a4319" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-357d8f20f940a442effba920e45a4319"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png"></a></p>
+<p>Now that we have deployed those rules, we&rsquo;ll try to read the users from the <code>users</code> collection again and see if that works:</p>
+<p><a href="#R-image-cc67239d6cec5d032cc14cab7fa240f6" class="lightbox-link"><img alt="Firestore Access Denied" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cc67239d6cec5d032cc14cab7fa240f6"><img alt="Firestore Access Denied" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png"></a></p>
+<p>Great! As we can see, we can no longer access all the user accounts in our application. However, if we try to access the <code>to_do_tasks</code> collection, we see that it still works:</p>
+<p><a href="#R-image-d4f3f5e681d3fefbcae030a93c2a00ae" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4f3f5e681d3fefbcae030a93c2a00ae"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
+<p>So, we need to modify our rules a bit to secure our to-do tasks.</p>
+<h2 id="secure-access-in-flutterflow">Secure Access in FlutterFlow</h2>
+<p>To configure the security in FlutterFlow, let&rsquo;s go back to the <strong>Firestore</strong> page and look at the <strong>Firestore Settings</strong> again. Here, we can see the <strong>Firestore Rules</strong> section that we can configure for our application:</p>
+<p><a href="#R-image-4fbb8323ca71490d24dada90d4cea250" class="lightbox-link"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4fbb8323ca71490d24dada90d4cea250"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png"></a></p>
+<p>Here, we can see that some of the rules are pre-configured for us. First, let&rsquo;s look at the <code>users</code> collection. It already has all of its options set to <strong>Users Collection</strong>, which, in the Firestore rules code, looks like <code>allow &lt;action&gt; if request.auth.uid == document</code>. This option basically means that a user can only perform and action on it&rsquo;s own document in the <code>users</code> collection. So, this prevents any other user from accessing or modifying that data. This is what we want!</p>
+<p>Now, let&rsquo;s look at the <code>to_do_tasks</code> collection. Right now we see that everyone can create documents and read documents, but with the current rules, no one can write to existing documents or delete them. Before we can update that, however, we need to configure our <code>to_do_tasks</code> collection to store a user&rsquo;s ID along with the task.</p>
+<h2 id="adding-a-uid-to-a-task">Adding a UID to a Task</h2>
+<p>So, back on the <strong>Collections</strong> tab, let&rsquo;s add a new field called <code>uid</code> to the collection, and give it the type <strong>String</strong>. We&rsquo;ll use this to store the user&rsquo;s unique ID in the database.</p>
+<p><a href="#R-image-d6342207d337240a7b19ad8f3647aea4" class="lightbox-link"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d6342207d337240a7b19ad8f3647aea4"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png"></a></p>
+<p>Next, on the <code>CreateToDoItemComponent</code>, we need to modify the <strong>Save</strong> button action to set that field to the <strong>User ID</strong> field under <strong>Authenticated User</strong>:</p>
+<p><a href="#R-image-2e93a507904d07ae497b788ac3ec1e0a" class="lightbox-link"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e93a507904d07ae497b788ac3ec1e0a"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png"></a></p>
+<p>Finally, in our Backend Query for the <strong>ListView</strong> widget on our <code>HomePage</code>, we need to add a <strong>Filter</strong> that checks that the <code>uid</code> should be equal to the authenticated user&rsquo;s User ID:</p>
+<p><a href="#R-image-4e84d601f85ca320f27fd6399c86e917" class="lightbox-link"><img alt="FlutterFlow User Filter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e84d601f85ca320f27fd6399c86e917"><img alt="FlutterFlow User Filter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png"></a></p>
+<p>With those changes, we are making sure that a newly created task will include the user&rsquo;s ID, and that our list of tasks will only show those tasks that are assigned to that user.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Filter is Required
+  </summary>
+  <div class="box-content">
+<p>Once the Firestore rules are configured, a filter is required on any backend query that is accessing the data, and it must match or be more strict than the rules that are configured. So, if we don&rsquo;t add a filter here, Firebase will return an error even though there may be items that the user can view.</p>
+  </div>
+</details>
+<h2 id="updating-firestore-rules">Updating Firestore Rules</h2>
+<p>Now, back in our Firestore Rules, we can set the <strong>Read</strong>, <strong>Write</strong>, and <strong>Delete</strong> actions on the <code>to_do_tasks</code> collection to only allow tagged users to access them, and reference the <code>uid</code> field as the tag that identifies the user:</p>
+<p><a href="#R-image-cbd267d8aee2b27be34184bf25dd11dc" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbd267d8aee2b27be34184bf25dd11dc"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png"></a></p>
+<p>Below that, we should see rules similar to this:</p>
+<div class="highlight" dir="auto"><pre tabindex="0"><code class="language-cloud-firestore-security-rules" data-lang="cloud-firestore-security-rules">rules_version = &#39;2&#39;;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /to_do_tasks/{document} {
+      allow create: if request.auth.uid == request.resource.data.uid;
+      allow read: if request.auth.uid == resource.data.uid;
+      allow write: if request.auth.uid == resource.data.uid;
+      allow delete: if request.auth.uid == resource.data.uid;
+    }
+
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == document;
+      allow delete: if request.auth.uid == document;
+    }
+  }
+}</code></pre></div>
+<p>Notice that the top section of rules now includes the code <code>allow &lt;action&gt; if request.auth.uid == resource.data.uid</code> for most actions? This ensures that only the user tagged in the task is able to create, read, edit, or delete those tasks.</p>
+<p>Once we have made those changes, we can click on the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/07-security/index.html"><span class="title">Deploy</span></a></span> to deploy these rules to Firebase.</p>
+<p>Also, since we made changes to our Firebase <code>to_do_tasks</code> collection and the backend queries, we should also scroll up to the <strong>Firestore Indexes</strong> section and click <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/07-security/index.html"><span class="title">Deploy</span></a></span> there as well.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Remember - Building Indexes Takes Time
+  </summary>
+  <div class="box-content">
+<p>Once you click the button to deploy your Firestore indexes, you must wait a little bit before starting your app. It can take a few minutes to build a new Firestore index, and you&rsquo;ll receive errors in your app if you try to load data while the indexes are still building.</p>
+  </div>
+</details>
+<p>With all of that in place, let&rsquo;s test our app in <strong>Test Mode</strong> and see if it works. For the demo animation below, we already created a second user account and populated it with some data, but now we should be able to see how each user stores their own data.</p>
+<p><a href="#R-image-f40a0e342acac648d3a9ced83c99bfac" class="lightbox-link"><img alt="Firestore Security Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f40a0e342acac648d3a9ced83c99bfac"><img alt="Firestore Security Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif"></a></p>
+<p>There we go! It looks like it is working correctly.</p>
+
+<details open class=" box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Test Thoroughly
+  </summary>
+  <div class="box-content">
+<p>At this point, our app has enough features, functionality, and security that we could start letting some users test it out. There are still many features to add, but it is a good start. Before that, however, it is always a good idea to fully test all features of your application, and if you aren&rsquo;t confident working with Firebase security, consult with an experienced developer to have them review your app&rsquo;s settings and see if they spot any errors. Finding and fixing data leaks and security breaches is an important part of developing any app that is entrusted with a user&rsquo;s data.</p>
+  </div>
+</details>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Store Tasks in User Document
+  </summary>
+  <div class="box-content">
+<p>Another commonly used method for protecting data in Firebase is to store a user&rsquo;s data inside of a list directly within their user document (in the <code>users</code> collection in our tutorial). This can be a bit simpler since we don&rsquo;t need to tag each task with a users <code>uid</code> and we can simply use the <strong>Authenticated User</strong> document in FlutterFlow to access that list without a backend query. In fact, this may even be an easier way to accomplish the same task!</p>
+<p>For the purposes of this tutorial, we chose to separate the tasks into their own collection to have a deeper discussion and understanding of Firebase security and Firestore rules. This is purely a design decision on our part, and as we&rsquo;ll see later in this tutorial, it enables some more advanced features later on.</p>
+  </div>
+</details>
+<h2 id="summary">Summary</h2>
+<p>Now we have created an application that stores data in the cloud and even includes proper security rules to prevent unauthorized access to the data. Next, we can focus on adding even more useful features to our application!</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+<p>Last modified by:
+              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/bd41f483c9292b25c58ce1a65bc8a2bb197d5954">Mar 12, 2026</a>
+</p>
+
+</div>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          
+          <a id="R-logo" href="/extras/index.html">
+            <div class="logo-title">K-State CS Hugo Framework</div>
+          </a>
+        </div>
+        <search><form action="/extras/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/index.html"><input type="checkbox" id="R-section-8ac037dd365a7ab70041d22087358e55" aria-controls="R-subsections-8ac037dd365a7ab70041d22087358e55"><label for="R-section-8ac037dd365a7ab70041d22087358e55"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="R-subsections-8ac037dd365a7ab70041d22087358e55" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/01-welcome/index.html"><a class="padding" href="/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
+            <li class="" data-nav-id="/extras/02-full-stack/index.html"><input type="checkbox" id="R-section-833bd75f80125bdb3a3b58824278b2dc" aria-controls="R-subsections-833bd75f80125bdb3a3b58824278b2dc"><label for="R-section-833bd75f80125bdb3a3b58824278b2dc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-833bd75f80125bdb3a3b58824278b2dc" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/02-full-stack/01-intro/index.html"><a class="padding" href="/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/02-setup/index.html"><a class="padding" href="/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/03-initial/index.html"><a class="padding" href="/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/04-docker/index.html"><a class="padding" href="/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/05-working/index.html"><a class="padding" href="/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/06-nodemon/index.html"><a class="padding" href="/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/07-database/index.html"><a class="padding" href="/extras/02-full-stack/07-database/index.html">7. Database</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/08-knex/index.html"><a class="padding" href="/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/index.html"><input type="checkbox" id="R-section-34a809bea981e201e90739794ef2ad65" aria-controls="R-subsections-34a809bea981e201e90739794ef2ad65"><label for="R-section-34a809bea981e201e90739794ef2ad65"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="R-subsections-34a809bea981e201e90739794ef2ad65" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/03-canvas-setup/01-codio-org/index.html"><a class="padding" href="/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/02-codio-course/index.html"><a class="padding" href="/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/03-codio-assign/index.html"><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/04-canvas-clone/index.html"><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
+            <li class="" data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e"><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/04-deploy-example/01-instructions/index.html"><a class="padding" href="/extras/04-deploy-example/01-instructions/index.html">1. Instructions</a></li></ul></li>
+            <li class="parent " data-nav-id="/extras/05-flutter-flow/index.html"><input type="checkbox" id="R-section-642d241f864349d539b611bd36b843c7" aria-controls="R-subsections-642d241f864349d539b611bd36b843c7" checked><label for="R-section-642d241f864349d539b611bd36b843c7"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Flutter Flow Example</span></label><a class="padding" href="/extras/05-flutter-flow/index.html"><b>5. </b>Flutter Flow Example</a><ul id="R-subsections-642d241f864349d539b611bd36b843c7" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/05-flutter-flow/01-starter/index.html"><a class="padding" href="/extras/05-flutter-flow/01-starter/index.html">1. Starter Project</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/02-first-page/index.html"><a class="padding" href="/extras/05-flutter-flow/02-first-page/index.html">2. First Component</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/03-list-view/index.html"><a class="padding" href="/extras/05-flutter-flow/03-list-view/index.html">3. List View</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/04-interaction/index.html"><a class="padding" href="/extras/05-flutter-flow/04-interaction/index.html">4. Interaction</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/05-firebase/index.html"><a class="padding" href="/extras/05-flutter-flow/05-firebase/index.html">5. Firebase</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/06-authentication/index.html"><a class="padding" href="/extras/05-flutter-flow/06-authentication/index.html">6. Authentication</a></li>
+            <li class="active " data-nav-id="/extras/05-flutter-flow/07-security/index.html"><a class="padding" href="/extras/05-flutter-flow/07-security/index.html">7. Security</a></li></ul></li>
+            <li class="" data-nav-id="/extras/06-video-intros/index.html"><a class="padding" href="/extras/06-video-intros/index.html"><b>6. </b>Video Intros</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-auto" value="auto" selected>KSU Auto</option>
+                    <option id="R-select-variant-light-theme" value="light-theme">KSU Light</option>
+                    <option id="R-select-variant-dark-theme" value="dark-theme">KSU Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p></div>
+      </div>
+    </aside>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773351840" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773351840" defer></script>
+    <script src="/extras/js/theme.min.js?1773351840" defer></script>
+  </body>
+</html>

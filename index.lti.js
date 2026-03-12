@@ -200,6 +200,14 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/07-database/index.html"
   },
   {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.",
+    "modified": "2026-03-12T16:43:33-05:00",
+    "tags": [],
+    "title": "Security",
+    "uri": "/extras/05-flutter-flow/07-security/index.html"
+  },
+  {
     "breadcrumb": "Full Stack Web Application",
     "description": "We’re going to use the Knex library to connect to our database from the server. We’ll also use it to handle database migrations and seeding.\nInstall Knex We can install Knex using npm inside the server container:\n# Terminal docker exec -it project-server bash Then we can use npm to install the knex library, along with the pg library for connecting to Postgres databases. This should be done in the /app/server directory inside the container:",
     "modified": "2023-09-08T17:24:16-05:00",

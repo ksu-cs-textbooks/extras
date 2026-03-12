@@ -49,5 +49,12 @@
       <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/06-authentication/index.html</guid>
       <description>Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!</description>
     </item>
+    <item>
+      <title>Security</title>
+      <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/07-security/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/07-security/index.html</guid>
+      <description>Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.</description>
+    </item>
   </channel>
 </rss>
