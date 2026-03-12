@@ -42,5 +42,12 @@
       <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/05-firebase/index.html</guid>
       <description>At this point, we have the basic concept of a mobile application that helps a user track to do tasks. However, currently our data is only stored in the local application state, which is only accessible on a single device. In addition, at any time a user could choose to clear the application’s cache, and all data would be lost. So, let’s explore adding a cloud service to our application that will store our user’s data for us. In addition, we’ll use this service to manage our user accounts and authentication.</description>
     </item>
+    <item>
+      <title>Authentication</title>
+      <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/06-authentication/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/06-authentication/index.html</guid>
+      <description>Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!</description>
+    </item>
   </channel>
 </rss>

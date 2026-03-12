@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authentication :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/06-authentication/index.html</link>
+    <description>Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/06-authentication/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

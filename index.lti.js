@@ -9,8 +9,8 @@ var relearn_lti_index = [
   },
   {
     "breadcrumb": "",
-    "description": "A full stack web application from scratch!",
-    "modified": "2023-08-11T15:48:35-05:00",
+    "description": "A full stack web application from scratch!\nDeprecated This tutorial has been superseded by the new CIS 526 Example Project in that textbook. The material covered in this tutorial was the original inspiration that was expanded upon to create the current work in CIS 526. Most of the information in this tutorial is now outdated but may still be relevant for some users.",
+    "modified": "2026-03-12T13:35:37-05:00",
     "tags": [],
     "title": "Full Stack Web Application",
     "uri": "/extras/02-full-stack/index.html"
@@ -174,6 +174,14 @@ var relearn_lti_index = [
     "tags": [],
     "title": "Working with Docker",
     "uri": "/extras/02-full-stack/05-working/index.html"
+  },
+  {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!",
+    "modified": "2026-03-12T13:35:37-05:00",
+    "tags": [],
+    "title": "Authentication",
+    "uri": "/extras/05-flutter-flow/06-authentication/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",
