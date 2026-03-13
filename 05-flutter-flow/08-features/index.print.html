@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="YouTube Video Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.
+As a reminder, here is our current progress on our application:
+To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. The app should have a page to display the current weather. Let’s start working on a few of these!">
+    <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta name="twitter:title" content="Features :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="YouTube Video Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.
+As a reminder, here is our current progress on our application:
+To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. The app should have a page to display the current weather. Let’s start working on a few of these!">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/08-features/index.html">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Features :: K-State CS Textbook Extras">
+    <meta property="og:description" content="YouTube Video Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.
+As a reminder, here is our current progress on our application:
+To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. The app should have a page to display the current weather. Let’s start working on a few of these!">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta itemprop="name" content="Features :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="YouTube Video Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.
+As a reminder, here is our current progress on our application:
+To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. The app should have a page to display the current weather. Let’s start working on a few of these!">
+    <meta itemprop="dateModified" content="2026-03-12T19:40:20-05:00">
+    <meta itemprop="wordCount" content="1360">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <title>Features :: K-State CS Textbook Extras</title>
+    <link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/08-features/index.html" rel="canonical" type="text/html" title="Features :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/08-features/index.xml" rel="alternate" type="application/rss+xml" title="Features :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/08-features/tele.html" rel="alternate" type="text/html" title="Features :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/08-features/embed.html" rel="alternate" type="text/html" title="Features :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773362441" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773362441" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773362441" defer></script>
+    <script src="/extras/js/search.min.js?1773362441" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773362441";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1773362441" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773362441" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773362441" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773362441" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773362441" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773362441" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773362441" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773362441" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1773362441" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/05-flutter-flow\/08-features\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'light-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=false;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1773362441" rel="stylesheet">
+  </head>
+  <body class="mobile-support print" data-url="/extras/05-flutter-flow/08-features/index.html">
+    
+    <div id="tele" class="tele mirror">
+    
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      
+      
+      
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="features">Features</h1>
+
+
+<a href="https://www.youtube.com/watch?v=asdf">YouTube Video</a>
+
+<p>Now that we have a mobile application with most of the basic features implemented, let&rsquo;s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.</p>
+<p>As a reminder, here is our current progress on our application:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should include a short title and longer description.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should track the date it was created and the date it is due.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should track whether it has been completed or not.</li>
+<li><input checked="" disabled="" type="checkbox"> Tasks may optionally have an address associated with the task.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should be assigned to different priorities (Low, High).</li>
+<li><input checked="" disabled="" type="checkbox"> When a task is completed, it should track the date and time when it was completed.</li>
+<li><input checked="" disabled="" type="checkbox"> Users should be able to create, edit, and delete tasks.</li>
+<li><input checked="" disabled="" type="checkbox"> Tasks should be sorted according to completion, due date, and priority.</li>
+<li><input checked="" disabled="" type="checkbox"> Our application should include user accounts so that multiple users can use the app.</li>
+<li><input checked="" disabled="" type="checkbox"> User accounts should use an email address and password to log in.</li>
+<li><input checked="" disabled="" type="checkbox"> User data should be stored in the cloud so they can use the app across devices.</li>
+<li><input checked="" disabled="" type="checkbox"> Each user&rsquo;s data should be stored securely and not accessible by other users.</li>
+<li><input disabled="" type="checkbox"> If a task has an address, the application should allow the user to request directions to that address.</li>
+<li><input disabled="" type="checkbox"> If the user gives permission, it should also track the location where a task was completed.</li>
+<li><input disabled="" type="checkbox"> Our application should track the percentage of tasks completed on-time (before the due date).</li>
+<li><input disabled="" type="checkbox"> Users should be able to configure their display name and update their password.</li>
+<li><input disabled="" type="checkbox"> Users should be able to delete their account and all associated data.</li>
+<li><input disabled="" type="checkbox"> User profile pictures should be visible from <a href="https://gravatar.com/" rel="external" target="_blank">Gravatar</a></li>
+<li><input disabled="" type="checkbox"> The app should display a global leaderboard showing the users with the highest on-time completion percentage.</li>
+<li><input disabled="" type="checkbox"> The app should have a page to display the current weather.</li>
+</ul>
+<p>Let&rsquo;s start working on a few of these!</p>
+<h2 id="request-directions">Request Directions</h2>
+<p>One quick feature we can add is the ability to request directions to a location stored in the task if one is present. To do this, let&rsquo;s go to our <strong>ToDoItemComponent</strong> and add an action to the <strong>AddressIconButton</strong> widget. In the Action flow editor, we&rsquo;ll start by adding a <strong>Conditional Action</strong> to to the <strong>On Tap</strong> action to check if the application is running on the web using the <strong>Is Web</strong> entry under the <strong>Global Properties</strong> list.</p>
+<p>On the <strong>TRUE</strong> branch, we&rsquo;ll use the <strong>Launch URL</strong> action found under the <strong>Share</strong> option. Then, we&rsquo;ll create a quick <strong>Inline Function</strong> that uses the <code>address</code> field as a parameter and includes this code:</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#e6db74">&#34;https://www.google.com/maps/search/?api=1&amp;query=&#34;</span> <span style="color:#f92672">+</span> Uri.encodeComponent(address)</span></span></code></pre></div>
+<p>This will construct a Google Maps URL that will search for that address on the web.</p>
+<p>On the <strong>FALSE</strong> branch, we can find the <strong>Launch Map</strong> action under the <strong>Widget/UI Interactions</strong> section, and then set the <strong>Place Type</strong> to <strong>Address</strong> and then link it to the <code>address</code> field in our task.</p>
+<p>The full process is shown in the animation below:</p>
+<p><a href="#R-image-944ef1859a3700380c2494a87f57e842" class="lightbox-link"><img alt="FlutterFlow Map Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-944ef1859a3700380c2494a87f57e842"><img alt="FlutterFlow Map Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif"></a></p>
+<p>Once that is done, we can test it out in <strong>Test Mode</strong> to confirm that it works!</p>
+<p><a href="#R-image-87a69ec0b64c9fcedc31d439c4c90421" class="lightbox-link"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87a69ec0b64c9fcedc31d439c4c90421"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif"></a></p>
+<p>As we can see, many of these more complex actions can be handled directly by FlutterFlow!</p>
+<h2 id="location-tracking">Location Tracking</h2>
+<p>Another feature we should include in our application is the ability to track the location where a task was completed. To enable this, we first must go to the <strong>Settings</strong> page and look for the <strong>Permissions</strong> section under <strong>Project Setup</strong>, and then enable the <strong>Location</strong> permission. When we install our application on a device, this will request access to the device&rsquo;s location so we can use it in our application.</p>
+<p><a href="#R-image-3335acaf013111b401aaa254bf876216" class="lightbox-link"><img alt="FlutterFlow Location Permission" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3335acaf013111b401aaa254bf876216"><img alt="FlutterFlow Location Permission" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png"></a></p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Follow the Guidelines
+  </summary>
+  <div class="box-content">
+<p>When publishing an application to an app store, it must abide by guidelines concerning the data collected and how it is stored and processed. As a developer, it is our job to make sure we read, understand, and adhere to those guidelines. Thankfully, there are helpful links at the top of the <strong>Permissions</strong> settings page where we can find the current guidelines for each app store.</p>
+  </div>
+</details>
+<p>We can also add a new <code>locationCompleted</code> field using the <strong>Lat Lng</strong> data type (short for &ldquo;Latitude Longitude&rdquo;) to our <code>to_do_tasks</code> collection in Firestore to store this data:</p>
+<p><a href="#R-image-33c8b1ccd7cfab5e2afb1d94e0409cf1" class="lightbox-link"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-33c8b1ccd7cfab5e2afb1d94e0409cf1"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png"></a></p>
+<p>Now that we&rsquo;ve enabled that setting, we can update the <strong>On Toggled On</strong> action attached to our <strong>Switch</strong> widget in the <strong>ToDoItemComponent</strong> to also set the <code>locationCompleted</code> field to the value in the <strong>Current Device Location</strong> option under <strong>Global Properties</strong></p>
+<p><a href="#R-image-8ec4c55d54ed3678ef53ac52e8192cc5" class="lightbox-link"><img alt="Update Location" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ec4c55d54ed3678ef53ac52e8192cc5"><img alt="Update Location" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png"></a></p>
+<p>We may also want to make a similar change to the <strong>On Toggled Off</strong> action that clears the <code>locationCompleted</code> field.</p>
+<p>Now, when we run our app in <strong>Test Mode</strong>, we should see our application try to store the location where a task is completed via the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a></p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Location Limitations
+  </summary>
+  <div class="box-content">
+<p>Unfortunately, the FlutterFlow <strong>Test Mode</strong> does not support actually loading the user&rsquo;s current location through the web browser, so we&rsquo;ll only see the coordinates <code>[0° N, 0° E]</code> stored in Firebase. On a real device, this location would be read from the phone&rsquo;s settings.</p>
+<p>Of course, this assumes that the user has allowed the application to read the device&rsquo;s location, and that location services are enabled. A more advanced app would include some logic here to check if the location is enabled and available first, and if not it can prompt the user to enable it.</p>
+  </div>
+</details>
+<h2 id="change-password">Change Password</h2>
+<p>We already have a place where user&rsquo;s can update their profile&rsquo;s display name and other settings, but we don&rsquo;t currently have a way for users to change their password. So, let&rsquo;s change that!</p>
+<p>First, we need a component that we can load to prompt the user to change their password. While we <em>could</em> build this component by hand, let&rsquo;s try some of the AI assisted features in FlutterFlow to see how they work.</p>
+<p>First, we&rsquo;ll go to the <strong>Page Selector</strong> and then click the <strong>Generate with AI</strong> button at the top to add new content to our application.</p>
+<p><a href="#R-image-69d3a8abccaa1be3870adc009357bb88" class="lightbox-link"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-69d3a8abccaa1be3870adc009357bb88"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png"></a></p>
+<p>In the window that appears, let&rsquo;s provide an easy to follow prompt for the system. The prompt we&rsquo;ll use is</p>
+<blockquote>
+<p>Generate a component to be loaded as a bottom sheet to allow the user to edit their password. It should include two password text fields, as well as save and cancel buttons. The design should follow the standard theme used throughout the application with helpful colors and icons.</p></blockquote>
+<p>Finally, click the <strong>Component</strong> button at the bottom, then click the <strong>Up Arrow</strong> button to let the AI start generating. At the top, you&rsquo;ll see a new icon start spinning while the AI is working in the background, and after a minute or so, you should be able to click on it and see the newly generated component. Here&rsquo;s what our example looked like:</p>
+<p><a href="#R-image-7662d69df79db4035050deffa78d0f96" class="lightbox-link"><img alt="FlutterFlow Generated Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7662d69df79db4035050deffa78d0f96"><img alt="FlutterFlow Generated Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png"></a></p>
+<p>In this view, we can customize our prompt, set some color schemes, and more. If we are satisfied, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/08-features/index.html"><span class="title">Insert Component</span></a></span> button at the bottom to add that component to our application.</p>
+<p>Now, let&rsquo;s go to our <code>auth_2_Profile</code> page and add a new button to allow users to change their password. We&rsquo;ll just quickly duplicate the <strong>Content View</strong> widget used for the <code>Edit Profile</code> button and tweak it a bit to match our needs. Remember that you can duplicate a widget simply by right-clicking on it and choosing <strong>Duplicate</strong>.</p>
+<p>Once it is customized, we&rsquo;ll set the <strong>On Tap</strong> action to load our new component in a bottom sheet:</p>
+<p><a href="#R-image-3b9af3e5ab7f0b083ce31db2b24d9299" class="lightbox-link"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b9af3e5ab7f0b083ce31db2b24d9299"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png"></a></p>
+<p>Finally, on our new component, we need to configure the <strong>Cancel</strong> button to dismiss the bottom sheet:</p>
+<p><a href="#R-image-22ff1569806711db56397b45da8fa8ec" class="lightbox-link"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-22ff1569806711db56397b45da8fa8ec"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png"></a></p>
+<p>Likewise, we need to configure the <strong>Save Password</strong> button to actually update the user&rsquo;s password using a the <strong>Update Password</strong> action as shown in the animation below:</p>
+<p><a href="#R-image-bffd27ac9496f8828903663e6773e1cd" class="lightbox-link"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bffd27ac9496f8828903663e6773e1cd"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif"></a></p>
+<p>Once that has been updated, try the application in <strong>Test Mode</strong> and see if you can update your password!</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Recent Authentication
+  </summary>
+  <div class="box-content">
+<p>As a security measure, Google Firebase requires a recent authentication in order to change a user&rsquo;s password. A simple way to do this is log out and log back in before trying to change the password.</p>
+<p>In a real application, often we would add additional functionality to ask the user to input their current password again to perform a new authentication first, then show the interface for updating the password.</p>
+  </div>
+</details>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+      
+      
+      
+    </div>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773362441" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773362441" defer></script>
+    <script src="/extras/js/theme.min.js?1773362441" defer></script>
+      
+      
+      
+    </div> 
+  <script src="/extras/js/tele-scroll.min.js?1773362441" defer></script>
+  </body>
+</html>

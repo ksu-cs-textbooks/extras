@@ -33,8 +33,8 @@ var relearn_lti_index = [
   },
   {
     "breadcrumb": "",
-    "description": "An example mobile application built with Flutter Flow",
-    "modified": "2026-03-04T15:09:34-06:00",
+    "description": "An example mobile application built with Flutter Flow\nStarter Project First Component List View Interaction Firebase Authentication Security Features",
+    "modified": "2026-03-12T19:40:20-05:00",
     "tags": [],
     "title": "Flutter Flow Example",
     "uri": "/extras/05-flutter-flow/index.html"
@@ -206,6 +206,14 @@ var relearn_lti_index = [
     "tags": [],
     "title": "Security",
     "uri": "/extras/05-flutter-flow/07-security/index.html"
+  },
+  {
+    "breadcrumb": "Flutter Flow Example",
+    "description": "Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.\nAs a reminder, here is our current progress on our application:\nTo Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. The app should have a page to display the current weather. Let’s start working on a few of these!",
+    "modified": "2026-03-12T19:40:20-05:00",
+    "tags": [],
+    "title": "Features",
+    "uri": "/extras/05-flutter-flow/08-features/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",
