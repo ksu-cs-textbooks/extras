@@ -249,6 +249,5 @@ Once again, let's go back to our list of features and see how we are doing:
 - [ ] Users should be able to delete their account and all associated data.
 - [ ] User profile pictures should be visible from [Gravatar](https://gravatar.com/)
 - [ ] The app should display a global leaderboard showing the users with the highest on-time completion percentage.
-- [ ] The app should have a page to display the current weather.
 
 We're over halfway there! Next, we'll look at how we can properly secure our user's data in Firebase!

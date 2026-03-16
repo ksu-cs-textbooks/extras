@@ -236,6 +236,5 @@ Let's take a minute to go back to that initial list of features and check off th
 - [ ] Users should be able to delete their account and all associated data.
 - [ ] User profile pictures should be visible from [Gravatar](https://gravatar.com/)
 - [ ] The app should display a global leaderboard showing the users with the highest on-time completion percentage.
-- [ ] The app should have a page to display the current weather.
 
 We are already nearly one third of the way through the list! At this point we have an app that has quite a few interesting features. Next, we'll work on connecting this app to the cloud and adding user accounts.

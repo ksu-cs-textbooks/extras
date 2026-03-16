@@ -31,7 +31,6 @@ For this tutorial, we're going to build a simple "To Do" application to help us 
 - [ ] Users should be able to delete their account and all associated data.
 - [ ] User profile pictures should be visible from [Gravatar](https://gravatar.com/)
 - [ ] The app should display a global leaderboard showing the users with the highest on-time completion percentage.
-- [ ] The app should have a page to display the current weather.
 
 That looks like a long list of features, but we'll slowly work through this list over several steps to build the desired functionality for our application. Our hope is that this list of features will give you enough building blocks to start building your own applications using these features and more!
 
