@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
   <head>
     <meta charset="utf-8">
@@ -28,34 +29,34 @@ To Do tasks should include a short title and longer description. To Do tasks sho
     <meta itemprop="description" content="YouTube Video Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.
 As a reminder, here is our current progress on our application:
 To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. Let’s start working on a few of these!">
-    <meta itemprop="dateModified" content="2026-03-16T14:07:58-05:00">
-    <meta itemprop="wordCount" content="2657">
+    <meta itemprop="dateModified" content="2026-03-17T14:27:15-05:00">
+    <meta itemprop="wordCount" content="2735">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Features :: K-State CS Textbook Extras</title>
     <link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/08-features/index.html" rel="canonical" type="text/html" title="Features :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/08-features/index.xml" rel="alternate" type="application/rss+xml" title="Features :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/08-features/tele.html" rel="alternate" type="text/html" title="Features :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/08-features/embed.html" rel="alternate" type="text/html" title="Features :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773688109" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773688109" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773688109" defer></script>
-    <script src="/extras/js/search.min.js?1773688109" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/search.min.js?1773775660" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773688109";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773688109" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773688109" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773688109" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773688109" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773688109" rel="stylesheet">
-    <link href="/extras/css/format-print.min.css?1773688109" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1773775660" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -114,60 +115,17 @@ To Do tasks should include a short title and longer description. To Do tasks sho
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773688109" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
   </head>
   <body class="mobile-support print" data-url="/extras/05-flutter-flow/08-features/index.html">
+    
+    <div id="tele" class="tele mirror">
+    
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
-          <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
-            </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-<nav class="TableOfContents">
-  <ul>
-    <li><a href="#request-directions">Request Directions</a></li>
-    <li><a href="#location-tracking">Location Tracking</a></li>
-    <li><a href="#change-password">Change Password</a></li>
-    <li><a href="#delete-account-and-data">Delete Account and Data</a></li>
-    <li><a href="#gravatar">Gravatar</a></li>
-    <li><a href="#summary">Summary</a></li>
-  </ul>
-</nav>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">Flutter Flow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Features</span><meta itemprop="position" content="3"></li>
-          </ol>
-          <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/08-features/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/08-features/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/07-security/index.html" title="Security (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/06-video-intros/index.html" title="Video Intros (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-                  <div class="topbar-area topbar-area-more" data-area="more">
-            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/08-features/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
-            </div>
-            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/08-features/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
-            </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
+      
+      
       <div id="R-main-overlay"></div>
       <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
         <div class="flex-block-wrapper">
@@ -211,16 +169,16 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <p>This will construct a Google Maps URL that will search for that address on the web.</p>
 <p>On the <strong>FALSE</strong> branch, we can find the <strong>Launch Map</strong> action under the <strong>Widget/UI Interactions</strong> section, and then set the <strong>Place Type</strong> to <strong>Address</strong> and then link it to the <code>address</code> field in our task.</p>
 <p>The full process is shown in the animation below:</p>
-<p><a href="#R-image-5dece87d7104d2ea2f5ec7a02c9d24e7" class="lightbox-link"><img alt="FlutterFlow Map Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5dece87d7104d2ea2f5ec7a02c9d24e7"><img alt="FlutterFlow Map Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif"></a></p>
+<p><a href="#R-image-92906893318bab73f7bbca8318831cc8" class="lightbox-link"><img alt="FlutterFlow Map Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92906893318bab73f7bbca8318831cc8"><img alt="FlutterFlow Map Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/mapaction.gif"></a></p>
 <p>Once that is done, we can test it out in <strong>Test Mode</strong> to confirm that it works!</p>
-<p><a href="#R-image-907f80af9d472fc72e223f2add648161" class="lightbox-link"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-907f80af9d472fc72e223f2add648161"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif"></a></p>
+<p><a href="#R-image-272655d7257351e0ba44a4de0d93003b" class="lightbox-link"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-272655d7257351e0ba44a4de0d93003b"><img alt="FlutterFlow Map Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/maptest.gif"></a></p>
 <p>As we can see, many of these more complex actions can be handled directly by FlutterFlow!</p>
 <h2 id="location-tracking">Location Tracking</h2>
 <p>Another feature we should include in our application is the ability to track the location where a task was completed. To enable this, we first must go to the <strong>Settings</strong> page and look for the <strong>Permissions</strong> section under <strong>Project Setup</strong>, and then enable the <strong>Location</strong> permission. When we install our application on a device, this will request access to the device&rsquo;s location so we can use it in our application.</p>
-<p><a href="#R-image-9cff896522fb69d89cf4da029b97cf3d" class="lightbox-link"><img alt="FlutterFlow Location Permission" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cff896522fb69d89cf4da029b97cf3d"><img alt="FlutterFlow Location Permission" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png"></a></p>
+<p><a href="#R-image-43bdf0ff4d66a13fa598834c451e9f34" class="lightbox-link"><img alt="FlutterFlow Location Permission" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-43bdf0ff4d66a13fa598834c451e9f34"><img alt="FlutterFlow Location Permission" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/location.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -232,11 +190,11 @@ To Do tasks should include a short title and longer description. To Do tasks sho
   </div>
 </details>
 <p>We can also add a new <code>locationCompleted</code> field using the <strong>Lat Lng</strong> data type (short for &ldquo;Latitude Longitude&rdquo;) to our <code>to_do_tasks</code> collection in Firestore to store this data:</p>
-<p><a href="#R-image-5ae4536c0473d004c00efd655c337e64" class="lightbox-link"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5ae4536c0473d004c00efd655c337e64"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png"></a></p>
+<p><a href="#R-image-5e1c70b6be2c4615ed13ab7629b045d4" class="lightbox-link"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e1c70b6be2c4615ed13ab7629b045d4"><img alt="FlutterFlow Add Location Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/addloc.png"></a></p>
 <p>Now that we&rsquo;ve enabled that setting, we can update the <strong>On Toggled On</strong> action attached to our <strong>Switch</strong> widget in the <strong>ToDoItemComponent</strong> to also set the <code>locationCompleted</code> field to the value in the <strong>Current Device Location</strong> option under <strong>Global Properties</strong></p>
-<p><a href="#R-image-48d36ae4a4604b993d9e1c478122e020" class="lightbox-link"><img alt="Update Location" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-48d36ae4a4604b993d9e1c478122e020"><img alt="Update Location" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png"></a></p>
+<p><a href="#R-image-0ec715b231287ba1b8d201c9e23eede3" class="lightbox-link"><img alt="Update Location" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0ec715b231287ba1b8d201c9e23eede3"><img alt="Update Location" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/updateloc.png"></a></p>
 <p>We may also want to make a similar change to the <strong>On Toggled Off</strong> action that clears the <code>locationCompleted</code> field.</p>
 <p>Now, when we run our app in <strong>Test Mode</strong>, we should see our application try to store the location where a task is completed via the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a></p>
 
@@ -254,25 +212,25 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <p>We already have a place where user&rsquo;s can update their profile&rsquo;s display name and other settings, but we don&rsquo;t currently have a way for users to change their password. So, let&rsquo;s change that!</p>
 <p>First, we need a component that we can load to prompt the user to change their password. While we <em>could</em> build this component by hand, let&rsquo;s try some of the AI assisted features in FlutterFlow to see how they work.</p>
 <p>First, we&rsquo;ll go to the <strong>Page Selector</strong> and then click the <strong>Generate with AI</strong> button at the top to add new content to our application.</p>
-<p><a href="#R-image-ef089a71d8bd313c43ec4446b3c44227" class="lightbox-link"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef089a71d8bd313c43ec4446b3c44227"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png"></a></p>
+<p><a href="#R-image-bf2d1d6dc3dfb7df7b12b6b93c7aec96" class="lightbox-link"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf2d1d6dc3dfb7df7b12b6b93c7aec96"><img alt="FlutterFlow Generate with AI" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/aibutton.png"></a></p>
 <p>In the window that appears, let&rsquo;s provide an easy to follow prompt for the system. The prompt we&rsquo;ll use is</p>
 <blockquote>
 <p>Generate a component to be loaded as a bottom sheet to allow the user to edit their password. It should include two password text fields, as well as save and cancel buttons. The design should follow the standard theme used throughout the application with helpful colors and icons.</p></blockquote>
 <p>Finally, click the <strong>Component</strong> button at the bottom, then click the <strong>Up Arrow</strong> button to let the AI start generating. At the top, you&rsquo;ll see a new icon start spinning while the AI is working in the background, and after a minute or so, you should be able to click on it and see the newly generated component. Here&rsquo;s what our example looked like:</p>
-<p><a href="#R-image-9a99f5d41d176641c3221a1a0486956f" class="lightbox-link"><img alt="FlutterFlow Generated Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a99f5d41d176641c3221a1a0486956f"><img alt="FlutterFlow Generated Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png"></a></p>
+<p><a href="#R-image-3e5144631dbcf41d99697787153d6e00" class="lightbox-link"><img alt="FlutterFlow Generated Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e5144631dbcf41d99697787153d6e00"><img alt="FlutterFlow Generated Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/generate.png"></a></p>
 <p>In this view, we can customize our prompt, set some color schemes, and more. If we are satisfied, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/08-features/index.html"><span class="title">Insert Component</span></a></span> button at the bottom to add that component to our application.</p>
 <p>Now, let&rsquo;s go to our <code>auth_2_Profile</code> page and add a new button to allow users to change their password. We&rsquo;ll just quickly duplicate the <strong>Content View</strong> widget used for the <code>Edit Profile</code> button and tweak it a bit to match our needs. Remember that you can duplicate a widget simply by right-clicking on it and choosing <strong>Duplicate</strong>.</p>
 <p>Once it is customized, we&rsquo;ll set the <strong>On Tap</strong> action to load our new component in a bottom sheet:</p>
-<p><a href="#R-image-5645a7ee478f4dbc27ff2fa5012715c4" class="lightbox-link"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5645a7ee478f4dbc27ff2fa5012715c4"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png"></a></p>
+<p><a href="#R-image-773820e564971914acc74389880f8152" class="lightbox-link"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-773820e564971914acc74389880f8152"><img alt="FlutterFlow Load Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepassword.png"></a></p>
 <p>Finally, on our new component, we need to configure the <strong>Cancel</strong> button to dismiss the bottom sheet:</p>
-<p><a href="#R-image-4165c06e63656fd4e3d2f990a089b4e3" class="lightbox-link"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4165c06e63656fd4e3d2f990a089b4e3"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png"></a></p>
+<p><a href="#R-image-56bf23259cb2a0103f6a979d43c3e4cc" class="lightbox-link"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56bf23259cb2a0103f6a979d43c3e4cc"><img alt="FlutterFlow Cancel Change Password" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/cancelpassword.png"></a></p>
 <p>Likewise, we need to configure the <strong>Save Password</strong> button to actually update the user&rsquo;s password using a the <strong>Update Password</strong> action as shown in the animation below:</p>
-<p><a href="#R-image-731e7347874f4ea85e1bc33e97710c05" class="lightbox-link"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-731e7347874f4ea85e1bc33e97710c05"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif"></a></p>
+<p><a href="#R-image-625e0f3a1932b52e4b7920e87c20d94b" class="lightbox-link"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-625e0f3a1932b52e4b7920e87c20d94b"><img alt="FlutterFlow Change Password Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/changepw.gif"></a></p>
 <p>Once that has been updated, try the application in <strong>Test Mode</strong> and see if you can update your password!</p>
 
 <details open class=" box cstyle notices note">
@@ -288,14 +246,14 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <h2 id="delete-account-and-data">Delete Account and Data</h2>
 <p>Next, let&rsquo;s go through the process of deleting data for a user account. Many apps today are required to provide this functionality to comply with various privacy laws, and it is always a good feature to have implemented in case a user wants to stop using the application. Thankfully, doing so is very simple with Google Firebase.</p>
 <p>Once again, we&rsquo;re going to add a new button to our <code>auth_2_Profile</code> page by duplicating an existing button and tweaking a bit just like we did above.</p>
-<p><a href="#R-image-cb68611cc78ce661f614ab8305d56c1a" class="lightbox-link"><img alt="FlutterFlow Delete Account" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deletebutton.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb68611cc78ce661f614ab8305d56c1a"><img alt="FlutterFlow Delete Account" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deletebutton.png"></a></p>
+<p><a href="#R-image-647e652894d9627fb57e0794230e2245" class="lightbox-link"><img alt="FlutterFlow Delete Account" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deletebutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-647e652894d9627fb57e0794230e2245"><img alt="FlutterFlow Delete Account" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deletebutton.png"></a></p>
 <p>Then, choose the action for that button and look for the <strong>Delete User</strong> action that can be found under the <strong>Backend/Database</strong> options within the <strong>Firebase Authentication</strong> list.</p>
-<p><a href="#R-image-4fbfa764ac08c6f4330871bebcec64b0" class="lightbox-link"><img alt="FlutterFlow Delete Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteaction.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4fbfa764ac08c6f4330871bebcec64b0"><img alt="FlutterFlow Delete Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteaction.png"></a></p>
+<p><a href="#R-image-83f2895b0bb7a4532ac46ed57dfe261a" class="lightbox-link"><img alt="FlutterFlow Delete Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteaction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-83f2895b0bb7a4532ac46ed57dfe261a"><img alt="FlutterFlow Delete Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteaction.png"></a></p>
 <p>Once that is configured, we must go back to our <strong>Firestore Settings</strong> to configure the collections that have data which must be deleted when a user is deleted. To do that, we just checkmark the last column in the list of collections under <strong>Firestore Rules</strong> to flag the records which should be deleted.</p>
-<p><a href="#R-image-c1bbcb34b19716fb8bab74fe315b6820" class="lightbox-link"><img alt="FlutterFlow Delete User Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteuser.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1bbcb34b19716fb8bab74fe315b6820"><img alt="FlutterFlow Delete User Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteuser.png"></a></p>
+<p><a href="#R-image-2edd49e8efd196c97c173697c80c3b42" class="lightbox-link"><img alt="FlutterFlow Delete User Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteuser.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2edd49e8efd196c97c173697c80c3b42"><img alt="FlutterFlow Delete User Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/deleteuser.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -312,8 +270,8 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <p>In effect, all we must do is create a <a href="https://docs.gravatar.com/rest/hash/" rel="external" target="_blank">sha256 hash</a> of our user&rsquo;s email address, and then construct a URL to request the image that looks like the following:</p>
 <div class="highlight" dir="auto"><pre tabindex="0"><code>https://gravatar.com/avatar/&lt;hash&gt;?d=mp</code></pre></div>
 <p>The simplest way to do this in our current application is to build this URL when the user account is first created and store it in the user profile&rsquo;s <code>photo_url</code> field. First, we&rsquo;ll need to install the <code>crypto</code> library, which allows us to generate the sha256 hash of a string. For this, we&rsquo;ll go to our <strong>Settings &amp; Integrations</strong> page and then find the <strong>Project Dependencies</strong> section. Under <strong>Custom Pub Dependencies</strong> we&rsquo;ll just add the <code>crypto</code> library. Then, we click the <strong>Refresh</strong> button at the top right to update our project dependencies.</p>
-<p><a href="#R-image-2123283de00b5f72e2bc49b4fd0a6c64" class="lightbox-link"><img alt="FlutterFlow Add Dependency" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/dependency.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2123283de00b5f72e2bc49b4fd0a6c64"><img alt="FlutterFlow Add Dependency" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/dependency.png"></a></p>
+<p><a href="#R-image-bf7e1ee3819d5ab68c3fc8ffebf2c295" class="lightbox-link"><img alt="FlutterFlow Add Dependency" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/dependency.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf7e1ee3819d5ab68c3fc8ffebf2c295"><img alt="FlutterFlow Add Dependency" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/dependency.png"></a></p>
 <p>This will refresh our project and install the new library so we can use it in our code.</p>
 
 <details open class=" box cstyle notices note">
@@ -351,8 +309,8 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>Finally, after saving the action, make sure the return type is set to <strong>ImagePath</strong> in the sidebar, even if the function itself returns a <strong>String</strong> value. This is important for making sure our value matches what the database expects in a later step.</p>
 <p>The full setup for this is shown below:</p>
-<p><a href="#R-image-801c1f20bc1974bfea4e6cfec6f49a19" class="lightbox-link"><img alt="FlutterFlow Custom Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/photoaction.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-801c1f20bc1974bfea4e6cfec6f49a19"><img alt="FlutterFlow Custom Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/photoaction.png"></a></p>
+<p><a href="#R-image-08472a9da8c447667182ea69768648bd" class="lightbox-link"><img alt="FlutterFlow Custom Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/photoaction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08472a9da8c447667182ea69768648bd"><img alt="FlutterFlow Custom Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/photoaction.png"></a></p>
 
 <details open class=" box cstyle notices tip">
   <summary class="box-label" tabindex="-1">
@@ -364,14 +322,14 @@ To Do tasks should include a short title and longer description. To Do tasks sho
   </div>
 </details>
 <p>So, let&rsquo;s go back to our <code>auth_2_create</code> page and update the action on the <strong>Create Account</strong> button.</p>
-<p><a href="#R-image-3fbfecc1faa9456fa9fd9199e886d559" class="lightbox-link"><img alt="FlutterFlow Create Account Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/create.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3fbfecc1faa9456fa9fd9199e886d559"><img alt="FlutterFlow Create Account Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/create.png"></a></p>
+<p><a href="#R-image-ca0ae83e61ea0d0ef1183d445ab4b771" class="lightbox-link"><img alt="FlutterFlow Create Account Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/create.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca0ae83e61ea0d0ef1183d445ab4b771"><img alt="FlutterFlow Create Account Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/create.png"></a></p>
 <p>In the <strong>Action Flow Editor</strong>, we&rsquo;ll need to add a new action to the top of the chain that is our new <code>generatePhotoUrl</code> action, with the <code>email</code> variable set to the <code>emailAddress</code> widget state. We can name the output variable <code>gravatar</code> for now.</p>
-<p><a href="#R-image-58c03159b29ebb771476bfd030a89602" class="lightbox-link"><img alt="FlutterFlow Use Custom Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/useaction.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-58c03159b29ebb771476bfd030a89602"><img alt="FlutterFlow Use Custom Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/useaction.png"></a></p>
+<p><a href="#R-image-078aaa20037731f5c5fe9172bbe907c4" class="lightbox-link"><img alt="FlutterFlow Use Custom Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/useaction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-078aaa20037731f5c5fe9172bbe907c4"><img alt="FlutterFlow Use Custom Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/useaction.png"></a></p>
 <p>Finally, in the <strong>Create Account</strong> action, we can add the <code>photo_url</code> field and set it&rsquo;s value to the <code>gravatar</code> variable, found under <strong>Action Outputs</strong> from the previous action.</p>
-<p><a href="#R-image-6549cc8a52e58c0fde01196731b11260" class="lightbox-link"><img alt="FlutterFlow Action Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/actionout.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6549cc8a52e58c0fde01196731b11260"><img alt="FlutterFlow Action Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/actionout.png"></a></p>
+<p><a href="#R-image-b003cbce5e5d7b5a78414a1df09c6c85" class="lightbox-link"><img alt="FlutterFlow Action Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/actionout.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b003cbce5e5d7b5a78414a1df09c6c85"><img alt="FlutterFlow Action Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/actionout.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -383,9 +341,19 @@ To Do tasks should include a short title and longer description. To Do tasks sho
   </div>
 </details>
 <p>Now, with all that in place, we can run our application in <strong>Test Mode</strong> and see if it works. Of course, we&rsquo;ll need to create an account using an email address that is already registered with <a href="https://gravatar.com/" rel="external" target="_blank">Gravatar</a>.</p>
-<p><a href="#R-image-50483cc8dbc4314ae399b8f02f232277" class="lightbox-link"><img alt="FlutterFlow Gravatar Demo" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/gravatar.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-50483cc8dbc4314ae399b8f02f232277"><img alt="FlutterFlow Gravatar Demo" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/gravatar.gif"></a></p>
+<p><a href="#R-image-3f541a5ff0bc4d98829f0ec89cbd895d" class="lightbox-link"><img alt="FlutterFlow Gravatar Demo" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/gravatar.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f541a5ff0bc4d98829f0ec89cbd895d"><img alt="FlutterFlow Gravatar Demo" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/08-features/images/gravatar.gif"></a></p>
 <p>As we test this, we may see a few places that still use the old placeholder image, so we can go through and update those as needed to use the correct <code>photo_url</code> field.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Updating Photos
+  </summary>
+  <div class="box-content">
+<p>Right now our application just stores the URL of the user&rsquo;s Gravatar image directly in the application. However, by storing that URL instead of the photo itself, it allows the user to update their profile image directly in Gravatar and then that new image will be shown in our application (because the URL of that image itself did not change). This allows users to seamlessly update their profile images without our app having to do anything!</p>
+  </div>
+</details>
 <h2 id="summary">Summary</h2>
 <p>At this point, we have implemented a large number of the features we wanted to include in our application:</p>
 <ul>
@@ -416,17 +384,17 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 </article>
         </div>
       </main>
-<div class="git-footer">
-  <p class="theme-version-footer">8.0.0</p>
-<p>Last modified by:
-              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
-              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/0f9c0048c74125714632e6b6eb52f8556586e801">Mar 16, 2026</a>
-</p>
-
-</div>
+      
+      
+      
     </div>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773688109" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773688109" defer></script>
-    <script src="/extras/js/theme.min.js?1773688109" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
+    <script src="/extras/js/theme.min.js?1773775660" defer></script>
+      
+      
+      
+    </div> 
+  <script src="/extras/js/tele-scroll.min.js?1773775660" defer></script>
   </body>
 </html>

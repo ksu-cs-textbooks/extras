@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leaderboard :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/09-leaderboard/index.html</link>
+    <description>One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/09-leaderboard/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Using APIs :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/10-api/index.html</link>
+    <description>Another very useful feature we may want to include in our application is the ability to query data directly from a web API and include that in our application. So, let’s look at the basic process of adding an API call to our application.&#xA;Do Not Expose API Keys Recall our discussion from earlier in this tutorial about the security concerns that are inherent in building a mobile application that is installed on user’s devices. Anything contained in the application is potentially visible to the user, and this includes any API keys used within the application itself. An API key is how users are identified when they access a paid API service, such as a weather data service or an AI chat service.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/10-api/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

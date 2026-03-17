@@ -28,26 +28,26 @@
     <link href="/extras/05-flutter-flow/07-security/index.print.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/07-security/tele.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/07-security/embed.html" rel="alternate" type="text/html" title="Security :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773688109" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773688109" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773688109" defer></script>
-    <script src="/extras/js/search.min.js?1773688109" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/search.min.js?1773775660" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773688109";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773688109" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773688109" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773688109" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773688109" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773688109" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773688109" rel="stylesheet">
-    <link href="/extras/css/format-html.min.css?1773688109" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1773775660" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -106,7 +106,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773688109" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
   </head>
   <body class="mobile-support html" data-url="/extras/05-flutter-flow/07-security/index.html">
     <div id="R-body" class="default-animation">
@@ -179,13 +179,13 @@
 <h2 id="firebase-configuration">Firebase Configuration</h2>
 <p>One of the key security concepts to keep in mind when developing applications (both mobile applications as well as web applications) is that we can never trust <em>anything</em> that is in control of the user. This includes their device, their web browser, or any other tool that they use to interface with our application. A user could modify the contents of their device, inspect its memory, change settings, send back malicious data, and generally do anything they want. So, we have to take that into account when developing the security settings in our applications. In short, we must enforce security in a location that is not accessible to the user.</p>
 <p>As we&rsquo;ve seen, Google Firebase is a cloud database that can be accessed directly without going through any other service. This means that <em>everything</em> needed to access data in Google Firebase has to be stored directly in our application, which would eventually be installed on user&rsquo;s phones. This means that any relatively skilled user could open up the memory in our application and find all of that information. In fact, it is stored directly in a <code>firebase_config.dart</code> file inside of the code for our FlutterFlow application, the code of which is shown below</p>
-<div class="tab-panel" data-tab-group="24a0146d7633b77c82185ba1337f18f8">
+<div class="tab-panel" data-tab-group="a5a6b47ca34c08e130076e51cd7f1e6f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="libbackendfirebasefirebase_configdart"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('24a0146d7633b77c82185ba1337f18f8','libbackendfirebasefirebase_configdart')"
+      onclick="switchTab('a5a6b47ca34c08e130076e51cd7f1e6f','libbackendfirebasefirebase_configdart')"
     >
       <span class="tab-nav-text">lib/backend/firebase/firebase_config.dart</span>
     </button>
@@ -229,13 +229,13 @@
 <h2 id="using-firebase-in-code">Using Firebase in Code</h2>
 <p>For this demo, we used Google Copilot to quickly create a demo application in JavaScript that uses the standard client libraries to access Google Firebase. This is the <em>exact same process</em> a web application written in a JavaScript framework, such as React or Vue, would use.</p>
 <p>In just a few seconds, we are given this piece of code:</p>
-<div class="tab-panel" data-tab-group="5dbbd148d40e43513e71fcdc29f4bb7b">
+<div class="tab-panel" data-tab-group="df844f9986ca01a2c57c1de4501fa3f1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="indexjs"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5dbbd148d40e43513e71fcdc29f4bb7b','indexjs')"
+      onclick="switchTab('df844f9986ca01a2c57c1de4501fa3f1','indexjs')"
     >
       <span class="tab-nav-text">index.js</span>
     </button>
@@ -293,12 +293,12 @@
     </div>
   </div>
 </div><p>As you can see, it includes the exact same configuration that was found in our FlutterFlow application. When we run this code, we see the following output:</p>
-<p><a href="#R-image-da332b2eb983cf53a527d9946b301091" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-da332b2eb983cf53a527d9946b301091"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
+<p><a href="#R-image-37bcbc37da7576062a50255a95a060db" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-37bcbc37da7576062a50255a95a060db"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
 <p>Yikes! As we can see here, we were able to access the entire contents of the <code>to_do_tasks</code> collection from Firestore with just that configuration. We didn&rsquo;t have to log in, we didn&rsquo;t have to create a user account, <em>we didn&rsquo;t even have to do anything except borrow a few settings from our app</em>!</p>
 <p>What if we try to do the same to the <code>users</code> collection? Let&rsquo;s try that:</p>
-<p><a href="#R-image-76b11372439c5ec0b93e4e59b6bbbb54" class="lightbox-link"><img alt="Firebase Users Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-76b11372439c5ec0b93e4e59b6bbbb54"><img alt="Firebase Users Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png"></a></p>
+<p><a href="#R-image-7548564e85f46f3be3ecb764fd870c23" class="lightbox-link"><img alt="Firebase Users Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7548564e85f46f3be3ecb764fd870c23"><img alt="Firebase Users Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseusers.png"></a></p>
 <p>Super yikes! We can even get a list of all of the users in our application! <strong>This is a major security flaw!</strong> Effectively, this means that anyone who downloads our application can see all of this data, and they can start trying to guess individual user&rsquo;s passwords or worse.</p>
 
 <details open class=" box cstyle notices note">
@@ -319,8 +319,8 @@
 </details>
 <h2 id="firestore-rules">Firestore Rules</h2>
 <p>Thankfully, Firebase has a solution available in the form of it&rsquo;s <strong>Firestore Rules</strong>, which allow us to define the requirements users must meet in order to access data in our database. Let&rsquo;s look at our current rules, which can be found in the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a>:</p>
-<p><a href="#R-image-1a6b89aa252d703a1012cbab7b643c71" class="lightbox-link"><img alt="Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a6b89aa252d703a1012cbab7b643c71"><img alt="Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png"></a></p>
+<p><a href="#R-image-ad8d5425316b16b481ae3ad3e6f8827b" class="lightbox-link"><img alt="Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ad8d5425316b16b481ae3ad3e6f8827b"><img alt="Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules.png"></a></p>
 <p>Here are the current rules that are defined for our demo application:</p>
 <div class="highlight" dir="auto"><pre tabindex="0"><code class="language-cloud-firestore-security-rules" data-lang="cloud-firestore-security-rules">rules_version = &#39;2&#39;;
 service cloud.firestore {
@@ -382,31 +382,31 @@ service cloud.firestore {
   }
 }</code></pre></div>
 <p>Once we are satisfied, we can click <strong>Publish</strong> to save our changes:</p>
-<p><a href="#R-image-101b9a96c469b3762901f2f35389f0d2" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-101b9a96c469b3762901f2f35389f0d2"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png"></a></p>
+<p><a href="#R-image-b519c30e3282ab2879c30588f98d1767" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b519c30e3282ab2879c30588f98d1767"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/newrules.png"></a></p>
 <p>Now that we have deployed those rules, we&rsquo;ll try to read the users from the <code>users</code> collection again and see if that works:</p>
-<p><a href="#R-image-734ecb04bb1a85db76d7f17d8804d9a4" class="lightbox-link"><img alt="Firestore Access Denied" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-734ecb04bb1a85db76d7f17d8804d9a4"><img alt="Firestore Access Denied" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png"></a></p>
+<p><a href="#R-image-076932046f72a31a1ec151d676f29667" class="lightbox-link"><img alt="Firestore Access Denied" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-076932046f72a31a1ec151d676f29667"><img alt="Firestore Access Denied" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/denied.png"></a></p>
 <p>Great! As we can see, we can no longer access all the user accounts in our application. However, if we try to access the <code>to_do_tasks</code> collection, we see that it still works:</p>
-<p><a href="#R-image-9f7ab49053266666e91fc1a14067b001" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f7ab49053266666e91fc1a14067b001"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
+<p><a href="#R-image-94308cac237f70282e869d60ddc3bae7" class="lightbox-link"><img alt="Firebase Data Output" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-94308cac237f70282e869d60ddc3bae7"><img alt="Firebase Data Output" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firebaseout.png"></a></p>
 <p>So, we need to modify our rules a bit to secure our to-do tasks.</p>
 <h2 id="secure-access-in-flutterflow">Secure Access in FlutterFlow</h2>
 <p>To configure the security in FlutterFlow, let&rsquo;s go back to the <strong>Firestore</strong> page and look at the <strong>Firestore Settings</strong> again. Here, we can see the <strong>Firestore Rules</strong> section that we can configure for our application:</p>
-<p><a href="#R-image-24f4527d99c148f2097070e45cf59fb5" class="lightbox-link"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-24f4527d99c148f2097070e45cf59fb5"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png"></a></p>
+<p><a href="#R-image-6c6929fa1e6f5dfc1e9592c8b8ab8d8c" class="lightbox-link"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c6929fa1e6f5dfc1e9592c8b8ab8d8c"><img alt="FlutterFlow Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/firestorerules2.png"></a></p>
 <p>Here, we can see that some of the rules are pre-configured for us. First, let&rsquo;s look at the <code>users</code> collection. It already has all of its options set to <strong>Users Collection</strong>, which, in the Firestore rules code, looks like <code>allow &lt;action&gt; if request.auth.uid == document</code>. This option basically means that a user can only perform and action on it&rsquo;s own document in the <code>users</code> collection. So, this prevents any other user from accessing or modifying that data. This is what we want!</p>
 <p>Now, let&rsquo;s look at the <code>to_do_tasks</code> collection. Right now we see that everyone can create documents and read documents, but with the current rules, no one can write to existing documents or delete them. Before we can update that, however, we need to configure our <code>to_do_tasks</code> collection to store a user&rsquo;s ID along with the task.</p>
 <h2 id="adding-a-uid-to-a-task">Adding a UID to a Task</h2>
 <p>So, back on the <strong>Collections</strong> tab, let&rsquo;s add a new field called <code>uid</code> to the collection, and give it the type <strong>String</strong>. We&rsquo;ll use this to store the user&rsquo;s unique ID in the database.</p>
-<p><a href="#R-image-17328d8d8fc77e7df726e8d86da7c95c" class="lightbox-link"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-17328d8d8fc77e7df726e8d86da7c95c"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png"></a></p>
+<p><a href="#R-image-f09072af50f186b2a4ddbef8a76d55c0" class="lightbox-link"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f09072af50f186b2a4ddbef8a76d55c0"><img alt="FlutterFlow Add UID to Task" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/adduid.png"></a></p>
 <p>Next, on the <code>CreateToDoItemComponent</code>, we need to modify the <strong>Save</strong> button action to set that field to the <strong>User ID</strong> field under <strong>Authenticated User</strong>:</p>
-<p><a href="#R-image-5ebecf4e1822cf341f1714bf4aa8bd05" class="lightbox-link"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5ebecf4e1822cf341f1714bf4aa8bd05"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png"></a></p>
+<p><a href="#R-image-c9ef23b059a5c8a4cfe5d0315496f9ed" class="lightbox-link"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9ef23b059a5c8a4cfe5d0315496f9ed"><img alt="FlutterFlow User Reference Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/userref.png"></a></p>
 <p>Finally, in our Backend Query for the <strong>ListView</strong> widget on our <code>HomePage</code>, we need to add a <strong>Filter</strong> that checks that the <code>uid</code> should be equal to the authenticated user&rsquo;s User ID:</p>
-<p><a href="#R-image-888d7385bd092d553d55e30ab11f0055" class="lightbox-link"><img alt="FlutterFlow User Filter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-888d7385bd092d553d55e30ab11f0055"><img alt="FlutterFlow User Filter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png"></a></p>
+<p><a href="#R-image-901bc6078f88dc1c3e1df94c9212a130" class="lightbox-link"><img alt="FlutterFlow User Filter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-901bc6078f88dc1c3e1df94c9212a130"><img alt="FlutterFlow User Filter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/filter.png"></a></p>
 <p>With those changes, we are making sure that a newly created task will include the user&rsquo;s ID, and that our list of tasks will only show those tasks that are assigned to that user.</p>
 
 <details open class=" box cstyle notices note">
@@ -420,8 +420,8 @@ service cloud.firestore {
 </details>
 <h2 id="updating-firestore-rules">Updating Firestore Rules</h2>
 <p>Now, back in our Firestore Rules, we can set the <strong>Read</strong>, <strong>Write</strong>, and <strong>Delete</strong> actions on the <code>to_do_tasks</code> collection to only allow tagged users to access them, and reference the <code>uid</code> field as the tag that identifies the user:</p>
-<p><a href="#R-image-0d5d4b2d67080f1e323e38202914b8db" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d5d4b2d67080f1e323e38202914b8db"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png"></a></p>
+<p><a href="#R-image-92cc3778993194e67687455e79c10fb8" class="lightbox-link"><img alt="Firestore Updated Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92cc3778993194e67687455e79c10fb8"><img alt="Firestore Updated Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/updaterules.png"></a></p>
 <p>Below that, we should see rules similar to this:</p>
 <div class="highlight" dir="auto"><pre tabindex="0"><code class="language-cloud-firestore-security-rules" data-lang="cloud-firestore-security-rules">rules_version = &#39;2&#39;;
 service cloud.firestore {
@@ -455,8 +455,8 @@ service cloud.firestore {
   </div>
 </details>
 <p>With all of that in place, let&rsquo;s test our app in <strong>Test Mode</strong> and see if it works. For the demo animation below, we already created a second user account and populated it with some data, but now we should be able to see how each user stores their own data.</p>
-<p><a href="#R-image-25a8b52bf2d99ed43cbc06ed42540585" class="lightbox-link"><img alt="Firestore Security Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-25a8b52bf2d99ed43cbc06ed42540585"><img alt="Firestore Security Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif"></a></p>
+<p><a href="#R-image-a5941d31be0b67d38c315c7236ffb9bc" class="lightbox-link"><img alt="Firestore Security Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a5941d31be0b67d38c315c7236ffb9bc"><img alt="Firestore Security Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/07-security/images/securitytest.gif"></a></p>
 <p>There we go! It looks like it is working correctly.</p>
 
 <details open class=" box cstyle notices warning">
@@ -562,7 +562,10 @@ service cloud.firestore {
             <li class="" data-nav-id="/extras/05-flutter-flow/05-firebase/index.html"><a class="padding" href="/extras/05-flutter-flow/05-firebase/index.html">5. Firebase</a></li>
             <li class="" data-nav-id="/extras/05-flutter-flow/06-authentication/index.html"><a class="padding" href="/extras/05-flutter-flow/06-authentication/index.html">6. Authentication</a></li>
             <li class="active " data-nav-id="/extras/05-flutter-flow/07-security/index.html"><a class="padding" href="/extras/05-flutter-flow/07-security/index.html">7. Security</a></li>
-            <li class="" data-nav-id="/extras/05-flutter-flow/08-features/index.html"><a class="padding" href="/extras/05-flutter-flow/08-features/index.html">8. Features</a></li></ul></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/08-features/index.html"><a class="padding" href="/extras/05-flutter-flow/08-features/index.html">8. Features</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/09-leaderboard/index.html"><a class="padding" href="/extras/05-flutter-flow/09-leaderboard/index.html">9. Leaderboard</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/10-api/index.html"><a class="padding" href="/extras/05-flutter-flow/10-api/index.html">10. Using APIs</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/11-release/index.html"><a class="padding" href="/extras/05-flutter-flow/11-release/index.html">11. Releasing a Project</a></li></ul></li>
             <li class="" data-nav-id="/extras/06-video-intros/index.html"><a class="padding" href="/extras/06-video-intros/index.html"><b>6. </b>Video Intros</a></li>
           </ul>
         </div>
@@ -598,8 +601,8 @@ service cloud.firestore {
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p></div>
       </div>
     </aside>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773688109" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773688109" defer></script>
-    <script src="/extras/js/theme.min.js?1773688109" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
+    <script src="/extras/js/theme.min.js?1773775660" defer></script>
   </body>
 </html>

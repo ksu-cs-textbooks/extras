@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Releasing a Project :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/11-release/index.html</link>
+    <description>The last step in this journey is to release your project to the world!&#xA;First, you’ll probably want to test your application and make sure it is ready for deployment. FlutterFlow has a great place to start:&#xA;Pre-checks before Publishing Once you are ready, you can publish your application on various platforms. The FlutterFlow documentation includes detailed guides for each platform:&#xA;Web Publishing Google Play Store Apple App Store You can also connect your project to GitHub and deploy from there:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/11-release/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

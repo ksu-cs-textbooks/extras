@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.">
+    <meta name="author" content="Russell Feldhausen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta name="twitter:title" content="Leaderboard :: K-State CS Textbook Extras">
+    <meta name="twitter:description" content="One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.">
+    <meta property="og:url" content="https://textbooks.cs.ksu.edu/extras/05-flutter-flow/09-leaderboard/index.html">
+    <meta property="og:site_name" content="K-State CS Textbook Extras">
+    <meta property="og:title" content="Leaderboard :: K-State CS Textbook Extras">
+    <meta property="og:description" content="One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <meta itemprop="name" content="Leaderboard :: K-State CS Textbook Extras">
+    <meta itemprop="description" content="One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.">
+    <meta itemprop="dateModified" content="2026-03-17T14:27:15-05:00">
+    <meta itemprop="wordCount" content="1832">
+    <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
+    <title>Leaderboard :: K-State CS Textbook Extras</title>
+    <link href="/extras/05-flutter-flow/09-leaderboard/index.xml" rel="alternate" type="application/rss+xml" title="Leaderboard :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/09-leaderboard/index.print.html" rel="alternate" type="text/html" title="Leaderboard :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/09-leaderboard/tele.html" rel="alternate" type="text/html" title="Leaderboard :: K-State CS Textbook Extras">
+    <link href="/extras/05-flutter-flow/09-leaderboard/embed.html" rel="alternate" type="text/html" title="Leaderboard :: K-State CS Textbook Extras">
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/search.min.js?1773775660" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
+    </script>
+    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1773775660" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/05-flutter-flow\/09-leaderboard\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/textbooks.cs.ksu.edu\/extras';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=false;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'light-theme', 'dark-theme' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      // [x] russfeld
+      window.relearn.writeVariant=true;
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          
+          if (window.relearn.writeVariant) {
+            window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+          }
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
+  </head>
+  <body class="mobile-support html" data-url="/extras/05-flutter-flow/09-leaderboard/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#leaderboard-collection">Leaderboard Collection</a></li>
+    <li><a href="#creating-the-leaderboard">Creating the Leaderboard</a></li>
+    <li><a href="#updating-the-leaderboard-display-name">Updating the Leaderboard Display name</a></li>
+    <li><a href="#tracking-leaderboard-stats">Tracking Leaderboard Stats</a></li>
+    <li><a href="#creating-a-leaderboard-page">Creating a Leaderboard Page</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#summary-1">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">Flutter Flow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Leaderboard</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/09-leaderboard/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/09-leaderboard/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/08-features/index.html" title="Features (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/10-api/index.html" title="Using APIs (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/09-leaderboard/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/09-leaderboard/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="leaderboard">Leaderboard</h1>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/asdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    You&rsquo;ve Got This!
+  </summary>
+  <div class="box-content">
+<p>In these last parts of the tutorial, we&rsquo;ll shift to showing a bit less of the process in screenshots and assume that you are becoming comfortable with navigating through an application in FlutterFlow. However, if you get stuck at any point, refer to the video above for a visual walkthrough of the whole process.</p>
+  </div>
+</details>
+<h2 id="leaderboard-collection">Leaderboard Collection</h2>
+<p>First, we&rsquo;ll need to create a <code>leaderboard</code> collection in Firebase with the following attributes:</p>
+<ul>
+<li><code>onTime</code> - Integer</li>
+<li><code>totalCompleted</code> - Integer</li>
+<li><code>displayName</code> - String</li>
+<li><code>photoUrl</code> - Image Path</li>
+<li><code>uid</code> - String</li>
+</ul>
+<p>After creating that collection, we should see this layout:</p>
+<p><a href="#R-image-a3e3e0a3abe18755f7d931424932f448" class="lightbox-link"><img alt="FlutterFlow Leaderboard" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a3e3e0a3abe18755f7d931424932f448"><img alt="FlutterFlow Leaderboard" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard.png"></a></p>
+<p>Next, we&rsquo;ll go to the <strong>Firestore Settings</strong> and scroll down to the <strong>Firestore Rules</strong> section. Here, we&rsquo;ll set the <code>leaderboard</code> collection to have the following rules:</p>
+<ul>
+<li>Create - Tagged Users (use the <code>uid</code> attribute)</li>
+<li>Read - Authenticated Users</li>
+<li>Write - Tagged Users (use the <code>uid</code> attribute)</li>
+<li>Delete - Tagged Users (use the <code>uid</code> attribute)</li>
+</ul>
+<p>With this setup, users will be able to create, update, and delete their entry in the leaderboard, and all authenticated users will be able to read the contents of the leaderboard. This is what allows us to display the leaderboard for each user!</p>
+<p>Finally, checkmark the box to delete data if the user account is deleted as well. When completed, the final rules should look like this.</p>
+<p><a href="#R-image-cdd9597b410dffc192da2ec54d985a0a" class="lightbox-link"><img alt="FlutterFlow Leaderboard Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboardrules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cdd9597b410dffc192da2ec54d985a0a"><img alt="FlutterFlow Leaderboard Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboardrules.png"></a></p>
+<p>Go ahead and click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/09-leaderboard/index.html"><span class="title">Deploy</span></a></span> button to deploy those rules to Firestore.</p>
+<h2 id="creating-the-leaderboard">Creating the Leaderboard</h2>
+<p>Next, we need to update our process for creating a new user to add an entry to the <code>leaderboard</code> collection as well. So, we&rsquo;ll go to our <code>auth_2_Create</code> page and update the action tied to the <strong>Create Account</strong> button to add another step. This step will create a document in the <code>leaderboard</code> collection with the following field values:</p>
+<ul>
+<li><code>onTime</code> - 0</li>
+<li><code>totalCompleted</code> - 0</li>
+<li><code>displayName</code> - <code>emailAddress</code> widget state</li>
+<li><code>photoUrl</code> - <code>gravatar</code> action output from the <code>generatePhotoUrl</code> action</li>
+<li><code>uid</code> - the <code>User ID</code> from the authenticated user</li>
+</ul>
+<p>The final setup will look like this:</p>
+<p><a href="#R-image-a83b85ac2705ae060f2fab6fe0b16ba7" class="lightbox-link"><img alt="FlutterFlow Add Create Document Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/createdocument.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a83b85ac2705ae060f2fab6fe0b16ba7"><img alt="FlutterFlow Add Create Document Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/createdocument.png"></a></p>
+<p>Now, when we create a new user account, we&rsquo;ll also create an entry for that user in the <code>leaderboard</code> collection.</p>
+<h2 id="updating-the-leaderboard-display-name">Updating the Leaderboard Display name</h2>
+<p>Of course, we also want to allow the user to update the display name shown in the leaderboard. So, in the <code>editProfile_auth_2</code> component, we need to update the action attached to the <strong>Button</strong> widget at the bottom to update that document as well. First, we need to add a <strong>Backend Query</strong> to the top-level <strong>Form</strong> widget in this component to get the user&rsquo;s <code>leaderboard</code> entry so it is accessible in the widget&rsquo;s state.</p>
+<p><a href="#R-image-c9c33029e62cbfe75e98041e43ad150d" class="lightbox-link"><img alt="FlutterFlow Create Query" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboardquery.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9c33029e62cbfe75e98041e43ad150d"><img alt="FlutterFlow Create Query" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboardquery.png"></a></p>
+<p>Now, we can use that query result to update the user&rsquo;s <code>leaderboard</code> entry in the <strong>Button</strong> widget&rsquo;s action. For this, we&rsquo;ll add a new <strong>Update Document</strong> action below the existing one in the action flow, and update the <code>displayName</code> field in the <code>leaderboard</code> document to match the <code>yourName</code> field&rsquo;s widget state.</p>
+<p><a href="#R-image-40c913836e87bb3847c02616a3558d9b" class="lightbox-link"><img alt="FlutterFlow Update Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/updateaction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-40c913836e87bb3847c02616a3558d9b"><img alt="FlutterFlow Update Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/updateaction.png"></a></p>
+<p>This allows the user to update their name on the leaderboard. Of course, to update their display image, they&rsquo;ll have to update their entry on Gravatar.</p>
+<h2 id="tracking-leaderboard-stats">Tracking Leaderboard Stats</h2>
+<p>Now for the fun part! Let&rsquo;s update our process for marking tasks complete to track the statistics in the leaderboard. For this, we&rsquo;ll once again start by adding a backend query, but this time we&rsquo;ll add it to the <strong>HomePage</strong> of our application. This query will again get the user&rsquo;s document in the <code>leaderboard</code> collection:</p>
+<p><a href="#R-image-86beb8cc882c28ac667c14878e0fbe99" class="lightbox-link"><img alt="FlutterFlow Add Backend Query" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/backendquery.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-86beb8cc882c28ac667c14878e0fbe99"><img alt="FlutterFlow Add Backend Query" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/backendquery.png"></a></p>
+<p>Next, we&rsquo;ll need to pass that query value to each of our <code>ToDoItemComponent</code> components in the <strong>ListView</strong> widget. So, we&rsquo;ll start by defining a new parameter for that widget that accepts the <code>leaderboard</code> document.</p>
+<p><a href="#R-image-4bbcdc11c2ed57ec501217dd57784d6b" class="lightbox-link"><img alt="FlutterFlow New Leaderboard Param" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderparam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bbcdc11c2ed57ec501217dd57784d6b"><img alt="FlutterFlow New Leaderboard Param" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderparam.png"></a></p>
+<p>Then, we&rsquo;ll set that parameter to match the <code>leaderboard</code> document in our <strong>HomePage</strong> page from the query we just created.</p>
+<p><a href="#R-image-344b53860107b49b2c4873ac555b6b9d" class="lightbox-link"><img alt="FlutterFlow Set Leaderboard Param" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderparam2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-344b53860107b49b2c4873ac555b6b9d"><img alt="FlutterFlow Set Leaderboard Param" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderparam2.png"></a></p>
+<p>After that, we&rsquo;ll need to create a quick custom function to help us compare dates. We&rsquo;ll call this <code>dateIsBefore</code> and set it up with the following settings:</p>
+<ul>
+<li>Argument 1 - <code>date1</code> as a String</li>
+<li>Argument 2 - <code>date2</code> as a String</li>
+<li>Return Value - Boolean</li>
+</ul>
+<p>The contents of the function will be a simple date comparison:</p>
+<div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> dateIsBefore(
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> date1,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> date2,
+</span></span><span style="display:flex;"><span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// MODIFY CODE ONLY BELOW THIS LINE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> date1.compareTo(date2) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// MODIFY CODE ONLY ABOVE THIS LINE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div>
+<p>The final code will look like this:</p>
+<p><a href="#R-image-4bb9253dd76fd2d14a0c246c06b23466" class="lightbox-link"><img alt="FlutterFlow Date Compare" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/comparedate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bb9253dd76fd2d14a0c246c06b23466"><img alt="FlutterFlow Date Compare" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/comparedate.png"></a></p>
+<p>Once created, save the function and check the code to make sure it is valid before continuing.</p>
+<p>Now, back on our <code>ToDoItemComponent</code> component, we need to update the logic attached to our <strong>Switch</strong> widget. For this, we&rsquo;ll add another action to each of the states.</p>
+<p>For the <strong>On Toggled On</strong> action, we&rsquo;ll do the following:</p>
+<ul>
+<li>Increment the <code>totalCompleted</code> field by 1 (in the <strong>Value Source</strong>, look for an <strong>Update</strong> option to find <strong>Increment</strong>)</li>
+<li>If the device&rsquo;s current date is less than the due date, increment the <code>onTime</code> field by 1, otherwise leave it alone.</li>
+</ul>
+<p>To do this, create a <strong>Conditional Value</strong> for the increment value, and use the new <code>dateIsBefore</code> function to compare the device&rsquo;s current time with the <code>dateDue</code> value of the task. If the current time is before that date, then increment by 1. Otherwise, increment by 0 (leaving the value unchanged).</p>
+<p>The key here is that we&rsquo;ll need to do this action <em>before</em> we update the <code>to_do_tasks</code> document, to make sure that our leaderboard is updated before the tasks list is updated.</p>
+<p><a href="#R-image-5423177d88a542a71b7c786bb386a7b3" class="lightbox-link"><img alt="FlutterFlow Increment Tasks" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/increment.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5423177d88a542a71b7c786bb386a7b3"><img alt="FlutterFlow Increment Tasks" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/increment.png"></a></p>
+<p>We&rsquo;ll do something similar for the <strong>On Toggled Off</strong> action:</p>
+<ul>
+<li>Decrement the <code>totalCompleted</code> field by 1</li>
+<li>If the <code>dateCompleted</code> value of the task is less than the <code>dateDue</code>, also decrement the <code>onTime</code> field by 1. Otherwise, leave it alone.</li>
+</ul>
+<p>Just like before, we&rsquo;ll need to do this action <em>before</em> we update the <code>to_do_tasks</code> document, since we need to access the <code>dateCompleted</code> field before it is reset. So, when adding this action to the action flow, make sure it comes first.</p>
+<p><a href="#R-image-aedd025dc9536985995b9d23377aca02" class="lightbox-link"><img alt="FlutterFlow Decrement Tasks" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/decrement.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aedd025dc9536985995b9d23377aca02"><img alt="FlutterFlow Decrement Tasks" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/decrement.png"></a></p>
+<p>Finally, let&rsquo;s test this setup in <strong>Test Mode</strong> to make sure it is working correctly. It may be helpful to also have the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a> open at the same time to see the changes as they are made. Remember that you&rsquo;ll have to create a new account for this to work!</p>
+
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Clear Out Firebase
+  </summary>
+  <div class="box-content">
+<p>In fact, now is a good time to completely clear out Firebase, including all accounts and documents, since this is the last major change we&rsquo;ll be making to our Firebase structure. This gives us a clean slate for future testing.</p>
+  </div>
+</details>
+<p>If everything goes to plan, we should be able to see our leaderboard updating in real time as we complete tasks in our list.</p>
+<p><a href="#R-image-d6a98c54f3bd78c84469afd21a537f10" class="lightbox-link"><img alt="FlutterFlow Leaderboard Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d6a98c54f3bd78c84469afd21a537f10"><img alt="FlutterFlow Leaderboard Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard.gif"></a></p>
+<p>Now all we have to do is create a page to display that leaderboard!</p>
+<h2 id="creating-a-leaderboard-page">Creating a Leaderboard Page</h2>
+<p>The last step in this process is to create a page to display our leaderboard. <strong>This is left as an exercise for you to complete</strong>, but here are some basic things you&rsquo;ll probably need to do:</p>
+<ol>
+<li>Currently we don&rsquo;t track the percentage of tasks completed on time, so we&rsquo;ll have to add that as an attribute to our <code>leaderboard</code> collection and make sure it gets updated each time a task is completed (or marked as incomplete).
+<ul>
+<li>Hint: do this as a separate action in the action flow for the <strong>Switch</strong> widget after the leaderboard fields are updated; this ensures that you are reading the new values for each field. You can use an inline function to perform the division operation between two fields that are linked as parameters to the inline function.</li>
+</ul>
+</li>
+<li>Create a new page for the Leaderboard. You can use FlutterFlow&rsquo;s AI designer to get started with this.
+<ul>
+<li>Here&rsquo;s the prompt we used: Create a page to display a leaderboard showing the top three entries in the leaderboard collection based on the percentage of tasks completed on time. The leaderboard should show the users profile image, display name, and percentage of completed tasks. It should not have any interactivity, just a static display of those three values from the collection.</li>
+</ul>
+</li>
+<li>Once the page is created, add a backend query to get the top 3 items in the <code>leaderboard</code> collection based on the percentage of tasks completed on time.</li>
+<li>Use the results of that query to populate the data on the leaderboard page
+<ul>
+<li>This can be a tedious process in FlutterFlow. Pages that are very data-heavy like this show the limitations of this platform compared to doing it directly in code, which may be faster.</li>
+<li>You may need to set proper default values or conditional visibility on leaderboard widgets to seamlessly handle the case where you have fewer than 3 entries in the leaderboard collection.</li>
+</ul>
+</li>
+<li>Add the Leaderboard page to the nav bar so users can see it.</li>
+</ol>
+<p>A final, working design for this page might look like what is shown below:</p>
+<p><a href="#R-image-b633fd5e8adf9bcf1906c6108d3befdf" class="lightbox-link"><img alt="FlutterFlow Leaderboard Demo" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard_demo.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b633fd5e8adf9bcf1906c6108d3befdf"><img alt="FlutterFlow Leaderboard Demo" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/09-leaderboard/images/leaderboard_demo.gif"></a></p>
+<h2 id="summary">Summary</h2>
+<p>Finally, we have completed all of the features in our original feature list for this application:</p>
+<h2 id="summary-1">Summary</h2>
+<p>At this point, we have implemented a large number of the features we wanted to include in our application:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should include a short title and longer description.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should track the date it was created and the date it is due.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should track whether it has been completed or not.</li>
+<li><input checked="" disabled="" type="checkbox"> Tasks may optionally have an address associated with the task.</li>
+<li><input checked="" disabled="" type="checkbox"> To Do tasks should be assigned to different priorities (Low, High).</li>
+<li><input checked="" disabled="" type="checkbox"> When a task is completed, it should track the date and time when it was completed.</li>
+<li><input checked="" disabled="" type="checkbox"> Users should be able to create, edit, and delete tasks.</li>
+<li><input checked="" disabled="" type="checkbox"> Tasks should be sorted according to completion, due date, and priority.</li>
+<li><input checked="" disabled="" type="checkbox"> Our application should include user accounts so that multiple users can use the app.</li>
+<li><input checked="" disabled="" type="checkbox"> User accounts should use an email address and password to log in.</li>
+<li><input checked="" disabled="" type="checkbox"> User data should be stored in the cloud so they can use the app across devices.</li>
+<li><input checked="" disabled="" type="checkbox"> Each user&rsquo;s data should be stored securely and not accessible by other users.</li>
+<li><input checked="" disabled="" type="checkbox"> If a task has an address, the application should allow the user to request directions to that address.</li>
+<li><input checked="" disabled="" type="checkbox"> If the user gives permission, it should also track the location where a task was completed.</li>
+<li><input checked="" disabled="" type="checkbox"> Our application should track the percentage of tasks completed on-time (before the due date).</li>
+<li><input checked="" disabled="" type="checkbox"> Users should be able to configure their display name and update their password.</li>
+<li><input checked="" disabled="" type="checkbox"> Users should be able to delete their account and all associated data.</li>
+<li><input checked="" disabled="" type="checkbox"> User profile pictures should be visible from <a href="https://gravatar.com/" rel="external" target="_blank">Gravatar</a></li>
+<li><input checked="" disabled="" type="checkbox"> The app should display a global leaderboard showing the users with the highest on-time completion percentage.</li>
+</ul>
+<p>There are still lots of design elements we can update and personalize to make this app our own, and there is still plenty of room for additional testing before preparing this application for release. In the next part of this tutorial, we&rsquo;ll add one other important feature to our application and prepare it for deployment.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+<p>Last modified by:
+              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/c00ec499074574f54fa0b39ab2f93cdca41e27d2">Mar 17, 2026</a>
+</p>
+
+</div>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          
+          <a id="R-logo" href="/extras/index.html">
+            <div class="logo-title">K-State CS Hugo Framework</div>
+          </a>
+        </div>
+        <search><form action="/extras/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/index.html"><input type="checkbox" id="R-section-8ac037dd365a7ab70041d22087358e55" aria-controls="R-subsections-8ac037dd365a7ab70041d22087358e55"><label for="R-section-8ac037dd365a7ab70041d22087358e55"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Introduction</span></label><a class="padding" href="/extras/01-introduction/index.html"><b>1. </b>Introduction</a><ul id="R-subsections-8ac037dd365a7ab70041d22087358e55" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/01-introduction/01-welcome/index.html"><a class="padding" href="/extras/01-introduction/01-welcome/index.html">1. Welcome</a></li></ul></li>
+            <li class="" data-nav-id="/extras/02-full-stack/index.html"><input type="checkbox" id="R-section-833bd75f80125bdb3a3b58824278b2dc" aria-controls="R-subsections-833bd75f80125bdb3a3b58824278b2dc"><label for="R-section-833bd75f80125bdb3a3b58824278b2dc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Full Stack Web Application</span></label><a class="padding" href="/extras/02-full-stack/index.html"><b>2. </b>Full Stack Web Application</a><ul id="R-subsections-833bd75f80125bdb3a3b58824278b2dc" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/02-full-stack/01-intro/index.html"><a class="padding" href="/extras/02-full-stack/01-intro/index.html">1. Introduction</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/02-setup/index.html"><a class="padding" href="/extras/02-full-stack/02-setup/index.html">2. Setup</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/03-initial/index.html"><a class="padding" href="/extras/02-full-stack/03-initial/index.html">3. Initialize</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/04-docker/index.html"><a class="padding" href="/extras/02-full-stack/04-docker/index.html">4. Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/05-working/index.html"><a class="padding" href="/extras/02-full-stack/05-working/index.html">5. Working with Docker</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/06-nodemon/index.html"><a class="padding" href="/extras/02-full-stack/06-nodemon/index.html">6. Nodemon</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/07-database/index.html"><a class="padding" href="/extras/02-full-stack/07-database/index.html">7. Database</a></li>
+            <li class="" data-nav-id="/extras/02-full-stack/08-knex/index.html"><a class="padding" href="/extras/02-full-stack/08-knex/index.html">8. Knex</a></li></ul></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/index.html"><input type="checkbox" id="R-section-34a809bea981e201e90739794ef2ad65" aria-controls="R-subsections-34a809bea981e201e90739794ef2ad65"><label for="R-section-34a809bea981e201e90739794ef2ad65"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Setting Up a Canvas Course</span></label><a class="padding" href="/extras/03-canvas-setup/index.html"><b>3. </b>Setting Up a Canvas Course</a><ul id="R-subsections-34a809bea981e201e90739794ef2ad65" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/03-canvas-setup/01-codio-org/index.html"><a class="padding" href="/extras/03-canvas-setup/01-codio-org/index.html">1. Canvas to Codio Org</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/02-codio-course/index.html"><a class="padding" href="/extras/03-canvas-setup/02-codio-course/index.html">2. Canvas to Codio Course</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/03-codio-assign/index.html"><a class="padding" href="/extras/03-canvas-setup/03-codio-assign/index.html">3. Canvas to Codio Assignment</a></li>
+            <li class="" data-nav-id="/extras/03-canvas-setup/04-canvas-clone/index.html"><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
+            <li class="" data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e"><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/04-deploy-example/01-instructions/index.html"><a class="padding" href="/extras/04-deploy-example/01-instructions/index.html">1. Instructions</a></li></ul></li>
+            <li class="parent " data-nav-id="/extras/05-flutter-flow/index.html"><input type="checkbox" id="R-section-642d241f864349d539b611bd36b843c7" aria-controls="R-subsections-642d241f864349d539b611bd36b843c7" checked><label for="R-section-642d241f864349d539b611bd36b843c7"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Flutter Flow Example</span></label><a class="padding" href="/extras/05-flutter-flow/index.html"><b>5. </b>Flutter Flow Example</a><ul id="R-subsections-642d241f864349d539b611bd36b843c7" class="collapsible-menu">
+            <li class="" data-nav-id="/extras/05-flutter-flow/01-starter/index.html"><a class="padding" href="/extras/05-flutter-flow/01-starter/index.html">1. Starter Project</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/02-first-page/index.html"><a class="padding" href="/extras/05-flutter-flow/02-first-page/index.html">2. First Component</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/03-list-view/index.html"><a class="padding" href="/extras/05-flutter-flow/03-list-view/index.html">3. List View</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/04-interaction/index.html"><a class="padding" href="/extras/05-flutter-flow/04-interaction/index.html">4. Interaction</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/05-firebase/index.html"><a class="padding" href="/extras/05-flutter-flow/05-firebase/index.html">5. Firebase</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/06-authentication/index.html"><a class="padding" href="/extras/05-flutter-flow/06-authentication/index.html">6. Authentication</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/07-security/index.html"><a class="padding" href="/extras/05-flutter-flow/07-security/index.html">7. Security</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/08-features/index.html"><a class="padding" href="/extras/05-flutter-flow/08-features/index.html">8. Features</a></li>
+            <li class="active " data-nav-id="/extras/05-flutter-flow/09-leaderboard/index.html"><a class="padding" href="/extras/05-flutter-flow/09-leaderboard/index.html">9. Leaderboard</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/10-api/index.html"><a class="padding" href="/extras/05-flutter-flow/10-api/index.html">10. Using APIs</a></li>
+            <li class="" data-nav-id="/extras/05-flutter-flow/11-release/index.html"><a class="padding" href="/extras/05-flutter-flow/11-release/index.html">11. Releasing a Project</a></li></ul></li>
+            <li class="" data-nav-id="/extras/06-video-intros/index.html"><a class="padding" href="/extras/06-video-intros/index.html"><b>6. </b>Video Intros</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-auto" value="auto" selected>KSU Auto</option>
+                    <option id="R-select-variant-light-theme" value="light-theme">KSU Light</option>
+                    <option id="R-select-variant-dark-theme" value="dark-theme">KSU Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/ksu-cs-textbooks/hugo-theme-relearn">Hugo Relearn Theme</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p></div>
+      </div>
+    </aside>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
+    <script src="/extras/js/theme.min.js?1773775660" defer></script>
+  </body>
+</html>
