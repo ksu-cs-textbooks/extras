@@ -157,11 +157,17 @@ Once that is updated, we'll go back to our `HomePage` and find the `ToDoItemComp
 
 ![FlutterFlow Component Params](images/todoparams.png)
 
-Now, when we look at our available variables, we'll see a new `to_do_tasks Document` option that represents the current document in our collection of to do tasks that are queried from Firestore. So, we'll set the **Unique Key** to the `to_do_tasks Document`'s `Index in List` option. We'll also update the `toDoItemParam` to be the `to_do_tasks Document`'s `Document` option. 
+Now, when we look at our available variables, we'll see a new `to_do_tasks Document` option that represents the current document in our collection of to do tasks that are queried from Firestore. So, we'll set the **Unique Key** to the `to_do_tasks Document`'s `Document ID` option. We'll also update the `toDoItemParam` to be the `to_do_tasks Document`'s `Document` option. 
 
 ![FlutterFlow Updated Params](images/updatedparams.png)
 
 There we go! Now that list view should display tasks from Firebase instead our internal **App State**. However, we still need to update a few things to be able to create, edit, and delete tasks.
+
+{{% notice note "Why Document ID Instead of Index in List?" %}}
+
+Since we are now sorting the list in our query, the index of each item in the list will change as it is updated. Because of this, we can no longer assume that value will be the same for each item as it is updated. So, when working with Firebase, it is always best to use either the document reference or the document's unique ID instead of it's index in the list to uniquely identify it.
+
+{{% /notice %}}
 
 ## Creating Tasks
 

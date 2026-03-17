@@ -243,6 +243,12 @@ Now, with all that in place, we can run our application in **Test Mode** and see
 
 As we test this, we may see a few places that still use the old placeholder image, so we can go through and update those as needed to use the correct `photo_url` field. 
 
+{{% notice note "Updating Photos" %}}
+
+Right now our application just stores the URL of the user's Gravatar image directly in the application. However, by storing that URL instead of the photo itself, it allows the user to update their profile image directly in Gravatar and then that new image will be shown in our application (because the URL of that image itself did not change). This allows users to seamlessly update their profile images without our app having to do anything!
+
+{{% /notice %}}
+
 ## Summary
 
 At this point, we have implemented a large number of the features we wanted to include in our application:
