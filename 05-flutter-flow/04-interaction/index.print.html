@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
   <head>
     <meta charset="utf-8">
@@ -25,7 +24,7 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
     <meta itemprop="name" content="Interaction :: K-State CS Textbook Extras">
     <meta itemprop="description" content="YouTube Video We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.
 Completing Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.">
-    <meta itemprop="dateModified" content="2026-03-16T14:07:58-05:00">
+    <meta itemprop="dateModified" content="2026-03-19T16:06:07-05:00">
     <meta itemprop="wordCount" content="2695">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Interaction :: K-State CS Textbook Extras</title>
@@ -33,26 +32,26 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
     <link href="/extras/05-flutter-flow/04-interaction/index.xml" rel="alternate" type="application/rss+xml" title="Interaction :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/04-interaction/tele.html" rel="alternate" type="text/html" title="Interaction :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/04-interaction/embed.html" rel="alternate" type="text/html" title="Interaction :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/search.min.js?1773775660" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773954401" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773954401" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/search.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773954401";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/format-print.min.css?1773775660" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1773954401" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -111,14 +110,70 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773954401" rel="stylesheet">
   </head>
-  <body class="mobile-support embed print" data-url="/extras/05-flutter-flow/04-interaction/index.html">
+  <body class="mobile-support print" data-url="/extras/05-flutter-flow/04-interaction/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      
-      
-      
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#completing-tasks">Completing Tasks</a></li>
+    <li><a href="#setting-completion-date">Setting Completion Date</a></li>
+    <li><a href="#editing-tasks">Editing Tasks</a>
+      <ul>
+        <li><a href="#component-widgets">Component Widgets</a></li>
+        <li><a href="#component-parameters">Component Parameters</a></li>
+        <li><a href="#widget-values">Widget Values</a></li>
+        <li><a href="#widget-buttons">Widget Buttons</a></li>
+      </ul>
+    </li>
+    <li><a href="#dynamically-loading-a-component">Dynamically Loading a Component</a></li>
+    <li><a href="#editing-dates">Editing Dates</a></li>
+    <li><a href="#saving-data">Saving Data</a></li>
+    <li><a href="#creating-data">Creating Data</a></li>
+    <li><a href="#deleting-data">Deleting Data</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">FlutterFlow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Interaction</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/04-interaction/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/03-list-view/index.html" title="List View (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/05-firebase/index.html" title="Firebase (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div id="R-main-overlay"></div>
       <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
         <div class="flex-block-wrapper">
@@ -129,41 +184,41 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 <h1 id="interaction">Interaction</h1>
 
 
-<a href="https://www.youtube.com/watch?v=asdf">YouTube Video</a>
+<a href="https://www.youtube.com/watch?v=QVOQStH4JKc">YouTube Video</a>
 
 <p>We now have a basic mobile app that displays some data from the app&rsquo;s internal state, but we have no way to modify that data. So, let&rsquo;s explore the basics of making our application interactive by allowing us to edit and create data.</p>
 <h2 id="completing-tasks">Completing Tasks</h2>
 <p>Let&rsquo;s start with the simplest case - marking a task completed. We already have a <strong>Switch</strong> widget in our <code>ToDoItemComponent</code> to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.</p>
 <p>First, let&rsquo;s go back to our <code>ToDoItemComponent</code> and add a new <strong>Component Parameter</strong> called <code>index</code> that should contain an integer. We&rsquo;ll use that to keep track of the index of the current to do task in our overall list so we can refer back to it.</p>
-<p><a href="#R-image-d31e944854ac8fcac1a133f5543dbfd9" class="lightbox-link"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d31e944854ac8fcac1a133f5543dbfd9"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png"></a></p>
+<p><a href="#R-image-ee4e07fae366ba2fe3dae446250cd7f0" class="lightbox-link"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee4e07fae366ba2fe3dae446250cd7f0"><img alt="FlutterFlow Index Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam.png"></a></p>
 <p>Next, we&rsquo;ll head back to our <code>HomePage</code> and configure a couple of options for the <code>ToDoItemComponent</code> that is placed inside of our <strong>ListView</strong> widget. Here, we want to set the <strong>Unique Key</strong> to the <code>toDoItemList Item</code> option, and then select the <strong>Index in List</strong> option from the available options.</p>
-<p><a href="#R-image-f7aec4c28224a528d5e7911bb2998dc9" class="lightbox-link"><img alt="FlutterFlow Index in List" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7aec4c28224a528d5e7911bb2998dc9"><img alt="FlutterFlow Index in List" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png"></a></p>
+<p><a href="#R-image-bf549a39cf7db6a8a155dbee39da0443" class="lightbox-link"><img alt="FlutterFlow Index in List" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf549a39cf7db6a8a155dbee39da0443"><img alt="FlutterFlow Index in List" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexinlist.png"></a></p>
 <p>We also want to configure the new <code>index</code> parameter to the same value:</p>
-<p><a href="#R-image-f20504c5748f0ea0ed37cb05da1174a2" class="lightbox-link"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f20504c5748f0ea0ed37cb05da1174a2"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png"></a></p>
+<p><a href="#R-image-a8acc5d2d61fafe312ec81d120814600" class="lightbox-link"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a8acc5d2d61fafe312ec81d120814600"><img alt="FlutterFlow Index Param Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/indexparam2.png"></a></p>
 <p>This allows us to access the index of the item in the list from within our <code>ToDoItemComponent</code> custom component. We&rsquo;ll need that value to know which task we need to update.</p>
 <p>To configure the switch interaction, we first need to find that widget in our <strong>Widget Tree</strong> and then look at the <strong>Properties Panel</strong> to the right. There, we should see a button to configure the actions for this widget.</p>
-<p><a href="#R-image-6aaeafbcb92f2f10bb0db5fa4e85302b" class="lightbox-link"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6aaeafbcb92f2f10bb0db5fa4e85302b"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png"></a></p>
+<p><a href="#R-image-f8756d5e0be1bba6dc5bca1a8c8bc5dc" class="lightbox-link"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f8756d5e0be1bba6dc5bca1a8c8bc5dc"><img alt="FlutterFlow Actions Panel" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/actions.png"></a></p>
 <p>Once on that page, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><span class="title">Open</span></a></span> button to open the <strong>Action Flow Editor</strong>, which is one of the easiest ways to configure these actions.</p>
 <p>In the window that appears, there are two action triggers to choose from. Let&rsquo;s start with the <strong>On Toggled On</strong> trigger. This trigger will fire when the switch is moved from the <strong>Off</strong> state to the <strong>On</strong> state. So, in our data model, we want to mark the underlying task as completed. To do this, we&rsquo;ll click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Action</span></a></span> button, then look for the <strong>State Management</strong> actions and choose <strong>Update App State</strong>.</p>
 <p>We&rsquo;ll then be able to click an <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Field</span></a></span> button to indicate which field in our app state we want to update. We&rsquo;ll choose our <code>toDoTasks</code> app state variable as our field to update, then we&rsquo;ll set the <strong>Update Type</strong> to <strong>Update Item at Index</strong>. The <strong>Item Index</strong> can be set to the <code>index</code> component parameter, and then the <strong>Update Type</strong> under that should be <strong>Update Field(s)</strong>. Finally, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Field</span></a></span> button in the popup window and select the <code>isCompleted</code> field, and set the value to the <code>True</code> value found under the <strong>Constants</strong> list. The full process is shown in the animation below or the video at the top of this page.</p>
-<p><a href="#R-image-e6b505499a64508fea7c34e68c89b18d" class="lightbox-link"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e6b505499a64508fea7c34e68c89b18d"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif"></a></p>
+<p><a href="#R-image-4376048ba9e7cf48b85860837fa35ae7" class="lightbox-link"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4376048ba9e7cf48b85860837fa35ae7"><img alt="FlutterFlow Configure Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/addaction.gif"></a></p>
 <p>Next, we&rsquo;ll need to do the same process for the <strong>On Toggled Off</strong> trigger, but this time we&rsquo;ll set the value for the <code>isCompleted</code> field to <code>False</code> instead. The rest of the process is the same.</p>
 <p>Once that is done, we can launch our app in test mode to see if our action is working properly. In the <strong>Debug Panel</strong> on the left, scroll down to find the <strong>App State</strong> section, and watch the data shown there change as you toggle the switches.</p>
-<p><a href="#R-image-d00a91ab5e4b540934e3bc6801479012" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d00a91ab5e4b540934e3bc6801479012"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif"></a></p>
+<p><a href="#R-image-0bc1a1c9be35c9a934e681484892952c" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0bc1a1c9be35c9a934e681484892952c"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction.gif"></a></p>
 <p>If everything is working correctly, you should see the app state update to match what is shown in the interface!</p>
 <h2 id="setting-completion-date">Setting Completion Date</h2>
 <p>We also want our application to keep track of the completion date, so let&rsquo;s go back to those actions we just configured in the <code>ToDoItemComponent</code> on the <strong>Switch</strong> widget and add an additional option to update the <code>dateCompleted</code> field. When we toggle the switch on, we should set the value to the <strong>Current Time</strong> option found under <strong>Global Properties</strong>, and when we toggle the switch off, we should set that value to the <strong>Empty String</strong> option found under <strong>Constants</strong> instead. The animation below shows that process.</p>
-<p><a href="#R-image-af61581befd1b48dcef190fa7c065b4d" class="lightbox-link"><img alt="FlutterFlow Update Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-af61581befd1b48dcef190fa7c065b4d"><img alt="FlutterFlow Update Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif"></a></p>
+<p><a href="#R-image-229d2a55cdd5e8649f3797d4c24f777f" class="lightbox-link"><img alt="FlutterFlow Update Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-229d2a55cdd5e8649f3797d4c24f777f"><img alt="FlutterFlow Update Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updateaction.gif"></a></p>
 <p>We can now test our application again by clicking the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: teal;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-rotate-right"></i> <span class="title">Instant Reload</span></a></span> button if it is still running in the Test Mode tab, and see if our date is now also updating.</p>
-<p><a href="#R-image-f549a49c5f1e36361d85d9d7bd3f679e" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f549a49c5f1e36361d85d9d7bd3f679e"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif"></a></p>
+<p><a href="#R-image-7e5912bc580e0e74b692645100e378eb" class="lightbox-link"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e5912bc580e0e74b692645100e378eb"><img alt="FlutterFlow Preview Actions" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/previewaction2.gif"></a></p>
 <p>There we go! We can now mark our tasks as done, and when we do, it will even update the <code>dateCompleted</code> value along with it. This is really the core concept behind building interactivity in our application.</p>
 <h2 id="editing-tasks">Editing Tasks</h2>
 <p>We can currently mark our tasks as completed, but what if we want to edit a task? That&rsquo;s another big part of this project, so let&rsquo;s create another custom component to edit our tasks. We&rsquo;ll start on the <strong>Page Selector</strong> tab and press the <span class="btn interactive  cstyle transparent" style="--VARIABLE-BOX-color: green;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button to create a new blank component. Let&rsquo;s name this one <code>EditToDoItemComponent</code>.</p>
@@ -203,8 +258,8 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 </ul>
 </div>
 <p>When fully set up, your component should have this layout:</p>
-<p><a href="#R-image-676c5a9b4b378d4bb45939d9c137f4be" class="lightbox-link"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-676c5a9b4b378d4bb45939d9c137f4be"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png"></a></p>
+<p><a href="#R-image-3511ed9890d00670eb0442b5019fe570" class="lightbox-link"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3511ed9890d00670eb0442b5019fe570"><img alt="FlutterFlow Edit Component Layout" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editcomponent.png"></a></p>
 
 <details open class=" box cstyle notices tip">
   <summary class="box-label" tabindex="-1">
@@ -217,57 +272,57 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 </details>
 <h3 id="component-parameters">Component Parameters</h3>
 <p>This component will also need to have a couple of parameters. In fact, they will be the exact same parameters we used for the <code>ToDoItemComponent</code> earlier, which are <code>toDoItemParam</code> using the <code>ToDoItemType</code> and an <code>index</code> parameter representing the index of the item in the list:</p>
-<p><a href="#R-image-4a112d7ffda657b10dc97ca6dac83186" class="lightbox-link"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a112d7ffda657b10dc97ca6dac83186"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png"></a></p>
+<p><a href="#R-image-e395e51f77521346548f909f7794c438" class="lightbox-link"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e395e51f77521346548f909f7794c438"><img alt="FlutterFlow Edit Item Params" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editparams.png"></a></p>
 <h3 id="widget-values">Widget Values</h3>
 <p>Now we can connect each widget&rsquo;s display values to the <code>toDoItemParam</code> parameter just like we did previously. For <strong>TextField</strong> widgets, we can also set a <strong>Label</strong> value and <strong>Hint</strong> value as well. Below is an example of setting up the <code>TitleField</code> <strong>TextField</strong> widget:</p>
-<p><a href="#R-image-fce0b73ea92ecc8a0ba74450ea1b09dc" class="lightbox-link"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fce0b73ea92ecc8a0ba74450ea1b09dc"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif"></a></p>
+<p><a href="#R-image-b4288592fbec9a0860a4c4820b5ae4f2" class="lightbox-link"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4288592fbec9a0860a4c4820b5ae4f2"><img alt="FlutterFlow Configure Text Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/textfield.gif"></a></p>
 <p>Go ahead and do the same process for the text field widgets displaying the <code>description</code> and <code>address</code> fields.</p>
 <p>For the <code>DueDateText</code> <strong>Text</strong> widget, we&rsquo;ll connect it directly to the <code>dateDue</code> field so we can see the complete due date.</p>
 <p>Finally, for the <code>PriorityDropDown</code>, we&rsquo;ll set the <strong>Initial Option Value</strong> to be the <code>priority</code> field from our <code>toDoItemParam</code> parameter, and we can also configure the drop-down to have both <code>Low</code> and <code>High</code> as options.</p>
-<p><a href="#R-image-667c399751602cf9744534741a2f2b50" class="lightbox-link"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-667c399751602cf9744534741a2f2b50"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png"></a></p>
+<p><a href="#R-image-9e97d9619f90c78237c0d5940e98a9d0" class="lightbox-link"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9e97d9619f90c78237c0d5940e98a9d0"><img alt="FlutterFlow Configure Drop Down" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/dropdown.png"></a></p>
 <h3 id="widget-buttons">Widget Buttons</h3>
 <p>To test out our widget, let&rsquo;s configure both the <code>CancelButton</code> and <code>SaveButton</code> actions to do the same thing. When creating an action, we&rsquo;ll choose the <strong>On Tap</strong> action, and then look for the <strong>Widget/UI Interactions</strong> section in the list of actions, and choose <strong>Bottom Sheet</strong> and then <strong>Dismiss</strong>. See the animation below for an example of configuring the <code>CancelButton</code> with this action.</p>
-<p><a href="#R-image-63c4e683c82ef4ca70a12969e7474725" class="lightbox-link"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-63c4e683c82ef4ca70a12969e7474725"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif"></a></p>
+<p><a href="#R-image-8501075ebbfbac92dabb95d1e395cf01" class="lightbox-link"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8501075ebbfbac92dabb95d1e395cf01"><img alt="FlutterFlow Configure Cancel Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/cancelaction.gif"></a></p>
 <p>Make sure you configure the <code>SaveButton</code> to perform the same action for now. We&rsquo;ll come back and update it later with additional functionality to actually save our changes.</p>
 <p>That&rsquo;s a basic component to edit tasks!</p>
 <h2 id="dynamically-loading-a-component">Dynamically Loading a Component</h2>
 <p>Now that we have a component available to edit our tasks, let&rsquo;s add some functionality to our interface that allows us to actually edit our tasks. For this, let&rsquo;s add an <strong>IconButton</strong> to our <code>ToDoItemComponent</code> at the end of the top row. We&rsquo;ll call this an <code>EditButton</code> and configure the design a bit:</p>
-<p><a href="#R-image-3ab8777fca8586843781df5deeb55bf2" class="lightbox-link"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ab8777fca8586843781df5deeb55bf2"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png"></a></p>
+<p><a href="#R-image-ee5816d6dba3dc7beb8cdadcc7647d5f" class="lightbox-link"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee5816d6dba3dc7beb8cdadcc7647d5f"><img alt="FlutterFlow Add Edit Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editbutton.png"></a></p>
 <p>For this button, we&rsquo;ll configure the <strong>On Tap</strong> action to open a <strong>Bottom Sheet</strong> and place our <code>EditToDoItemComponent</code> in that area. We&rsquo;ll also link the <code>toDoItemParam</code> and <code>index</code> parameters to this sheet, and enable the <strong>Safe Area</strong> option just to make sure our interface does not interfere with anything else on the screen. The animation below shows the full process.</p>
-<p><a href="#R-image-ab4ef6157fc41a1a215b6a497f73050a" class="lightbox-link"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ab4ef6157fc41a1a215b6a497f73050a"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif"></a></p>
+<p><a href="#R-image-205c29a9e139e9b7ad3543e2a137e1b3" class="lightbox-link"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-205c29a9e139e9b7ad3543e2a137e1b3"><img alt="FlutterFlow Configure Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editaction.gif"></a></p>
 <p>Once we have configured that button, we should be able to launch our application in <strong>Test Mode</strong> and test it out!</p>
-<p><a href="#R-image-47ed11ad563ae5769236460e95d7a68e" class="lightbox-link"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-47ed11ad563ae5769236460e95d7a68e"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif"></a></p>
+<p><a href="#R-image-df9f2b4d5c32383c049068add234892f" class="lightbox-link"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-df9f2b4d5c32383c049068add234892f"><img alt="FlutterFlow Demo Edit Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdemo.gif"></a></p>
 <p>If everything is working correctly, we can click on the Edit button in each of our to do tasks, and we&rsquo;ll see a little pop up on the bottom of the screen showing the settings for that task!</p>
 <p>We can place any component in that <strong>Bottom Sheet</strong> area by configuring an action to launch it.</p>
 <h2 id="editing-dates">Editing Dates</h2>
 <p>Let&rsquo;s go back to our <code>EditToDoItemComponent</code> and configure the <code>DueDateButton</code> widget&rsquo;s <strong>On Tap</strong> action to open a <strong>Date/Time Picker</strong> under the <strong>Widget/UI Interactions</strong> section so we can choose a due date. We&rsquo;ll set it to the <strong>Date+Time</strong> type and allow the user to select any valid date and time in the future.</p>
 <p>Once the user has selected a value, we can find that value in the <strong>Widget State</strong> under the <strong>Date Picked</strong> value. So, let&rsquo;s configure the <code>DueDateText</code> to use that value if available using a <strong>Conditional Value</strong> configuration to check if a date has been selected. The process is shown in the animation below.</p>
-<p><a href="#R-image-e98614b908ce8d803cc7024b62ef6594" class="lightbox-link"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e98614b908ce8d803cc7024b62ef6594"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif"></a></p>
+<p><a href="#R-image-9f317c18f804b03787b29d6bcd6939d9" class="lightbox-link"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f317c18f804b03787b29d6bcd6939d9"><img alt="FlutterFlow Edit Date Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdate.gif"></a></p>
 <p>Let&rsquo;s reload our <strong>Test Mode</strong> and make sure that this is working before continuing.</p>
-<p><a href="#R-image-82975e0d3b43089106a24ef85f20a43a" class="lightbox-link"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-82975e0d3b43089106a24ef85f20a43a"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif"></a></p>
+<p><a href="#R-image-b4bd7c2df3643bd7025d9cf0f5ccf0ce" class="lightbox-link"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4bd7c2df3643bd7025d9cf0f5ccf0ce"><img alt="FlutterFlow Edit Date Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/editdatetest.gif"></a></p>
 <h2 id="saving-data">Saving Data</h2>
 <p>Finally, let&rsquo;s update our <code>SaveButton</code> action to actually save the data. This is very similar to what we did when we configured the <strong>Switch</strong> widget to mark a task as completed. We&rsquo;ll start by going back to our <code>EditToDoItemComponent</code> and then clicking the <code>SaveButton</code> and editing the Actions applied to it. In the <strong>Action Flow Editor</strong>, we need to add a second action that will save the data before dismissing the bottom sheet. So, we can click the <strong>Plus</strong> button at the bottom of that action and create a new action. In that action, we&rsquo;ll look for the <strong>State Management</strong> option and find <strong>Update App State</strong>, then click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/04-interaction/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Field</span></a></span> button to choose our <code>toDoTasks</code> <strong>App State</strong> field. Then, just like before, we&rsquo;ll select the <strong>Update Item at Index</strong> option and set the <strong>Item Index</strong> to our <code>index</code> variable, then we can set the individual fields by matching them to either the text fields and drop down fields on our component or the <strong>Date Picked</strong> state from our <strong>Widget State</strong> for the due date if it has been selected, using a <strong>Conditional Value</strong> similar to what we did before. The full process is shown in the animation below or the video above.</p>
-<p><a href="#R-image-1cb382287568bd94d0f57472bc7a60b6" class="lightbox-link"><img alt="FlutterFlow Update Save Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cb382287568bd94d0f57472bc7a60b6"><img alt="FlutterFlow Update Save Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave.gif"></a></p>
+<p><a href="#R-image-562a91619f69d7b7d95e5943cd4bd07a" class="lightbox-link"><img alt="FlutterFlow Update Save Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-562a91619f69d7b7d95e5943cd4bd07a"><img alt="FlutterFlow Update Save Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave.gif"></a></p>
 <p>Once that is done, we can reload our app in <strong>Test Mode</strong> and make sure that the edits we make are properly saved in the app state that is shown in the <strong>Debug Panel</strong> on the left side.</p>
-<p><a href="#R-image-a01d0afd2d2dd752a96dab042d096cf6" class="lightbox-link"><img alt="FlutterFlow Update Save Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave2.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a01d0afd2d2dd752a96dab042d096cf6"><img alt="FlutterFlow Update Save Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave2.gif"></a></p>
+<p><a href="#R-image-9641a0f401341124ad49c2dc83a8bb90" class="lightbox-link"><img alt="FlutterFlow Update Save Action Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave2.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9641a0f401341124ad49c2dc83a8bb90"><img alt="FlutterFlow Update Save Action Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/updatesave2.gif"></a></p>
 <p>There we go! We can now update our state easily!</p>
 <h2 id="creating-data">Creating Data</h2>
 <p>The process to create a component for creating a new to do task is very similar. Let&rsquo;s look at that process and see how it differs.</p>
 <p>First, let&rsquo;s create a duplicate of our <code>EditToDoItemComponent</code> - we&rsquo;ll call it <code>CreateToDoItemComponent</code> to follow our existing naming scheme. You can duplicate a component by right-clicking it in the <strong>Page Selector</strong> and selecting <strong>Duplicate Component</strong>. Once it is created, we can rename it to the appropriate name.</p>
 <p>Next, we can remove the two component parameters from this component since they aren&rsquo;t needed at all. So, choose the component in the <strong>Page Selector</strong> and find the <strong>Component Parameters</strong> section of the <strong>Properties Panel</strong> and remove the <code>toDoItemParam</code> and <code>index</code> parameters from that list.</p>
-<p><a href="#R-image-00f6aafe75dd51e0d5418de7ad1b9f3e" class="lightbox-link"><img alt="FlutterFlow Remove Parameters" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/removeparams.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-00f6aafe75dd51e0d5418de7ad1b9f3e"><img alt="FlutterFlow Remove Parameters" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/removeparams.gif"></a></p>
+<p><a href="#R-image-657a95ba7bbf6905ffd61ee46a8cc9a5" class="lightbox-link"><img alt="FlutterFlow Remove Parameters" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/removeparams.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-657a95ba7bbf6905ffd61ee46a8cc9a5"><img alt="FlutterFlow Remove Parameters" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/removeparams.gif"></a></p>
 <p>We&rsquo;ll also need to update the <strong>Initial Value</strong> settings for each of our fields since they are no longer relevant. They can just be completely removed for now. Remember to update the three <strong>Text Field</strong> widgets as well as the <strong>Drop Down</strong> widget for priority and the else case in the <strong>Text</strong> widget for the due date (it can be set to the <strong>Empty String</strong> constant).</p>
 <p>Finally, we need to modify the <code>SaveButton</code> action to <strong>Add to List</strong> instead of <strong>Update Item at Index</strong>. The process of matching up the fields is the same as before, but with a few important changes:</p>
 <ol>
@@ -277,14 +332,14 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 <li>All other fields should have values set by the widgets or reasonable defaults</li>
 </ol>
 <p>The full process for editing that action is shown below.</p>
-<p><a href="#R-image-9cdc1c0ffd72f10339250a7a1c3bd773" class="lightbox-link"><img alt="FlutterFlow Create Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createaction.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cdc1c0ffd72f10339250a7a1c3bd773"><img alt="FlutterFlow Create Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createaction.gif"></a></p>
+<p><a href="#R-image-074313d018853e2a7414a1871934fc4b" class="lightbox-link"><img alt="FlutterFlow Create Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createaction.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-074313d018853e2a7414a1871934fc4b"><img alt="FlutterFlow Create Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createaction.gif"></a></p>
 <p>Finally, let&rsquo;s quickly add a <strong>Button</strong> widget to the bottom of our <code>HomePage</code> to allow us to create a new task. The <strong>On Tap</strong> action for that button will be to open the <code>CreateToDoItemComponent</code> as a bottom sheet. For the example, we chose to add that at the bottom of the <strong>Column</strong> widget in a new <strong>Row</strong> widget so it could expand to fill the whole width, and we added a <strong>Spacer</strong> widget as well.</p>
-<p><a href="#R-image-9f5ab482ddd8fd19909c7d9ee8d0f41d" class="lightbox-link"><img alt="FlutterFlow Create Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbutton.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f5ab482ddd8fd19909c7d9ee8d0f41d"><img alt="FlutterFlow Create Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbutton.png"></a></p>
+<p><a href="#R-image-ae5197ecbe24b52aea0ae46062fedfeb" class="lightbox-link"><img alt="FlutterFlow Create Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae5197ecbe24b52aea0ae46062fedfeb"><img alt="FlutterFlow Create Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbutton.png"></a></p>
 <p>Once again, at this point we can open our app in <strong>Test Mode</strong> to confirm that we can actually add new items to our <strong>App State</strong>.</p>
-<p><a href="#R-image-7c15f01061d5f7dacc03e1044a2198e8" class="lightbox-link"><img alt="FlutterFlow Create Button Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbuttontest.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c15f01061d5f7dacc03e1044a2198e8"><img alt="FlutterFlow Create Button Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbuttontest.gif"></a></p>
+<p><a href="#R-image-b56e03a3e36895094bf67fd57727bf16" class="lightbox-link"><img alt="FlutterFlow Create Button Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbuttontest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b56e03a3e36895094bf67fd57727bf16"><img alt="FlutterFlow Create Button Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/createbuttontest.gif"></a></p>
 <p>Awesome! It looks like it is working!</p>
 
 <details open class=" box cstyle notices note">
@@ -298,11 +353,11 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 </details>
 <h2 id="deleting-data">Deleting Data</h2>
 <p>Finally, let&rsquo;s add another button that allows users to delete data. This is actually quite simple - we just add a new button to our <code>ToDoItemComponent</code> and set the action to <strong>Update App State</strong> then choose the <strong>Remove From List at Index</strong> option and select the <code>index</code> parameter. However, this time we also want to set the <strong>Update Type</strong> at the bottom to <strong>Rebuild Containing Page</strong> since we are updating the app state beyond this component. By setting this option, it will refresh the entire list and remove this component once the underlying <strong>App State</strong> is updated.</p>
-<p><a href="#R-image-0ce7e5390f8a6467c1d88bb995fbab39" class="lightbox-link"><img alt="FlutterFlow Delete Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteaction.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0ce7e5390f8a6467c1d88bb995fbab39"><img alt="FlutterFlow Delete Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteaction.png"></a></p>
+<p><a href="#R-image-a08b582328af00342d0f071d17e9f3c7" class="lightbox-link"><img alt="FlutterFlow Delete Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteaction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a08b582328af00342d0f071d17e9f3c7"><img alt="FlutterFlow Delete Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteaction.png"></a></p>
 <p>With that in place, we should also be able to delete items from our application.</p>
-<p><a href="#R-image-01ab15c2d1957845d63593da391eb5e4" class="lightbox-link"><img alt="FlutterFlow Delete Button Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteactiontest.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-01ab15c2d1957845d63593da391eb5e4"><img alt="FlutterFlow Delete Button Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteactiontest.gif"></a></p>
+<p><a href="#R-image-6231a1914e3602a7b4513d7a7296ea4a" class="lightbox-link"><img alt="FlutterFlow Delete Button Test" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteactiontest.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6231a1914e3602a7b4513d7a7296ea4a"><img alt="FlutterFlow Delete Button Test" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/04-interaction/images/deleteactiontest.gif"></a></p>
 <h2 id="summary">Summary</h2>
 <p>Let&rsquo;s take a minute to go back to that initial list of features and check off the ones we have already implemented:</p>
 <ul>
@@ -333,13 +388,17 @@ Completing Tasks Let’s start with the simplest case - marking a task completed
 </article>
         </div>
       </main>
-      
-      
-      
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+<p>Last modified by:
+              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/900dec15da4476981ef82993fca8d8b77534d848">Mar 19, 2026</a>
+</p>
+
+</div>
     </div>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
-    <script src="/extras/js/theme.min.js?1773775660" defer></script>
-  <script src="/extras/js/embed-iframe.min.js?1773775660" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773954401" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773954401" defer></script>
+    <script src="/extras/js/theme.min.js?1773954401" defer></script>
   </body>
 </html>

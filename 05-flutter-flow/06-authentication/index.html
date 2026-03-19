@@ -20,7 +20,7 @@
     <meta property="og:image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <meta itemprop="name" content="Authentication :: K-State CS Textbook Extras">
     <meta itemprop="description" content="Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!">
-    <meta itemprop="dateModified" content="2026-03-16T14:07:58-05:00">
+    <meta itemprop="dateModified" content="2026-03-19T16:06:07-05:00">
     <meta itemprop="wordCount" content="2446">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>Authentication :: K-State CS Textbook Extras</title>
@@ -28,26 +28,26 @@
     <link href="/extras/05-flutter-flow/06-authentication/index.print.html" rel="alternate" type="text/html" title="Authentication :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/06-authentication/tele.html" rel="alternate" type="text/html" title="Authentication :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/06-authentication/embed.html" rel="alternate" type="text/html" title="Authentication :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/search.min.js?1773775660" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773954401" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773954401" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/search.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773954401";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/format-html.min.css?1773775660" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/format-html.min.css?1773954401" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -106,7 +106,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773954401" rel="stylesheet">
   </head>
   <body class="mobile-support html" data-url="/extras/05-flutter-flow/06-authentication/index.html">
     <div id="R-body" class="default-animation">
@@ -138,7 +138,7 @@
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">Flutter Flow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Authentication</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">FlutterFlow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Authentication</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/06-authentication/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
@@ -175,7 +175,7 @@
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/asdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/C2GcPY9YOjA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <p>Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let&rsquo;s dive in!</p>
@@ -194,11 +194,11 @@
   </div>
 </details>
 <p>First, go to the <strong>Page Selector</strong> in the <strong>Navigation Menu</strong>, and then click the <span class="btn interactive  cstyle transparent" style="--VARIABLE-BOX-color: green;"><a href="/extras/05-flutter-flow/06-authentication/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button at the top to add new content to our application.</p>
-<p><a href="#R-image-40a6fdcbe0e03d809fdd6415a03fec8b" class="lightbox-link"><img alt="FlutterFlow Add Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addpage.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-40a6fdcbe0e03d809fdd6415a03fec8b"><img alt="FlutterFlow Add Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addpage.png"></a></p>
+<p><a href="#R-image-d12b1bdcc4725abc32f796adeeabd1b9" class="lightbox-link"><img alt="FlutterFlow Add Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addpage.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d12b1bdcc4725abc32f796adeeabd1b9"><img alt="FlutterFlow Add Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addpage.png"></a></p>
 <p>In the pop up window that appears, this time we&rsquo;ll select the <strong>Flows</strong> option at the top, and then the <strong>Auth</strong> filter below that. Look for the flow titled <strong>Account &amp; Profile Creation</strong> in the list of available flows, and click <strong>Add to Project</strong> at the bottom of that flow:</p>
-<p><a href="#R-image-799d6d3b0f464b724a73564e76cca44d" class="lightbox-link"><img alt="FlutterFlow Add Flow" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-799d6d3b0f464b724a73564e76cca44d"><img alt="FlutterFlow Add Flow" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow.png"></a></p>
+<p><a href="#R-image-b1c83368ffa2b39785c87cb08ecf90e4" class="lightbox-link"><img alt="FlutterFlow Add Flow" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1c83368ffa2b39785c87cb08ecf90e4"><img alt="FlutterFlow Add Flow" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -210,33 +210,33 @@
   </div>
 </details>
 <p>When we select that option, we&rsquo;ll see another popup window that lists the items we&rsquo;ll be adding to our application, as well as the underlying data collections and other options that will be enabled for us.</p>
-<p><a href="#R-image-7b37f3f050d76493e58a57ae08497fd3" class="lightbox-link"><img alt="FlutterFlow Add Flow Confirmation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b37f3f050d76493e58a57ae08497fd3"><img alt="FlutterFlow Add Flow Confirmation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow2.png"></a></p>
+<p><a href="#R-image-e3ba50cb7daf1178db7ed8121c646034" class="lightbox-link"><img alt="FlutterFlow Add Flow Confirmation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e3ba50cb7daf1178db7ed8121c646034"><img alt="FlutterFlow Add Flow Confirmation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/addflow2.png"></a></p>
 <p>As we can see, this flow includes 6 new pages and a new component that will be added to our application. In addition, notice that it will handle adding a <code>users</code> collection to our Firestore cloud database as well as enable authentication via Firebase in our application. Click <strong>Add to Project</strong> again to add all of these items to our project.</p>
 <p>In the next window that appears, we can give our flow a name. We&rsquo;ll stick with the default <code>AccountProfileCreation</code> for now. Finally, click <strong>Create Flow</strong> to create it in our application.</p>
 <p>After a few moments, we should see all of the new content appear in our application. You may have to click the <code>AccountProfileCreation</code> folder in the <strong>Page Selector</strong> to see all of the new items.</p>
-<p><a href="#R-image-e04ea3e4e98b554ae115b567f2926997" class="lightbox-link"><img alt="FlutterFlow Account Flow" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/accountflow.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e04ea3e4e98b554ae115b567f2926997"><img alt="FlutterFlow Account Flow" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/accountflow.png"></a></p>
+<p><a href="#R-image-4f581cfae4e071ea782aefed66a0342a" class="lightbox-link"><img alt="FlutterFlow Account Flow" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/accountflow.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f581cfae4e071ea782aefed66a0342a"><img alt="FlutterFlow Account Flow" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/accountflow.png"></a></p>
 <p>Before we start configuring those pages, let&rsquo;s look at some of the settings that were enabled for us in the background.</p>
 <h2 id="authentication-settings">Authentication Settings</h2>
 <p>First, in FlutterFlow, let&rsquo;s go to the <strong>Settings and Integrations</strong> option in the <strong>Navigation Menu</strong>, and then we&rsquo;ll look for the <strong>Authentication</strong> settings under <strong>App Settings</strong> in the list on the left.</p>
-<p><a href="#R-image-dc690542645a2a844aa3874ab1777306" class="lightbox-link"><img alt="FlutterFlow Authentication Settings " class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/authsettings.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc690542645a2a844aa3874ab1777306"><img alt="FlutterFlow Authentication Settings " class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/authsettings.png"></a></p>
+<p><a href="#R-image-12af4b1b1e3e4c0abeab6c9dd8b56b96" class="lightbox-link"><img alt="FlutterFlow Authentication Settings " class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/authsettings.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-12af4b1b1e3e4c0abeab6c9dd8b56b96"><img alt="FlutterFlow Authentication Settings " class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/authsettings.png"></a></p>
 <p>Here, we can see that the <strong>Enable Authentication</strong> option has already been enabled, and <strong>Firebase</strong> is selected as our authentication provider. This was done for us when we added the <strong>Account &amp; Profile Creation</strong> flow earlier.</p>
 <p>However, we do need to configure our initial pages for our app. These settings tell our app where to send users when they arrive at the application, and change depending on whether the user is authenticated (or &ldquo;logged-in&rdquo;) or not. So, let&rsquo;s set the <strong>Entry Page</strong> to the new <code>auth_2_login</code> page, and the <strong>Logged In Page</strong> to our <code>HomePage</code> we created earlier:</p>
-<p><a href="#R-image-fd3c4f7f898cdd135e833de417a0afbe" class="lightbox-link"><img alt="FlutterFlow Initial Pages" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/initpage.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd3c4f7f898cdd135e833de417a0afbe"><img alt="FlutterFlow Initial Pages" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/initpage.png"></a></p>
+<p><a href="#R-image-fd7cfcdb5ede2224a9af0e7ab8ce8248" class="lightbox-link"><img alt="FlutterFlow Initial Pages" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/initpage.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd7cfcdb5ede2224a9af0e7ab8ce8248"><img alt="FlutterFlow Initial Pages" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/initpage.png"></a></p>
 <p>There we go! Now our app has some default pages set up.</p>
 <h2 id="firebase-settings">Firebase Settings</h2>
 <p>Next, we need to go to the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a> and enable authentication there. To do this, find your project in the list of projects, and then go to the <strong>Security</strong> -&gt; <strong>Authentication</strong> page:</p>
-<p><a href="#R-image-1cd0fe78b68f85bfbe20047d7f766271" class="lightbox-link"><img alt="Firebase Authentication Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cd0fe78b68f85bfbe20047d7f766271"><img alt="Firebase Authentication Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth.png"></a></p>
+<p><a href="#R-image-1fe31c16ede423f4f43126bdba76f277" class="lightbox-link"><img alt="Firebase Authentication Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fe31c16ede423f4f43126bdba76f277"><img alt="Firebase Authentication Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth.png"></a></p>
 <p>On the page that opens, click the <strong>Get Started</strong> button to start configuring authentication for your Firebase project. Then, under the <strong>Sign-in method</strong> tab, choose the <strong>Email/Password</strong> option</p>
-<p><a href="#R-image-2be1cde10707f19cca6c4ed5a0aa1103" class="lightbox-link"><img alt="Firebase Email/Password Auth" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2be1cde10707f19cca6c4ed5a0aa1103"><img alt="Firebase Email/Password Auth" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth2.png"></a></p>
+<p><a href="#R-image-c64f2e834e897a68a6c33a94908c8b70" class="lightbox-link"><img alt="Firebase Email/Password Auth" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c64f2e834e897a68a6c33a94908c8b70"><img alt="Firebase Email/Password Auth" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth2.png"></a></p>
 <p>Under that option, choose the <strong>Enable</strong> option to enable that authentication method, then click <strong>Save</strong> to save that setting.</p>
-<p><a href="#R-image-5b46f73efbeaf0c1845dbd85cbc2698b" class="lightbox-link"><img alt="Firebase Enable Email Auth" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b46f73efbeaf0c1845dbd85cbc2698b"><img alt="Firebase Enable Email Auth" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth3.png"></a></p>
+<p><a href="#R-image-bce1705d5ec8c0b55f1fdbcb7293788b" class="lightbox-link"><img alt="Firebase Enable Email Auth" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bce1705d5ec8c0b55f1fdbcb7293788b"><img alt="Firebase Enable Email Auth" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/fbauth3.png"></a></p>
 <p>There we go! That is the basic setup for authentication in Firebase. However, keep this tab open since we&rsquo;ll need to come back to it later when we start testing our application.</p>
 
 <details open class=" box cstyle notices note">
@@ -250,14 +250,14 @@
 </details>
 <h2 id="login-page">Login Page</h2>
 <p>Now, let&rsquo;s go back to FlutterFlow and look at our new Login page, which can be found on the <strong>Page Selector</strong> named <code>auth_2_login</code>:</p>
-<p><a href="#R-image-9c272530ead5248ff84ec10b91175bea" class="lightbox-link"><img alt="FlutterFlow Login Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginpage.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9c272530ead5248ff84ec10b91175bea"><img alt="FlutterFlow Login Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginpage.png"></a></p>
+<p><a href="#R-image-27e5098a557dd7caa8861112da65043f" class="lightbox-link"><img alt="FlutterFlow Login Page" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginpage.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27e5098a557dd7caa8861112da65043f"><img alt="FlutterFlow Login Page" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginpage.png"></a></p>
 <p>This page already includes a lot of the functionality we need to log into our application. For example, if we click the <strong>Sign In</strong> button and look at the <strong>Actions</strong> for that button, we can see that it is already configured to authenticate our user using the <strong>Auth</strong> -&gt; <strong>Log In</strong> action:</p>
-<p><a href="#R-image-58f2efb5ac39b5c383a86f86f9914cdb" class="lightbox-link"><img alt="FlutterFlow Login Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginbutton.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-58f2efb5ac39b5c383a86f86f9914cdb"><img alt="FlutterFlow Login Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginbutton.png"></a></p>
+<p><a href="#R-image-1a22987eaf1a4ec3c4d76d31df991cfb" class="lightbox-link"><img alt="FlutterFlow Login Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginbutton.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a22987eaf1a4ec3c4d76d31df991cfb"><img alt="FlutterFlow Login Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/loginbutton.png"></a></p>
 <p>So, it looks like a lot of the functionality for our application is already configured for us! This one of the major advantages of using the built-in flows in FlutterFlow - it does a lot of the heavy lifting for us. In fact, we can even go to the <strong>Storyboard</strong> option on the <strong>Navigation Menu</strong> to see an overall layout for our application:</p>
-<p><a href="#R-image-37bb1fa64617f509cdd65951ec746796" class="lightbox-link"><img alt="FlutterFlow Storyboard" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/storyboard.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-37bb1fa64617f509cdd65951ec746796"><img alt="FlutterFlow Storyboard" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/storyboard.png"></a></p>
+<p><a href="#R-image-48affed361a287adf24eba66ae2aab51" class="lightbox-link"><img alt="FlutterFlow Storyboard" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/storyboard.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48affed361a287adf24eba66ae2aab51"><img alt="FlutterFlow Storyboard" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/storyboard.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -271,17 +271,17 @@
 <p>As we can see, our application already has a lot of functionality built into it from that pre-built flow! We&rsquo;ll test it shortly, but for now we need to update a couple of things.</p>
 <h2 id="create-a-user-document">Create a User Document</h2>
 <p>First, we need to configure the application to actually create a document in our Firestore <code>users</code> collection when a new user is created. To do this, we&rsquo;ll go to the <strong>Page Selector</strong> and find the <code>auth_2_Create</code> page, and click the <strong>Create Account</strong> button and look for it&rsquo;s actions:</p>
-<p><a href="#R-image-b4be87f6cc4716ae3db953f4fc3096d1" class="lightbox-link"><img alt="FlutterFlow Create Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4be87f6cc4716ae3db953f4fc3096d1"><img alt="FlutterFlow Create Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create.png"></a></p>
+<p><a href="#R-image-2160c50163f75f73ca2446f92342e509" class="lightbox-link"><img alt="FlutterFlow Create Action" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2160c50163f75f73ca2446f92342e509"><img alt="FlutterFlow Create Action" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create.png"></a></p>
 <p>Click the button to open the <strong>Action Flow Editor</strong> and find the <strong>Auth</strong> -&gt; <strong>Create Account</strong> action. Here, we need to checkmark the <strong>Create User Document</strong> option:</p>
-<p><a href="#R-image-cc27ded772c59e43015081c97ba7a803" class="lightbox-link"><img alt="FlutterFlow Create Document" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cc27ded772c59e43015081c97ba7a803"><img alt="FlutterFlow Create Document" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create1.png"></a></p>
+<p><a href="#R-image-45d8a031673cf44aca4b2b11d99b2467" class="lightbox-link"><img alt="FlutterFlow Create Document" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45d8a031673cf44aca4b2b11d99b2467"><img alt="FlutterFlow Create Document" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create1.png"></a></p>
 <p>Below that, we&rsquo;ll select the <code>users</code> collection, and then we can configure any desired fields. For example, we&rsquo;ll set the <code>email</code> and <code>display_name</code> fields to use the <code>emailAddress</code> widget state, and we&rsquo;ll also set the <code>createdTime</code> to match the current time on the device.</p>
-<p><a href="#R-image-9b77f62ae7f86f7414f37bcee2bca641" class="lightbox-link"><img alt="FlutterFlow Create Fields" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9b77f62ae7f86f7414f37bcee2bca641"><img alt="FlutterFlow Create Fields" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create2.png"></a></p>
+<p><a href="#R-image-6ff0a2a5c8d0d50ef0a47a8786b8a294" class="lightbox-link"><img alt="FlutterFlow Create Fields" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6ff0a2a5c8d0d50ef0a47a8786b8a294"><img alt="FlutterFlow Create Fields" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create2.png"></a></p>
 <p>Finally, we need to make sure that we turn off the <strong>Navigate Automatically</strong> option at the bottom of that list:</p>
-<p><a href="#R-image-c83bdd888ecca4653d762a4f688eee5f" class="lightbox-link"><img alt="FlutterFlow Disable Navigation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c83bdd888ecca4653d762a4f688eee5f"><img alt="FlutterFlow Disable Navigation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create3.png"></a></p>
+<p><a href="#R-image-ff08ef982ec3480c928e778729f88bdd" class="lightbox-link"><img alt="FlutterFlow Disable Navigation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ff08ef982ec3480c928e778729f88bdd"><img alt="FlutterFlow Disable Navigation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/create3.png"></a></p>
 <p>This is because we cannot automatically navigate in our application if we are creating a user document, but thankfully this action already has a second step to handle navigation for us, so we are all set!</p>
 <p>Once configured, we can click the <strong>Close</strong> button at the top to save those changes. Now, when a user account is created, it will create a matching document in the <code>users</code> collection in Firestore for that user. We can use that document to store additional information about our users!</p>
 <h2 id="remove-the-change-photo-options">Remove the Change Photo Options</h2>
@@ -297,21 +297,21 @@
   </div>
 </details>
 <p>To do this, find the <code>editProfile_auth_2</code> component in the <strong>Page Selector</strong>, and then click the <strong>Change Photo</strong> button in that component and simply remove it.</p>
-<p><a href="#R-image-ea44ffbf88dd87cdb64179afc2905aa7" class="lightbox-link"><img alt="FlutterFlow Remove Change Photo Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/removephoto.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ea44ffbf88dd87cdb64179afc2905aa7"><img alt="FlutterFlow Remove Change Photo Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/removephoto.png"></a></p>
+<p><a href="#R-image-7353716ac96c8e89fef63be521a808e5" class="lightbox-link"><img alt="FlutterFlow Remove Change Photo Button" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/removephoto.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7353716ac96c8e89fef63be521a808e5"><img alt="FlutterFlow Remove Change Photo Button" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/removephoto.png"></a></p>
 <p>Next, find the <code>Button-Login</code> widget, and update the action to remove the <code>photo_url</code> from the list of fields to be updated.</p>
-<p><a href="#R-image-f7321ca2b5b1d2130b1b43fd5c7a1ac6" class="lightbox-link"><img alt="FlutterFlow Remove Photo URL" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7321ca2b5b1d2130b1b43fd5c7a1ac6"><img alt="FlutterFlow Remove Photo URL" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo1.png"></a></p>
-<p><a href="#R-image-128495fcc29330ee965fa2e3153f7faf" class="lightbox-link"><img alt="FlutterFlow Remove Photo URL Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-128495fcc29330ee965fa2e3153f7faf"><img alt="FlutterFlow Remove Photo URL Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo2.png"></a></p>
+<p><a href="#R-image-639dda228541a8c723fe1aa62a814d1b" class="lightbox-link"><img alt="FlutterFlow Remove Photo URL" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-639dda228541a8c723fe1aa62a814d1b"><img alt="FlutterFlow Remove Photo URL" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo1.png"></a></p>
+<p><a href="#R-image-3d425ded31731f87a89343a3626dab62" class="lightbox-link"><img alt="FlutterFlow Remove Photo URL Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3d425ded31731f87a89343a3626dab62"><img alt="FlutterFlow Remove Photo URL Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo2.png"></a></p>
 <p>Finally, we need to remove the <strong>Path</strong> from the <code>uploadedImage</code> widget since we don&rsquo;t have a way to display user images currently:</p>
-<p><a href="#R-image-a03e691e59ceefc3b5ec22458a2e71b3" class="lightbox-link"><img alt="FlutterFlow Remove Photo Path" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a03e691e59ceefc3b5ec22458a2e71b3"><img alt="FlutterFlow Remove Photo Path" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo3.png"></a></p>
+<p><a href="#R-image-963f253840da172da250013005b34dc0" class="lightbox-link"><img alt="FlutterFlow Remove Photo Path" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-963f253840da172da250013005b34dc0"><img alt="FlutterFlow Remove Photo Path" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/photo3.png"></a></p>
 <p>We can set this to a blank value for now. It may replace that with a default image from the Unsplash stock image site, which is great for now!</p>
 <h2 id="testing-authentication">Testing Authentication</h2>
 <p>At this point, we should no longer see any errors at the top of our application in the <strong>Project Issues</strong> area, just a few warnings about Firestore Rules:</p>
-<p><a href="#R-image-89d6e580e3e2929b799cba38efbe3a14" class="lightbox-link"><img alt="FlutterFlow Firestore Warnings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/warnings.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-89d6e580e3e2929b799cba38efbe3a14"><img alt="FlutterFlow Firestore Warnings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/warnings.png"></a></p>
+<p><a href="#R-image-89cf599d58cf2eb91de0a3a163fc37ea" class="lightbox-link"><img alt="FlutterFlow Firestore Warnings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/warnings.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-89cf599d58cf2eb91de0a3a163fc37ea"><img alt="FlutterFlow Firestore Warnings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/warnings.png"></a></p>
 
 <details open class=" box cstyle notices tip">
   <summary class="box-label" tabindex="-1">
@@ -323,8 +323,8 @@
   </div>
 </details>
 <p>At this point, click on the first option that warns us that our &ldquo;Firestore rule out of date.&rdquo; That will take us to our Firestore settings, which we can also find by going to the <strong>Firestore</strong> option in the <strong>Navigation Menu</strong> and then clicking the <strong>Settings</strong> gear icon at the top:</p>
-<p><a href="#R-image-a25bd943668b11978182518801ac4db1" class="lightbox-link"><img alt="Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/rules.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a25bd943668b11978182518801ac4db1"><img alt="Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/rules.png"></a></p>
+<p><a href="#R-image-711baa9b39c89879a95afd35db2dae3c" class="lightbox-link"><img alt="Firestore Rules" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/rules.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-711baa9b39c89879a95afd35db2dae3c"><img alt="Firestore Rules" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/rules.png"></a></p>
 <p>For now, just click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/06-authentication/index.html"><span class="title">Deploy</span></a></span> button to deploy the new Firestore rules.</p>
 
 <details open class=" box cstyle notices note">
@@ -337,15 +337,15 @@
   </div>
 </details>
 <p>At long last, we can click the button to run our app in <strong>Test Mode</strong> and see if it works!</p>
-<p><a href="#R-image-18b541a86e62f4d378880c5958341ef4" class="lightbox-link"><img alt="Creating an Account Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-18b541a86e62f4d378880c5958341ef4"><img alt="Creating an Account Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount.gif"></a></p>
+<p><a href="#R-image-ee2690c585e7639a5fa39a991b4f4a01" class="lightbox-link"><img alt="Creating an Account Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee2690c585e7639a5fa39a991b4f4a01"><img alt="Creating an Account Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount.gif"></a></p>
 <p>In this animation, we see that we can go through the entire process of creating an account in our application!</p>
 <p>Behind the scenes, we can go back to the <a href="https://console.firebase.google.com/" rel="external" target="_blank">Firebase Console</a> and see that our user account has been created successfully:</p>
-<p><a href="#R-image-7e5b978776816172162cbb381e05d4a2" class="lightbox-link"><img alt="Firestore Account Created" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e5b978776816172162cbb381e05d4a2"><img alt="Firestore Account Created" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount2.png"></a></p>
+<p><a href="#R-image-90d052452518f494a71dcf1a7b6ae95c" class="lightbox-link"><img alt="Firestore Account Created" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-90d052452518f494a71dcf1a7b6ae95c"><img alt="Firestore Account Created" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/createaccount2.png"></a></p>
 <p>We can also see that the corresponding <code>user</code> document was created as well:</p>
-<p><a href="#R-image-b5a6d2481ac143a27c14d6c56c506cff" class="lightbox-link"><img alt="Firestore User Document" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/userdocument.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b5a6d2481ac143a27c14d6c56c506cff"><img alt="Firestore User Document" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/userdocument.png"></a></p>
+<p><a href="#R-image-627b83c88a7be09e1e527e94b0c9a96e" class="lightbox-link"><img alt="Firestore User Document" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/userdocument.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-627b83c88a7be09e1e527e94b0c9a96e"><img alt="Firestore User Document" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/userdocument.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -359,20 +359,20 @@
 <p>Unfortunately, we might quickly notice that it is difficult to navigate in our application since we haven&rsquo;t provided a clear way to get back to the <code>HomePage</code> where our list of to do tasks is kept, and once on that page, we don&rsquo;t have any easy way to get back to the user profile page and the logout button. So, let&rsquo;s configure some navigation options in our application to make things easy to use!</p>
 <h2 id="configure-navigation">Configure Navigation</h2>
 <p>Thankfully, it is very easy to configure some basic navigation options for our application. First, we need to enable the Nav Bar in our <strong>Project Settings</strong> on the <strong>Nav Bar &amp; App Bar</strong> page:</p>
-<p><a href="#R-image-96442fa07fb711db44cce879d77f78d8" class="lightbox-link"><img alt="FlutterFlow Enable Nav Bar" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-96442fa07fb711db44cce879d77f78d8"><img alt="FlutterFlow Enable Nav Bar" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar1.png"></a></p>
+<p><a href="#R-image-4459bf9dd0303e7397eabfcdac11b841" class="lightbox-link"><img alt="FlutterFlow Enable Nav Bar" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4459bf9dd0303e7397eabfcdac11b841"><img alt="FlutterFlow Enable Nav Bar" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar1.png"></a></p>
 <p>Next, we can add pages to our Nav Bar by finding the <code>HomePage</code> in our <strong>Page Selector</strong> and then looking at the <strong>Nav Bar Item Properties</strong> at the bottom of the <strong>Properties Panel</strong></p>
-<p><a href="#R-image-278bab15086ec0f35c2a211d00f4370e" class="lightbox-link"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-278bab15086ec0f35c2a211d00f4370e"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.png"></a></p>
+<p><a href="#R-image-d93985aa8d5433b3ef8ca91c3a8fa05b" class="lightbox-link"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d93985aa8d5433b3ef8ca91c3a8fa05b"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.png"></a></p>
 <p>Here, we&rsquo;ll turn on the <strong>Show on Nav Bar</strong> option. Below, we can set the name and icons used for the page as well:</p>
-<p><a href="#R-image-99cbcb15f4e93f141919788310ce6137" class="lightbox-link"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-99cbcb15f4e93f141919788310ce6137"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar2.png"></a></p>
+<p><a href="#R-image-f449b8307a944b23b33cba942c72f858" class="lightbox-link"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f449b8307a944b23b33cba942c72f858"><img alt="FlutterFlow Nav Bar Settings" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar2.png"></a></p>
 <p>We can also do the same for the <code>auth_2_Profile</code> page to add it to the list as well:</p>
-<p><a href="#R-image-26ea03388e4910669027fa1c6e2cac71" class="lightbox-link"><img alt="FlutterFlow Profile Nav Bar" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-26ea03388e4910669027fa1c6e2cac71"><img alt="FlutterFlow Profile Nav Bar" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar3.png"></a></p>
+<p><a href="#R-image-0e8a2e4a7bf9df4e39d05d744d4da80c" class="lightbox-link"><img alt="FlutterFlow Profile Nav Bar" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0e8a2e4a7bf9df4e39d05d744d4da80c"><img alt="FlutterFlow Profile Nav Bar" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar3.png"></a></p>
 <p>Notice that we can now see our application&rsquo;s Nav Bar at the bottom of the screen? Now, we can reload our application in <strong>Test Mode</strong> and explore our new Nav Bar! We can even log out and log back in and see that everything is working!</p>
-<p><a href="#R-image-ab408d316c8320ce3d50d8ba4e845042" class="lightbox-link"><img alt="FlutterFlow Profile Nav Bar Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ab408d316c8320ce3d50d8ba4e845042"><img alt="FlutterFlow Profile Nav Bar Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.gif"></a></p>
+<p><a href="#R-image-91b9817e0664e6b0d16a9de3763c34bb" class="lightbox-link"><img alt="FlutterFlow Profile Nav Bar Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-91b9817e0664e6b0d16a9de3763c34bb"><img alt="FlutterFlow Profile Nav Bar Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/06-authentication/images/navbar.gif"></a></p>
 <p>At this point, take a moment to click through the application and confirm that everything is working as intended.</p>
 <h2 id="summary">Summary</h2>
 <p>Once again, let&rsquo;s go back to our list of features and see how we are doing:</p>
@@ -408,7 +408,7 @@
   <p class="theme-version-footer">8.0.0</p>
 <p>Last modified by:
               <i class='fa-fw fas fa-user'></i> Russell Feldhausen
-              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/0f9c0048c74125714632e6b6eb52f8556586e801">Mar 16, 2026</a>
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/900dec15da4476981ef82993fca8d8b77534d848">Mar 19, 2026</a>
 </p>
 
 </div>
@@ -471,7 +471,7 @@
             <li class="" data-nav-id="/extras/03-canvas-setup/04-canvas-clone/index.html"><a class="padding" href="/extras/03-canvas-setup/04-canvas-clone/index.html">4. Cloning a Canvas Course</a></li></ul></li>
             <li class="" data-nav-id="/extras/04-deploy-example/index.html"><input type="checkbox" id="R-section-e55f22700d7c855e47a026797d217f3e" aria-controls="R-subsections-e55f22700d7c855e47a026797d217f3e"><label for="R-section-e55f22700d7c855e47a026797d217f3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Deployment Example</span></label><a class="padding" href="/extras/04-deploy-example/index.html"><b>4. </b>Deployment Example</a><ul id="R-subsections-e55f22700d7c855e47a026797d217f3e" class="collapsible-menu">
             <li class="" data-nav-id="/extras/04-deploy-example/01-instructions/index.html"><a class="padding" href="/extras/04-deploy-example/01-instructions/index.html">1. Instructions</a></li></ul></li>
-            <li class="parent " data-nav-id="/extras/05-flutter-flow/index.html"><input type="checkbox" id="R-section-642d241f864349d539b611bd36b843c7" aria-controls="R-subsections-642d241f864349d539b611bd36b843c7" checked><label for="R-section-642d241f864349d539b611bd36b843c7"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Flutter Flow Example</span></label><a class="padding" href="/extras/05-flutter-flow/index.html"><b>5. </b>Flutter Flow Example</a><ul id="R-subsections-642d241f864349d539b611bd36b843c7" class="collapsible-menu">
+            <li class="parent " data-nav-id="/extras/05-flutter-flow/index.html"><input type="checkbox" id="R-section-642d241f864349d539b611bd36b843c7" aria-controls="R-subsections-642d241f864349d539b611bd36b843c7" checked><label for="R-section-642d241f864349d539b611bd36b843c7"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu FlutterFlow Example</span></label><a class="padding" href="/extras/05-flutter-flow/index.html"><b>5. </b>FlutterFlow Example</a><ul id="R-subsections-642d241f864349d539b611bd36b843c7" class="collapsible-menu">
             <li class="" data-nav-id="/extras/05-flutter-flow/01-starter/index.html"><a class="padding" href="/extras/05-flutter-flow/01-starter/index.html">1. Starter Project</a></li>
             <li class="" data-nav-id="/extras/05-flutter-flow/02-first-page/index.html"><a class="padding" href="/extras/05-flutter-flow/02-first-page/index.html">2. First Component</a></li>
             <li class="" data-nav-id="/extras/05-flutter-flow/03-list-view/index.html"><a class="padding" href="/extras/05-flutter-flow/03-list-view/index.html">3. List View</a></li>
@@ -518,8 +518,8 @@
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a></p></div>
       </div>
     </aside>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
-    <script src="/extras/js/theme.min.js?1773775660" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773954401" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773954401" defer></script>
+    <script src="/extras/js/theme.min.js?1773954401" defer></script>
   </body>
 </html>

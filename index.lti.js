@@ -33,10 +33,10 @@ var relearn_lti_index = [
   },
   {
     "breadcrumb": "",
-    "description": "An example mobile application built with Flutter Flow\nStarter Project First Component List View Interaction Firebase Authentication Security Features Leaderboard Using APIs Releasing a Project",
-    "modified": "2026-03-12T19:40:20-05:00",
+    "description": "An example mobile application built with FlutterFlow\nStarter Project First Component List View Interaction Firebase Authentication Security Features Leaderboard Using APIs Releasing a Project",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
-    "title": "Flutter Flow Example",
+    "title": "FlutterFlow Example",
     "uri": "/extras/05-flutter-flow/index.html"
   },
   {
@@ -72,9 +72,9 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/01-intro/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "In this project, we’ll use the FlutterFlow tool to build a basic mobile application that could be deployed on Android and iOS devices as well as the web, all in one.\nUnder the Hood Behind the scenes, this tool develops an application using the Flutter mobile application framework, which is built on top of the Dart programming language. We’ll examine some of the code written by this tool as we go.",
-    "modified": "2026-03-04T15:09:34-06:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Starter Project",
     "uri": "/extras/05-flutter-flow/01-starter/index.html"
@@ -96,9 +96,9 @@ var relearn_lti_index = [
     "uri": "/extras/03-canvas-setup/02-codio-course/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first component by adding some widgets and data.\nThe Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:",
-    "modified": "2026-03-16T14:07:58-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "First Component",
     "uri": "/extras/05-flutter-flow/02-first-page/index.html"
@@ -128,9 +128,9 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/03-initial/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.\nComponent Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:",
-    "modified": "2026-03-06T16:57:34-06:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "List View",
     "uri": "/extras/05-flutter-flow/03-list-view/index.html"
@@ -152,17 +152,17 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/04-docker/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "We now have a basic mobile app that displays some data from the app’s internal state, but we have no way to modify that data. So, let’s explore the basics of making our application interactive by allowing us to edit and create data.\nCompleting Tasks Let’s start with the simplest case - marking a task completed. We already have a Switch widget in our ToDoItemComponent to represent this data, but now we want to be able to press that switch in our interface and update the underlying data. Before we can do this, we need to pass some additional data in our application.",
-    "modified": "2026-03-16T14:07:58-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Interaction",
     "uri": "/extras/05-flutter-flow/04-interaction/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "At this point, we have the basic concept of a mobile application that helps a user track to do tasks. However, currently our data is only stored in the local application state, which is only accessible on a single device. In addition, at any time a user could choose to clear the application’s cache, and all data would be lost. So, let’s explore adding a cloud service to our application that will store our user’s data for us. In addition, we’ll use this service to manage our user accounts and authentication.",
-    "modified": "2026-03-17T14:27:15-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Firebase",
     "uri": "/extras/05-flutter-flow/05-firebase/index.html"
@@ -176,9 +176,9 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/05-working/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let’s dive in!",
-    "modified": "2026-03-16T14:07:58-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Authentication",
     "uri": "/extras/05-flutter-flow/06-authentication/index.html"
@@ -200,17 +200,17 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/07-database/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Our application is currently storing both our user’s data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let’s take a minute to explore the flaw and truly understand why it is so important to fix correctly.",
-    "modified": "2026-03-12T16:43:33-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Security",
     "uri": "/extras/05-flutter-flow/07-security/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Now that we have a mobile application with most of the basic features implemented, let’s go through a quick process to implement some additional features that we included in our specification that are relatively easy to add.\nAs a reminder, here is our current progress on our application:\nTo Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. Let’s start working on a few of these!",
-    "modified": "2026-03-17T14:27:15-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Features",
     "uri": "/extras/05-flutter-flow/08-features/index.html"
@@ -224,23 +224,23 @@ var relearn_lti_index = [
     "uri": "/extras/02-full-stack/08-knex/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "One of the last features we could add to our application is a leaderboard, which keeps track of the percentage of tasks that are completed on time. This will demonstrate some additional functionality we can build in Firebase to allow users to share data in a protected way throughout the application.",
-    "modified": "2026-03-17T14:27:15-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Leaderboard",
     "uri": "/extras/05-flutter-flow/09-leaderboard/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "Another very useful feature we may want to include in our application is the ability to query data directly from a web API and include that in our application. So, let’s look at the basic process of adding an API call to our application.\nDo Not Expose API Keys Recall our discussion from earlier in this tutorial about the security concerns that are inherent in building a mobile application that is installed on user’s devices. Anything contained in the application is potentially visible to the user, and this includes any API keys used within the application itself. An API key is how users are identified when they access a paid API service, such as a weather data service or an AI chat service.",
-    "modified": "2026-03-17T14:27:15-05:00",
+    "modified": "2026-03-19T16:06:07-05:00",
     "tags": [],
     "title": "Using APIs",
     "uri": "/extras/05-flutter-flow/10-api/index.html"
   },
   {
-    "breadcrumb": "Flutter Flow Example",
+    "breadcrumb": "FlutterFlow Example",
     "description": "The last step in this journey is to release your project to the world!\nFirst, you’ll probably want to test your application and make sure it is ready for deployment. FlutterFlow has a great place to start:\nPre-checks before Publishing Once you are ready, you can publish your application on various platforms. The FlutterFlow documentation includes detailed guides for each platform:\nWeb Publishing Google Play Store Apple App Store You can also connect your project to GitHub and deploy from there:",
     "modified": "2026-03-17T14:27:15-05:00",
     "tags": [],

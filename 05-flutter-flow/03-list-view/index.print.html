@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
   <head>
     <meta charset="utf-8">
@@ -25,7 +24,7 @@ Component Parameters First, we need to configure the component parameters for ou
     <meta itemprop="name" content="List View :: K-State CS Textbook Extras">
     <meta itemprop="description" content="YouTube Video Now that we have a simple component that represents a to do task, let’s work on building a list view that shows all of the tasks in our application.
 Component Parameters First, we need to configure the component parameters for our ToDoItemComponent component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the ToDoItemComponent in the Page Selector page found in the Navigation Menu, but don’t click on any of the components inside of it. To the right, we should see the Properties Panel contain an entry for Component Parmeters at the top. Click the button to add a new component parameter entry:">
-    <meta itemprop="dateModified" content="2026-03-06T16:57:34-06:00">
+    <meta itemprop="dateModified" content="2026-03-19T16:06:07-05:00">
     <meta itemprop="wordCount" content="2417">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>List View :: K-State CS Textbook Extras</title>
@@ -33,26 +32,26 @@ Component Parameters First, we need to configure the component parameters for ou
     <link href="/extras/05-flutter-flow/03-list-view/index.xml" rel="alternate" type="application/rss+xml" title="List View :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/03-list-view/tele.html" rel="alternate" type="text/html" title="List View :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/03-list-view/embed.html" rel="alternate" type="text/html" title="List View :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/search.min.js?1773775660" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773954401" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773954401" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/search.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773954401";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/format-print.min.css?1773775660" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1773954401" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -111,14 +110,67 @@ Component Parameters First, we need to configure the component parameters for ou
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773954401" rel="stylesheet">
   </head>
-  <body class="mobile-support embed print" data-url="/extras/05-flutter-flow/03-list-view/index.html">
+  <body class="mobile-support print" data-url="/extras/05-flutter-flow/03-list-view/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      
-      
-      
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#component-parameters">Component Parameters</a></li>
+    <li><a href="#configuring-data-values">Configuring Data Values</a>
+      <ul>
+        <li><a href="#title-and-priority">Title and Priority</a></li>
+        <li><a href="#due-date">Due Date</a></li>
+        <li><a href="#address-icon">Address Icon</a></li>
+        <li><a href="#completion-status">Completion Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-a-list">Creating a List</a></li>
+    <li><a href="#previewing">Previewing</a></li>
+    <li><a href="#quick-tweak---container-height">Quick Tweak - Container Height</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/extras/index.html"><span itemprop="name">K-State CS Textbook Extras</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/05-flutter-flow/index.html"><span itemprop="name">FlutterFlow Example</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">List View</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/ksu-cs-textbooks/extras/edit/master/content/05-flutter-flow/03-list-view/_index.md" rel="external" target="_blank" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/03-list-view/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/02-first-page/index.html" title="First Component (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/04-interaction/index.html" title="Interaction (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+            <div class="topbar-button topbar-button-embed" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/03-list-view/embed.html" title="Embeddable Version"><i class="fa-fw fas fa-expand-arrows-alt"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-tele" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/extras/05-flutter-flow/03-list-view/tele.html" title="Teleprompter View"><i class="fa-fw fas fa-tv"></i></a>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div id="R-main-overlay"></div>
       <main id="R-body-inner" class="highlightable 05-flutter-flow" tabindex="-1">
         <div class="flex-block-wrapper">
@@ -129,44 +181,44 @@ Component Parameters First, we need to configure the component parameters for ou
 <h1 id="list-view">List View</h1>
 
 
-<a href="https://www.youtube.com/watch?v=asdf">YouTube Video</a>
+<a href="https://www.youtube.com/watch?v=--RmbP1H8Pg">YouTube Video</a>
 
 <p>Now that we have a simple component that represents a to do task, let&rsquo;s work on building a list view that shows all of the tasks in our application.</p>
 <h2 id="component-parameters">Component Parameters</h2>
 <p>First, we need to configure the component parameters for our <code>ToDoItemComponent</code> component and wire up all of the fields so they are displayed correctly. So, to begin, make sure you have selected the <code>ToDoItemComponent</code> in the <strong>Page Selector</strong> page found in the <strong>Navigation Menu</strong>, but don&rsquo;t click on any of the components inside of it. To the right, we should see the <strong>Properties Panel</strong> contain an entry for <strong>Component Parmeters</strong> at the top. Click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: gray;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button to add a new component parameter entry:</p>
-<p><a href="#R-image-1bdc4bc71f1040238d73840e053ee16d" class="lightbox-link"><img alt="FlutterFlow Component Parameters" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/componentparams.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1bdc4bc71f1040238d73840e053ee16d"><img alt="FlutterFlow Component Parameters" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/componentparams.png"></a></p>
+<p><a href="#R-image-0214f24e1fdb63876d27544bbaea978e" class="lightbox-link"><img alt="FlutterFlow Component Parameters" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/componentparams.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0214f24e1fdb63876d27544bbaea978e"><img alt="FlutterFlow Component Parameters" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/componentparams.png"></a></p>
 <p>Next, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Parameter</span></a></span> to add a new parameter to the component.</p>
-<p><a href="#R-image-0e974ddb9c37631942023e889621da93" class="lightbox-link"><img alt="FlutterFlow Add Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0e974ddb9c37631942023e889621da93"><img alt="FlutterFlow Add Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam.png"></a></p>
+<p><a href="#R-image-fe957ef9f76267fcee018a85d7083975" class="lightbox-link"><img alt="FlutterFlow Add Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fe957ef9f76267fcee018a85d7083975"><img alt="FlutterFlow Add Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam.png"></a></p>
 <p>In the panel that opens, enter a memorable name for the parameter (something like <code>toDoItemParam</code> since parameter names must be in <code>lowerCamelCase</code>) and then set the type to <strong>Data Type</strong> and choose our <code>ToDoItemType</code> from the list of data types. We also want to checkmark the <strong>Required</strong> option, but leave the <strong>Is List</strong> option unchecked since we are dealing with a single item in this component.</p>
-<p><a href="#R-image-cc07581b83f1b86bd32f43df128a01d3" class="lightbox-link"><img alt="FlutterFlow Add Parameter Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cc07581b83f1b86bd32f43df128a01d3"><img alt="FlutterFlow Add Parameter Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam2.png"></a></p>
+<p><a href="#R-image-0a5b9e99581e543bed4be49325821cca" class="lightbox-link"><img alt="FlutterFlow Add Parameter Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a5b9e99581e543bed4be49325821cca"><img alt="FlutterFlow Add Parameter Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addparam2.png"></a></p>
 <p>Once the parameter is configured, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Confirm</span></a></span> button to save the settings.</p>
 <h2 id="configuring-data-values">Configuring Data Values</h2>
 <p>Now that our component has a parameter, we can wire up each widget in the component to display that data.</p>
 <h3 id="title-and-priority">Title and Priority</h3>
 <p>First, let&rsquo;s handle the easiest ones, which are the title text and priority text widgets on the top row. First, in the <strong>Widget Tree</strong>, click the <code>TitleText</code> component (or whichever name you used for that component), and then look for the <strong>Text</strong> option in the <strong>Properties Panel</strong> to the right:</p>
-<p><a href="#R-image-c226117376421765bb0e09ff19bc5785" class="lightbox-link"><img alt="FlutterFlow Text Properties" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textprops.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c226117376421765bb0e09ff19bc5785"><img alt="FlutterFlow Text Properties" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textprops.png"></a></p>
+<p><a href="#R-image-9dc042aa9431d2ff4d60a562e7edc0a4" class="lightbox-link"><img alt="FlutterFlow Text Properties" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textprops.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9dc042aa9431d2ff4d60a562e7edc0a4"><img alt="FlutterFlow Text Properties" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textprops.png"></a></p>
 <p>Next to the <strong>Text</strong> title, there is a little orange colored icon that can be clicked to link this text widget to a variable&rsquo;s value. Click that button to bring up the panel to set the value from a variable:</p>
-<p><a href="#R-image-b786fd74b9d8611e10352a8d57c613bb" class="lightbox-link"><img alt="FlutterFlow Set Text Value from Variable" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/setvalue.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b786fd74b9d8611e10352a8d57c613bb"><img alt="FlutterFlow Set Text Value from Variable" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/setvalue.png"></a></p>
+<p><a href="#R-image-c65550e524383b3cdd454c3f423fd316" class="lightbox-link"><img alt="FlutterFlow Set Text Value from Variable" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/setvalue.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c65550e524383b3cdd454c3f423fd316"><img alt="FlutterFlow Set Text Value from Variable" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/setvalue.png"></a></p>
 <p>In that panel, choose the <strong>Component Parameters</strong> option, and find the <code>toDoItemParam</code> entry. Then, the panel will switch to a second view, where we can choose the specific field we&rsquo;d like to use in that field. In the first box, we&rsquo;ll choose <strong>Data Structure Field</strong> and then choose the <code>title</code> field in the second box. In the third box, we can enter <code>default</code> since we really don&rsquo;t care what the default value is, but in the last box, we&rsquo;ll enter some default text like <code>To Do Item Title</code> just to appear in our UI builder.</p>
-<p><a href="#R-image-91bb1363f771fe55832b89e29074bd56" class="lightbox-link"><img alt="FlutterFlow Configure Text Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-91bb1363f771fe55832b89e29074bd56"><img alt="FlutterFlow Configure Text Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue.png"></a></p>
+<p><a href="#R-image-cb586a529592e6768c72740fc6652799" class="lightbox-link"><img alt="FlutterFlow Configure Text Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb586a529592e6768c72740fc6652799"><img alt="FlutterFlow Configure Text Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue.png"></a></p>
 <p>Once we have everything set, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Confirm</span></a></span> button to save our changes. Now, we should see that that text field has the value we configured:</p>
-<p><a href="#R-image-ab62cf6177fd800f44eb152aa46fde17" class="lightbox-link"><img alt="FlutterFlow Configured Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ab62cf6177fd800f44eb152aa46fde17"><img alt="FlutterFlow Configured Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue2.png"></a></p>
+<p><a href="#R-image-febbf811bffab92c4db8181033cd606d" class="lightbox-link"><img alt="FlutterFlow Configured Field" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-febbf811bffab92c4db8181033cd606d"><img alt="FlutterFlow Configured Field" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configvalue2.png"></a></p>
 <p>Awesome! That&rsquo;s the first big step toward making our application actually work with our data. Let&rsquo;s continue to set up our other fields.</p>
 <p>Let&rsquo;s do the same process for our priority text field. First, let&rsquo;s set the value to display data from the <code>priority</code> field just like we did for the <code>title</code> field above. However, this time, we also want the display color to change a bit based on the value. So, we&rsquo;ll scroll down to find the <strong>Text Color</strong> option under the <strong>Text Properties</strong> settings in the <strong>Properties Panel</strong>, and click the little orange icon next to that item to configure it as well:</p>
-<p><a href="#R-image-c3cc4694348c57144141197e2829ecaa" class="lightbox-link"><img alt="FlutterFlow Configure Text Color" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3cc4694348c57144141197e2829ecaa"><img alt="FlutterFlow Configure Text Color" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.png"></a></p>
+<p><a href="#R-image-4f44d9c16ebc8b55834047b6a8651b23" class="lightbox-link"><img alt="FlutterFlow Configure Text Color" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f44d9c16ebc8b55834047b6a8651b23"><img alt="FlutterFlow Configure Text Color" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.png"></a></p>
 <p>Our goal is to have items with high priority display this text in red, and low priority in white. So, we&rsquo;ll select the <strong>Conditional Value (If/ThenElse)</strong> in the panel as our main option. Then, in the panel that appears, we&rsquo;ll configure the <strong>IF</strong> condition by clicking it and selecting the Inline Function option. In that window, we&rsquo;ll create an argument named <code>priority</code> and link the value to the <code>priority</code> attribute from our <code>toDoItemParam</code>. In the expression, we&rsquo;ll use the following Dart code to check the priority&rsquo;s value:</p>
 <div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>priority.toLowerCase() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;high&#34;</span></span></span></code></pre></div>
 <p>If everything checks out, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Confirm</span></a></span> button to save that inline function as our conditional. Then, we can click the color box next to the <strong>Then</strong> block and choose the red color <strong>Error</strong> and also click the color box next to the <strong>Else</strong> block and set the color to our <strong>Secondary Text</strong> color. Finally, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Confirm</span></a></span> button once again to save this value. The full process is shown in the animation below and in the video at the top of this page.</p>
-<p><a href="#R-image-ed458b36ea125cac99be9ef83a6a430c" class="lightbox-link"><img alt="FlutterFlow Configure Text Color Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ed458b36ea125cac99be9ef83a6a430c"><img alt="FlutterFlow Configure Text Color Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.gif"></a></p>
+<p><a href="#R-image-9e0d7679ced0346397d0c67dd049f417" class="lightbox-link"><img alt="FlutterFlow Configure Text Color Animation" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9e0d7679ced0346397d0c67dd049f417"><img alt="FlutterFlow Configure Text Color Animation" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/textcolor.gif"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -180,8 +232,8 @@ Component Parameters First, we need to configure the component parameters for ou
 <h3 id="due-date">Due Date</h3>
 <p>Next, let&rsquo;s configure the text widget displaying the due date, which is in the second row of our component. For this item, we want to do a bit of text parsing to convert the date into a more useful format. Our vision is to have this field display something like &ldquo;in a few days&rdquo; instead of the exact due date. Thankfully, FlutterFlow includes by default a library called <code>timeago</code> that does exactly that!</p>
 <p>To accomplish this in FlutterFlow, we need to write a bit of custom code. So, let&rsquo;s go to the <strong>Custom Code</strong> option in the <strong>Navigation Menu</strong>. Once there, we&rsquo;ll click on the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button at the top to create a new item, and select the <strong>Function</strong> option.</p>
-<p><a href="#R-image-7fe937ac7e5d4009881e5a29eb15e2bc" class="lightbox-link"><img alt="FlutterFlow Custom Code" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcode.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fe937ac7e5d4009881e5a29eb15e2bc"><img alt="FlutterFlow Custom Code" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcode.png"></a></p>
+<p><a href="#R-image-9a3da5627d75ac363f23cae31277beef" class="lightbox-link"><img alt="FlutterFlow Custom Code" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcode.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a3da5627d75ac363f23cae31277beef"><img alt="FlutterFlow Custom Code" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcode.png"></a></p>
 <p>Here, we&rsquo;ll be presented with a simple code editor where we can configure our function. First, in the <strong>Properties Panel</strong> to the right, we&rsquo;ll click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Arguments</span></a></span> button and configure an argument named <code>date</code> that is of type <strong>String</strong> and make sure both the <strong>Is List</strong> and <strong>Nullable</strong> options are <strong>Unchecked</strong>. Above that, we&rsquo;ll also make sure our <strong>Return Value</strong> is also using the <strong>String</strong> type and both the <strong>Is List</strong> and <strong>Nullable</strong> options are <strong>Unchecked</strong></p>
 <p>In the code area, we&rsquo;ll see a clear section where we should input our code. We&rsquo;ll use the following Dart code as the body of our function:</p>
 <div class="highlight" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
@@ -190,8 +242,8 @@ Component Parameters First, we need to configure the component parameters for ou
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>;
 </span></span><span style="display:flex;"><span>  }</span></span></code></pre></div>
 <p>Finally, at the top, we&rsquo;ll name our function <code>dateToTimeAgo</code>, then click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Save Function</span></a></span> at the top to save our function.</p>
-<p><a href="#R-image-1286267a19155fe5410979650740ca55" class="lightbox-link"><img alt="FlutterFlow Custom Function" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunction.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1286267a19155fe5410979650740ca55"><img alt="FlutterFlow Custom Function" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunction.png"></a></p>
+<p><a href="#R-image-48d45e91a88d1cd0fe45dc6c97a48974" class="lightbox-link"><img alt="FlutterFlow Custom Function" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunction.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48d45e91a88d1cd0fe45dc6c97a48974"><img alt="FlutterFlow Custom Function" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunction.png"></a></p>
 
 <details open class=" box cstyle notices warning">
   <summary class="box-label" tabindex="-1">
@@ -203,16 +255,16 @@ Component Parameters First, we need to configure the component parameters for ou
   </div>
 </details>
 <p>Once our function has been saved, we should also click the button that appears to check our code for any errors. Thankfully, the project analyzer in the top toolbar of FlutterFlow (the little &ldquo;bug&rdquo; icon) also reminds us to do this:</p>
-<p><a href="#R-image-e3b77853d064c2a07317510cacf8745c" class="lightbox-link"><img alt="FlutterFlow Validate Custom Code" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunctionvalidate.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e3b77853d064c2a07317510cacf8745c"><img alt="FlutterFlow Validate Custom Code" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunctionvalidate.png"></a></p>
+<p><a href="#R-image-e4e7e09f13151cc7bc35b79dc0cf688a" class="lightbox-link"><img alt="FlutterFlow Validate Custom Code" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunctionvalidate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e4e7e09f13151cc7bc35b79dc0cf688a"><img alt="FlutterFlow Validate Custom Code" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customfunctionvalidate.png"></a></p>
 <p>There we go! Now we have a custom function we can use to format a date string in that format. So, we can go back to our <strong>Widget Tree</strong> for our custom component and configure the value of the <code>DueDateText</code> widget to use that function. When we open the <strong>Set from Variable</strong> panel, we&rsquo;ll just choose our <code>dateToTimeAgo</code> custom function, and set the <code>date</code> parameter to be the <code>dateDue</code> attribute from our <code>toDoItemParam</code> component parameter. We can also add a few default values and UI builder values as well. The full process is shown in the animation below or the video at the top of this page.</p>
-<p><a href="#R-image-203a2cd8ec0b56ef222910d63ccfaa9c" class="lightbox-link"><img alt="FlutterFlow Configure Due Date" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/duedate.gif" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-203a2cd8ec0b56ef222910d63ccfaa9c"><img alt="FlutterFlow Configure Due Date" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/duedate.gif"></a></p>
+<p><a href="#R-image-d964dd9562a0486106026fda57194946" class="lightbox-link"><img alt="FlutterFlow Configure Due Date" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/duedate.gif" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d964dd9562a0486106026fda57194946"><img alt="FlutterFlow Configure Due Date" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/duedate.gif"></a></p>
 <p>There we go! That should configure our due date to display correctly.</p>
 <h3 id="address-icon">Address Icon</h3>
 <p>Next, let&rsquo;s configure the <code>AddressIconButton</code> to only appear if the address is set for a task. To do this, click on that widget in the <strong>Widget Tree</strong> and find the <strong>Visibility</strong> option, then turn on the <strong>Conditional</strong> option. Once enabled, click the box below that to configure the visibility. Once again, we&rsquo;ll use a simple <strong>Inline Function</strong> to check that the length of the <code>address</code> field in the <code>toDoItemParam</code> is greater than 0.</p>
-<p><a href="#R-image-03d074902082a0ed625c1b9dda7f7d05" class="lightbox-link"><img alt="FlutterFlow Configure Address Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addressicon.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-03d074902082a0ed625c1b9dda7f7d05"><img alt="FlutterFlow Configure Address Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addressicon.png"></a></p>
+<p><a href="#R-image-8c3ab3653c7c859156b8c668ce37042d" class="lightbox-link"><img alt="FlutterFlow Configure Address Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addressicon.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8c3ab3653c7c859156b8c668ce37042d"><img alt="FlutterFlow Configure Address Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/addressicon.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -224,30 +276,30 @@ Component Parameters First, we need to configure the component parameters for ou
   </div>
 </details>
 <p>We can also scroll down to the <strong>Icon Properties</strong> option in the <strong>Properties Panel</strong> and choose a fitting icon, such as a map pin.</p>
-<p><a href="#R-image-6847fac7ac29de8528491b98684dc3a4" class="lightbox-link"><img alt="FlutterFlow Icon Button Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/iconbuttonicon.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6847fac7ac29de8528491b98684dc3a4"><img alt="FlutterFlow Icon Button Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/iconbuttonicon.png"></a></p>
-<p><a href="#R-image-b8c6678102297012574e4fbc0c5b0863" class="lightbox-link"><img alt="FlutterFlow Map Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/mapicon.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8c6678102297012574e4fbc0c5b0863"><img alt="FlutterFlow Map Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/mapicon.png"></a></p>
+<p><a href="#R-image-f7fd089ec51a1ae9567e04cdfb7b346d" class="lightbox-link"><img alt="FlutterFlow Icon Button Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/iconbuttonicon.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7fd089ec51a1ae9567e04cdfb7b346d"><img alt="FlutterFlow Icon Button Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/iconbuttonicon.png"></a></p>
+<p><a href="#R-image-0f4860c50a4b9b7813c808f21271fca1" class="lightbox-link"><img alt="FlutterFlow Map Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/mapicon.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0f4860c50a4b9b7813c808f21271fca1"><img alt="FlutterFlow Map Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/mapicon.png"></a></p>
 <h3 id="completion-status">Completion Status</h3>
 <p>Finally, let&rsquo;s configure the icon button that shows completion status. As you might guess at this point, we&rsquo;ll set the icon based on the value of the <code>isCompleted</code> attribute of our <code>toDoItemParam</code> component parameter. However, if we try to do so, we&rsquo;ll quickly realize that the <strong>Icon Button</strong> widget doesn&rsquo;t do that very well. So, let&rsquo;s swap out our <strong>IconButton</strong> widget for a <strong>Switch</strong> instead.</p>
 <p>This widget is specifically designed to be something that can be toggled on and off, such as updating the completion status for a task. To configure this widget, we&rsquo;ll scroll to the bottom of the <strong>Properties Panel</strong> and link the <strong>Switch Initial Value</strong> option to the <code>isCompleted</code> attribute.</p>
-<p><a href="#R-image-a6e099d1358bc113140903e047b4b7f8" class="lightbox-link"><img alt="FlutterFlow Toggle Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/switch.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6e099d1358bc113140903e047b4b7f8"><img alt="FlutterFlow Toggle Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/switch.png"></a></p>
+<p><a href="#R-image-48efee4d2c137e72b2952ed3618e1b23" class="lightbox-link"><img alt="FlutterFlow Toggle Icon" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/switch.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48efee4d2c137e72b2952ed3618e1b23"><img alt="FlutterFlow Toggle Icon" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/switch.png"></a></p>
 <p>There we go! We&rsquo;ve configured our first custom component and linked up all of the widgets to various data values from our component parameter. Now, let&rsquo;s see how we can use it in our app.</p>
 <h2 id="creating-a-list">Creating a List</h2>
 <p>In FlutterFlow, it&rsquo;s finally time to go back to the <strong>Page Selector</strong> and select our <code>HomePage</code> that was created for us when we started this project. On this page, we want start by adding a <strong>ListView</strong> widget into the main column space.</p>
 <p>Then, in the <strong>Properties Panel</strong>, we can configure the list to use the <strong>Vertical</strong> axis and add some spacing between each item.</p>
-<p><a href="#R-image-e0d54e62c584a045bf9ca693b4de6f5a" class="lightbox-link"><img alt="FlutterFlow List View" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/listview.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0d54e62c584a045bf9ca693b4de6f5a"><img alt="FlutterFlow List View" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/listview.png"></a></p>
+<p><a href="#R-image-e7aca844959b17a47302cc6e16550962" class="lightbox-link"><img alt="FlutterFlow List View" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/listview.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e7aca844959b17a47302cc6e16550962"><img alt="FlutterFlow List View" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/listview.png"></a></p>
 <p>Next, we should click on the <strong>Generate Dynamic Children</strong> option near the top of the <strong>Properties Panel</strong>, and then configure a new variable called <code>toDoItemList</code> and set the value to our <code>toDoTasks</code> variable found under the App State option. After selecting the value, we&rsquo;ll choose the <strong>No Further Changes</strong> option in the panel that appears, and then click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><span class="title">Confirm</span></a></span> button to save our changes, then click <strong>Save</strong></p>
-<p><a href="#R-image-ae341f8bf8260c31c19c1c956bda2acf" class="lightbox-link"><img alt="FlutterFlow Configure List View" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configurelist.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae341f8bf8260c31c19c1c956bda2acf"><img alt="FlutterFlow Configure List View" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configurelist.png"></a></p>
+<p><a href="#R-image-05d9b9982a67f4a8d529a444e402f537" class="lightbox-link"><img alt="FlutterFlow Configure List View" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configurelist.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05d9b9982a67f4a8d529a444e402f537"><img alt="FlutterFlow Configure List View" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configurelist.png"></a></p>
 <p>We&rsquo;ll get a pop-up notice reminding us that we simply have to edit the first child of this list to configure how each list element should look. So, let&rsquo;s now add our <code>ToDoItemComponent</code> component to our <strong>ListView</strong> component. The simplest way to do this is to click the &ldquo;Add a child to this widget&rdquo; button next to our <strong>ListView</strong> widget, then select the option for widgets defined in this project, and then find our <code>ToDoItemComponent</code> in the list and select it:</p>
-<p><a href="#R-image-41fc58061ec6af4095128cc3f9bc681c" class="lightbox-link"><img alt="FlutterFlow Select Custom Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcomponent.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-41fc58061ec6af4095128cc3f9bc681c"><img alt="FlutterFlow Select Custom Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcomponent.png"></a></p>
+<p><a href="#R-image-17243b1ca78a482e1b698a5019368860" class="lightbox-link"><img alt="FlutterFlow Select Custom Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcomponent.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-17243b1ca78a482e1b698a5019368860"><img alt="FlutterFlow Select Custom Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/customcomponent.png"></a></p>
 <p>After selecting that component, it will fill our <strong>ListView</strong> with several instances of our custom component. Next, we need to configure the component parameter by finding that option in the <strong>Properties Panel</strong> and set it to the <code>toDoItemList Item</code> option, then selecting <strong>No Further Changes</strong> in the second page.</p>
-<p><a href="#R-image-ac0e0945b167620047e1fd1c8d5e6a78" class="lightbox-link"><img alt="FlutterFlow Configure Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configparam.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac0e0945b167620047e1fd1c8d5e6a78"><img alt="FlutterFlow Configure Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configparam.png"></a></p>
+<p><a href="#R-image-572b73c1a263e22e1df94ee49fac2906" class="lightbox-link"><img alt="FlutterFlow Configure Parameter" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configparam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-572b73c1a263e22e1df94ee49fac2906"><img alt="FlutterFlow Configure Parameter" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/configparam.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -260,12 +312,12 @@ Component Parameters First, we need to configure the component parameters for ou
 </details>
 <h2 id="previewing">Previewing</h2>
 <p>Finally, at long last, we are ready to preview our application to see how it actually looks. The easiest way to do this is to quickly publish this project to the web using the FlutterFlow test platform. First, we must configure our project to be publishable on the web in the project settings. Thankfully, we can just click the arrow next to the <strong>Run</strong> button in the upper right and it will take us directly to the settings of our application:</p>
-<p><a href="#R-image-4398ff1b18bba9e3072ba89f085a6184" class="lightbox-link"><img alt="FlutterFlow Run Options" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/runoptions.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4398ff1b18bba9e3072ba89f085a6184"><img alt="FlutterFlow Run Options" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/runoptions.png"></a></p>
+<p><a href="#R-image-27070aa898ac7515f1300d2cab6078ed" class="lightbox-link"><img alt="FlutterFlow Run Options" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/runoptions.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27070aa898ac7515f1300d2cab6078ed"><img alt="FlutterFlow Run Options" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/runoptions.png"></a></p>
 <p>In the settings, you&rsquo;ll be taken to the <strong>Platforms</strong> page. On that page, simply turn on the <strong>Web</strong> option to enable publishing to the web.</p>
 <p>Now, we can click the actual <strong>Run</strong> button at the upper right to run our application in test mode. This will open a new browser tab, and in the background it will compile and build your application. It may take a couple of minutes to complete, but once it is done, you&rsquo;ll be shown a web interface that contains your application running in the web!</p>
-<p><a href="#R-image-cb038d2187d79f03e6b414224c53d416" class="lightbox-link"><img alt="FlutterFlow Test Mode" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/testmode.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb038d2187d79f03e6b414224c53d416"><img alt="FlutterFlow Test Mode" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/testmode.png"></a></p>
+<p><a href="#R-image-b8e772433f15ace77debbdf471e24f17" class="lightbox-link"><img alt="FlutterFlow Test Mode" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/testmode.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8e772433f15ace77debbdf471e24f17"><img alt="FlutterFlow Test Mode" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/testmode.png"></a></p>
 <p>Take a close look at this interface and see if everything looks correct:</p>
 <ul>
 <li>Are the tasks showing the correct completion status?</li>
@@ -280,11 +332,11 @@ Component Parameters First, we need to configure the component parameters for ou
 <p>You can check the <strong>App State</strong> in the debug panel on the left and make sure that the data shown there matches the user interface on the right.</p>
 <h2 id="quick-tweak---container-height">Quick Tweak - Container Height</h2>
 <p>One thing you might quickly notice is that each to do task is shown in a very large block, which isn&rsquo;t quite what we want. So, to fix this, we can go back to our FlutterFlow App Builder tab in our browser and find the <strong>Container</strong> widget that contains each of those items, and remove the default height value from the <strong>Properties Panel</strong></p>
-<p><a href="#R-image-e2a82e5f9bf557de763bd805bd698f34" class="lightbox-link"><img alt="FlutterFlow Container Height" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/updateheight.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e2a82e5f9bf557de763bd805bd698f34"><img alt="FlutterFlow Container Height" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/updateheight.png"></a></p>
+<p><a href="#R-image-b15cd7a7c054de27b630e430cc30e7b9" class="lightbox-link"><img alt="FlutterFlow Container Height" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/updateheight.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b15cd7a7c054de27b630e430cc30e7b9"><img alt="FlutterFlow Container Height" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/updateheight.png"></a></p>
 <p>Then, we can jump back to the tab showing our Test Mode view and click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: teal;"><a href="/extras/05-flutter-flow/03-list-view/index.html"><i class="fa-fw fas fa-rotate-right"></i> <span class="title">Instant Reload</span></a></span> button to reload our test view with those changes.</p>
-<p><a href="#R-image-8ac26da80fbf0c2436c3540f411ea957" class="lightbox-link"><img alt="FlutterFlow Reloaded" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/reloaded.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ac26da80fbf0c2436c3540f411ea957"><img alt="FlutterFlow Reloaded" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/reloaded.png"></a></p>
+<p><a href="#R-image-08c24ecf6052d164980a4bc43a540359" class="lightbox-link"><img alt="FlutterFlow Reloaded" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/reloaded.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08c24ecf6052d164980a4bc43a540359"><img alt="FlutterFlow Reloaded" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/03-list-view/images/reloaded.png"></a></p>
 <p>Awesome! Now our app looks like it is coming together nicely.</p>
 
 <details open class=" box cstyle notices note">
@@ -304,13 +356,17 @@ Component Parameters First, we need to configure the component parameters for ou
 </article>
         </div>
       </main>
-      
-      
-      
+<div class="git-footer">
+  <p class="theme-version-footer">8.0.0</p>
+<p>Last modified by:
+              <i class='fa-fw fas fa-user'></i> Russell Feldhausen
+              <i class='fas fa-calendar'></i> <a href="https://github.com/ksu-cs-textbooks/extras/commit/900dec15da4476981ef82993fca8d8b77534d848">Mar 19, 2026</a>
+</p>
+
+</div>
     </div>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
-    <script src="/extras/js/theme.min.js?1773775660" defer></script>
-  <script src="/extras/js/embed-iframe.min.js?1773775660" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773954401" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773954401" defer></script>
+    <script src="/extras/js/theme.min.js?1773954401" defer></script>
   </body>
 </html>

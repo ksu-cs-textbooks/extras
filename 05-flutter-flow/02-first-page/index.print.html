@@ -29,7 +29,7 @@ To Do tasks should include a short title and longer description. To Do tasks sho
     <meta itemprop="description" content="YouTube Video Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first component by adding some widgets and data.
 The Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:
 To Do tasks should include a short title and longer description. To Do tasks should track the date it was created and the date it is due. To Do tasks should track whether it has been completed or not. Tasks may optionally have an address associated with the task. To Do tasks should be assigned to different priorities (Low, High). When a task is completed, it should track the date and time when it was completed. Users should be able to create, edit, and delete tasks. Tasks should be sorted according to completion, due date, and priority. Our application should include user accounts so that multiple users can use the app. User accounts should use an email address and password to log in. User data should be stored in the cloud so they can use the app across devices. Each user’s data should be stored securely and not accessible by other users. If a task has an address, the application should allow the user to request directions to that address. If the user gives permission, it should also track the location where a task was completed. Our application should track the percentage of tasks completed on-time (before the due date). Users should be able to configure their display name and update their password. Users should be able to delete their account and all associated data. User profile pictures should be visible from Gravatar The app should display a global leaderboard showing the users with the highest on-time completion percentage. That looks like a long list of features, but we’ll slowly work through this list over several steps to build the desired functionality for our application. Our hope is that this list of features will give you enough building blocks to start building your own applications using these features and more!">
-    <meta itemprop="dateModified" content="2026-03-16T14:07:58-05:00">
+    <meta itemprop="dateModified" content="2026-03-19T16:06:07-05:00">
     <meta itemprop="wordCount" content="2351">
     <meta itemprop="image" content="https://textbooks.cs.ksu.edu/extras/images/hero.png">
     <title>First Component :: K-State CS Textbook Extras</title>
@@ -37,26 +37,26 @@ To Do tasks should include a short title and longer description. To Do tasks sho
     <link href="/extras/05-flutter-flow/02-first-page/index.xml" rel="alternate" type="application/rss+xml" title="First Component :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/02-first-page/tele.html" rel="alternate" type="text/html" title="First Component :: K-State CS Textbook Extras">
     <link href="/extras/05-flutter-flow/02-first-page/embed.html" rel="alternate" type="text/html" title="First Component :: K-State CS Textbook Extras">
-    <link href="/extras/css/auto-complete/auto-complete.min.css?1773775660" rel="stylesheet">
-    <script src="/extras/js/auto-complete/auto-complete.min.js?1773775660" defer></script>
-    <script src="/extras/js/search-lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/search.min.js?1773775660" defer></script>
+    <link href="/extras/css/auto-complete/auto-complete.min.css?1773954401" rel="stylesheet">
+    <script src="/extras/js/auto-complete/auto-complete.min.js?1773954401" defer></script>
+    <script src="/extras/js/search-lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/search.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/extras/searchindex.en.js?1773775660";
+      window.relearn.index_js_url="/extras/searchindex.en.js?1773954401";
     </script>
-    <script src="/extras/js/lunr/lunr.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.multi.min.js?1773775660" defer></script>
-    <script src="/extras/js/lunr/lunr.en.min.js?1773775660" defer></script>
+    <script src="/extras/js/lunr/lunr.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.stemmer.support.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.multi.min.js?1773954401" defer></script>
+    <script src="/extras/js/lunr/lunr.en.min.js?1773954401" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773775660" rel="stylesheet"></noscript>
-    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/theme.min.css?1773775660" rel="stylesheet">
-    <link href="/extras/css/format-print.min.css?1773775660" rel="stylesheet" id="R-format-style">
+    <link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/extras/fonts/fontawesome/css/fontawesome-all.min.css?1773954401" rel="stylesheet"></noscript>
+    <link href="/extras/css/perfect-scrollbar/perfect-scrollbar.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/theme.min.css?1773954401" rel="stylesheet">
+    <link href="/extras/css/format-print.min.css?1773954401" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -115,7 +115,7 @@ To Do tasks should include a short title and longer description. To Do tasks sho
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/extras/css/custom.css?1773775660" rel="stylesheet">
+    <link href="/extras/css/custom.css?1773954401" rel="stylesheet">
   </head>
   <body class="mobile-support embed print" data-url="/extras/05-flutter-flow/02-first-page/index.html">
     <div id="R-body" class="default-animation">
@@ -133,7 +133,7 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <h1 id="first-component">First Component</h1>
 
 
-<a href="https://www.youtube.com/watch?v=asdf">YouTube Video</a>
+<a href="https://www.youtube.com/watch?v=siO1F8_s1Oo">YouTube Video</a>
 
 <p>Now that we&rsquo;ve created a new project in FlutterFlow, let&rsquo;s explore the process of creating our first component by adding some widgets and data.</p>
 <h2 id="the-concept---to-do-application">The Concept - &ldquo;To Do&rdquo; Application</h2>
@@ -191,36 +191,36 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <li>Each individual item in the array is surrounded by curly braces <code>{ }</code>. These represent <strong>objects</strong> in JSON, but they are very similar to <strong>dictionaries</strong> in other programming languages. Each attribute in the object has a name and a value.</li>
 </ul>
 <p>This structure gives us the basics we need to start scaffolding our application. First, we need to add this as a <strong>Data Type</strong> in our application so it knows what the structure is. To do this, click the <strong>Data Types</strong> option in the <strong>Navigation Menu</strong> to get to that page.</p>
-<p><a href="#R-image-aa134a7d9e17ede678b8cf01d9869864" class="lightbox-link"><img alt="FlutterFlow Data Types" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa134a7d9e17ede678b8cf01d9869864"><img alt="FlutterFlow Data Types" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes.png"></a></p>
+<p><a href="#R-image-efed9427baff1dec0c0d7b9e7ad00fd5" class="lightbox-link"><img alt="FlutterFlow Data Types" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-efed9427baff1dec0c0d7b9e7ad00fd5"><img alt="FlutterFlow Data Types" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes.png"></a></p>
 <p>Next, click the <span class="btn interactive  cstyle action" style="--VARIABLE-BOX-color: coral;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><i class="fa-fw fas fa-file-arrow-up"></i> <span class="title">Create Data Type from JSON</span></a></span>, and then in the panel that appears, set the name to <code>ToDoItemType</code> and paste in a single to do item from the JSON above (from one curly brace <code>{ }</code> to another) in the box:</p>
-<p><a href="#R-image-5faf56261dd7063d3f6f5bd1311c7676" class="lightbox-link"><img alt="FlutterFlow Create Data Type" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5faf56261dd7063d3f6f5bd1311c7676"><img alt="FlutterFlow Create Data Type" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes2.png"></a></p>
+<p><a href="#R-image-619ae3b7d7a729d775194cc3b3eed365" class="lightbox-link"><img alt="FlutterFlow Create Data Type" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-619ae3b7d7a729d775194cc3b3eed365"><img alt="FlutterFlow Create Data Type" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes2.png"></a></p>
 <p>Once that is done, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><span class="title">Create</span></a></span> button to create that data type. That should create a data type that looks like the one in the screenshot below:</p>
-<p><a href="#R-image-b2eee2cf8e2c9c73cdf47b13bc9a75ea" class="lightbox-link"><img alt="FlutterFlow To Do Data Type" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b2eee2cf8e2c9c73cdf47b13bc9a75ea"><img alt="FlutterFlow To Do Data Type" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes3.png"></a></p>
+<p><a href="#R-image-de1e0c6e8ff08df40bdd3b44278031c8" class="lightbox-link"><img alt="FlutterFlow To Do Data Type" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-de1e0c6e8ff08df40bdd3b44278031c8"><img alt="FlutterFlow To Do Data Type" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/datatypes3.png"></a></p>
 <p>There we go! That tells FlutterFlow about the structure of the data we&rsquo;ll use to represent a single to do task in our application.</p>
 <p>Next, let&rsquo;s add this data to our <strong>App Values</strong> by clicking that option in the <strong>Navigation Menu</strong> on the left side of the FlutterFlow window, and then selecting the <strong>App State</strong> option on that page.</p>
-<p><a href="#R-image-e89a8a0728ee6512866194a1beae8728" class="lightbox-link"><img alt="FlutterFlow App State" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/appstate.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e89a8a0728ee6512866194a1beae8728"><img alt="FlutterFlow App State" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/appstate.png"></a></p>
+<p><a href="#R-image-6df336426eaff0fd428ec11fc601ecca" class="lightbox-link"><img alt="FlutterFlow App State" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/appstate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6df336426eaff0fd428ec11fc601ecca"><img alt="FlutterFlow App State" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/appstate.png"></a></p>
 <p>Then, we can click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add App State Variable</span></a></span> button on the upper right to create a new <strong>App State Variable</strong> for our application. In the popup window, let&rsquo;s call our field <code>toDoTasks</code> in the Field Name box, and choose the <strong>Data Type</strong> Field Type. Next, we&rsquo;ll need to select our <code>ToDoItemType</code> from the second list that appears. We also want to make sure we checkmark the <strong>Is List</strong> option, since our data type is a list of items. Finally, click the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><span class="title">Create</span></a></span> button to create that variable.</p>
-<p><a href="#R-image-e4ede8ed1887c7e639da5a3717a004b0" class="lightbox-link"><img alt="FlutterFlow Add App State Variable" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addappstate.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e4ede8ed1887c7e639da5a3717a004b0"><img alt="FlutterFlow Add App State Variable" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addappstate.png"></a></p>
+<p><a href="#R-image-09c33f7d010ea4ed22b9cec09c205452" class="lightbox-link"><img alt="FlutterFlow Add App State Variable" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addappstate.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-09c33f7d010ea4ed22b9cec09c205452"><img alt="FlutterFlow Add App State Variable" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addappstate.png"></a></p>
 <p>Once we&rsquo;ve created our variable, we can add some items to the list by clicking the drop-down arrow in the <strong>Default Value</strong> column and then clicking the <span class="btn interactive  cstyle default" style="--VARIABLE-BOX-color: blue;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><i class="fa-fw fas fa-plus"></i> <span class="title">Add Item</span></a></span> button.</p>
-<p><a href="#R-image-7107418c0c2ae02aaef845b4a5b7af48" class="lightbox-link"><img alt="FlutterFlow Add App State Variable Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addvalue.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7107418c0c2ae02aaef845b4a5b7af48"><img alt="FlutterFlow Add App State Variable Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addvalue.png"></a></p>
+<p><a href="#R-image-b8d077a3606b894b7a1d78db92c458c6" class="lightbox-link"><img alt="FlutterFlow Add App State Variable Value" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addvalue.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8d077a3606b894b7a1d78db92c458c6"><img alt="FlutterFlow Add App State Variable Value" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addvalue.png"></a></p>
 <p>Once that adds a value to the list, we can click the <strong>Tap to Edit Fields</strong> option to add values to each field. We&rsquo;ll use the values for the first to do task item in the JSON structure above.</p>
-<p><a href="#R-image-ffe49c96da05fccf16f1e7e5bb8ef7a0" class="lightbox-link"><img alt="FlutterFlow Add Set Variable Fields" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/setfields.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ffe49c96da05fccf16f1e7e5bb8ef7a0"><img alt="FlutterFlow Add Set Variable Fields" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/setfields.png"></a></p>
+<p><a href="#R-image-21ab4c7959ea539fe35489cc53f6bb78" class="lightbox-link"><img alt="FlutterFlow Add Set Variable Fields" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/setfields.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21ab4c7959ea539fe35489cc53f6bb78"><img alt="FlutterFlow Add Set Variable Fields" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/setfields.png"></a></p>
 <p>We can repeat that for our other to do task as well, so we&rsquo;ll have 2 values in the list. This allows us to start building components that can display data stored in a list.</p>
 <h2 id="first-component---a-to-do-item">First Component - A To Do Item</h2>
 <p>Now that we have some data in our application, we can start scaffolding our first component - a way to display a to do item in our application. So, to begin, let&rsquo;s click back on the <strong>Page Selector</strong> option in the <strong>Navigation Menu</strong> to view our existing application.</p>
-<p><a href="#R-image-41cef5dd4fcbaa9bae871a70f148f343" class="lightbox-link"><img alt="FlutterFlow Page Selector" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/pageselector.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-41cef5dd4fcbaa9bae871a70f148f343"><img alt="FlutterFlow Page Selector" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/pageselector.png"></a></p>
+<p><a href="#R-image-926a8ea419b233e6505cc0244bce01f8" class="lightbox-link"><img alt="FlutterFlow Page Selector" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/pageselector.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-926a8ea419b233e6505cc0244bce01f8"><img alt="FlutterFlow Page Selector" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/pageselector.png"></a></p>
 <p>Before we add anything to our page, let&rsquo;s start by creating a new stand-alone component to represent a single to do task. So, at the top of the <strong>Page Tree</strong>, click the <span class="btn interactive  cstyle transparent" style="--VARIABLE-BOX-color: green;"><a href="/extras/05-flutter-flow/02-first-page/index.html"><i class="fa-fw fas fa-plus"></i></a></span> button to create a new component.</p>
 <p>In the popup window, choose the <strong>New Component</strong> option at the top, and then click the <strong>Create Blank</strong> option. We&rsquo;ll name our component <code>ToDoItemComponent</code>.</p>
-<p><a href="#R-image-874d2815b5bf6dbfcb8888c6b0a1b9fd" class="lightbox-link"><img alt="FlutterFlow Create Blank Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-874d2815b5bf6dbfcb8888c6b0a1b9fd"><img alt="FlutterFlow Create Blank Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent.png"></a></p>
+<p><a href="#R-image-49e69f5efa5f53c3de0ae33c1f89c79b" class="lightbox-link"><img alt="FlutterFlow Create Blank Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-49e69f5efa5f53c3de0ae33c1f89c79b"><img alt="FlutterFlow Create Blank Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent.png"></a></p>
 
 <details open class=" box cstyle notices note">
   <summary class="box-label" tabindex="-1">
@@ -232,8 +232,8 @@ To Do tasks should include a short title and longer description. To Do tasks sho
   </div>
 </details>
 <p>Once it has been created, we&rsquo;ll see it in our <strong>Page Tree</strong> on the left side of the screen:</p>
-<p><a href="#R-image-1be30495eccef53448ba3e527ef87028" class="lightbox-link"><img alt="FlutterFlow New Component In Tree" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1be30495eccef53448ba3e527ef87028"><img alt="FlutterFlow New Component In Tree" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent2.png"></a></p>
+<p><a href="#R-image-441458e46bb1c40d5b867cd2d8336936" class="lightbox-link"><img alt="FlutterFlow New Component In Tree" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-441458e46bb1c40d5b867cd2d8336936"><img alt="FlutterFlow New Component In Tree" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcomponent2.png"></a></p>
 
 <details open class=" box cstyle notices tip">
   <summary class="box-label" tabindex="-1">
@@ -247,30 +247,30 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <h2 id="widget-tree">Widget Tree</h2>
 <p>Now that we have a basic component, we can start adding widgets to that component. The <a href="https://docs.flutterflow.io/resources/ui/overview" rel="external" target="_blank">FlutterFlow Documentation - UI Building Blocks</a> section has a great deep-dive into the fundamental concepts of building user interfaces using Flutter. We recommend reading through the <strong>Overview</strong> and <strong>Widgets &gt; Introduction to Widgets</strong> pages at a minimum to familiarize yourself with these concepts.</p>
 <p>At the core, a page or component will contain a <strong>Widget Tree</strong> that contains the content on the page. Each widget in that tree may be an <strong>Atom</strong>, which is a stand-alone building block for the UI like a <strong>Text</strong> or <strong>Icon</strong> widget, or a <strong>Molecule</strong>, which is a widget that contains other widgets, like a <strong>Row</strong>, <strong>Column</strong> or <strong>List</strong> widget. Below is an example of a <strong>Widget Tree</strong> for a component.</p>
-<p><a href="#R-image-bbf55e31df433d9e831b7857fa4bf711" class="lightbox-link"><img alt="FlutterFlow Widget Tree" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widget.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bbf55e31df433d9e831b7857fa4bf711"><img alt="FlutterFlow Widget Tree" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widget.png"></a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><a href="#R-image-11ce8d72e521e8e98f235276153e0bbc" class="lightbox-link"><img alt="FlutterFlow Widget Tree" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widget.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-11ce8d72e521e8e98f235276153e0bbc"><img alt="FlutterFlow Widget Tree" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widget.png"></a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>In FlutterFlow, this <strong>Widget Tree</strong> would be represented in the UI in this way:</p>
-<p><a href="#R-image-514c2a6b795add26c6c18e2053f60689" class="lightbox-link"><img alt="FlutterFlow Widget Tree UI" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widgetui.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-514c2a6b795add26c6c18e2053f60689"><img alt="FlutterFlow Widget Tree UI" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widgetui.png"></a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><a href="#R-image-c2b3ce98de73b0fc60558219136b894a" class="lightbox-link"><img alt="FlutterFlow Widget Tree UI" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widgetui.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c2b3ce98de73b0fc60558219136b894a"><img alt="FlutterFlow Widget Tree UI" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/flutterflow_widgetui.png"></a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>As you can see, each item in the widget tree matches to an item in the user interface, and the structure of the tree shows how each widget is placed relative to each other in the larger structure of the application.</p>
 <h2 id="adding-a-column">Adding a Column</h2>
 <p>For our component, let&rsquo;s start by adding a <strong>Column</strong> widget as our starting point. So, we&rsquo;ll click on the <strong>Widget Palette</strong> button in the <strong>Navigation Menu</strong> on the left, then we&rsquo;ll find the <strong>Column</strong> widget and drag it into our component.</p>
-<p><a href="#R-image-5938aff166725545ca5c0afced43fa37" class="lightbox-link"><img alt="FlutterFlow Add Column Widget" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addcolumn.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5938aff166725545ca5c0afced43fa37"><img alt="FlutterFlow Add Column Widget" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addcolumn.png"></a></p>
+<p><a href="#R-image-adf61b6843eadf7fc4971ea7d304fe48" class="lightbox-link"><img alt="FlutterFlow Add Column Widget" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addcolumn.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-adf61b6843eadf7fc4971ea7d304fe48"><img alt="FlutterFlow Add Column Widget" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/addcolumn.png"></a></p>
 <p>Once we&rsquo;ve added that widget to our component, we&rsquo;ll see the <strong>Properties Panel</strong> for the <strong>Column</strong> widget appear on the right side of the page. If it doesn&rsquo;t appear, make sure you select the <strong>Column</strong> widget either on the <strong>Canvas Area</strong> or by clicking the <strong>Widget Tree</strong> option in the <strong>Navigation Menu</strong> and finding it in the <strong>Widget Tree</strong> on the left side of that view.</p>
-<p><a href="#R-image-d954e37ad5ca9c60b94b53d650e72875" class="lightbox-link"><img alt="FlutterFlow New Column" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcolumn.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d954e37ad5ca9c60b94b53d650e72875"><img alt="FlutterFlow New Column" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcolumn.png"></a></p>
+<p><a href="#R-image-bb6463ef1411db07529eaf4834dffe2e" class="lightbox-link"><img alt="FlutterFlow New Column" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcolumn.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bb6463ef1411db07529eaf4834dffe2e"><img alt="FlutterFlow New Column" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/newcolumn.png"></a></p>
 <p>As you can see, there is a large number of settings you can configure for a single <strong>Column</strong> widget in FlutterFlow - this is where the real power of this design system appears. Unfortunately, there are <em>so many</em> options here that it can be difficult to know which ones are important or even to clearly describe which ones to update.</p>
 <p>For now, there is just one option we&rsquo;ll need to modify from the default. You may have to search around a bit to find it by hovering over the options, or refer to the video above for a clear description of where to find it:</p>
 <ul>
 <li>Column Properties -&gt; Main Axis Size -&gt; Choose &ldquo;Use minimum amount of size on the main axis&rdquo;</li>
 </ul>
-<p><a href="#R-image-ccff0b1d3e26a9fbcff636ee2484b82e" class="lightbox-link"><img alt="FlutterFlow Column Properties" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/columnproperties.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ccff0b1d3e26a9fbcff636ee2484b82e"><img alt="FlutterFlow Column Properties" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/columnproperties.png"></a></p>
+<p><a href="#R-image-4d8da8f8836ba5765e63bb18618b547b" class="lightbox-link"><img alt="FlutterFlow Column Properties" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/columnproperties.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d8da8f8836ba5765e63bb18618b547b"><img alt="FlutterFlow Column Properties" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/columnproperties.png"></a></p>
 <h2 id="adding-rows">Adding Rows</h2>
 <p>Next, let&rsquo;s add a couple of rows to our <strong>Column</strong> widget. So, following the same process as before, add two <strong>Row</strong> widgets to the column widget, but be careful not to put one row inside of another, or place a row in place of the column widget. If done correctly, when looking at the <strong>Widget Tree</strong> we should see two <strong>Row</strong> widgets inside of the <strong>Column</strong> widget as shown below:</p>
-<p><a href="#R-image-9e2886fc4850b1ccbbc88715de32bcb0" class="lightbox-link"><img alt="FlutterFlow Two Rows" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/tworows.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9e2886fc4850b1ccbbc88715de32bcb0"><img alt="FlutterFlow Two Rows" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/tworows.png"></a></p>
+<p><a href="#R-image-b46084c9eb32edcd77d9659b486b3c84" class="lightbox-link"><img alt="FlutterFlow Two Rows" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/tworows.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b46084c9eb32edcd77d9659b486b3c84"><img alt="FlutterFlow Two Rows" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/tworows.png"></a></p>
 <p>With this structure, we have a framework where each to do task will be displayed with two rows of data! Let&rsquo;s continue onward to add more widgets to this framework to actually display the data.</p>
 <h2 id="adding-widgets">Adding Widgets</h2>
 <p>In the first row, let&rsquo;s add three more widgets in this order:</p>
@@ -285,31 +285,31 @@ To Do tasks should include a short title and longer description. To Do tasks sho
 <li>An <strong>IconButton</strong> widget to show if the task has an address assigned to it.</li>
 </ul>
 <p>We won&rsquo;t worry about changing any of the options for these widgets yet. We&rsquo;ll just focus on getting them into our <strong>Widget Tree</strong> for now. Once you&rsquo;ve done that, you should have a <strong>Widget Tree</strong> that looks like this (you can also click the <strong>Toggle App Brightness</strong> icon at the top right of the <strong>Canvas Area</strong> to make it easier to see items if you are working in dark mode):</p>
-<p><a href="#R-image-11a5e55714fc434ef5e0d29e8f0e934c" class="lightbox-link"><img alt="FlutterFlow Basic To Do Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/todo.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-11a5e55714fc434ef5e0d29e8f0e934c"><img alt="FlutterFlow Basic To Do Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/todo.png"></a></p>
+<p><a href="#R-image-eff64bc281067bdd03515af08871ad00" class="lightbox-link"><img alt="FlutterFlow Basic To Do Component" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/todo.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eff64bc281067bdd03515af08871ad00"><img alt="FlutterFlow Basic To Do Component" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/todo.png"></a></p>
 <p>Thats a start! We have the basic building blocks for our component in place. Now let&rsquo;s work on making the design a bit cleaner before moving ahead.</p>
 <h2 id="managing-design">Managing Design</h2>
 <p>First, let&rsquo;s add a bit of spacing between our two rows. We can do this by clicking the <strong>Column</strong> widget in the <strong>Widget Tree</strong>, and then finding the <strong>Items Spacing</strong> option in the <strong>Properties Panel</strong> to the right. Let&rsquo;s set this value to 5 for now.</p>
-<p><a href="#R-image-3ba3837028e514a4af3ae21e7686c1d9" class="lightbox-link"><img alt="FlutterFlow Item Spacing" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ba3837028e514a4af3ae21e7686c1d9"><img alt="FlutterFlow Item Spacing" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing.png"></a></p>
+<p><a href="#R-image-844c9a2036ce1fa65a06080b9207381d" class="lightbox-link"><img alt="FlutterFlow Item Spacing" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-844c9a2036ce1fa65a06080b9207381d"><img alt="FlutterFlow Item Spacing" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing.png"></a></p>
 <p>This will add a little gap between the two rows in our component. Next, let&rsquo;s do the same for each <strong>Row</strong> widget, just to make sure there is a little space available there as well. Once we&rsquo;ve done that, our <strong>Canvas Area</strong> should show the components with a bit more space between them.</p>
-<p><a href="#R-image-1d2bc8f28c3ba7cf258c4f1942edfbe0" class="lightbox-link"><img alt="FlutterFlow Component Spacing" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d2bc8f28c3ba7cf258c4f1942edfbe0"><img alt="FlutterFlow Component Spacing" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing2.png"></a></p>
+<p><a href="#R-image-7bd0b754a4a58af384e121bf6281f098" class="lightbox-link"><img alt="FlutterFlow Component Spacing" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7bd0b754a4a58af384e121bf6281f098"><img alt="FlutterFlow Component Spacing" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/itemspacing2.png"></a></p>
 <p>Next, we want to add some flexible space in each row so that the last widget in that row is pushed to the very end of the row, all the way to the right. To do that, we must first configure each row so that it can expand to take up the available space in a container. This can be found in the <strong>Properties Panel</strong> for the row under <strong>Padding &amp; Alignment</strong> - we want to choose the middle <strong>Expansion</strong> option, which is labelled &ldquo;Flexible.&rdquo; Then, we must also make sure the <strong>Main Axis Size</strong> under <strong>Row Properties</strong> is also set to the second option, which will use the maximum amount of size on the main axis.</p>
-<p><a href="#R-image-2c52a8a7f7bde3b83021956a0a196ff6" class="lightbox-link"><img alt="FlutterFlow Row Expansion" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/rowexpand.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2c52a8a7f7bde3b83021956a0a196ff6"><img alt="FlutterFlow Row Expansion" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/rowexpand.png"></a></p>
+<p><a href="#R-image-1fe9cb66688f9ce842333601ae07e406" class="lightbox-link"><img alt="FlutterFlow Row Expansion" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/rowexpand.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fe9cb66688f9ce842333601ae07e406"><img alt="FlutterFlow Row Expansion" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/rowexpand.png"></a></p>
 <p>Make sure you set these properties on both <strong>Row</strong> widgets before continuing.</p>
 <p>Then, we can add a <strong>Spacer</strong> widget to each row, right before the last component in the component tree.</p>
-<p><a href="#R-image-bf50f36285245a6cb80bd29f1e01fdfd" class="lightbox-link"><img alt="FlutterFlow Spacers" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/spacer.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf50f36285245a6cb80bd29f1e01fdfd"><img alt="FlutterFlow Spacers" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/spacer.png"></a></p>
+<p><a href="#R-image-7ad3ba39f1e36c2f4e84b19119805ac3" class="lightbox-link"><img alt="FlutterFlow Spacers" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/spacer.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7ad3ba39f1e36c2f4e84b19119805ac3"><img alt="FlutterFlow Spacers" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/spacer.png"></a></p>
 <p>There, with that in place, the last widget on each row will be pushed to the rightmost side, expanding the row to fill the space.</p>
 <h2 id="naming-widgets">Naming Widgets</h2>
 <p>Finally, before moving on, let&rsquo;s quickly rename our widgets so they are easier for us to keep track of. We can do this by clicking each widget in the <strong>Widget Tree</strong> and then entering a name in the box at the top of the <strong>Properties Panel</strong>. Generally, in FlutterFlow it is recommended to name widgets using <code>PascalCase</code> (also known as <code>UpperCamelCase</code>), and we often want to include the type of the widget in the name, such as <code>TitleText</code> or <code>IsCompletedIconButton</code>.</p>
-<p><a href="#R-image-af2df9b1c6d2bdbd5170fc6107fe65fa" class="lightbox-link"><img alt="FlutterFlow Rename Widget" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-af2df9b1c6d2bdbd5170fc6107fe65fa"><img alt="FlutterFlow Rename Widget" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname.png"></a></p>
+<p><a href="#R-image-020a817c2e21679957a6f7155d65d0c3" class="lightbox-link"><img alt="FlutterFlow Rename Widget" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-020a817c2e21679957a6f7155d65d0c3"><img alt="FlutterFlow Rename Widget" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname.png"></a></p>
 <p>Take a moment to rename some or all of the widgets in your widget tree to something useful. After renaming our widgets, we should see something like this in our <strong>Widget Tree</strong>:</p>
-<p><a href="#R-image-16a3d1c88e3ac043f1eba8bcea70875e" class="lightbox-link"><img alt="FlutterFlow Widget Tree Names" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-16a3d1c88e3ac043f1eba8bcea70875e"><img alt="FlutterFlow Widget Tree Names" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname2.png"></a></p>
+<p><a href="#R-image-f4c62476ac0b772a5b7023d1a2fdd6bd" class="lightbox-link"><img alt="FlutterFlow Widget Tree Names" class="border lazy lightbox figure-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4c62476ac0b772a5b7023d1a2fdd6bd"><img alt="FlutterFlow Widget Tree Names" class="border lazy lightbox lightbox-image" loading="lazy" src="/extras/05-flutter-flow/02-first-page/images/widgetname2.png"></a></p>
 <h2 id="summary">Summary</h2>
 <p>There we go! Now we have created our first widget in FlutterFlow. From here, we can start adding data to this widget and building up the interactivity in our application.</p>
 <div class="footnotes" role="doc-endnotes">
@@ -330,9 +330,9 @@ To Do tasks should include a short title and longer description. To Do tasks sho
       
       
     </div>
-    <script src="/extras/js/clipboard/clipboard.min.js?1773775660" defer></script>
-    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773775660" defer></script>
-    <script src="/extras/js/theme.min.js?1773775660" defer></script>
-  <script src="/extras/js/embed-iframe.min.js?1773775660" defer></script>
+    <script src="/extras/js/clipboard/clipboard.min.js?1773954401" defer></script>
+    <script src="/extras/js/perfect-scrollbar/perfect-scrollbar.min.js?1773954401" defer></script>
+    <script src="/extras/js/theme.min.js?1773954401" defer></script>
+  <script src="/extras/js/embed-iframe.min.js?1773954401" defer></script>
   </body>
 </html>
