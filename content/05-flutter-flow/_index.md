@@ -1,11 +1,11 @@
 +++
 archetype = "chapter"
 ordinal = "5"
-title = "Flutter Flow Example"
+title = "FlutterFlow Example"
 pre = "<b>5. </b>"
 weight = 5
 +++
 
-An example mobile application built with Flutter Flow
+An example mobile application built with FlutterFlow
 
 {{< children >}}

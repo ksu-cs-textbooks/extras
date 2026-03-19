@@ -4,7 +4,7 @@ pre: "7. "
 weight: 70
 ---
 
-{{< youtube asdf >}}
+{{< youtube iFf3UE6g9_U >}}
 
 Our application is currently storing both our user's data in the cloud as well as our to do tasks. However, we have yet to properly configure the Firestore Rules for our application, and that creates a major security flaw. Before we look at how to fix this, let's take a minute to explore the flaw and truly understand why it is so important to fix correctly.
 

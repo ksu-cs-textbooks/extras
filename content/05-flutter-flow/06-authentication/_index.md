@@ -4,7 +4,7 @@ pre: "6. "
 weight: 60
 ---
 
-{{< youtube asdf >}}
+{{< youtube C2GcPY9YOjA >}}
 
 Now that we have a working application that is synched with a cloud database, it is time to add user authentication and user accounts to our project. Thankfully, Firebase already includes all of the functionality we need to add authentication directly into our application, and FlutterFlow includes some scaffolded UI elements to make this a breeze. Let's dive in!
 
