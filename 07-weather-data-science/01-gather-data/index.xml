@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gather Data :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/01-gather-data/index.html</link>
+    <description>Video Walkthrough Resources Slides Kansas Mesonet NOAA Weather Data Teacher Notes You can expand upon this section by linking it to discussions around local weather patterns or a larger module on the climate and weather in general. Students could be encouraged to collect their own weather data for a time period and use that data in this activity (with a bit of formatting help). While this activity is rooted in weather data, the same basic process can be used to analyze data of all types.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/07-weather-data-science/01-gather-data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

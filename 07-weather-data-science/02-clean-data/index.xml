@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean Data :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/02-clean-data/index.html</link>
+    <description>Video Walkthrough Resources Slides clean_data.py on GitHub Teacher Notes When doing this as part of an outreach activity, often this section is just a discussion and the full clean_data.py script is provided to students so they can quickly clean their raw data and move ahead to the next part. However, this can easily be expanded to a larger activity to actually build and test the clean_data.py script or perform additional data cleaning processes in a spreadsheet program.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/07-weather-data-science/02-clean-data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

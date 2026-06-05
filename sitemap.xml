@@ -25,8 +25,16 @@
     <lastmod>2026-02-09T15:10:48-06:00</lastmod>
   </url>
   <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/index.html</loc>
+    <lastmod>2026-06-05T16:57:50-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/01-codio-org/index.html</loc>
     <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/01-gather-data/index.html</loc>
+    <lastmod>2026-06-05T16:57:50-05:00</lastmod>
   </url>
   <url>
     <loc>https://textbooks.cs.ksu.edu/extras/04-deploy-example/01-instructions/index.html</loc>
@@ -49,6 +57,10 @@
     <lastmod>2024-06-27T16:41:43-05:00</lastmod>
   </url>
   <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/02-clean-data/index.html</loc>
+    <lastmod>2026-06-05T16:57:50-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/02-first-page/index.html</loc>
     <lastmod>2026-03-19T16:06:07-05:00</lastmod>
   </url>
@@ -59,6 +71,10 @@
   <url>
     <loc>https://textbooks.cs.ksu.edu/extras/03-canvas-setup/03-codio-assign/index.html</loc>
     <lastmod>2024-06-27T16:41:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/03-graph-data/index.html</loc>
+    <lastmod>2026-06-05T16:57:50-05:00</lastmod>
   </url>
   <url>
     <loc>https://textbooks.cs.ksu.edu/extras/02-full-stack/03-initial/index.html</loc>
@@ -79,6 +95,10 @@
   <url>
     <loc>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/04-interaction/index.html</loc>
     <lastmod>2026-03-19T16:06:07-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/04-machine-learning/index.html</loc>
+    <lastmod>2026-06-05T16:57:50-05:00</lastmod>
   </url>
   <url>
     <loc>https://textbooks.cs.ksu.edu/extras/05-flutter-flow/05-firebase/index.html</loc>

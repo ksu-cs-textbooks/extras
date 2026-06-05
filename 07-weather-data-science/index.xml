@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weather Data Science :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/index.html</link>
+    <description>A STEM outreach activity using data science and machine learning techniques to analyze weather data.&#xA;Time: 60 - 120 minutes+ Age: Middle School and Up Teacher Introduction Video Starter Code The starter code can be found on GitHub. This repository is a template that can be easily forked by students or teachers to their own accounts.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/07-weather-data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gather Data</title>
+      <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/01-gather-data/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/01-gather-data/index.html</guid>
+      <description>Video Walkthrough Resources Slides Kansas Mesonet NOAA Weather Data Teacher Notes You can expand upon this section by linking it to discussions around local weather patterns or a larger module on the climate and weather in general. Students could be encouraged to collect their own weather data for a time period and use that data in this activity (with a bit of formatting help). While this activity is rooted in weather data, the same basic process can be used to analyze data of all types.</description>
+    </item>
+    <item>
+      <title>Clean Data</title>
+      <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/02-clean-data/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/02-clean-data/index.html</guid>
+      <description>Video Walkthrough Resources Slides clean_data.py on GitHub Teacher Notes When doing this as part of an outreach activity, often this section is just a discussion and the full clean_data.py script is provided to students so they can quickly clean their raw data and move ahead to the next part. However, this can easily be expanded to a larger activity to actually build and test the clean_data.py script or perform additional data cleaning processes in a spreadsheet program.</description>
+    </item>
+    <item>
+      <title>Graph Data</title>
+      <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/03-graph-data/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/03-graph-data/index.html</guid>
+      <description>Video Walkthrough Resources Slides weather.ipynb solution on GitHub Plotly Express Planting Temperatures from Riley County Extension Mesonet Corn Production Handbook Teacher Notes This section is the main interactive part of the lesson. Students should be given plenty of time to type in the code to load the data and create at least the first graph of the data. Depending on time and interest, the activity can slowly shift from having students write the code to having students follow along with the example solution to add more complexity to the graphs and answer the underlying questions posed at the beginning of the lesson.</description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/04-machine-learning/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/04-machine-learning/index.html</guid>
+      <description>Video Walkthrough Resources Slides ai.ipynb on GitHub scikit-learn scikit-learn Linear Regression scikit-learn Polynomial Regression scikit-learn Random Forest Model Teacher Notes This section is mainly a deeper demonstration of some machine learning concepts and models that can be used in Python. The goal is to use the students’ current understanding of data science concepts and expand upon that using some more advanced techniques. The actual techniques presented here are mostly for demonstration purposes and aren’t really meant to be statistically valid for the input data (though they do produce some interesting results nonetheless). AI coding tools are a great way to give students the power to explore this data in more detail if they are available (most of the model solution code in this section was generated using an AI tool).</description>
+    </item>
+  </channel>
+</rss>

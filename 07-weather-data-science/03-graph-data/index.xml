@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph Data :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/03-graph-data/index.html</link>
+    <description>Video Walkthrough Resources Slides weather.ipynb solution on GitHub Plotly Express Planting Temperatures from Riley County Extension Mesonet Corn Production Handbook Teacher Notes This section is the main interactive part of the lesson. Students should be given plenty of time to type in the code to load the data and create at least the first graph of the data. Depending on time and interest, the activity can slowly shift from having students write the code to having students follow along with the example solution to add more complexity to the graphs and answer the underlying questions posed at the beginning of the lesson.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/07-weather-data-science/03-graph-data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

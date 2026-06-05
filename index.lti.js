@@ -48,12 +48,28 @@ var relearn_lti_index = [
     "uri": "/extras/06-video-intros/index.html"
   },
   {
+    "breadcrumb": "",
+    "description": "A STEM outreach activity using data science and machine learning techniques to analyze weather data.\nTime: 60 - 120 minutes+ Age: Middle School and Up Teacher Introduction Video Starter Code The starter code can be found on GitHub. This repository is a template that can be easily forked by students or teachers to their own accounts.",
+    "modified": "2026-06-05T16:57:50-05:00",
+    "tags": [],
+    "title": "Weather Data Science",
+    "uri": "/extras/07-weather-data-science/index.html"
+  },
+  {
     "breadcrumb": "Setting Up a Canvas Course",
     "description": "The first step in creating a new Canvas course that you want to connect to a Codio course, is connecting the Canvas course to the Codio Organization.\nInstall Codio By default, Codio is not an installed app on Canvas. You will need to install the app.",
     "modified": "2024-06-27T16:41:43-05:00",
     "tags": [],
     "title": "Canvas to Codio Org",
     "uri": "/extras/03-canvas-setup/01-codio-org/index.html"
+  },
+  {
+    "breadcrumb": "Weather Data Science",
+    "description": "Video Walkthrough Resources Slides Kansas Mesonet NOAA Weather Data Teacher Notes You can expand upon this section by linking it to discussions around local weather patterns or a larger module on the climate and weather in general. Students could be encouraged to collect their own weather data for a time period and use that data in this activity (with a bit of formatting help). While this activity is rooted in weather data, the same basic process can be used to analyze data of all types.",
+    "modified": "2026-06-05T16:57:50-05:00",
+    "tags": [],
+    "title": "Gather Data",
+    "uri": "/extras/07-weather-data-science/01-gather-data/index.html"
   },
   {
     "breadcrumb": "Deployment Example",
@@ -96,6 +112,14 @@ var relearn_lti_index = [
     "uri": "/extras/03-canvas-setup/02-codio-course/index.html"
   },
   {
+    "breadcrumb": "Weather Data Science",
+    "description": "Video Walkthrough Resources Slides clean_data.py on GitHub Teacher Notes When doing this as part of an outreach activity, often this section is just a discussion and the full clean_data.py script is provided to students so they can quickly clean their raw data and move ahead to the next part. However, this can easily be expanded to a larger activity to actually build and test the clean_data.py script or perform additional data cleaning processes in a spreadsheet program.",
+    "modified": "2026-06-05T16:57:50-05:00",
+    "tags": [],
+    "title": "Clean Data",
+    "uri": "/extras/07-weather-data-science/02-clean-data/index.html"
+  },
+  {
     "breadcrumb": "FlutterFlow Example",
     "description": "Now that we’ve created a new project in FlutterFlow, let’s explore the process of creating our first component by adding some widgets and data.\nThe Concept - “To Do” Application For this tutorial, we’re going to build a simple “To Do” application to help us keep track of our tasks. Our application should have the following features:",
     "modified": "2026-03-19T16:06:07-05:00",
@@ -118,6 +142,14 @@ var relearn_lti_index = [
     "tags": [],
     "title": "Canvas to Codio Assignment",
     "uri": "/extras/03-canvas-setup/03-codio-assign/index.html"
+  },
+  {
+    "breadcrumb": "Weather Data Science",
+    "description": "Video Walkthrough Resources Slides weather.ipynb solution on GitHub Plotly Express Planting Temperatures from Riley County Extension Mesonet Corn Production Handbook Teacher Notes This section is the main interactive part of the lesson. Students should be given plenty of time to type in the code to load the data and create at least the first graph of the data. Depending on time and interest, the activity can slowly shift from having students write the code to having students follow along with the example solution to add more complexity to the graphs and answer the underlying questions posed at the beginning of the lesson.",
+    "modified": "2026-06-05T16:57:50-05:00",
+    "tags": [],
+    "title": "Graph Data",
+    "uri": "/extras/07-weather-data-science/03-graph-data/index.html"
   },
   {
     "breadcrumb": "Full Stack Web Application",
@@ -158,6 +190,14 @@ var relearn_lti_index = [
     "tags": [],
     "title": "Interaction",
     "uri": "/extras/05-flutter-flow/04-interaction/index.html"
+  },
+  {
+    "breadcrumb": "Weather Data Science",
+    "description": "Video Walkthrough Resources Slides ai.ipynb on GitHub scikit-learn scikit-learn Linear Regression scikit-learn Polynomial Regression scikit-learn Random Forest Model Teacher Notes This section is mainly a deeper demonstration of some machine learning concepts and models that can be used in Python. The goal is to use the students’ current understanding of data science concepts and expand upon that using some more advanced techniques. The actual techniques presented here are mostly for demonstration purposes and aren’t really meant to be statistically valid for the input data (though they do produce some interesting results nonetheless). AI coding tools are a great way to give students the power to explore this data in more detail if they are available (most of the model solution code in this section was generated using an AI tool).",
+    "modified": "2026-06-05T16:57:50-05:00",
+    "tags": [],
+    "title": "Machine Learning",
+    "uri": "/extras/07-weather-data-science/04-machine-learning/index.html"
   },
   {
     "breadcrumb": "FlutterFlow Example",

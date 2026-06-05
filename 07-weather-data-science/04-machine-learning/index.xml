@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning :: K-State CS Textbook Extras</title>
+    <link>https://textbooks.cs.ksu.edu/extras/07-weather-data-science/04-machine-learning/index.html</link>
+    <description>Video Walkthrough Resources Slides ai.ipynb on GitHub scikit-learn scikit-learn Linear Regression scikit-learn Polynomial Regression scikit-learn Random Forest Model Teacher Notes This section is mainly a deeper demonstration of some machine learning concepts and models that can be used in Python. The goal is to use the students’ current understanding of data science concepts and expand upon that using some more advanced techniques. The actual techniques presented here are mostly for demonstration purposes and aren’t really meant to be statistically valid for the input data (though they do produce some interesting results nonetheless). AI coding tools are a great way to give students the power to explore this data in more detail if they are available (most of the model solution code in this section was generated using an AI tool).</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/extras/07-weather-data-science/04-machine-learning/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
